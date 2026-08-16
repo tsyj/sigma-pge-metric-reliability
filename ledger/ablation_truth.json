@@ -1,0 +1,63 @@
+{
+ "truth": {
+  "flat": {
+   "u_max": 6.043359338821507,
+   "u_rms": 1.7715054309161289,
+   "surf_max": 6.043359338821507,
+   "deep_rms_200": 3.272286165951776e-06,
+   "deep_rms_400": 1.9998022494845952e-11,
+   "deep_rms_800": 2.4653622381314385e-18,
+   "deep_rms_1500": 1.9164221695938355e-26
+  },
+  "mit": {
+   "u_max": 6.108636712540366,
+   "u_rms": 1.7715433757921981,
+   "surf_max": 6.108636712540366,
+   "deep_rms_200": 0.004351908053838462,
+   "deep_rms_400": 0.0023569812539664314,
+   "deep_rms_800": 0.000366026871860862,
+   "deep_rms_1500": 0.00010504954388206133
+  },
+  "r26steep": {
+   "u_max": 6.053482662703283,
+   "u_rms": 1.7715099869994273,
+   "surf_max": 6.053482662703283,
+   "deep_rms_200": 0.0011268632780195398,
+   "deep_rms_400": 0.0006508568770407188,
+   "deep_rms_800": 6.681196105101138e-05,
+   "deep_rms_1500": 5.0211258254561376e-05
+  }
+ },
+ "metrics": {
+  "u_max": {
+   "label": "全域最大流速",
+   "worst_error_fraction": 0.5759805170730276,
+   "verdict": "mixed"
+  },
+  "u_rms": {
+   "label": "全域 rms",
+   "worst_error_fraction": 0.46724854631421064,
+   "verdict": "mostly_signal"
+  },
+  "surf_max": {
+   "label": "表层最大流速",
+   "worst_error_fraction": 0.4978345630822054,
+   "verdict": "mostly_signal"
+  },
+  "deep_rms_200": {
+   "label": "深层 rms >200m",
+   "worst_error_fraction": 0.999619441875591,
+   "verdict": "pure_error"
+  },
+  "deep_rms_800": {
+   "label": "深层 rms >800m",
+   "worst_error_fraction": 0.9999686530922501,
+   "verdict": "pure_error"
+  },
+  "deep_rms_1500": {
+   "label": "深层 rms >1500m",
+   "worst_error_fraction": 0.9999921194013821,
+   "verdict": "pure_error"
+  }
+ }
+}

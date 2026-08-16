@@ -1,0 +1,658 @@
+{
+ "note": "E43 宽容解析重评（修复字符串 region 静默改写）",
+ "changed_rounds": 4,
+ "n_valid": 20,
+ "n_passed": 0,
+ "detail": {
+  "blind/deepseek-v4-flash/s0": [
+   {
+    "round": 0,
+    "name": null,
+    "old_key": [
+     null,
+     null
+    ],
+    "new_key": [
+     null,
+     null
+    ],
+    "old_valid": false,
+    "new": {
+     "valid": false,
+     "key_num": null,
+     "key_den": null,
+     "reason": "积木组合不可用（该场/区域无输出）"
+    },
+    "changed": false
+   },
+   {
+    "round": 1,
+    "name": "deep_shallow_u_rms_ratio",
+    "old_key": [
+     "u|d800|rms",
+     "u|s200|rms"
+    ],
+    "new_key": [
+     "u|d800|rms",
+     "u|s200|rms"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|d800|rms",
+     "key_den": "u|s200|rms",
+     "rho": -0.9628410593989358,
+     "paired": 0.0,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 2,
+    "name": "deep_w_u_ratio",
+    "old_key": [
+     "w|d200|rms",
+     "u|d200|rms"
+    ],
+    "new_key": [
+     "w|d200|rms",
+     "u|d200|rms"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "w|d200|rms",
+     "key_den": "u|d200|rms",
+     "rho": 0.8130979113476269,
+     "paired": 0.25,
+     "passA": false,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 4,
+    "name": "w_p95_to_u_p95_ratio",
+    "old_key": [
+     "w|all|p95",
+     "u|all|p95"
+    ],
+    "new_key": [
+     "w|all|p95",
+     "u|all|p95"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "w|all|p95",
+     "key_den": "u|all|p95",
+     "rho": -0.9220523547325358,
+     "paired": 0.0,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 5,
+    "name": null,
+    "old_key": [
+     null,
+     null
+    ],
+    "new_key": [
+     null,
+     null
+    ],
+    "old_valid": false,
+    "new": {
+     "valid": false,
+     "key_num": null,
+     "key_den": null,
+     "reason": "积木组合不可用（该场/区域无输出）"
+    },
+    "changed": false
+   }
+  ],
+  "guided/deepseek-v4-flash/s0": [
+   {
+    "round": 0,
+    "name": "deep_w_to_temp_rms_ratio",
+    "old_key": [
+     "w|d800|rms",
+     "temp|d800|rms"
+    ],
+    "new_key": [
+     "w|d800|rms",
+     "temp|d800|rms"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "w|d800|rms",
+     "key_den": "temp|d800|rms",
+     "rho": -0.8202959180534622,
+     "paired": 0.0,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 1,
+    "name": null,
+    "old_key": [
+     null,
+     null
+    ],
+    "new_key": [
+     null,
+     null
+    ],
+    "old_valid": false,
+    "new": {
+     "valid": false,
+     "key_num": null,
+     "key_den": null,
+     "reason": "积木组合不可用（该场/区域无输出）"
+    },
+    "changed": false
+   },
+   {
+    "round": 2,
+    "name": "deep_w_to_temp_rms_ratio",
+    "old_key": [
+     "w|all|rms",
+     "temp|all|rms"
+    ],
+    "new_key": [
+     "w|all|rms",
+     "temp|all|rms"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "w|all|rms",
+     "key_den": "temp|all|rms",
+     "rho": -0.8701282721707836,
+     "paired": 0.0,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 3,
+    "name": "deep_w_to_u_rms_ratio",
+    "old_key": [
+     "w|all|rms",
+     "u|all|rms"
+    ],
+    "new_key": [
+     "w|all|rms",
+     "u|all|rms"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "w|all|rms",
+     "key_den": "u|all|rms",
+     "rho": 0.05355440031991141,
+     "paired": 0.0,
+     "passA": false,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 4,
+    "name": "shallow_w_to_deep_w_rms_ratio",
+    "old_key": [
+     "w|all|rms",
+     null
+    ],
+    "new_key": [
+     "w|all|rms",
+     null
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "w|all|rms",
+     "key_den": null,
+     "rho": -0.8701282721707836,
+     "paired": 0.0,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 5,
+    "name": "deep_w_to_temp_p95_ratio",
+    "old_key": [
+     "w|all|p95",
+     "temp|all|p95"
+    ],
+    "new_key": [
+     "w|all|p95",
+     "temp|all|p95"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "w|all|p95",
+     "key_den": "temp|all|p95",
+     "rho": -0.9539204527976869,
+     "paired": 0.0,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   }
+  ],
+  "guided/deepseek-v4-flash/s1": [
+   {
+    "round": 0,
+    "name": "deep_w_ratio_1500",
+    "old_key": [
+     "w|d1500|rms",
+     "w|s50|rms"
+    ],
+    "new_key": [
+     "w|d1500|rms",
+     "w|s50|rms"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "w|d1500|rms",
+     "key_den": "w|s50|rms",
+     "rho": 0.6181980374665478,
+     "paired": 0.0,
+     "passA": false,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 1,
+    "name": null,
+    "old_key": [
+     null,
+     null
+    ],
+    "new_key": [
+     null,
+     null
+    ],
+    "old_valid": false,
+    "new": {
+     "valid": false,
+     "key_num": null,
+     "key_den": null,
+     "reason": "积木组合不可用（该场/区域无输出）"
+    },
+    "changed": false
+   },
+   {
+    "round": 2,
+    "name": "shallow_deep_u_rms_ratio",
+    "old_key": [
+     "u|all|rms",
+     null
+    ],
+    "new_key": [
+     "u|s200|rms",
+     "u|d800|rms"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|s200|rms",
+     "key_den": "u|d800|rms",
+     "rho": 0.9631486665231167,
+     "paired": 1.0,
+     "passA": false,
+     "passB": true,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": true
+   },
+   {
+    "round": 3,
+    "name": "shallow_deep_u_rms_ratio",
+    "old_key": [
+     "u|all|rms",
+     null
+    ],
+    "new_key": [
+     "u|s200|rms",
+     "u|d800|rms"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|s200|rms",
+     "key_den": "u|d800|rms",
+     "rho": 0.9631486665231167,
+     "paired": 1.0,
+     "passA": false,
+     "passB": true,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": true
+   }
+  ],
+  "guided/deepseek-v4-flash/s2": [
+   {
+    "round": 0,
+    "name": "deep_to_surface_rms_ratio",
+    "old_key": [
+     "u|d800|rms",
+     "u|s200|rms"
+    ],
+    "new_key": [
+     "u|d800|rms",
+     "u|s200|rms"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|d800|rms",
+     "key_den": "u|s200|rms",
+     "rho": -0.9628410593989358,
+     "paired": 0.0,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 1,
+    "name": "surface_to_deep_p95_ratio",
+    "old_key": [
+     "u|all|p95",
+     null
+    ],
+    "new_key": [
+     "u|all|p95",
+     null
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|all|p95",
+     "key_den": null,
+     "rho": -0.8623150512165862,
+     "paired": 0.0625,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 2,
+    "name": "deep_w_over_u_mean_abs",
+    "old_key": [
+     "w|all|mean_abs",
+     "u|all|mean_abs"
+    ],
+    "new_key": [
+     "w|d800|mean_abs",
+     "u|d800|mean_abs"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "w|d800|mean_abs",
+     "key_den": "u|d800|mean_abs",
+     "rho": 0.28770494324648566,
+     "paired": 0.0,
+     "passA": false,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": true
+   },
+   {
+    "round": 3,
+    "name": "...",
+    "old_key": [
+     "u|all|rms",
+     null
+    ],
+    "new_key": [
+     "u|all|rms",
+     null
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|all|rms",
+     "key_den": null,
+     "rho": -0.9507828601310406,
+     "paired": 0.03125,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 4,
+    "name": null,
+    "old_key": [
+     null,
+     null
+    ],
+    "new_key": [
+     null,
+     null
+    ],
+    "old_valid": false,
+    "new": {
+     "valid": false,
+     "key_num": null,
+     "key_den": null,
+     "reason": "积木组合不可用（该场/区域无输出）"
+    },
+    "changed": false
+   },
+   {
+    "round": 5,
+    "name": null,
+    "old_key": [
+     null,
+     null
+    ],
+    "new_key": [
+     null,
+     null
+    ],
+    "old_valid": false,
+    "new": {
+     "valid": false,
+     "key_num": null,
+     "key_den": null,
+     "reason": "积木组合不可用（该场/区域无输出）"
+    },
+    "changed": false
+   }
+  ],
+  "guided/deepseek-v4-pro/s0": [
+   {
+    "round": 0,
+    "name": "...",
+    "old_key": [
+     "u|all|rms",
+     null
+    ],
+    "new_key": [
+     "u|all|rms",
+     null
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|all|rms",
+     "key_den": null,
+     "rho": -0.9507828601310406,
+     "paired": 0.03125,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 1,
+    "name": "...",
+    "old_key": [
+     "u|all|rms",
+     null
+    ],
+    "new_key": [
+     "u|all|rms",
+     null
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|all|rms",
+     "key_den": null,
+     "rho": -0.9507828601310406,
+     "paired": 0.03125,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 2,
+    "name": "deep_shallow_velocity_ratio_p95",
+    "old_key": [
+     "u|d800|p95",
+     "u|s200|p95"
+    ],
+    "new_key": [
+     "u|d800|p95",
+     "u|s200|p95"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|d800|p95",
+     "key_den": "u|s200|p95",
+     "rho": -0.9525669814512906,
+     "paired": 0.0,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   },
+   {
+    "round": 4,
+    "name": "deep_shallow_u_rms_ratio",
+    "old_key": [
+     "u|all|rms",
+     null
+    ],
+    "new_key": [
+     "u|d800|rms",
+     "u|s200|rms"
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|d800|rms",
+     "key_den": "u|s200|rms",
+     "rho": -0.9628410593989358,
+     "paired": 0.0,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": true
+   },
+   {
+    "round": 5,
+    "name": "...",
+    "old_key": [
+     "u|all|rms",
+     null
+    ],
+    "new_key": [
+     "u|all|rms",
+     null
+    ],
+    "old_valid": true,
+    "new": {
+     "valid": true,
+     "key_num": "u|all|rms",
+     "key_den": null,
+     "rho": -0.9507828601310406,
+     "paired": 0.03125,
+     "passA": true,
+     "passB": false,
+     "passed": false,
+     "n26": 58,
+     "npairs": 32
+    },
+    "changed": false
+   }
+  ]
+ }
+}

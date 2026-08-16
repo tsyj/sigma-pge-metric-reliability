@@ -1,0 +1,261 @@
+{
+ "planner": "bisect",
+ "seed": 0,
+ "n_steps": 8,
+ "wall_total_s": 1165.9,
+ "budget": {
+  "n_runs": 8,
+  "wall_total_s": 1165.7,
+  "wall_per_run_s": 145.7
+ },
+ "log": [
+  {
+   "i": 0,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 0.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 98.2009506225586,
+    "u_rms": 7.761971473693848,
+    "deep_rms_800": 9.290669441223145,
+    "surf_max": 43.6943244934082,
+    "temp_min": 3.765155553817749,
+    "temp_max": 25.984886169433594,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_266404276ec5",
+   "wall_s": 153.0,
+   "critic": [
+    "NOTE: u_max=98.2 含真实风驱流分量；deep_rms_800=9.29 才隔离 σ-PGE"
+   ],
+   "hidden_grade": {
+    "score": 7.708643998253778,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   }
+  },
+  {
+   "i": 1,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 300.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 61.14754104614258,
+    "u_rms": 5.068474769592285,
+    "deep_rms_800": 6.108617305755615,
+    "surf_max": 19.257707595825195,
+    "temp_min": 3.377838611602783,
+    "temp_max": 25.951757431030273,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_cd90b8a93f2e",
+   "wall_s": 146.2,
+   "critic": [
+    "NOTE: u_max=61.1 含真实风驱流分量；deep_rms_800=6.11 才隔离 σ-PGE"
+   ],
+   "hidden_grade": {
+    "score": 5.297948025223518,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   }
+  },
+  {
+   "i": 2,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 1000.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 43.659671783447266,
+    "u_rms": 3.314824104309082,
+    "deep_rms_800": 3.2559256553649902,
+    "surf_max": 10.15517807006836,
+    "temp_min": 3.569993734359741,
+    "temp_max": 25.94771385192871,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_dce2b19cd8ad",
+   "wall_s": 145.9,
+   "critic": [
+    "NOTE: u_max=43.7 含真实风驱流分量；deep_rms_800=3.26 才隔离 σ-PGE"
+   ],
+   "hidden_grade": {
+    "score": 3.681143738614466,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   }
+  },
+  {
+   "i": 3,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 2000.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 25.220989227294922,
+    "u_rms": 2.6874520778656006,
+    "deep_rms_800": 2.0208535194396973,
+    "surf_max": 6.337119102478027,
+    "temp_min": 3.7078397274017334,
+    "temp_max": 25.943941116333008,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_0b0a9926a354",
+   "wall_s": 143.1,
+   "critic": [
+    "NOTE: u_max=25.2 含真实风驱流分量；deep_rms_800=2.02 才隔离 σ-PGE"
+   ],
+   "hidden_grade": {
+    "score": 3.1715560695223597,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   }
+  },
+  {
+   "i": 4,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 1500.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 32.30708312988281,
+    "u_rms": 2.916316509246826,
+    "deep_rms_800": 2.4678285121917725,
+    "surf_max": 7.73839807510376,
+    "temp_min": 3.659351110458374,
+    "temp_max": 25.9457950592041,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_ce64784901eb",
+   "wall_s": 142.3,
+   "critic": [
+    "NOTE: u_max=32.3 含真实风驱流分量；deep_rms_800=2.47 才隔离 σ-PGE"
+   ],
+   "hidden_grade": {
+    "score": 3.3528817898365566,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   }
+  },
+  {
+   "i": 5,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 650.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 53.422760009765625,
+    "u_rms": 3.868440628051758,
+    "deep_rms_800": 4.250135898590088,
+    "surf_max": 13.254722595214844,
+    "temp_min": 3.4620954990386963,
+    "temp_max": 25.94816017150879,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_3fb55a970263",
+   "wall_s": 146.5,
+   "critic": [
+    "NOTE: u_max=53.4 含真实风驱流分量；deep_rms_800=4.25 才隔离 σ-PGE"
+   ],
+   "hidden_grade": {
+    "score": 4.172683398047139,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   }
+  },
+  {
+   "i": 6,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 1250.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 37.28484344482422,
+    "u_rms": 3.081484794616699,
+    "deep_rms_800": 2.7968690395355225,
+    "surf_max": 8.769217491149902,
+    "temp_min": 3.6227056980133057,
+    "temp_max": 25.94679069519043,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_c2d4d7504741",
+   "wall_s": 144.5,
+   "critic": [
+    "NOTE: u_max=37.3 含真实风驱流分量；deep_rms_800=2.80 才隔离 σ-PGE"
+   ],
+   "hidden_grade": {
+    "score": 3.48670658806619,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   }
+  },
+  {
+   "i": 7,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 1750.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 28.36212158203125,
+    "u_rms": 2.789884567260742,
+    "deep_rms_800": 2.2184066772460938,
+    "surf_max": 6.922458171844482,
+    "temp_min": 3.6837692260742188,
+    "temp_max": 25.944835662841797,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_a37e07fe7290",
+   "wall_s": 144.2,
+   "critic": [
+    "NOTE: u_max=28.4 含真实风驱流分量；deep_rms_800=2.22 才隔离 σ-PGE"
+   ],
+   "hidden_grade": {
+    "score": 3.2523472881306708,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   }
+  }
+ ]
+}

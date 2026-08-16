@@ -1,0 +1,78 @@
+{
+ "H1": {
+  "valid": true,
+  "crashed": false,
+  "deep_rms_800": 4.072525501251221,
+  "u_max": 52.09764099121094,
+  "hidden": {
+   "temp_over_max": 0.03943777084350586,
+   "temp_over_mean": 3.8868773117428645e-05,
+   "truth_day": 1.0,
+   "truth_akv": 1e-05,
+   "err_rms_vs_truth": 4.810209559037139,
+   "err_max_vs_truth": 40.993104936617556,
+   "truth_max": 9.24042109589166,
+   "truth_rms": 2.5661553443923126,
+   "skill_vs_zero": -2.5136791989457072
+  },
+  "run_id": "e2_b84e736f3f18"
+ },
+ "H2": {
+  "valid": true,
+  "crashed": false,
+  "deep_rms_800": 0.02831422910094261,
+  "u_max": 7.8369975090026855,
+  "hidden": {
+   "temp_over_max": 0.020227432250976562,
+   "temp_over_mean": 0.00011692330008372664
+  },
+  "run_id": "e2_b3e567c2329a"
+ },
+ "H3": {
+  "valid": true,
+  "crashed": false,
+  "deep_rms_800": 2.8621087074279785,
+  "u_max": 25.023456573486328,
+  "hidden": {
+   "temp_over_max": 0.008754730224609375,
+   "temp_over_mean": 2.922920145920216e-07,
+   "truth_day": 1.0,
+   "truth_akv": 1e-05,
+   "err_rms_vs_truth": 4.684598339389896,
+   "err_max_vs_truth": 19.95863201156098,
+   "truth_max": 9.24042109589166,
+   "truth_rms": 2.5661553443923126,
+   "skill_vs_zero": -2.3325665725757156
+  },
+  "run_id": "e2_cee3dc1a788a"
+ },
+ "H4": {
+  "valid": true,
+  "crashed": false,
+  "deep_rms_800": 8.443272590637207,
+  "u_max": 86.22602844238281,
+  "hidden": {
+   "temp_over_max": 0.08385086059570312,
+   "temp_over_mean": 3.376068207217031e-06,
+   "truth_day": 1.0,
+   "truth_akv": 0.05,
+   "err_rms_vs_truth": 5.805372732866908,
+   "err_max_vs_truth": 76.05908491742841,
+   "truth_max": 1.9124005167214742,
+   "truth_rms": 0.6996139378574187,
+   "skill_vs_zero": -67.8562412411012
+  },
+  "run_id": "e2_c3af16d3aa1d"
+ },
+ "H5": {
+  "valid": true,
+  "crashed": false,
+  "deep_rms_800": 12.001516342163086,
+  "u_max": 105.08113861083984,
+  "hidden": {
+   "temp_over_max": 0.02436065673828125,
+   "temp_over_mean": 1.196295784211543e-06
+  },
+  "run_id": "e2_3714416f80c7"
+ }
+}

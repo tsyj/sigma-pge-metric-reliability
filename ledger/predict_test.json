@@ -1,0 +1,1382 @@
+{
+ "held_out": [
+  {
+   "name": "H1",
+   "kind": "内插",
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 700.0,
+    "ntimes": 8640,
+    "seed": 0
+   }
+  },
+  {
+   "name": "H2",
+   "kind": "内插+换地形",
+   "action": {
+    "bathy": "flat",
+    "VISC2": 300.0,
+    "ntimes": 8640,
+    "seed": 0
+   }
+  },
+  {
+   "name": "H3",
+   "kind": "对数内插",
+   "action": {
+    "bathy": "r26steep",
+    "VISC4": 5000000000.0,
+    "ntimes": 8640,
+    "seed": 0
+   }
+  },
+  {
+   "name": "H4",
+   "kind": "内插",
+   "action": {
+    "bathy": "r26steep",
+    "AKV_BAK": 0.05,
+    "ntimes": 8640,
+    "seed": 0
+   }
+  },
+  {
+   "name": "H5",
+   "kind": "跨地形外推",
+   "action": {
+    "bathy": "mit",
+    "TNU2": 200.0,
+    "ntimes": 8640,
+    "seed": 0
+   }
+  }
+ ],
+ "truth": {
+  "H1": {
+   "valid": true,
+   "crashed": false,
+   "deep_rms_800": 4.072525501251221,
+   "u_max": 52.09764099121094,
+   "hidden": {
+    "temp_over_max": 0.03943777084350586,
+    "temp_over_mean": 3.8868773117428645e-05,
+    "truth_day": 1.0,
+    "truth_akv": 1e-05,
+    "err_rms_vs_truth": 4.810209559037139,
+    "err_max_vs_truth": 40.993104936617556,
+    "truth_max": 9.24042109589166,
+    "truth_rms": 2.5661553443923126,
+    "skill_vs_zero": -2.5136791989457072
+   },
+   "run_id": "e2_b84e736f3f18"
+  },
+  "H2": {
+   "valid": true,
+   "crashed": false,
+   "deep_rms_800": 0.02831422910094261,
+   "u_max": 7.8369975090026855,
+   "hidden": {
+    "temp_over_max": 0.020227432250976562,
+    "temp_over_mean": 0.00011692330008372664
+   },
+   "run_id": "e2_b3e567c2329a"
+  },
+  "H3": {
+   "valid": true,
+   "crashed": false,
+   "deep_rms_800": 2.8621087074279785,
+   "u_max": 25.023456573486328,
+   "hidden": {
+    "temp_over_max": 0.008754730224609375,
+    "temp_over_mean": 2.922920145920216e-07,
+    "truth_day": 1.0,
+    "truth_akv": 1e-05,
+    "err_rms_vs_truth": 4.684598339389896,
+    "err_max_vs_truth": 19.95863201156098,
+    "truth_max": 9.24042109589166,
+    "truth_rms": 2.5661553443923126,
+    "skill_vs_zero": -2.3325665725757156
+   },
+   "run_id": "e2_cee3dc1a788a"
+  },
+  "H4": {
+   "valid": true,
+   "crashed": false,
+   "deep_rms_800": 8.443272590637207,
+   "u_max": 86.22602844238281,
+   "hidden": {
+    "temp_over_max": 0.08385086059570312,
+    "temp_over_mean": 3.376068207217031e-06,
+    "truth_day": 1.0,
+    "truth_akv": 0.05,
+    "err_rms_vs_truth": 5.805372732866908,
+    "err_max_vs_truth": 76.05908491742841,
+    "truth_max": 1.9124005167214742,
+    "truth_rms": 0.6996139378574187,
+    "skill_vs_zero": -67.8562412411012
+   },
+   "run_id": "e2_c3af16d3aa1d"
+  },
+  "H5": {
+   "valid": true,
+   "crashed": false,
+   "deep_rms_800": 12.001516342163086,
+   "u_max": 105.08113861083984,
+   "hidden": {
+    "temp_over_max": 0.02436065673828125,
+    "temp_over_mean": 1.196295784211543e-06
+   },
+   "run_id": "e2_3714416f80c7"
+  }
+ },
+ "agents": [
+  {
+   "agent": "A/v4-flash/s0",
+   "condition": "A",
+   "model": "deepseek-v4-flash",
+   "seed": 0,
+   "raw": "{\"predictions\": [\n  {\"name\": \"H1\", \"deep_rms_800\": 0.19, \"will_crash\": false, \"why\": \"陡海山地形比平底更强地激发深层流动，VISC2中等且只积分1天，深流速明显高于平底同期但低于已见3天极端值。\"},\n  {\"name\": \"H2\", \"deep_rms_800\": 0.042, \"will_crash\": false, \"why\": \"平底深层流动弱，VISC2=300介于100与2000之间，1天深RMS预计约为0.04 cm/s。\"},\n  {\"name\": \"H3\", \"deep_rms_800\": 0.12, \"will_crash\": false, \"why\": \"r26steep有地形底流增强，但高VISC4=5e9抑制小尺度流速，预计低于H1。\"},\n  {\"name\": \"H4\", \"deep_rms_800\": 0.21, \"will_crash\": false, \"why\": \"AKV_BAK=0.05增强了垂向动量向深层传递，陡海山进一步放大底部流速，因此略高于H1。\"},\n  {\"name\": \"H5\", \"deep_rms_800\": 0.070, \"will_crash\": false, \"why\": \"mit海山地形可能较r26steep平缓，TNU2=200影响不大，预计深层流速只中等增强。\"}\n],\n\"which_am_i_least_sure_about\": \"H5，因为历史上没有任何mit地形结果，且仅TNU2变化，地形增强程度最难约束。\"}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 0.19,
+      "will_crash": false,
+      "why": "陡海山地形比平底更强地激发深层流动，VISC2中等且只积分1天，深流速明显高于平底同期但低于已见3天极端值。"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.042,
+      "will_crash": false,
+      "why": "平底深层流动弱，VISC2=300介于100与2000之间，1天深RMS预计约为0.04 cm/s。"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 0.12,
+      "will_crash": false,
+      "why": "r26steep有地形底流增强，但高VISC4=5e9抑制小尺度流速，预计低于H1。"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 0.21,
+      "will_crash": false,
+      "why": "AKV_BAK=0.05增强了垂向动量向深层传递，陡海山进一步放大底部流速，因此略高于H1。"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 0.07,
+      "will_crash": false,
+      "why": "mit海山地形可能较r26steep平缓，TNU2=200影响不大，预计深层流速只中等增强。"
+     }
+    ],
+    "which_am_i_least_sure_about": "H5，因为历史上没有任何mit地形结果，且仅TNU2变化，地形增强程度最难约束。"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 0.19,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 1.3311102114919322,
+     "nn": 0.1660795956850052,
+     "gp": 1.0,
+     "med": 0.08993466570973396
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.042,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.1712445486191553,
+     "nn": 0.1660795956850052,
+     "gp": 0.7819488823609165,
+     "med": 0.08993466570973396
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 0.12,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 1.377504878882606,
+     "nn": 0.1660795956850052,
+     "gp": 1.0,
+     "med": 0.08993466570973396
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 0.21,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 1.6042915159414706,
+     "nn": 0.2452281266450882,
+     "gp": 1.0,
+     "med": 0.08993466570973396
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 0.07,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 2.2341380808192435,
+     "nn": 0.1660795956850052,
+     "gp": 1.0,
+     "med": 0.08993466570973396
+    }
+   ]
+  },
+  {
+   "agent": "A/v4-pro/s0",
+   "condition": "A",
+   "model": "deepseek-v4-pro",
+   "seed": 0,
+   "raw": "{\"predictions\": [\n  {\"name\": \"H1\", \"deep_rms_800\": 0.13, \"will_crash\": true, \"why\": \"r26steep在3天VISC2=2000时已崩，VISC2=700更弱且缺少强双谐波耗散，1天内陡地形噪声更易失控。\"},\n  {\"name\": \"H2\", \"deep_rms_800\": 0.032, \"will_crash\": false, \"why\": \"flat地形历史全部稳定，VISC2=300比2000摩擦更小，深层流速略高于0.026。\"},\n  {\"name\": \"H3\", \"deep_rms_800\": 0.052, \"will_crash\": false, \"why\": \"VISC4=5e9强耗散小尺度，r26steep在1天积分内可能被稳定住。\"},\n  {\"name\": \"H4\", \"deep_rms_800\": 0.046, \"will_crash\": false, \"why\": \"AKV_BAK=0.05大幅增加垂向黏性，抑制陡地形垂向剪切，利于1天稳定。\"},\n  {\"name\": \"H5\", \"deep_rms_800\": 0.078, \"will_crash\": false, \"why\": \"mit虽3天曾崩，但1天较短，且TNU2=200主要影响示踪物扩散，不直接驱动动量崩溃。\"}\n],\n\"which_am_i_least_sure_about\": \"H1，因为历史只有r26steep在3天崩溃，没有1天观测，且未列出的VISC4默认值会明显影响崩溃阈值。\"}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 0.13,
+      "will_crash": true,
+      "why": "r26steep在3天VISC2=2000时已崩，VISC2=700更弱且缺少强双谐波耗散，1天内陡地形噪声更易失控。"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.032,
+      "will_crash": false,
+      "why": "flat地形历史全部稳定，VISC2=300比2000摩擦更小，深层流速略高于0.026。"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 0.052,
+      "will_crash": false,
+      "why": "VISC4=5e9强耗散小尺度，r26steep在1天积分内可能被稳定住。"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 0.046,
+      "will_crash": false,
+      "why": "AKV_BAK=0.05大幅增加垂向黏性，抑制陡地形垂向剪切，利于1天稳定。"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 0.078,
+      "will_crash": false,
+      "why": "mit虽3天曾崩，但1天较短，且TNU2=200主要影响示踪物扩散，不直接驱动动量崩溃。"
+     }
+    ],
+    "which_am_i_least_sure_about": "H1，因为历史只有r26steep在3天崩溃，没有1天观测，且未列出的VISC4默认值会明显影响崩溃阈值。"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 0.13,
+     "pred_crash": true,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 1.4959204601379243,
+     "nn": 0.10097105801105499,
+     "gp": 1.0,
+     "med": 0.10093696415424347
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.032,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.053145236541160774,
+     "nn": 0.10097105801105499,
+     "gp": 0.057883409939895804,
+     "med": 0.10093696415424347
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 0.052,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 1.7406827812954317,
+     "nn": 0.11625384539365768,
+     "gp": 1.0,
+     "med": 0.10093696415424347
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 0.046,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 2.2637529789938156,
+     "nn": 0.10097105801105499,
+     "gp": 1.0,
+     "med": 0.10093696415424347
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 0.078,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 2.18714151814302,
+     "nn": 0.10097105801105499,
+     "gp": 1.0,
+     "med": 0.10093696415424347
+    }
+   ]
+  },
+  {
+   "agent": "A/v4-pro/s1",
+   "condition": "A",
+   "model": "deepseek-v4-pro",
+   "seed": 1,
+   "raw": "{\"predictions\":[\n  {\"name\":\"H1\",\"deep_rms_800\":0.066,\"will_crash\":false,\"why\":\"r26steep地形比flat增强深层流，但VISC2=700和1天积分仍较小。\"},\n  {\"name\":\"H2\",\"deep_rms_800\":0.036,\"will_crash\":false,\"why\":\"由flat历史的3天/1天比值缩放并内插VISC2到300。\"},\n  {\"name\":\"H3\",\"deep_rms_800\":0.062,\"will_crash\":false,\"why\":\"r26steep有地形增强，但VISC4=5e9增加耗散抵消部分。\"},\n  {\"name\":\"H4\",\"deep_rms_800\":0.055,\"will_crash\":false,\"why\":\"AKV_BAK=0.05增强混合，但1天内深海响应有限。\"},\n  {\"name\":\"H5\",\"deep_rms_800\":0.046,\"will_crash\":false,\"why\":\"mit地形在1天低粘度配置下预计稳定，TNU2=200影响较小。\"}\n],\n\"which_am_i_least_sure_about\":\"H1，因为r26steep地形没有历史数据，陡海山对深层RMS的增强幅度难以外推。\"}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 0.066,
+      "will_crash": false,
+      "why": "r26steep地形比flat增强深层流，但VISC2=700和1天积分仍较小。"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.036,
+      "will_crash": false,
+      "why": "由flat历史的3天/1天比值缩放并内插VISC2到300。"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 0.062,
+      "will_crash": false,
+      "why": "r26steep有地形增强，但VISC4=5e9增加耗散抵消部分。"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 0.055,
+      "will_crash": false,
+      "why": "AKV_BAK=0.05增强混合，但1天内深海响应有限。"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 0.046,
+      "will_crash": false,
+      "why": "mit地形在1天低粘度配置下预计稳定，TNU2=200影响较小。"
+     }
+    ],
+    "which_am_i_least_sure_about": "H1，因为r26steep地形没有历史数据，陡海山对深层RMS的增强幅度难以外推。"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 0.066,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 1.7903198769028925,
+     "nn": 0.14736944437026978,
+     "gp": 1.0,
+     "med": 0.10063102096319199
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.036,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.10429775898854203,
+     "nn": 0.14736944437026978,
+     "gp": 0.14186676632101913,
+     "med": 0.10063102096319199
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 0.062,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 1.664294435431977,
+     "nn": 0.14736944437026978,
+     "gp": 1.0,
+     "med": 0.10063102096319199
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 0.055,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 2.1861481211811458,
+     "nn": 0.14736944437026978,
+     "gp": 1.0,
+     "med": 0.10063102096319199
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 0.046,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 2.416478289151926,
+     "nn": 0.14736944437026978,
+     "gp": 1.0,
+     "med": 0.10063102096319199
+    }
+   ]
+  },
+  {
+   "agent": "A/v4-pro/s10",
+   "condition": "A",
+   "model": "deepseek-v4-pro",
+   "seed": 10,
+   "raw": "{\n  \"predictions\": [\n    {\"name\": \"H1\", \"deep_rms_800\": 0.36, \"will_crash\": false, \"why\": \"陡海山地形环流使深层流速明显高于平坦底；VISC2=700 在 1 天积分中应可抑制数值噪声。\"},\n    {\"name\": \"H2\", \"deep_rms_800\": 0.032, \"will_crash\": false, \"why\": \"平坦底主要靠风生斜压调整，1 天时深层流动仍较弱；较低的 VISC2=300 略有增强。\"},\n    {\"name\": \"H3\", \"deep_rms_800\": 0.27, \"will_crash\": false, \"why\": \"高双谐黏性耗散细尺度海山涡动，但陡地形仍维持中等深层流速，弱于 H1。\"},\n    {\"name\": \"H4\", \"deep_rms_800\": 0.15, \"will_crash\": false, \"why\": \"AKV_BAK=0.05 的强垂向混合会削弱垂向剪切和陡地形下的深层环流。\"},\n    {\"name\": \"H5\", \"deep_rms_800\": 0.12, \"will_crash\": false, \"why\": \"mit 海山激发中等地形流；TNU2=200 较低，但 1 天积分内预计仍可稳定。\"}\n  ],\n  \"which_am_i_least_sure_about\": \"H5，因为历史中唯一一次 mit 配置在 1440 步崩溃，但该次还有极高 VISC4 和极低 AKV_BAK；本次仅改 TNU2，缺失参数使我最不确定。\"\n}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 0.36,
+      "will_crash": false,
+      "why": "陡海山地形环流使深层流速明显高于平坦底；VISC2=700 在 1 天积分中应可抑制数值噪声。"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.032,
+      "will_crash": false,
+      "why": "平坦底主要靠风生斜压调整，1 天时深层流动仍较弱；较低的 VISC2=300 略有增强。"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 0.27,
+      "will_crash": false,
+      "why": "高双谐黏性耗散细尺度海山涡动，但陡地形仍维持中等深层流速，弱于 H1。"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 0.15,
+      "will_crash": false,
+      "why": "AKV_BAK=0.05 的强垂向混合会削弱垂向剪切和陡地形下的深层环流。"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 0.12,
+      "will_crash": false,
+      "why": "mit 海山激发中等地形流；TNU2=200 较低，但 1 天积分内预计仍可稳定。"
+     }
+    ],
+    "which_am_i_least_sure_about": "H5，因为历史中唯一一次 mit 配置在 1440 步崩溃，但该次还有极高 VISC4 和极低 AKV_BAK；本次仅改 TNU2，缺失参数使我最不确定。"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 0.36,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 1.0535613116774738,
+     "nn": 0.003006985643878579,
+     "gp": 1.0,
+     "med": 0.0030055446550250053
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.032,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.053145236541160774,
+     "nn": 0.003006985643878579,
+     "gp": 0.12000600983026552,
+     "med": 0.0030055446550250053
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 0.27,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 1.0253223607712436,
+     "nn": 0.1290893256664276,
+     "gp": 1.0,
+     "med": 0.0030055446550250053
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 0.15,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 1.7504195516197085,
+     "nn": 0.003006985643878579,
+     "gp": 1.0,
+     "med": 0.0030055446550250053
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 0.12,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 2.0000548747858753,
+     "nn": 0.003006985643878579,
+     "gp": 1.0,
+     "med": 0.0030055446550250053
+    }
+   ]
+  },
+  {
+   "agent": "A/v4-pro/s11",
+   "condition": "A",
+   "model": "deepseek-v4-pro",
+   "seed": 11,
+   "raw": "{\"predictions\": [\n  {\"name\": \"H1\", \"deep_rms_800\": 2.2, \"will_crash\": false, \"why\": \"陡海山增强深层流，且VISC2=700比历史2000更低，1天积分后深层RMS可达cm/s量级\"},\n  {\"name\": \"H2\", \"deep_rms_800\": 0.05, \"will_crash\": false, \"why\": \"平底深层流很弱，VISC2从2000降到300会使深层RMS略增，但仍远小于海山配置\"},\n  {\"name\": \"H3\", \"deep_rms_800\": 1.7, \"will_crash\": false, \"why\": \"r26steep地形仍提供强深层流，VISC4=5e9主要增加数值稳定性，对深层RMS略低于H1\"},\n  {\"name\": \"H4\", \"deep_rms_800\": 0.9, \"will_crash\": false, \"why\": \"陡海山深层流被AKV_BAK=0.05部分抑制，但仍显著高于平底和mit海山\"},\n  {\"name\": \"H5\", \"deep_rms_800\": 0.8, \"will_crash\": false, \"why\": \"mit海山1440时deep_rms为0.145，积分到1天约增长5-6倍，TNU2对流速影响小\"}\n],\n \"which_am_i_least_sure_about\": \"H1，因为r26steep在历史中未出现过，且其缺失的VISC4/AKV_BAK默认值对陡地形深层流影响较大，外推最不确定\"}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 2.2,
+      "will_crash": false,
+      "why": "陡海山增强深层流，且VISC2=700比历史2000更低，1天积分后深层RMS可达cm/s量级"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.05,
+      "will_crash": false,
+      "why": "平底深层流很弱，VISC2从2000降到300会使深层RMS略增，但仍远小于海山配置"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 1.7,
+      "will_crash": false,
+      "why": "r26steep地形仍提供强深层流，VISC4=5e9主要增加数值稳定性，对深层RMS略低于H1"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 0.9,
+      "will_crash": false,
+      "why": "陡海山深层流被AKV_BAK=0.05部分抑制，但仍显著高于平底和mit海山"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 0.8,
+      "will_crash": false,
+      "why": "mit海山1440时deep_rms为0.145，积分到1天约增长5-6倍，TNU2对流速影响小"
+     }
+    ],
+    "which_am_i_least_sure_about": "H1，因为r26steep在历史中未出现过，且其缺失的VISC4/AKV_BAK默认值对陡地形深层流影响较大，外推最不确定"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 2.2,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 0.26744113162255484,
+     "nn": 0.1453099548816681,
+     "gp": 0.7323832337370989,
+     "med": 0.01295176416169852
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.05,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.24696526255727366,
+     "nn": 0.11444774270057678,
+     "gp": 0.32681993628249284,
+     "med": 0.01295176416169852
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 1.7,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 0.226237203551957,
+     "nn": 0.1453099548816681,
+     "gp": 0.9109227530241952,
+     "med": 0.01295176416169852
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 0.9,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 0.9722683012360649,
+     "nn": 0.1453099548816681,
+     "gp": 0.9786987396619338,
+     "med": 0.01295176416169852
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 0.8,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 1.1761461338415566,
+     "nn": 0.11444774270057678,
+     "gp": 0.8994904888347518,
+     "med": 0.01295176416169852
+    }
+   ]
+  },
+  {
+   "agent": "B/v4-flash/s0",
+   "condition": "B",
+   "model": "deepseek-v4-flash",
+   "seed": 0,
+   "raw": "{\"predictions\":[\n  {\"name\":\"H1\",\"deep_rms_800\":1.1,\"will_crash\":false,\"why\":\"VISC2=700远高于100，对陡海山深流有强阻尼；按历史VISC2外推并考虑仅1天，深流约1 cm/s量级。\"},\n  {\"name\":\"H2\",\"deep_rms_800\":0.05,\"will_crash\":false,\"why\":\"平底没有海山地形整流，800 m以下深流很弱，VISC2=300不会改变量级。\"},\n  {\"name\":\"H3\",\"deep_rms_800\":2.0,\"will_crash\":false,\"why\":\"VISC4=5e9对小尺度涡旋有强耗散，会在VISC4=1e8约4.9 cm/s基础上进一步降低，且只有1天。\"},\n  {\"name\":\"H4\",\"deep_rms_800\":5.0,\"will_crash\":false,\"why\":\"AKV_BAK=0.05接近已试的0.1高垂直混合情形，1天深流应接近但略低于该试验的5.8 cm/s。\"},\n  {\"name\":\"H5\",\"deep_rms_800\":3.5,\"will_crash\":false,\"why\":\"mit地形3天约6 cm/s，1天约其一半量级；TNU2=200温和扩散再略降但不至于崩溃。\"}\n],\n\"which_am_i_least_sure_about\":\"H3，因为VISC4=5e9远超已观察到的1e8，双谐波耗散的尺度选择效应非线性很强，外推误差最大。\"}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 1.1,
+      "will_crash": false,
+      "why": "VISC2=700远高于100，对陡海山深流有强阻尼；按历史VISC2外推并考虑仅1天，深流约1 cm/s量级。"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.05,
+      "will_crash": false,
+      "why": "平底没有海山地形整流，800 m以下深流很弱，VISC2=300不会改变量级。"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 2.0,
+      "will_crash": false,
+      "why": "VISC4=5e9对小尺度涡旋有强耗散，会在VISC4=1e8约4.9 cm/s基础上进一步降低，且只有1天。"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 5.0,
+      "will_crash": false,
+      "why": "AKV_BAK=0.05接近已试的0.1高垂直混合情形，1天深流应接近但略低于该试验的5.8 cm/s。"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 3.5,
+      "will_crash": false,
+      "why": "mit地形3天约6 cm/s，1天约其一半量级；TNU2=200温和扩散再略降但不至于崩溃。"
+     }
+    ],
+    "which_am_i_least_sure_about": "H3，因为VISC4=5e9远超已观察到的1e8，双谐波耗散的尺度选择效应非线性很强，外推误差最大。"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 1.1,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 0.568471127286536,
+     "nn": 0.46146446466445923,
+     "gp": 1.0,
+     "med": 5.171807765960693
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.05,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.24696526255727366,
+     "nn": 0.10102080553770065,
+     "gp": 1.0,
+     "med": 5.171807765960693
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 2.0,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 0.15565612926624967,
+     "nn": 4.908156394958496,
+     "gp": 1.0,
+     "med": 5.171807765960693
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 5.0,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 0.22754080633937102,
+     "nn": 5.785247325897217,
+     "gp": 1.0,
+     "med": 5.171807765960693
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 3.5,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 0.5351680764832247,
+     "nn": 5.985355377197266,
+     "gp": 1.0,
+     "med": 5.171807765960693
+    }
+   ]
+  },
+  {
+   "agent": "B/v4-pro/s0",
+   "condition": "B",
+   "model": "deepseek-v4-pro",
+   "seed": 0,
+   "raw": "{\"predictions\": [\n  {\"name\": \"H1\", \"deep_rms_800\": 1.45, \"will_crash\": false, \"why\": \"VISC2=700 比历史中的 100 和 500 更强，且 1 天积分比 3 天短，深部 RMS 应明显低于 r26steep 3 天的 4.0 左右。\"},\n  {\"name\": \"H2\", \"deep_rms_800\": 0.11, \"will_crash\": false, \"why\": \"平底深部信号一直很小，3 天只有约 0.15 cm/s，1 天积分会略低。\"},\n  {\"name\": \"H3\", \"deep_rms_800\": 1.38, \"will_crash\": false, \"why\": \"VISC4=5e9 是历史中 1e9 的 5 倍，强双谐波耗散会大幅削弱深部流动，且 1 天积分更短。\"},\n  {\"name\": \"H4\", \"deep_rms_800\": 2.55, \"will_crash\": false, \"why\": \"AKV_BAK=0.05 略微增强向下的动量混合，深部 RMS 可能略高于默认背景黏性情形，但 1 天积分仍低于 3 天。\"},\n  {\"name\": \"H5\", \"deep_rms_800\": 2.40, \"will_crash\": false, \"why\": \"TNU2=200 会平滑密度梯度并削弱涡动能量，同时 1 天积分比历史 3 天短。\"}\n],\n\"which_am_i_least_sure_about\": \"H3，因为 VISC4 只有 0 和 1e9 两个历史点，外推到 5e9 和 1 天积分的时间因子都很不确定。\"}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 1.45,
+      "will_crash": false,
+      "why": "VISC2=700 比历史中的 100 和 500 更强，且 1 天积分比 3 天短，深部 RMS 应明显低于 r26steep 3 天的 4.0 左右。"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.11,
+      "will_crash": false,
+      "why": "平底深部信号一直很小，3 天只有约 0.15 cm/s，1 天积分会略低。"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 1.38,
+      "will_crash": false,
+      "why": "VISC4=5e9 是历史中 1e9 的 5 倍，强双谐波耗散会大幅削弱深部流动，且 1 天积分更短。"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 2.55,
+      "will_crash": false,
+      "why": "AKV_BAK=0.05 略微增强向下的动量混合，深部 RMS 可能略高于默认背景黏性情形，但 1 天积分仍低于 3 天。"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 2.4,
+      "will_crash": false,
+      "why": "TNU2=200 会平滑密度梯度并削弱涡动能量，同时 1 天积分比历史 3 天短。"
+     }
+    ],
+    "which_am_i_least_sure_about": "H3，因为 VISC4 只有 0 和 1e9 两个历史点，外推到 5e9 和 1 天积分的时间因子都很不确定。"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 1.45,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 0.44849581020978624,
+     "nn": 4.046626091003418,
+     "gp": 1.0,
+     "med": 4.205587148666382
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.11,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.5893879433794799,
+     "nn": 0.15004348754882812,
+     "gp": 1.0,
+     "med": 4.205587148666382
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 1.38,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 0.3168070385289944,
+     "nn": 3.239027500152588,
+     "gp": 1.0,
+     "med": 4.205587148666382
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 2.55,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 0.5199706302414346,
+     "nn": 4.046626091003418,
+     "gp": 1.0,
+     "med": 4.205587148666382
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 2.4,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 0.6990248791218944,
+     "nn": 4.378848552703857,
+     "gp": 1.0,
+     "med": 4.205587148666382
+    }
+   ]
+  },
+  {
+   "agent": "B/v4-pro/s1",
+   "condition": "B",
+   "model": "deepseek-v4-pro",
+   "seed": 1,
+   "raw": "{\"predictions\": [\n  {\"name\": \"H1\", \"deep_rms_800\": 2.7, \"will_crash\": false, \"why\": \"Interpolated between VISC2=500 and 2000 at 3 days, then reduced for 1-day spin-up.\"},\n  {\"name\": \"H2\", \"deep_rms_800\": 0.06, \"will_crash\": false, \"why\": \"Flat bathymetry has minimal deep flow; higher VISC2 and 1-day spin-up reduce it further.\"},\n  {\"name\": \"H3\", \"deep_rms_800\": 1.9, \"will_crash\": false, \"why\": \"VISC4=5e9 is on the strong-damping side and 1-day spin-up lowers the 3-day estimate.\"},\n  {\"name\": \"H4\", \"deep_rms_800\": 4.7, \"will_crash\": false, \"why\": \"Higher AKV_BAK slightly increases deep momentum transfer compared with AKV=0.01, scaled to 1-day.\"},\n  {\"name\": \"H5\", \"deep_rms_800\": 3.5, \"will_crash\": false, \"why\": \"TNU2=200 is stable but stronger tracer diffusion probably weakens deep baroclinic flow relative to TNU2=50, scaled to 1-day.\"}\n],\n\"which_am_i_least_sure_about\": \"H5: no non-crash TNU2 variation was tested, so its effect on deep_rms is poorly constrained.\"}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 2.7,
+      "will_crash": false,
+      "why": "Interpolated between VISC2=500 and 2000 at 3 days, then reduced for 1-day spin-up."
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.06,
+      "will_crash": false,
+      "why": "Flat bathymetry has minimal deep flow; higher VISC2 and 1-day spin-up reduce it further."
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 1.9,
+      "will_crash": false,
+      "why": "VISC4=5e9 is on the strong-damping side and 1-day spin-up lowers the 3-day estimate."
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 4.7,
+      "will_crash": false,
+      "why": "Higher AKV_BAK slightly increases deep momentum transfer compared with AKV=0.01, scaled to 1-day."
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 3.5,
+      "will_crash": false,
+      "why": "TNU2=200 is stable but stronger tracer diffusion probably weakens deep baroclinic flow relative to TNU2=50, scaled to 1-day."
+     }
+    ],
+    "which_am_i_least_sure_about": "H5: no non-crash TNU2 variation was tested, so its effect on deep_rms is poorly constrained."
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 2.7,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 0.1785000482857738,
+     "nn": 4.858270168304443,
+     "gp": 3.864519103100895,
+     "med": 6.705984592437744
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.06,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.32614650860489847,
+     "nn": 0.1507928967475891,
+     "gp": 0.2832157976383658,
+     "med": 6.705984592437744
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 1.9,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 0.17793252397740195,
+     "nn": 2.264615058898926,
+     "gp": 3.1927732882663626,
+     "med": 6.705984592437744
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 4.7,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 0.25441295273967235,
+     "nn": 7.4646525382995605,
+     "gp": 4.436517433438157,
+     "med": 6.705984592437744
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 3.5,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 0.5351680764832247,
+     "nn": 7.38057804107666,
+     "gp": 1.0,
+     "med": 6.705984592437744
+    }
+   ]
+  },
+  {
+   "agent": "B/v4-pro/s10",
+   "condition": "B",
+   "model": "deepseek-v4-pro",
+   "seed": 10,
+   "raw": "{\"predictions\": [\n  {\"name\": \"H1\", \"deep_rms_800\": 0.8, \"will_crash\": false, \"why\": \"VISC2=700 比基线黏性大14倍，且仅积分1天，深部流速应明显低于3天基线的4.17 cm/s。\"},\n  {\"name\": \"H2\", \"deep_rms_800\": 0.04, \"will_crash\": false, \"why\": \"平底地形深部整流很弱，1天积分后深部 RMS 仍接近基线的小值。\"},\n  {\"name\": \"H3\", \"deep_rms_800\": 1.3, \"will_crash\": false, \"why\": \"VISC4 主要抑制小尺度，3天基线约4.17，1天按约三分之一并略降。\"},\n  {\"name\": \"H4\", \"deep_rms_800\": 0.5, \"will_crash\": false, \"why\": \"AKV_BAK=0.05 远高于历史测试值，强垂向黏性削弱斜压驱动的深部流速。\"},\n  {\"name\": \"H5\", \"deep_rms_800\": 1.0, \"will_crash\": false, \"why\": \"TNU2=200 增加密度扩散，削弱深部斜压梯度；1天积分也小于3天 MIT 基线约4.91 cm/s。\"}\n],\n\"which_am_i_least_sure_about\": \"H4，因为 AKV_BAK=0.05 比历史测试的 1e-6–1e-5 大三个数量级，深部响应可能从约0.2到1 cm/s不等，历史数据不足以稳健外推。\"}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 0.8,
+      "will_crash": false,
+      "why": "VISC2=700 比基线黏性大14倍，且仅积分1天，深部流速应明显低于3天基线的4.17 cm/s。"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.04,
+      "will_crash": false,
+      "why": "平底地形深部整流很弱，1天积分后深部 RMS 仍接近基线的小值。"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 1.3,
+      "will_crash": false,
+      "why": "VISC4 主要抑制小尺度，3天基线约4.17，1天按约三分之一并略降。"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 0.5,
+      "will_crash": false,
+      "why": "AKV_BAK=0.05 远高于历史测试值，强垂向黏性削弱斜压驱动的深部流速。"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 1.0,
+      "will_crash": false,
+      "why": "TNU2=200 增加密度扩散，削弱深部斜压梯度；1天积分也小于3天 MIT 基线约4.91 cm/s。"
+     }
+    ],
+    "which_am_i_least_sure_about": "H4，因为 AKV_BAK=0.05 比历史测试的 1e-6–1e-5 大三个数量级，深部响应可能从约0.2到1 cm/s不等，历史数据不足以稳健外推。"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 0.8,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 0.7067738254528175,
+     "nn": 4.563462734222412,
+     "gp": 1.2561670044446327,
+     "med": 5.077962875366211
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.04,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.1500552495492172,
+     "nn": 0.15247030556201935,
+     "gp": 0.8577755322833553,
+     "med": 5.077962875366211
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 1.3,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 0.34274277262339403,
+     "nn": 4.1734442710876465,
+     "gp": 2.1077668468518835,
+     "med": 5.077962875366211
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 0.5,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 1.227540806339371,
+     "nn": 5.724547386169434,
+     "gp": 1.0001370818299165,
+     "med": 5.077962875366211
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 1.0,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 1.0792361208335004,
+     "nn": 9.22687816619873,
+     "gp": 1.1282957512147433,
+     "med": 5.077962875366211
+    }
+   ]
+  },
+  {
+   "agent": "C/v4-flash/s0",
+   "condition": "C",
+   "model": "deepseek-v4-flash",
+   "seed": 0,
+   "raw": "{\"predictions\": [\n  {\"name\": \"H1\", \"deep_rms_800\": 0.70, \"will_crash\": false, \"why\": \"按 VISC2=100 和 1000 的 3 天 deep_rms 对数插值约 1.1，再按 1 天积分打折到约 0.7。\"},\n  {\"name\": \"H2\", \"deep_rms_800\": 0.05, \"will_crash\": false, \"why\": \"flat 底深流速本就很低，VISC2=300 又比 step5 更强耗散，故 1 天深流速很小。\"},\n  {\"name\": \"H3\", \"deep_rms_800\": 2.0, \"will_crash\": false, \"why\": \"大 VISC4 主要抑制格点/小尺度，不会致爆；TNU2=0 时深流速应低于 step0 但同量级。\"},\n  {\"name\": \"H4\", \"deep_rms_800\": 2.2, \"will_crash\": false, \"why\": \"AKV_BAK=0.05 增强垂向混合，但 1 天内影响主要在上层与底边界，800 m 以下略低于基准。\"},\n  {\"name\": \"H5\", \"deep_rms_800\": 2.7, \"will_crash\": false, \"why\": \"mit 海山但 TNU2=200 比 1000 弱，且只积分 1 天，预计不会崩溃，深流速接近 r26steep 的量级。\"}\n ],\n \"which_am_i_least_sure_about\": \"H5，因为 mit 地形与 TNU2 的崩溃阈值没有近距离观测，TNU2=200 是否会在 1 天内稳定不确定性最大。\"\n}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 0.7,
+      "will_crash": false,
+      "why": "按 VISC2=100 和 1000 的 3 天 deep_rms 对数插值约 1.1，再按 1 天积分打折到约 0.7。"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.05,
+      "will_crash": false,
+      "why": "flat 底深流速本就很低，VISC2=300 又比 step5 更强耗散，故 1 天深流速很小。"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 2.0,
+      "will_crash": false,
+      "why": "大 VISC4 主要抑制格点/小尺度，不会致爆；TNU2=0 时深流速应低于 step0 但同量级。"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 2.2,
+      "will_crash": false,
+      "why": "AKV_BAK=0.05 增强垂向混合，但 1 天内影响主要在上层与底边界，800 m 以下略低于基准。"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 2.7,
+      "will_crash": false,
+      "why": "mit 海山但 TNU2=200 比 1000 弱，且只积分 1 天，预计不会崩溃，深流速接近 r26steep 的量级。"
+     }
+    ],
+    "which_am_i_least_sure_about": "H5，因为 mit 地形与 TNU2 的崩溃阈值没有近距离观测，TNU2=200 是否会在 1 天内稳定不确定性最大。"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 0.7,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 0.7647657724305043,
+     "nn": 5.077214241027832,
+     "gp": 1.0,
+     "med": 2.9359064400196075
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.05,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.24696526255727366,
+     "nn": 0.17131434381008148,
+     "gp": 1.0,
+     "med": 2.9359064400196075
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 2.0,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 0.15565612926624967,
+     "nn": 5.077214241027832,
+     "gp": 1.0,
+     "med": 2.9359064400196075
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 2.2,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 0.5840881298531835,
+     "nn": 5.077214241027832,
+     "gp": 1.0,
+     "med": 2.9359064400196075
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 2.7,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 0.647872356674513,
+     "nn": 0.17131434381008148,
+     "gp": 1.0,
+     "med": 2.9359064400196075
+    }
+   ]
+  },
+  {
+   "agent": "C/v4-pro/s0",
+   "condition": "C",
+   "model": "deepseek-v4-pro",
+   "seed": 0,
+   "raw": "{\n  \"predictions\": [\n    {\n      \"name\": \"H1\",\n      \"deep_rms_800\": 1.1,\n      \"will_crash\": false,\n      \"why\": \"高VISC2强耗散且只积分1天，深水流速比3天基准明显降低\"\n    },\n    {\n      \"name\": \"H2\",\n      \"deep_rms_800\": 0.07,\n      \"will_crash\": false,\n      \"why\": \"flat底800m以深在3天时仅约0.15，1天且VISC2更高会更弱\"\n    },\n    {\n      \"name\": \"H3\",\n      \"deep_rms_800\": 1.2,\n      \"will_crash\": false,\n      \"why\": \"高VISC4进一步耗散深水流动，1天积分未完全发展\"\n    },\n    {\n      \"name\": \"H4\",\n      \"deep_rms_800\": 1.5,\n      \"will_crash\": false,\n      \"why\": \"AKV_BAK增大对深水均方根影响较小，接近默认配置的1天值\"\n    },\n    {\n      \"name\": \"H5\",\n      \"deep_rms_800\": 1.2,\n      \"will_crash\": true,\n      \"why\": \"mit海山加TNU2=200高扩散，历史显示海山地形上高TNU2易崩溃\"\n    }\n  ],\n  \"which_am_i_least_sure_about\": \"H5：未见过mit地形，且TNU2=200很高，崩溃与否和崩溃前深水RMS都很难估计\"\n}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 1.1,
+      "will_crash": false,
+      "why": "高VISC2强耗散且只积分1天，深水流速比3天基准明显降低"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.07,
+      "will_crash": false,
+      "why": "flat底800m以深在3天时仅约0.15，1天且VISC2更高会更弱"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 1.2,
+      "will_crash": false,
+      "why": "高VISC4进一步耗散深水流动，1天积分未完全发展"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 1.5,
+      "will_crash": false,
+      "why": "AKV_BAK增大对深水均方根影响较小，接近默认配置的1天值"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 1.2,
+      "will_crash": true,
+      "why": "mit海山加TNU2=200高扩散，历史显示海山地形上高TNU2易崩溃"
+     }
+    ],
+    "which_am_i_least_sure_about": "H5：未见过mit地形，且TNU2=200很高，崩溃与否和崩溃前深水RMS都很难估计"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 1.1,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 0.568471127286536,
+     "nn": 4.046626091003418,
+     "gp": 1.0715286242319049,
+     "med": 3.4278404712677
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.07,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.3930932982355117,
+     "nn": 0.15181124210357666,
+     "gp": 0.13968422185297144,
+     "med": 3.4278404712677
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 1.2,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 0.37750487888260603,
+     "nn": 2.9275624752044678,
+     "gp": 1.7081319370760089,
+     "med": 3.4278404712677
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 1.5,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 0.7504195516197085,
+     "nn": 4.047811031341553,
+     "gp": 1.7371381839527402,
+     "med": 3.4278404712677
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 1.2,
+     "pred_crash": true,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 1.0000548747858755,
+     "nn": 0.15181124210357666,
+     "gp": 0.41892405234075375,
+     "med": 3.4278404712677
+    }
+   ]
+  },
+  {
+   "agent": "C/v4-pro/s1",
+   "condition": "C",
+   "model": "deepseek-v4-pro",
+   "seed": 1,
+   "raw": "{\"predictions\": [\n  {\"name\": \"H1\", \"deep_rms_800\": 4.0, \"will_crash\": false, \"why\": \"VISC2 700 远高于基准的 10，预计深海流速从 11.9 大幅下降但不会为零。\"},\n  {\"name\": \"H2\", \"deep_rms_800\": 0.07, \"will_crash\": false, \"why\": \"flat 地形在历史中 deep_rms 仅 0.145，VISC2 300 和 1 天积分将其压得更低。\"},\n  {\"name\": \"H3\", \"deep_rms_800\": 2.5, \"will_crash\": false, \"why\": \"VISC4=5e9 比历史 1e9 的抑制更强，深海 RMS 应显著低于基准。\"},\n  {\"name\": \"H4\", \"deep_rms_800\": 6.0, \"will_crash\": false, \"why\": \"AKV_BAK 增至 0.05 会减弱内波但历史上 0.001 仅略降，故给中等下降。\"},\n  {\"name\": \"H5\", \"deep_rms_800\": 3.8, \"will_crash\": false, \"why\": \"mit 与 r26steep 接近，但 TNU2=200 强扩散会明显削弱斜压深流。\"}\n],\n\"which_am_i_least_sure_about\": \"H4，因为 AKV_BAK 对 deep_rms 的影响在已试范围内非单调：0.001 时 u_max 上升但 deep 略降，0.05 可能强阻尼也可能向下传递动量，方向不确定。\"}",
+   "parsed": {
+    "predictions": [
+     {
+      "name": "H1",
+      "deep_rms_800": 4.0,
+      "will_crash": false,
+      "why": "VISC2 700 远高于基准的 10，预计深海流速从 11.9 大幅下降但不会为零。"
+     },
+     {
+      "name": "H2",
+      "deep_rms_800": 0.07,
+      "will_crash": false,
+      "why": "flat 地形在历史中 deep_rms 仅 0.145，VISC2 300 和 1 天积分将其压得更低。"
+     },
+     {
+      "name": "H3",
+      "deep_rms_800": 2.5,
+      "will_crash": false,
+      "why": "VISC4=5e9 比历史 1e9 的抑制更强，深海 RMS 应显著低于基准。"
+     },
+     {
+      "name": "H4",
+      "deep_rms_800": 6.0,
+      "will_crash": false,
+      "why": "AKV_BAK 增至 0.05 会减弱内波但历史上 0.001 仅略降，故给中等下降。"
+     },
+     {
+      "name": "H5",
+      "deep_rms_800": 3.8,
+      "will_crash": false,
+      "why": "mit 与 r26steep 接近，但 TNU2=200 强扩散会明显削弱斜压深流。"
+     }
+    ],
+    "which_am_i_least_sure_about": "H4，因为 AKV_BAK 对 deep_rms 的影响在已试范围内非单调：0.001 时 u_max 上升但 deep 略降，0.05 可能强阻尼也可能向下传递动量，方向不确定。"
+   },
+   "items": [
+    {
+     "name": "H1",
+     "kind": "内插",
+     "pred": 4.0,
+     "pred_crash": false,
+     "actual": 4.072525501251221,
+     "actual_crash": false,
+     "err": 0.007803821116798734,
+     "nn": 3.7506182193756104,
+     "gp": 2.273900473082567,
+     "med": 3.6982052326202393
+    },
+    {
+     "name": "H2",
+     "kind": "内插+换地形",
+     "pred": 0.07,
+     "pred_crash": false,
+     "actual": 0.02831422910094261,
+     "actual_crash": false,
+     "err": 0.3930932982355117,
+     "nn": 0.14545390009880066,
+     "gp": 0.49345601045798043,
+     "med": 3.6982052326202393
+    },
+    {
+     "name": "H3",
+     "kind": "对数内插",
+     "pred": 2.5,
+     "pred_crash": false,
+     "actual": 2.8621087074279785,
+     "actual_crash": false,
+     "err": 0.058746116258193266,
+     "nn": 2.6184275150299072,
+     "gp": 2.271916156252835,
+     "med": 3.6982052326202393
+    },
+    {
+     "name": "H4",
+     "kind": "内插",
+     "pred": 6.0,
+     "pred_crash": false,
+     "actual": 8.443272590637207,
+     "actual_crash": false,
+     "err": 0.14835956029174616,
+     "nn": 5.4615373611450195,
+     "gp": 1.7350129000321648,
+     "med": 3.6982052326202393
+    },
+    {
+     "name": "H5",
+     "kind": "跨地形外推",
+     "pred": 3.8,
+     "pred_crash": false,
+     "actual": 12.001516342163086,
+     "actual_crash": false,
+     "err": 0.4994525242166902,
+     "nn": 3.645792245864868,
+     "gp": 1.2931674370187054,
+     "med": 3.6982052326202393
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,739 @@
+{
+ "planner": "llm",
+ "model": "deepseek-v4-pro",
+ "condition": "A",
+ "seed": 11,
+ "n_steps": 10,
+ "wall_total_s": 2360.5,
+ "log": [
+  {
+   "action": {
+    "bathy": "flat",
+    "VISC2": 1000.0,
+    "VISC4": 0.0,
+    "AKV_BAK": 1e-05,
+    "TNU2": 10.0,
+    "ntimes": 25920,
+    "seed": 11
+   },
+   "obs": {
+    "u_max": 12.724367141723633,
+    "u_rms": 5.7553606033325195,
+    "deep_rms_800": 0.11444774270057678,
+    "surf_max": 12.724367141723633,
+    "temp_min": 3.9999992847442627,
+    "temp_max": 25.951799392700195,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   }
+  },
+  {
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 0.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 25920,
+    "seed": 11
+   },
+   "obs": {
+    "u_max": 11.554898262023926,
+    "u_rms": 5.190133571624756,
+    "deep_rms_800": 0.08365748077630997,
+    "surf_max": 11.362643241882324,
+    "temp_min": 3.9999992847442627,
+    "temp_max": 25.95561981201172,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   }
+  },
+  {
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 100000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 25920,
+    "seed": 11
+   },
+   "obs": {
+    "u_max": 11.555359840393066,
+    "u_rms": 5.189981460571289,
+    "deep_rms_800": 0.08365432918071747,
+    "surf_max": 11.36310863494873,
+    "temp_min": 3.9999992847442627,
+    "temp_max": 25.955646514892578,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   }
+  },
+  {
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 100000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 8640,
+    "seed": 11
+   },
+   "obs": {
+    "u_max": 5.805261611938477,
+    "u_rms": 2.371497392654419,
+    "deep_rms_800": 0.02286245860159397,
+    "surf_max": 4.400589466094971,
+    "temp_min": 3.999999761581421,
+    "temp_max": 25.945873260498047,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   }
+  },
+  {
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 100000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "obs": {
+    "u_max": 6.130340576171875,
+    "u_rms": 1.5656143426895142,
+    "deep_rms_800": 0.0030049337074160576,
+    "surf_max": 6.130340576171875,
+    "temp_min": 4.0,
+    "temp_max": 25.921863555908203,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   }
+  },
+  {
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 10000000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "obs": {
+    "u_max": 6.16974401473999,
+    "u_rms": 1.5601881742477417,
+    "deep_rms_800": 0.003003560472279787,
+    "surf_max": 6.16974401473999,
+    "temp_min": 4.0,
+    "temp_max": 25.921768188476562,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   }
+  },
+  {
+   "action": {
+    "bathy": "mit",
+    "VISC2": 2000.0,
+    "VISC4": 10000000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "obs": {
+    "u_max": 8.044273376464844,
+    "u_rms": 1.6063355207443237,
+    "deep_rms_800": 0.1453099548816681,
+    "surf_max": 8.044273376464844,
+    "temp_min": 3.3641397953033447,
+    "temp_max": 27.037376403808594,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   }
+  },
+  {
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 10000000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 1000.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "obs": {
+    "u_max": 6.169694900512695,
+    "u_rms": 1.5601600408554077,
+    "deep_rms_800": 0.0030055446550250053,
+    "surf_max": 6.169694900512695,
+    "temp_min": 4.0,
+    "temp_max": 25.921710968017578,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   }
+  },
+  {
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 10000000000.0,
+    "AKV_BAK": 1.0,
+    "TNU2": 0.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "obs": {
+    "u_max": 1.1085014343261719,
+    "u_rms": 0.4509274959564209,
+    "deep_rms_800": 0.003039026167243719,
+    "surf_max": 1.1085014343261719,
+    "temp_min": 4.0,
+    "temp_max": 25.921232223510742,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   }
+  },
+  {
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 10000000000.0,
+    "AKV_BAK": 1.0,
+    "TNU2": 1000.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "obs": {
+    "u_max": 1.108324408531189,
+    "u_rms": 0.4508841633796692,
+    "deep_rms_800": 0.003041069721803069,
+    "surf_max": 1.108324408531189,
+    "temp_min": 4.0,
+    "temp_max": 25.921226501464844,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   }
+  }
+ ],
+ "trace": [
+  {
+   "step": 0,
+   "prompt": "可调的配置（动作空间）：\n  bathy    : \"r26steep\"（陡海山）/ \"mit\"（另一种海山）/ \"flat\"（平底）\n  VISC2    : 0 – 2000      横向谐波黏性 m²/s（典型海洋值 1–100）\n  VISC4    : 0 – 1e10      横向双谐波黏性 m⁴/s\n  AKV_BAK  : 1e-6 – 1.0    背景垂向黏性 m²/s\n  TNU2     : 0 – 1000      示踪物水平扩散 m²/s\n  ntimes   : 1440 – 25920  积分步数（DT=10 s，故 8640 = 1 天）\n\n固定不可改：{\n  \"solver\": \"ROMS 3.9 (PRSGRD31 + RHO_SURF, SEAMOUNT_WIND)\",\n  \"grid_hv\": \"48×48×13\",\n  \"forcing\": \"纬向风应力 τ=0.1 N/m²，前 ~12 h tanh 爬升\",\n  \"duration\": \"3 天（NTIMES=25920 × DT=10 s）\",\n  \"stratification\": \"同一 T(z) 剖面，T∈[4.0, 25.9] °C，初始 u≡0\",\n  \"conservation\": \"合法修正须落在反对称密度雅可比内（越界判非法）\"\n}\n\n每次实验后你能看到的读数（单位 cm/s，除非另注）：\n  u_max            全域最大流速\n  u_rms            全域均方根流速\n  deep_rms_800     800 m 以深的均方根流速\n  surf_max         表层最大流速\n  temp_min/max     温度极值（°C）\n  valid            是否完赛（False 时其余读数不可比较）\n  crashed          是否数值爆炸\n  completion_ratio 完成比例\n\n回复格式（纯 JSON）：\n{\"action\": {\"bathy\": \"...\", \"VISC2\": ..., \"ntimes\": 8640},\n \"why\": \"一句话说明为什么试这个\",\n \"note\": \"任何你想补充的观察；没有就写空字符串\"}\n\n已完成 0/10 次实验。\n\n历史：\n（还没有任何实验）\n\n请给出第 1 次实验的配置。",
+   "raw": "{\"action\": {\"bathy\": \"flat\", \"VISC2\": 1000, \"VISC4\": 0, \"AKV_BAK\": 1e-5, \"TNU2\": 10, \"ntimes\": 25920},\n \"why\": \"平底并加强水平黏性，尽量耗散可能传至 800 m 以深的流动，先测试低深层流速的可行配置。\",\n \"note\": \"\"}",
+   "parsed": {
+    "action": {
+     "bathy": "flat",
+     "VISC2": 1000,
+     "VISC4": 0,
+     "AKV_BAK": 1e-05,
+     "TNU2": 10,
+     "ntimes": 25920
+    },
+    "why": "平底并加强水平黏性，尽量耗散可能传至 800 m 以深的流动，先测试低深层流速的可行配置。",
+    "note": ""
+   },
+   "action": {
+    "bathy": "flat",
+    "VISC2": 1000.0,
+    "VISC4": 0.0,
+    "AKV_BAK": 1e-05,
+    "TNU2": 10.0,
+    "ntimes": 25920,
+    "seed": 11
+   },
+   "clamp_notes": [],
+   "obs": {
+    "u_max": 12.724367141723633,
+    "u_rms": 5.7553606033325195,
+    "deep_rms_800": 0.11444774270057678,
+    "surf_max": 12.724367141723633,
+    "temp_min": 3.9999992847442627,
+    "temp_max": 25.951799392700195,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_b7b8b6e72de2",
+   "wall_s": 458.0
+  },
+  {
+   "step": 1,
+   "prompt": "可调的配置（动作空间）：\n  bathy    : \"r26steep\"（陡海山）/ \"mit\"（另一种海山）/ \"flat\"（平底）\n  VISC2    : 0 – 2000      横向谐波黏性 m²/s（典型海洋值 1–100）\n  VISC4    : 0 – 1e10      横向双谐波黏性 m⁴/s\n  AKV_BAK  : 1e-6 – 1.0    背景垂向黏性 m²/s\n  TNU2     : 0 – 1000      示踪物水平扩散 m²/s\n  ntimes   : 1440 – 25920  积分步数（DT=10 s，故 8640 = 1 天）\n\n固定不可改：{\n  \"solver\": \"ROMS 3.9 (PRSGRD31 + RHO_SURF, SEAMOUNT_WIND)\",\n  \"grid_hv\": \"48×48×13\",\n  \"forcing\": \"纬向风应力 τ=0.1 N/m²，前 ~12 h tanh 爬升\",\n  \"duration\": \"3 天（NTIMES=25920 × DT=10 s）\",\n  \"stratification\": \"同一 T(z) 剖面，T∈[4.0, 25.9] °C，初始 u≡0\",\n  \"conservation\": \"合法修正须落在反对称密度雅可比内（越界判非法）\"\n}\n\n每次实验后你能看到的读数（单位 cm/s，除非另注）：\n  u_max            全域最大流速\n  u_rms            全域均方根流速\n  deep_rms_800     800 m 以深的均方根流速\n  surf_max         表层最大流速\n  temp_min/max     温度极值（°C）\n  valid            是否完赛（False 时其余读数不可比较）\n  crashed          是否数值爆炸\n  completion_ratio 完成比例\n\n回复格式（纯 JSON）：\n{\"action\": {\"bathy\": \"...\", \"VISC2\": ..., \"ntimes\": 8640},\n \"why\": \"一句话说明为什么试这个\",\n \"note\": \"任何你想补充的观察；没有就写空字符串\"}\n\n已完成 1/10 次实验。\n\n历史：\n步 | 配置 | valid | u_max | deep_rms_800 | surf_max | crashed\n0 | {\"bathy\": \"flat\", \"VISC2\": 1000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-05, \"TNU2\": 10.0, \"ntimes\": 25920} | True | 12.724 | 0.114 | 12.724 | False\n\n请给出第 2 次实验的配置。",
+   "raw": "{\"action\": {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920},\n \"why\": \"在上一组 flat 配置已给出较低 deep_rms_800 的基础上，继续用平底、加大水平黏性、把垂向背景黏性降到下限并关闭示踪扩散，试图进一步抑制深层动量输入。\",\n \"note\": \"\"}",
+   "parsed": {
+    "action": {
+     "bathy": "flat",
+     "VISC2": 2000.0,
+     "VISC4": 0.0,
+     "AKV_BAK": 1e-06,
+     "TNU2": 0.0,
+     "ntimes": 25920
+    },
+    "why": "在上一组 flat 配置已给出较低 deep_rms_800 的基础上，继续用平底、加大水平黏性、把垂向背景黏性降到下限并关闭示踪扩散，试图进一步抑制深层动量输入。",
+    "note": ""
+   },
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 0.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 25920,
+    "seed": 11
+   },
+   "clamp_notes": [],
+   "obs": {
+    "u_max": 11.554898262023926,
+    "u_rms": 5.190133571624756,
+    "deep_rms_800": 0.08365748077630997,
+    "surf_max": 11.362643241882324,
+    "temp_min": 3.9999992847442627,
+    "temp_max": 25.95561981201172,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_b03027be3672",
+   "wall_s": 441.0
+  },
+  {
+   "step": 2,
+   "prompt": "可调的配置（动作空间）：\n  bathy    : \"r26steep\"（陡海山）/ \"mit\"（另一种海山）/ \"flat\"（平底）\n  VISC2    : 0 – 2000      横向谐波黏性 m²/s（典型海洋值 1–100）\n  VISC4    : 0 – 1e10      横向双谐波黏性 m⁴/s\n  AKV_BAK  : 1e-6 – 1.0    背景垂向黏性 m²/s\n  TNU2     : 0 – 1000      示踪物水平扩散 m²/s\n  ntimes   : 1440 – 25920  积分步数（DT=10 s，故 8640 = 1 天）\n\n固定不可改：{\n  \"solver\": \"ROMS 3.9 (PRSGRD31 + RHO_SURF, SEAMOUNT_WIND)\",\n  \"grid_hv\": \"48×48×13\",\n  \"forcing\": \"纬向风应力 τ=0.1 N/m²，前 ~12 h tanh 爬升\",\n  \"duration\": \"3 天（NTIMES=25920 × DT=10 s）\",\n  \"stratification\": \"同一 T(z) 剖面，T∈[4.0, 25.9] °C，初始 u≡0\",\n  \"conservation\": \"合法修正须落在反对称密度雅可比内（越界判非法）\"\n}\n\n每次实验后你能看到的读数（单位 cm/s，除非另注）：\n  u_max            全域最大流速\n  u_rms            全域均方根流速\n  deep_rms_800     800 m 以深的均方根流速\n  surf_max         表层最大流速\n  temp_min/max     温度极值（°C）\n  valid            是否完赛（False 时其余读数不可比较）\n  crashed          是否数值爆炸\n  completion_ratio 完成比例\n\n回复格式（纯 JSON）：\n{\"action\": {\"bathy\": \"...\", \"VISC2\": ..., \"ntimes\": 8640},\n \"why\": \"一句话说明为什么试这个\",\n \"note\": \"任何你想补充的观察；没有就写空字符串\"}\n\n已完成 2/10 次实验。\n\n历史：\n步 | 配置 | valid | u_max | deep_rms_800 | surf_max | crashed\n0 | {\"bathy\": \"flat\", \"VISC2\": 1000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-05, \"TNU2\": 10.0, \"ntimes\": 25920} | True | 12.724 | 0.114 | 12.724 | False\n1 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n\n请给出第 3 次实验的配置。",
+   "raw": "{\"action\": {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 1e8, \"AKV_BAK\": 1e-6, \"TNU2\": 0.0, \"ntimes\": 25920}, \"why\": \"保持平底和已有的最高VISC2、最低AKV_BAK与TNU2，加入中高双谐波黏性VISC4以进一步耗散深海小尺度运动，尝试继续压低deep_rms_800。\", \"note\": \"\"}",
+   "parsed": {
+    "action": {
+     "bathy": "flat",
+     "VISC2": 2000.0,
+     "VISC4": 100000000.0,
+     "AKV_BAK": 1e-06,
+     "TNU2": 0.0,
+     "ntimes": 25920
+    },
+    "why": "保持平底和已有的最高VISC2、最低AKV_BAK与TNU2，加入中高双谐波黏性VISC4以进一步耗散深海小尺度运动，尝试继续压低deep_rms_800。",
+    "note": ""
+   },
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 100000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 25920,
+    "seed": 11
+   },
+   "clamp_notes": [],
+   "obs": {
+    "u_max": 11.555359840393066,
+    "u_rms": 5.189981460571289,
+    "deep_rms_800": 0.08365432918071747,
+    "surf_max": 11.36310863494873,
+    "temp_min": 3.9999992847442627,
+    "temp_max": 25.955646514892578,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_4ec5ddbfce45",
+   "wall_s": 452.0
+  },
+  {
+   "step": 3,
+   "prompt": "可调的配置（动作空间）：\n  bathy    : \"r26steep\"（陡海山）/ \"mit\"（另一种海山）/ \"flat\"（平底）\n  VISC2    : 0 – 2000      横向谐波黏性 m²/s（典型海洋值 1–100）\n  VISC4    : 0 – 1e10      横向双谐波黏性 m⁴/s\n  AKV_BAK  : 1e-6 – 1.0    背景垂向黏性 m²/s\n  TNU2     : 0 – 1000      示踪物水平扩散 m²/s\n  ntimes   : 1440 – 25920  积分步数（DT=10 s，故 8640 = 1 天）\n\n固定不可改：{\n  \"solver\": \"ROMS 3.9 (PRSGRD31 + RHO_SURF, SEAMOUNT_WIND)\",\n  \"grid_hv\": \"48×48×13\",\n  \"forcing\": \"纬向风应力 τ=0.1 N/m²，前 ~12 h tanh 爬升\",\n  \"duration\": \"3 天（NTIMES=25920 × DT=10 s）\",\n  \"stratification\": \"同一 T(z) 剖面，T∈[4.0, 25.9] °C，初始 u≡0\",\n  \"conservation\": \"合法修正须落在反对称密度雅可比内（越界判非法）\"\n}\n\n每次实验后你能看到的读数（单位 cm/s，除非另注）：\n  u_max            全域最大流速\n  u_rms            全域均方根流速\n  deep_rms_800     800 m 以深的均方根流速\n  surf_max         表层最大流速\n  temp_min/max     温度极值（°C）\n  valid            是否完赛（False 时其余读数不可比较）\n  crashed          是否数值爆炸\n  completion_ratio 完成比例\n\n回复格式（纯 JSON）：\n{\"action\": {\"bathy\": \"...\", \"VISC2\": ..., \"ntimes\": 8640},\n \"why\": \"一句话说明为什么试这个\",\n \"note\": \"任何你想补充的观察；没有就写空字符串\"}\n\n已完成 3/10 次实验。\n\n历史：\n步 | 配置 | valid | u_max | deep_rms_800 | surf_max | crashed\n0 | {\"bathy\": \"flat\", \"VISC2\": 1000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-05, \"TNU2\": 10.0, \"ntimes\": 25920} | True | 12.724 | 0.114 | 12.724 | False\n1 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n2 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n\n请给出第 4 次实验的配置。",
+   "raw": "{\"action\": {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-6, \"TNU2\": 0.0, \"ntimes\": 8640},\n \"why\": \"保持当前最佳摩擦配置不变，缩短积分到1天，检验深层流动尚未充分发展时 deep_rms_800 是否显著降低。\",\n \"note\": \"\"}",
+   "parsed": {
+    "action": {
+     "bathy": "flat",
+     "VISC2": 2000.0,
+     "VISC4": 100000000.0,
+     "AKV_BAK": 1e-06,
+     "TNU2": 0.0,
+     "ntimes": 8640
+    },
+    "why": "保持当前最佳摩擦配置不变，缩短积分到1天，检验深层流动尚未充分发展时 deep_rms_800 是否显著降低。",
+    "note": ""
+   },
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 100000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 8640,
+    "seed": 11
+   },
+   "clamp_notes": [],
+   "obs": {
+    "u_max": 5.805261611938477,
+    "u_rms": 2.371497392654419,
+    "deep_rms_800": 0.02286245860159397,
+    "surf_max": 4.400589466094971,
+    "temp_min": 3.999999761581421,
+    "temp_max": 25.945873260498047,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_27dd7d2ee20f",
+   "wall_s": 161.3
+  },
+  {
+   "step": 4,
+   "prompt": "可调的配置（动作空间）：\n  bathy    : \"r26steep\"（陡海山）/ \"mit\"（另一种海山）/ \"flat\"（平底）\n  VISC2    : 0 – 2000      横向谐波黏性 m²/s（典型海洋值 1–100）\n  VISC4    : 0 – 1e10      横向双谐波黏性 m⁴/s\n  AKV_BAK  : 1e-6 – 1.0    背景垂向黏性 m²/s\n  TNU2     : 0 – 1000      示踪物水平扩散 m²/s\n  ntimes   : 1440 – 25920  积分步数（DT=10 s，故 8640 = 1 天）\n\n固定不可改：{\n  \"solver\": \"ROMS 3.9 (PRSGRD31 + RHO_SURF, SEAMOUNT_WIND)\",\n  \"grid_hv\": \"48×48×13\",\n  \"forcing\": \"纬向风应力 τ=0.1 N/m²，前 ~12 h tanh 爬升\",\n  \"duration\": \"3 天（NTIMES=25920 × DT=10 s）\",\n  \"stratification\": \"同一 T(z) 剖面，T∈[4.0, 25.9] °C，初始 u≡0\",\n  \"conservation\": \"合法修正须落在反对称密度雅可比内（越界判非法）\"\n}\n\n每次实验后你能看到的读数（单位 cm/s，除非另注）：\n  u_max            全域最大流速\n  u_rms            全域均方根流速\n  deep_rms_800     800 m 以深的均方根流速\n  surf_max         表层最大流速\n  temp_min/max     温度极值（°C）\n  valid            是否完赛（False 时其余读数不可比较）\n  crashed          是否数值爆炸\n  completion_ratio 完成比例\n\n回复格式（纯 JSON）：\n{\"action\": {\"bathy\": \"...\", \"VISC2\": ..., \"ntimes\": 8640},\n \"why\": \"一句话说明为什么试这个\",\n \"note\": \"任何你想补充的观察；没有就写空字符串\"}\n\n已完成 4/10 次实验。\n\n历史：\n步 | 配置 | valid | u_max | deep_rms_800 | surf_max | crashed\n0 | {\"bathy\": \"flat\", \"VISC2\": 1000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-05, \"TNU2\": 10.0, \"ntimes\": 25920} | True | 12.724 | 0.114 | 12.724 | False\n1 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n2 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n3 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 8640} | True | 5.805 | 0.023 | 4.401 | False\n\n请给出第 5 次实验的配置。",
+   "raw": "{\"action\": {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440}, \"why\": \"保持平底与高黏性、低示踪扩散的配置，并缩短到最短积分步数，进一步减少深层对风应力的响应。\", \"note\": \"\"}",
+   "parsed": {
+    "action": {
+     "bathy": "flat",
+     "VISC2": 2000.0,
+     "VISC4": 100000000.0,
+     "AKV_BAK": 1e-06,
+     "TNU2": 0.0,
+     "ntimes": 1440
+    },
+    "why": "保持平底与高黏性、低示踪扩散的配置，并缩短到最短积分步数，进一步减少深层对风应力的响应。",
+    "note": ""
+   },
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 100000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "clamp_notes": [],
+   "obs": {
+    "u_max": 6.130340576171875,
+    "u_rms": 1.5656143426895142,
+    "deep_rms_800": 0.0030049337074160576,
+    "surf_max": 6.130340576171875,
+    "temp_min": 4.0,
+    "temp_max": 25.921863555908203,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_d5df34328a16",
+   "wall_s": 27.0
+  },
+  {
+   "step": 5,
+   "prompt": "可调的配置（动作空间）：\n  bathy    : \"r26steep\"（陡海山）/ \"mit\"（另一种海山）/ \"flat\"（平底）\n  VISC2    : 0 – 2000      横向谐波黏性 m²/s（典型海洋值 1–100）\n  VISC4    : 0 – 1e10      横向双谐波黏性 m⁴/s\n  AKV_BAK  : 1e-6 – 1.0    背景垂向黏性 m²/s\n  TNU2     : 0 – 1000      示踪物水平扩散 m²/s\n  ntimes   : 1440 – 25920  积分步数（DT=10 s，故 8640 = 1 天）\n\n固定不可改：{\n  \"solver\": \"ROMS 3.9 (PRSGRD31 + RHO_SURF, SEAMOUNT_WIND)\",\n  \"grid_hv\": \"48×48×13\",\n  \"forcing\": \"纬向风应力 τ=0.1 N/m²，前 ~12 h tanh 爬升\",\n  \"duration\": \"3 天（NTIMES=25920 × DT=10 s）\",\n  \"stratification\": \"同一 T(z) 剖面，T∈[4.0, 25.9] °C，初始 u≡0\",\n  \"conservation\": \"合法修正须落在反对称密度雅可比内（越界判非法）\"\n}\n\n每次实验后你能看到的读数（单位 cm/s，除非另注）：\n  u_max            全域最大流速\n  u_rms            全域均方根流速\n  deep_rms_800     800 m 以深的均方根流速\n  surf_max         表层最大流速\n  temp_min/max     温度极值（°C）\n  valid            是否完赛（False 时其余读数不可比较）\n  crashed          是否数值爆炸\n  completion_ratio 完成比例\n\n回复格式（纯 JSON）：\n{\"action\": {\"bathy\": \"...\", \"VISC2\": ..., \"ntimes\": 8640},\n \"why\": \"一句话说明为什么试这个\",\n \"note\": \"任何你想补充的观察；没有就写空字符串\"}\n\n已完成 5/10 次实验。\n\n历史：\n步 | 配置 | valid | u_max | deep_rms_800 | surf_max | crashed\n0 | {\"bathy\": \"flat\", \"VISC2\": 1000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-05, \"TNU2\": 10.0, \"ntimes\": 25920} | True | 12.724 | 0.114 | 12.724 | False\n1 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n2 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n3 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 8640} | True | 5.805 | 0.023 | 4.401 | False\n4 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 6.130 | 0.003 | 6.130 | False\n\n请给出第 6 次实验的配置。",
+   "raw": "{\"action\": {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440}, \"why\": \"在当前最短积分和最大VISC2、最小垂直黏性基础上，继续加大双谐黏性到上限，试图进一步阻尼深层速度。\", \"note\": \"\"}",
+   "parsed": {
+    "action": {
+     "bathy": "flat",
+     "VISC2": 2000.0,
+     "VISC4": 10000000000.0,
+     "AKV_BAK": 1e-06,
+     "TNU2": 0.0,
+     "ntimes": 1440
+    },
+    "why": "在当前最短积分和最大VISC2、最小垂直黏性基础上，继续加大双谐黏性到上限，试图进一步阻尼深层速度。",
+    "note": ""
+   },
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 10000000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "clamp_notes": [],
+   "obs": {
+    "u_max": 6.16974401473999,
+    "u_rms": 1.5601881742477417,
+    "deep_rms_800": 0.003003560472279787,
+    "surf_max": 6.16974401473999,
+    "temp_min": 4.0,
+    "temp_max": 25.921768188476562,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_2382d9cf7adf",
+   "wall_s": 26.0
+  },
+  {
+   "step": 6,
+   "prompt": "可调的配置（动作空间）：\n  bathy    : \"r26steep\"（陡海山）/ \"mit\"（另一种海山）/ \"flat\"（平底）\n  VISC2    : 0 – 2000      横向谐波黏性 m²/s（典型海洋值 1–100）\n  VISC4    : 0 – 1e10      横向双谐波黏性 m⁴/s\n  AKV_BAK  : 1e-6 – 1.0    背景垂向黏性 m²/s\n  TNU2     : 0 – 1000      示踪物水平扩散 m²/s\n  ntimes   : 1440 – 25920  积分步数（DT=10 s，故 8640 = 1 天）\n\n固定不可改：{\n  \"solver\": \"ROMS 3.9 (PRSGRD31 + RHO_SURF, SEAMOUNT_WIND)\",\n  \"grid_hv\": \"48×48×13\",\n  \"forcing\": \"纬向风应力 τ=0.1 N/m²，前 ~12 h tanh 爬升\",\n  \"duration\": \"3 天（NTIMES=25920 × DT=10 s）\",\n  \"stratification\": \"同一 T(z) 剖面，T∈[4.0, 25.9] °C，初始 u≡0\",\n  \"conservation\": \"合法修正须落在反对称密度雅可比内（越界判非法）\"\n}\n\n每次实验后你能看到的读数（单位 cm/s，除非另注）：\n  u_max            全域最大流速\n  u_rms            全域均方根流速\n  deep_rms_800     800 m 以深的均方根流速\n  surf_max         表层最大流速\n  temp_min/max     温度极值（°C）\n  valid            是否完赛（False 时其余读数不可比较）\n  crashed          是否数值爆炸\n  completion_ratio 完成比例\n\n回复格式（纯 JSON）：\n{\"action\": {\"bathy\": \"...\", \"VISC2\": ..., \"ntimes\": 8640},\n \"why\": \"一句话说明为什么试这个\",\n \"note\": \"任何你想补充的观察；没有就写空字符串\"}\n\n已完成 6/10 次实验。\n\n历史：\n步 | 配置 | valid | u_max | deep_rms_800 | surf_max | crashed\n0 | {\"bathy\": \"flat\", \"VISC2\": 1000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-05, \"TNU2\": 10.0, \"ntimes\": 25920} | True | 12.724 | 0.114 | 12.724 | False\n1 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n2 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n3 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 8640} | True | 5.805 | 0.023 | 4.401 | False\n4 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 6.130 | 0.003 | 6.130 | False\n5 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 6.170 | 0.003 | 6.170 | False\n\n请给出第 7 次实验的配置。",
+   "raw": "{\"action\": {\"bathy\": \"mit\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440}, \"why\": \"在已获得最低deep_rms的短时高黏度参数组合下，测试另一种海山地形是否能进一步降低800m以深均方根流速。\", \"note\": \"\"}",
+   "parsed": {
+    "action": {
+     "bathy": "mit",
+     "VISC2": 2000.0,
+     "VISC4": 10000000000.0,
+     "AKV_BAK": 1e-06,
+     "TNU2": 0.0,
+     "ntimes": 1440
+    },
+    "why": "在已获得最低deep_rms的短时高黏度参数组合下，测试另一种海山地形是否能进一步降低800m以深均方根流速。",
+    "note": ""
+   },
+   "action": {
+    "bathy": "mit",
+    "VISC2": 2000.0,
+    "VISC4": 10000000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 0.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "clamp_notes": [],
+   "obs": {
+    "u_max": 8.044273376464844,
+    "u_rms": 1.6063355207443237,
+    "deep_rms_800": 0.1453099548816681,
+    "surf_max": 8.044273376464844,
+    "temp_min": 3.3641397953033447,
+    "temp_max": 27.037376403808594,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_95bc0b5944d3",
+   "wall_s": 26.3
+  },
+  {
+   "step": 7,
+   "prompt": "可调的配置（动作空间）：\n  bathy    : \"r26steep\"（陡海山）/ \"mit\"（另一种海山）/ \"flat\"（平底）\n  VISC2    : 0 – 2000      横向谐波黏性 m²/s（典型海洋值 1–100）\n  VISC4    : 0 – 1e10      横向双谐波黏性 m⁴/s\n  AKV_BAK  : 1e-6 – 1.0    背景垂向黏性 m²/s\n  TNU2     : 0 – 1000      示踪物水平扩散 m²/s\n  ntimes   : 1440 – 25920  积分步数（DT=10 s，故 8640 = 1 天）\n\n固定不可改：{\n  \"solver\": \"ROMS 3.9 (PRSGRD31 + RHO_SURF, SEAMOUNT_WIND)\",\n  \"grid_hv\": \"48×48×13\",\n  \"forcing\": \"纬向风应力 τ=0.1 N/m²，前 ~12 h tanh 爬升\",\n  \"duration\": \"3 天（NTIMES=25920 × DT=10 s）\",\n  \"stratification\": \"同一 T(z) 剖面，T∈[4.0, 25.9] °C，初始 u≡0\",\n  \"conservation\": \"合法修正须落在反对称密度雅可比内（越界判非法）\"\n}\n\n每次实验后你能看到的读数（单位 cm/s，除非另注）：\n  u_max            全域最大流速\n  u_rms            全域均方根流速\n  deep_rms_800     800 m 以深的均方根流速\n  surf_max         表层最大流速\n  temp_min/max     温度极值（°C）\n  valid            是否完赛（False 时其余读数不可比较）\n  crashed          是否数值爆炸\n  completion_ratio 完成比例\n\n回复格式（纯 JSON）：\n{\"action\": {\"bathy\": \"...\", \"VISC2\": ..., \"ntimes\": 8640},\n \"why\": \"一句话说明为什么试这个\",\n \"note\": \"任何你想补充的观察；没有就写空字符串\"}\n\n已完成 7/10 次实验。\n\n历史：\n步 | 配置 | valid | u_max | deep_rms_800 | surf_max | crashed\n0 | {\"bathy\": \"flat\", \"VISC2\": 1000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-05, \"TNU2\": 10.0, \"ntimes\": 25920} | True | 12.724 | 0.114 | 12.724 | False\n1 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n2 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n3 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 8640} | True | 5.805 | 0.023 | 4.401 | False\n4 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 6.130 | 0.003 | 6.130 | False\n5 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 6.170 | 0.003 | 6.170 | False\n6 | {\"bathy\": \"mit\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 8.044 | 0.145 | 8.044 | False\n\n请给出第 8 次实验的配置。",
+   "raw": "{\"action\": {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 1000.0, \"ntimes\": 1440}, \"why\": \"保持已验证的短积分和最大速度耗散，试探最大示踪水平扩散是否能进一步压低深部残差。\", \"note\": \"\"}",
+   "parsed": {
+    "action": {
+     "bathy": "flat",
+     "VISC2": 2000.0,
+     "VISC4": 10000000000.0,
+     "AKV_BAK": 1e-06,
+     "TNU2": 1000.0,
+     "ntimes": 1440
+    },
+    "why": "保持已验证的短积分和最大速度耗散，试探最大示踪水平扩散是否能进一步压低深部残差。",
+    "note": ""
+   },
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 10000000000.0,
+    "AKV_BAK": 1e-06,
+    "TNU2": 1000.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "clamp_notes": [],
+   "obs": {
+    "u_max": 6.169694900512695,
+    "u_rms": 1.5601600408554077,
+    "deep_rms_800": 0.0030055446550250053,
+    "surf_max": 6.169694900512695,
+    "temp_min": 4.0,
+    "temp_max": 25.921710968017578,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_68934dfe9526",
+   "wall_s": 26.7
+  },
+  {
+   "step": 8,
+   "prompt": "可调的配置（动作空间）：\n  bathy    : \"r26steep\"（陡海山）/ \"mit\"（另一种海山）/ \"flat\"（平底）\n  VISC2    : 0 – 2000      横向谐波黏性 m²/s（典型海洋值 1–100）\n  VISC4    : 0 – 1e10      横向双谐波黏性 m⁴/s\n  AKV_BAK  : 1e-6 – 1.0    背景垂向黏性 m²/s\n  TNU2     : 0 – 1000      示踪物水平扩散 m²/s\n  ntimes   : 1440 – 25920  积分步数（DT=10 s，故 8640 = 1 天）\n\n固定不可改：{\n  \"solver\": \"ROMS 3.9 (PRSGRD31 + RHO_SURF, SEAMOUNT_WIND)\",\n  \"grid_hv\": \"48×48×13\",\n  \"forcing\": \"纬向风应力 τ=0.1 N/m²，前 ~12 h tanh 爬升\",\n  \"duration\": \"3 天（NTIMES=25920 × DT=10 s）\",\n  \"stratification\": \"同一 T(z) 剖面，T∈[4.0, 25.9] °C，初始 u≡0\",\n  \"conservation\": \"合法修正须落在反对称密度雅可比内（越界判非法）\"\n}\n\n每次实验后你能看到的读数（单位 cm/s，除非另注）：\n  u_max            全域最大流速\n  u_rms            全域均方根流速\n  deep_rms_800     800 m 以深的均方根流速\n  surf_max         表层最大流速\n  temp_min/max     温度极值（°C）\n  valid            是否完赛（False 时其余读数不可比较）\n  crashed          是否数值爆炸\n  completion_ratio 完成比例\n\n回复格式（纯 JSON）：\n{\"action\": {\"bathy\": \"...\", \"VISC2\": ..., \"ntimes\": 8640},\n \"why\": \"一句话说明为什么试这个\",\n \"note\": \"任何你想补充的观察；没有就写空字符串\"}\n\n已完成 8/10 次实验。\n\n历史：\n步 | 配置 | valid | u_max | deep_rms_800 | surf_max | crashed\n0 | {\"bathy\": \"flat\", \"VISC2\": 1000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-05, \"TNU2\": 10.0, \"ntimes\": 25920} | True | 12.724 | 0.114 | 12.724 | False\n1 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n2 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n3 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 8640} | True | 5.805 | 0.023 | 4.401 | False\n4 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 6.130 | 0.003 | 6.130 | False\n5 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 6.170 | 0.003 | 6.170 | False\n6 | {\"bathy\": \"mit\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 8.044 | 0.145 | 8.044 | False\n7 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 1000.0, \"ntimes\": 1440} | True | 6.170 | 0.003 | 6.170 | False\n\n请给出第 9 次实验的配置。",
+   "raw": "{\"action\": {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1.0, \"TNU2\": 0.0, \"ntimes\": 1440}, \"why\": \"在已知对deep_rms_800最低的短时flat配置上，尝试用最大背景垂向黏性进一步抑制深层流速。\", \"note\": \"当前最佳deep_rms_800=0.003 cm/s来自ntimes=1440且AKV_BAK=1e-6；本次只增大AKV_BAK看是否更优。\"}",
+   "parsed": {
+    "action": {
+     "bathy": "flat",
+     "VISC2": 2000.0,
+     "VISC4": 10000000000.0,
+     "AKV_BAK": 1.0,
+     "TNU2": 0.0,
+     "ntimes": 1440
+    },
+    "why": "在已知对deep_rms_800最低的短时flat配置上，尝试用最大背景垂向黏性进一步抑制深层流速。",
+    "note": "当前最佳deep_rms_800=0.003 cm/s来自ntimes=1440且AKV_BAK=1e-6；本次只增大AKV_BAK看是否更优。"
+   },
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 10000000000.0,
+    "AKV_BAK": 1.0,
+    "TNU2": 0.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "clamp_notes": [],
+   "obs": {
+    "u_max": 1.1085014343261719,
+    "u_rms": 0.4509274959564209,
+    "deep_rms_800": 0.003039026167243719,
+    "surf_max": 1.1085014343261719,
+    "temp_min": 4.0,
+    "temp_max": 25.921232223510742,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_0e418c784204",
+   "wall_s": 26.4
+  },
+  {
+   "step": 9,
+   "prompt": "可调的配置（动作空间）：\n  bathy    : \"r26steep\"（陡海山）/ \"mit\"（另一种海山）/ \"flat\"（平底）\n  VISC2    : 0 – 2000      横向谐波黏性 m²/s（典型海洋值 1–100）\n  VISC4    : 0 – 1e10      横向双谐波黏性 m⁴/s\n  AKV_BAK  : 1e-6 – 1.0    背景垂向黏性 m²/s\n  TNU2     : 0 – 1000      示踪物水平扩散 m²/s\n  ntimes   : 1440 – 25920  积分步数（DT=10 s，故 8640 = 1 天）\n\n固定不可改：{\n  \"solver\": \"ROMS 3.9 (PRSGRD31 + RHO_SURF, SEAMOUNT_WIND)\",\n  \"grid_hv\": \"48×48×13\",\n  \"forcing\": \"纬向风应力 τ=0.1 N/m²，前 ~12 h tanh 爬升\",\n  \"duration\": \"3 天（NTIMES=25920 × DT=10 s）\",\n  \"stratification\": \"同一 T(z) 剖面，T∈[4.0, 25.9] °C，初始 u≡0\",\n  \"conservation\": \"合法修正须落在反对称密度雅可比内（越界判非法）\"\n}\n\n每次实验后你能看到的读数（单位 cm/s，除非另注）：\n  u_max            全域最大流速\n  u_rms            全域均方根流速\n  deep_rms_800     800 m 以深的均方根流速\n  surf_max         表层最大流速\n  temp_min/max     温度极值（°C）\n  valid            是否完赛（False 时其余读数不可比较）\n  crashed          是否数值爆炸\n  completion_ratio 完成比例\n\n回复格式（纯 JSON）：\n{\"action\": {\"bathy\": \"...\", \"VISC2\": ..., \"ntimes\": 8640},\n \"why\": \"一句话说明为什么试这个\",\n \"note\": \"任何你想补充的观察；没有就写空字符串\"}\n\n已完成 9/10 次实验。\n\n历史：\n步 | 配置 | valid | u_max | deep_rms_800 | surf_max | crashed\n0 | {\"bathy\": \"flat\", \"VISC2\": 1000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-05, \"TNU2\": 10.0, \"ntimes\": 25920} | True | 12.724 | 0.114 | 12.724 | False\n1 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 0.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n2 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 25920} | True | 11.555 | 0.084 | 11.363 | False\n3 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 8640} | True | 5.805 | 0.023 | 4.401 | False\n4 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 100000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 6.130 | 0.003 | 6.130 | False\n5 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 6.170 | 0.003 | 6.170 | False\n6 | {\"bathy\": \"mit\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 8.044 | 0.145 | 8.044 | False\n7 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1e-06, \"TNU2\": 1000.0, \"ntimes\": 1440} | True | 6.170 | 0.003 | 6.170 | False\n8 | {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1.0, \"TNU2\": 0.0, \"ntimes\": 1440} | True | 1.109 | 0.003 | 1.109 | False\n\n请给出第 10 次实验的配置。",
+   "raw": "{\"action\": {\"bathy\": \"flat\", \"VISC2\": 2000.0, \"VISC4\": 10000000000.0, \"AKV_BAK\": 1.0, \"TNU2\": 1000.0, \"ntimes\": 1440}, \"why\": \"在步8强耗散短时配置基础上，把示踪物水平扩散也加到最大，尝试进一步抑制斜压深层流动。\", \"note\": \"步7显示TNU2在低AKV_BAK下对deep_rms无影响；步8高AKV_BAK显著降低u_max，组合边界预期安全。\"}",
+   "parsed": {
+    "action": {
+     "bathy": "flat",
+     "VISC2": 2000.0,
+     "VISC4": 10000000000.0,
+     "AKV_BAK": 1.0,
+     "TNU2": 1000.0,
+     "ntimes": 1440
+    },
+    "why": "在步8强耗散短时配置基础上，把示踪物水平扩散也加到最大，尝试进一步抑制斜压深层流动。",
+    "note": "步7显示TNU2在低AKV_BAK下对deep_rms无影响；步8高AKV_BAK显著降低u_max，组合边界预期安全。"
+   },
+   "action": {
+    "bathy": "flat",
+    "VISC2": 2000.0,
+    "VISC4": 10000000000.0,
+    "AKV_BAK": 1.0,
+    "TNU2": 1000.0,
+    "ntimes": 1440,
+    "seed": 11
+   },
+   "clamp_notes": [],
+   "obs": {
+    "u_max": 1.108324408531189,
+    "u_rms": 0.4508841633796692,
+    "deep_rms_800": 0.003041069721803069,
+    "surf_max": 1.108324408531189,
+    "temp_min": 4.0,
+    "temp_max": 25.921226501464844,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_4e26562ed0e1",
+   "wall_s": 26.8
+  }
+ ],
+ "final": {
+  "best_action": {
+   "bathy": "flat",
+   "VISC2": 2000.0,
+   "VISC4": 10000000000.0,
+   "AKV_BAK": 1.0,
+   "TNU2": 1000.0,
+   "ntimes": 1440
+  },
+  "best_reason": "该配置在历史有效实验中使 deep_rms_800 达到最小的 0.003 cm/s，同时 u_max 和 surf_max 也最低，因此被选为最优。",
+  "what_controls_the_error": "从历史看，deep_rms_800 主要受积分步数 ntimes、背景垂向黏性 AKV_BAK 和地形控制：缩短 ntimes、提高 AKV_BAK、使用 flat 地形会显著压低深层流速；VISC4 和 TNU2 的影响相对较小。",
+  "metric_trustworthy": false,
+  "metric_doubt": "怀疑。不同 ntimes 代表不同的实际积分时长，0.003 cm/s 可能只是短积分尚未充分发展深层流场的瞬时读数；同时缺少 completion_ratio、u_rms 和完整温度读数，难以判断它是否真正优于完整 3 天的稳定配置。",
+  "what_i_would_do_next": "如果还有预算，我会保持 flat、VISC2=2000、VISC4=1e10、AKV_BAK=1.0、TNU2=1000，但把 ntimes 延长到 25920，验证高垂向黏性在完整 3 天积分下能否仍然压低 deep_rms_800。"
+ },
+ "hidden_grades": [
+  {
+   "step": 0,
+   "run_id": "e2_b7b8b6e72de2",
+   "hidden": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   }
+  },
+  {
+   "step": 1,
+   "run_id": "e2_b03027be3672",
+   "hidden": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   }
+  },
+  {
+   "step": 2,
+   "run_id": "e2_4ec5ddbfce45",
+   "hidden": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   }
+  },
+  {
+   "step": 3,
+   "run_id": "e2_27dd7d2ee20f",
+   "hidden": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   }
+  },
+  {
+   "step": 4,
+   "run_id": "e2_d5df34328a16",
+   "hidden": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   }
+  },
+  {
+   "step": 5,
+   "run_id": "e2_2382d9cf7adf",
+   "hidden": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   }
+  },
+  {
+   "step": 6,
+   "run_id": "e2_95bc0b5944d3",
+   "hidden": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   }
+  },
+  {
+   "step": 7,
+   "run_id": "e2_68934dfe9526",
+   "hidden": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   }
+  },
+  {
+   "step": 8,
+   "run_id": "e2_0e418c784204",
+   "hidden": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   }
+  },
+  {
+   "step": 9,
+   "run_id": "e2_4e26562ed0e1",
+   "hidden": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   }
+  }
+ ]
+}

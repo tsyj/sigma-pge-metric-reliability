@@ -1,0 +1,15 @@
+{
+ "n_truth_points": 26,
+ "candidates": [
+  "u_max",
+  "u_rms",
+  "surf_max",
+  "deep_rms_200",
+  "deep_rms_800",
+  "deep_rms_1500"
+ ],
+ "untrustworthy": [
+  "全域 rms",
+  "表层最大流速"
+ ]
+}

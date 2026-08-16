@@ -1,0 +1,954 @@
+[
+ {
+  "knob": "VISC2",
+  "val": 0.0,
+  "bathy": "r26steep",
+  "run_id": "e2_266404276ec5",
+  "obs": {
+   "u_max": 98.2009506225586,
+   "u_rms": 7.761971473693848,
+   "deep_rms_800": 9.290669441223145,
+   "surf_max": 43.6943244934082,
+   "temp_min": 3.765155553817749,
+   "temp_max": 25.984886169433594,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 0.0,
+  "bathy": "flat",
+  "run_id": "e2_109ca3289c7f",
+  "obs": {
+   "u_max": 14.252551078796387,
+   "u_rms": 3.3252005577087402,
+   "deep_rms_800": 0.030055664479732513,
+   "surf_max": 12.034598350524902,
+   "temp_min": 3.999617338180542,
+   "temp_max": 25.929479598999023,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 50.0,
+  "bathy": "r26steep",
+  "run_id": "e2_04ac56d390ce",
+  "obs": {
+   "u_max": 90.54286193847656,
+   "u_rms": 7.019600868225098,
+   "deep_rms_800": 8.673704147338867,
+   "surf_max": 32.11189651489258,
+   "temp_min": 3.714409351348877,
+   "temp_max": 25.94757080078125,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 50.0,
+  "bathy": "flat",
+  "run_id": "e2_d10659e1b864",
+  "obs": {
+   "u_max": 9.968766212463379,
+   "u_rms": 3.0910496711730957,
+   "deep_rms_800": 0.029437988996505737,
+   "surf_max": 9.968766212463379,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.933856964111328,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 150.0,
+  "bathy": "r26steep",
+  "run_id": "e2_8ece45ca0d8d",
+  "obs": {
+   "u_max": 77.45010375976562,
+   "u_rms": 6.009817600250244,
+   "deep_rms_800": 7.474990367889404,
+   "surf_max": 24.778507232666016,
+   "temp_min": 3.45489764213562,
+   "temp_max": 25.994735717773438,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 150.0,
+  "bathy": "flat",
+  "run_id": "e2_c375f3e285d9",
+  "obs": {
+   "u_max": 8.666055679321289,
+   "u_rms": 2.9416282176971436,
+   "deep_rms_800": 0.028902510181069374,
+   "surf_max": 7.876433372497559,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.939424514770508,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 400.0,
+  "bathy": "r26steep",
+  "run_id": "e2_3b79f788a4f1",
+  "obs": {
+   "u_max": 55.33033752441406,
+   "u_rms": 4.6228251457214355,
+   "deep_rms_800": 5.430625915527344,
+   "surf_max": 17.08333396911621,
+   "temp_min": 3.3788375854492188,
+   "temp_max": 25.94585609436035,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 400.0,
+  "bathy": "flat",
+  "run_id": "e2_73d78bd9bb16",
+  "obs": {
+   "u_max": 7.484000205993652,
+   "u_rms": 2.779456853866577,
+   "deep_rms_800": 0.027954252436757088,
+   "surf_max": 6.437855243682861,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.946651458740234,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 800.0,
+  "bathy": "r26steep",
+  "run_id": "e2_37506f16ae83",
+  "obs": {
+   "u_max": 49.39033508300781,
+   "u_rms": 3.584641933441162,
+   "deep_rms_800": 3.7599313259124756,
+   "surf_max": 11.691197395324707,
+   "temp_min": 3.5171093940734863,
+   "temp_max": 25.94820213317871,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 800.0,
+  "bathy": "flat",
+  "run_id": "e2_1b79f019a3ed",
+  "obs": {
+   "u_max": 6.660061836242676,
+   "u_rms": 2.632291793823242,
+   "deep_rms_800": 0.026610804721713066,
+   "surf_max": 5.414541721343994,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.949026107788086,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 1500.0,
+  "bathy": "r26steep",
+  "run_id": "e2_ce64784901eb",
+  "obs": {
+   "u_max": 32.30708312988281,
+   "u_rms": 2.916316509246826,
+   "deep_rms_800": 2.4678285121917725,
+   "surf_max": 7.73839807510376,
+   "temp_min": 3.659351110458374,
+   "temp_max": 25.9457950592041,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 1500.0,
+  "bathy": "flat",
+  "run_id": "e2_575a58da7c09",
+  "obs": {
+   "u_max": 6.012909889221191,
+   "u_rms": 2.4610233306884766,
+   "deep_rms_800": 0.024447698146104813,
+   "surf_max": 4.683228492736816,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.946712493896484,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 2747.0,
+  "bathy": "r26steep",
+  "run_id": "e2_e6d68386cec3",
+  "obs": {
+   "u_max": 18.844158172607422,
+   "u_rms": 2.4612982273101807,
+   "deep_rms_800": 1.6184065341949463,
+   "surf_max": 5.601497173309326,
+   "temp_min": 3.7081072330474854,
+   "temp_max": 25.949722290039062,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC2",
+  "val": 2747.0,
+  "bathy": "flat",
+  "run_id": "e2_aa592ccd4bb8",
+  "obs": {
+   "u_max": 5.566967010498047,
+   "u_rms": 2.244525194168091,
+   "deep_rms_800": 0.020987149327993393,
+   "surf_max": 4.118738174438477,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.942726135253906,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 0.0,
+  "bathy": "r26steep",
+  "run_id": "e2_7fcfb281959d",
+  "obs": {
+   "u_max": 90.54286193847656,
+   "u_rms": 7.019600868225098,
+   "deep_rms_800": 8.673704147338867,
+   "surf_max": 32.11189651489258,
+   "temp_min": 3.714409351348877,
+   "temp_max": 25.94757080078125,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 0.0,
+  "bathy": "flat",
+  "run_id": "e2_7b5ccdec85e1",
+  "obs": {
+   "u_max": 9.968766212463379,
+   "u_rms": 3.0910496711730957,
+   "deep_rms_800": 0.029437988996505737,
+   "surf_max": 9.968766212463379,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.933856964111328,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 10000000.0,
+  "bathy": "r26steep",
+  "run_id": "e2_7cc735ac8075",
+  "obs": {
+   "u_max": 85.70233154296875,
+   "u_rms": 6.921328544616699,
+   "deep_rms_800": 8.570535659790039,
+   "surf_max": 30.906667709350586,
+   "temp_min": 3.6997649669647217,
+   "temp_max": 25.974769592285156,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 10000000.0,
+  "bathy": "flat",
+  "run_id": "e2_8fef85cfc8bc",
+  "obs": {
+   "u_max": 9.942648887634277,
+   "u_rms": 3.0829238891601562,
+   "deep_rms_800": 0.02942417375743389,
+   "surf_max": 9.878769874572754,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.934560775756836,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 100000000.0,
+  "bathy": "r26steep",
+  "run_id": "e2_3ded5f633af8",
+  "obs": {
+   "u_max": 80.30211639404297,
+   "u_rms": 6.381209373474121,
+   "deep_rms_800": 7.907474040985107,
+   "surf_max": 26.124263763427734,
+   "temp_min": 3.5833864212036133,
+   "temp_max": 25.97109603881836,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 100000000.0,
+  "bathy": "flat",
+  "run_id": "e2_a91a2e7b3791",
+  "obs": {
+   "u_max": 9.78558349609375,
+   "u_rms": 3.04390025138855,
+   "deep_rms_800": 0.02935575693845749,
+   "surf_max": 9.241150856018066,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.93807601928711,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 500000000.0,
+  "bathy": "r26steep",
+  "run_id": "e2_171f3dfc1d3c",
+  "obs": {
+   "u_max": 64.68653869628906,
+   "u_rms": 5.2721686363220215,
+   "deep_rms_800": 6.369969367980957,
+   "surf_max": 15.990851402282715,
+   "temp_min": 3.537475824356079,
+   "temp_max": 25.940059661865234,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 500000000.0,
+  "bathy": "flat",
+  "run_id": "e2_5911958ddc4e",
+  "obs": {
+   "u_max": 9.696147918701172,
+   "u_rms": 2.9961111545562744,
+   "deep_rms_800": 0.029283197596669197,
+   "surf_max": 8.329666137695312,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.940494537353516,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 1000000000.0,
+  "bathy": "r26steep",
+  "run_id": "e2_61fedbad7d60",
+  "obs": {
+   "u_max": 50.74988555908203,
+   "u_rms": 4.67495584487915,
+   "deep_rms_800": 5.349757194519043,
+   "surf_max": 12.159961700439453,
+   "temp_min": 3.6045470237731934,
+   "temp_max": 25.93822479248047,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 1000000000.0,
+  "bathy": "flat",
+  "run_id": "e2_881a70c84453",
+  "obs": {
+   "u_max": 9.446648597717285,
+   "u_rms": 2.9713969230651855,
+   "deep_rms_800": 0.02924848534166813,
+   "surf_max": 7.854905128479004,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.939584732055664,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 3000000000.0,
+  "bathy": "r26steep",
+  "run_id": "e2_d7c81431c9f5",
+  "obs": {
+   "u_max": 30.90473175048828,
+   "u_rms": 3.737337827682495,
+   "deep_rms_800": 3.4913666248321533,
+   "surf_max": 9.319433212280273,
+   "temp_min": 3.8118579387664795,
+   "temp_max": 25.945985794067383,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 3000000000.0,
+  "bathy": "flat",
+  "run_id": "e2_12db7c402b0b",
+  "obs": {
+   "u_max": 8.99630069732666,
+   "u_rms": 2.924006223678589,
+   "deep_rms_800": 0.02917836792767048,
+   "surf_max": 6.715704441070557,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.946760177612305,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 10000000000.0,
+  "bathy": "r26steep",
+  "run_id": "e2_1b1f143d9792",
+  "obs": {
+   "u_max": 18.901752471923828,
+   "u_rms": 3.1792826652526855,
+   "deep_rms_800": 2.2304794788360596,
+   "surf_max": 8.107221603393555,
+   "temp_min": 3.7745237350463867,
+   "temp_max": 26.00868034362793,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "VISC4",
+  "val": 10000000000.0,
+  "bathy": "flat",
+  "run_id": "e2_be5e14cb5f2c",
+  "obs": {
+   "u_max": 8.375224113464355,
+   "u_rms": 2.8576807975769043,
+   "deep_rms_800": 0.029092011973261833,
+   "surf_max": 5.651633262634277,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.95026969909668,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 1e-05,
+  "bathy": "r26steep",
+  "run_id": "e2_ad4cb66f1fc7",
+  "obs": {
+   "u_max": 90.54286193847656,
+   "u_rms": 7.019600868225098,
+   "deep_rms_800": 8.673704147338867,
+   "surf_max": 32.11189651489258,
+   "temp_min": 3.714409351348877,
+   "temp_max": 25.94757080078125,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 1e-05,
+  "bathy": "flat",
+  "run_id": "e2_6014076f73c3",
+  "obs": {
+   "u_max": 9.968766212463379,
+   "u_rms": 3.0910496711730957,
+   "deep_rms_800": 0.029437988996505737,
+   "surf_max": 9.968766212463379,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.933856964111328,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 0.0001,
+  "bathy": "r26steep",
+  "run_id": "e2_bd046d7ffb14",
+  "obs": {
+   "u_max": 90.52629089355469,
+   "u_rms": 6.995744228363037,
+   "deep_rms_800": 8.672357559204102,
+   "surf_max": 32.14049530029297,
+   "temp_min": 3.7147228717803955,
+   "temp_max": 25.947532653808594,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 0.0001,
+  "bathy": "flat",
+  "run_id": "e2_721ccc919e79",
+  "obs": {
+   "u_max": 10.017949104309082,
+   "u_rms": 3.039649486541748,
+   "deep_rms_800": 0.029426343739032745,
+   "surf_max": 10.017949104309082,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.93375587463379,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 0.001,
+  "bathy": "r26steep",
+  "run_id": "e2_7167f10e6ef8",
+  "obs": {
+   "u_max": 90.38653564453125,
+   "u_rms": 6.869328022003174,
+   "deep_rms_800": 8.660198211669922,
+   "surf_max": 30.61128044128418,
+   "temp_min": 3.7176780700683594,
+   "temp_max": 25.95098876953125,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 0.001,
+  "bathy": "flat",
+  "run_id": "e2_13bafd1a73e6",
+  "obs": {
+   "u_max": 10.38464641571045,
+   "u_rms": 2.770794153213501,
+   "deep_rms_800": 0.02933373861014843,
+   "surf_max": 10.38464641571045,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.932300567626953,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 0.01,
+  "bathy": "r26steep",
+  "run_id": "e2_423a87445e0e",
+  "obs": {
+   "u_max": 89.6650161743164,
+   "u_rms": 6.733423233032227,
+   "deep_rms_800": 8.573567390441895,
+   "surf_max": 26.981348037719727,
+   "temp_min": 3.7261223793029785,
+   "temp_max": 25.943986892700195,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 0.01,
+  "bathy": "flat",
+  "run_id": "e2_317a9fe4d3bf",
+  "obs": {
+   "u_max": 10.94913101196289,
+   "u_rms": 2.736027240753174,
+   "deep_rms_800": 0.028907351195812225,
+   "surf_max": 10.94913101196289,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.94032096862793,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 0.1,
+  "bathy": "r26steep",
+  "run_id": "e2_24d71298a83d",
+  "obs": {
+   "u_max": 86.57731628417969,
+   "u_rms": 6.321681499481201,
+   "deep_rms_800": 8.328341484069824,
+   "surf_max": 24.394142150878906,
+   "temp_min": 3.6348495483398438,
+   "temp_max": 26.218008041381836,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 0.1,
+  "bathy": "flat",
+  "run_id": "e2_df25deef97aa",
+  "obs": {
+   "u_max": 7.621923923492432,
+   "u_rms": 2.6393187046051025,
+   "deep_rms_800": 0.03601078689098358,
+   "surf_max": 7.621923923492432,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.9276065826416,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 0.3,
+  "bathy": "r26steep",
+  "run_id": "e2_5512d55442a2",
+  "obs": {
+   "u_max": 83.40882873535156,
+   "u_rms": 5.797232627868652,
+   "deep_rms_800": 7.964315891265869,
+   "surf_max": 24.2550048828125,
+   "temp_min": 3.651684284210205,
+   "temp_max": 26.375499725341797,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 0.3,
+  "bathy": "flat",
+  "run_id": "e2_f05e329c7a86",
+  "obs": {
+   "u_max": 4.991569519042969,
+   "u_rms": 2.073871612548828,
+   "deep_rms_800": 0.06876467168331146,
+   "surf_max": 4.991569519042969,
+   "temp_min": 3.999998092651367,
+   "temp_max": 25.923269271850586,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 1.0,
+  "bathy": "r26steep",
+  "run_id": "e2_16efdad9880d",
+  "obs": {
+   "u_max": 69.69342803955078,
+   "u_rms": 4.705887317657471,
+   "deep_rms_800": 6.70311975479126,
+   "surf_max": 18.43230438232422,
+   "temp_min": 3.681325674057007,
+   "temp_max": 25.996517181396484,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "AKV_BAK",
+  "val": 1.0,
+  "bathy": "flat",
+  "run_id": "e2_fa2337282fcd",
+  "obs": {
+   "u_max": 2.7571661472320557,
+   "u_rms": 1.3029265403747559,
+   "deep_rms_800": 0.12522223591804504,
+   "surf_max": 2.7571661472320557,
+   "temp_min": 3.9998667240142822,
+   "temp_max": 25.921701431274414,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 0.0,
+  "bathy": "r26steep",
+  "run_id": "e2_e0f9b6fa36c5",
+  "obs": {
+   "u_max": 97.46707916259766,
+   "u_rms": 6.371445178985596,
+   "deep_rms_800": 7.029772758483887,
+   "surf_max": 31.80779457092285,
+   "temp_min": 2.5277626514434814,
+   "temp_max": 55.96632766723633,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 0.0,
+  "bathy": "flat",
+  "run_id": "e2_0f30ed653d45",
+  "obs": {
+   "u_max": 10.183573722839355,
+   "u_rms": 3.1025562286376953,
+   "deep_rms_800": 0.029363250359892845,
+   "surf_max": 10.183573722839355,
+   "temp_min": 3.9997262954711914,
+   "temp_max": 25.955472946166992,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 5.0,
+  "bathy": "r26steep",
+  "run_id": "e2_ee2bd0a8d356",
+  "obs": {
+   "u_max": 69.1379623413086,
+   "u_rms": 4.849608421325684,
+   "deep_rms_800": 4.660271644592285,
+   "surf_max": 16.781742095947266,
+   "temp_min": 3.8321025371551514,
+   "temp_max": 28.748149871826172,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 5.0,
+  "bathy": "flat",
+  "run_id": "e2_1eefb83bbdee",
+  "obs": {
+   "u_max": 10.157999992370605,
+   "u_rms": 3.1012654304504395,
+   "deep_rms_800": 0.02936858870089054,
+   "surf_max": 10.157999992370605,
+   "temp_min": 3.9997658729553223,
+   "temp_max": 25.95244789123535,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 12.5,
+  "bathy": "r26steep",
+  "run_id": "e2_dace8b3d51e9",
+  "obs": {
+   "u_max": 72.83586120605469,
+   "u_rms": 5.340601444244385,
+   "deep_rms_800": 5.925364971160889,
+   "surf_max": 20.660226821899414,
+   "temp_min": 3.695964813232422,
+   "temp_max": 28.210994720458984,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 12.5,
+  "bathy": "flat",
+  "run_id": "e2_19ddceecb478",
+  "obs": {
+   "u_max": 10.121583938598633,
+   "u_rms": 3.099397897720337,
+   "deep_rms_800": 0.029377587139606476,
+   "surf_max": 10.121583938598633,
+   "temp_min": 3.999819278717041,
+   "temp_max": 25.948379516601562,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 25.0,
+  "bathy": "r26steep",
+  "run_id": "e2_4730b2a0a58b",
+  "obs": {
+   "u_max": 79.72034454345703,
+   "u_rms": 6.095873832702637,
+   "deep_rms_800": 7.336194038391113,
+   "surf_max": 23.315017700195312,
+   "temp_min": 3.5946104526519775,
+   "temp_max": 26.93474006652832,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 25.0,
+  "bathy": "flat",
+  "run_id": "e2_f9fb12a6aa2f",
+  "obs": {
+   "u_max": 10.065624237060547,
+   "u_rms": 3.0964481830596924,
+   "deep_rms_800": 0.029395051300525665,
+   "surf_max": 10.065624237060547,
+   "temp_min": 3.9998950958251953,
+   "temp_max": 25.9426212310791,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 37.5,
+  "bathy": "r26steep",
+  "run_id": "e2_ceccc9c5d229",
+  "obs": {
+   "u_max": 81.98089599609375,
+   "u_rms": 6.600235939025879,
+   "deep_rms_800": 8.050021171569824,
+   "surf_max": 28.914073944091797,
+   "temp_min": 3.6290013790130615,
+   "temp_max": 26.472278594970703,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 37.5,
+  "bathy": "flat",
+  "run_id": "e2_5c603374c94c",
+  "obs": {
+   "u_max": 10.014913558959961,
+   "u_rms": 3.0936739444732666,
+   "deep_rms_800": 0.029415300115942955,
+   "surf_max": 10.014913558959961,
+   "temp_min": 3.9999568462371826,
+   "temp_max": 25.937854766845703,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 50.0,
+  "bathy": "r26steep",
+  "run_id": "e2_fcccebc822e6",
+  "obs": {
+   "u_max": 90.54286193847656,
+   "u_rms": 7.019600868225098,
+   "deep_rms_800": 8.673704147338867,
+   "surf_max": 32.11189651489258,
+   "temp_min": 3.714409351348877,
+   "temp_max": 25.94757080078125,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 50.0,
+  "bathy": "flat",
+  "run_id": "e2_ab79b814902e",
+  "obs": {
+   "u_max": 9.968766212463379,
+   "u_rms": 3.0910496711730957,
+   "deep_rms_800": 0.029437988996505737,
+   "surf_max": 9.968766212463379,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.933856964111328,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 75.0,
+  "bathy": "r26steep",
+  "run_id": "e2_26ee34c13f5e",
+  "obs": {
+   "u_max": 97.79225158691406,
+   "u_rms": 7.467559814453125,
+   "deep_rms_800": 9.37095832824707,
+   "surf_max": 36.31328582763672,
+   "temp_min": 3.586317777633667,
+   "temp_max": 25.958646774291992,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ },
+ {
+  "knob": "TNU2",
+  "val": 75.0,
+  "bathy": "flat",
+  "run_id": "e2_11aefafe644c",
+  "obs": {
+   "u_max": 9.903467178344727,
+   "u_rms": 3.086174249649048,
+   "deep_rms_800": 0.02948947623372078,
+   "surf_max": 9.887889862060547,
+   "temp_min": 3.999999761581421,
+   "temp_max": 25.927616119384766,
+   "valid": true,
+   "crashed": false,
+   "completion_ratio": 1.0
+  }
+ }
+]

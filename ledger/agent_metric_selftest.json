@@ -1,0 +1,32 @@
+{
+ "summary": {
+  "n_r26": 58,
+  "n_flat": 44,
+  "n_pairs": 32,
+  "n_keys": 124
+ },
+ "baseline": {
+  "valid": true,
+  "key_num": "u|d800|rms",
+  "key_den": null,
+  "rho": -0.9630871450982806,
+  "paired": 0.0,
+  "passA": true,
+  "passB": false,
+  "passed": false,
+  "n26": 58,
+  "npairs": 32
+ },
+ "uv_ratio": {
+  "valid": true,
+  "key_num": "u|all|rms",
+  "key_den": "v|all|mean_abs",
+  "rho": -0.9229751761050786,
+  "paired": 1.0,
+  "passA": true,
+  "passB": true,
+  "passed": true,
+  "n26": 58,
+  "npairs": 32
+ }
+}

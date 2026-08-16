@@ -1,0 +1,1181 @@
+{
+ "n_seed": 12,
+ "n_adapt": 10,
+ "seed": 0,
+ "wall_total_s": 1345.7,
+ "budget": {
+  "n_runs": 22,
+  "wall_total_s": 2700.9,
+  "wall_per_run_s": 122.8
+ },
+ "final_memory": {
+  "flat": {
+   "sensitivity_per_decade": -0.0007242900836267512,
+   "baseline_at_zero": 0.030055664479732513,
+   "best": {
+    "bathy": "flat",
+    "VISC2": 292.2,
+    "obj": 0.028343038633465767,
+    "valid": true,
+    "u_max": 7.862908363342285,
+    "u_rms": 2.8359463214874268,
+    "surf_max": 6.9138078689575195
+   },
+   "n_obs": 4
+  },
+  "mit": {
+   "sensitivity_per_decade": -2.440936944281929,
+   "baseline_at_zero": 11.676650047302246,
+   "best": {
+    "bathy": "mit",
+    "VISC2": 743.6,
+    "obj": 4.623599052429199,
+    "valid": true,
+    "u_max": 46.01112365722656,
+    "u_rms": 4.083415508270264,
+    "surf_max": 10.20343017578125
+   },
+   "n_obs": 4
+  },
+  "r26steep": {
+   "sensitivity_per_decade": -2.4587663769362007,
+   "baseline_at_zero": 9.290669441223145,
+   "best": {
+    "bathy": "r26steep",
+    "VISC2": 2000.0,
+    "obj": 2.0208535194396973,
+    "valid": true,
+    "u_max": 25.220989227294922,
+    "u_rms": 2.6874520778656006,
+    "surf_max": 6.337119102478027
+   },
+   "n_obs": 14
+  },
+  "_contrast": {
+   "r26steep_over_flat_at_zero": 309.1,
+   "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+  }
+ },
+ "log": [
+  {
+   "phase": "seed",
+   "i": 0,
+   "action": {
+    "bathy": "flat",
+    "VISC2": 0.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 14.252551078796387,
+    "u_rms": 3.3252005577087402,
+    "deep_rms_800": 0.030055664479732513,
+    "surf_max": 12.034598350524902,
+    "temp_min": 3.999617338180542,
+    "temp_max": 25.929479598999023,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_109ca3289c7f",
+   "hidden_grade": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   },
+   "wall_s": 124.9
+  },
+  {
+   "phase": "seed",
+   "i": 1,
+   "action": {
+    "bathy": "mit",
+    "VISC2": 0.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 121.47663879394531,
+    "u_rms": 9.281157493591309,
+    "deep_rms_800": 11.676650047302246,
+    "surf_max": 38.246734619140625,
+    "temp_min": 3.3296310901641846,
+    "temp_max": 27.126583099365234,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_2a6de2e86518",
+   "hidden_grade": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   },
+   "wall_s": 126.8
+  },
+  {
+   "phase": "seed",
+   "i": 2,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 0.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 98.2009506225586,
+    "u_rms": 7.761971473693848,
+    "deep_rms_800": 9.290669441223145,
+    "surf_max": 43.6943244934082,
+    "temp_min": 3.765155553817749,
+    "temp_max": 25.984886169433594,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_266404276ec5",
+   "hidden_grade": {
+    "score": 7.708643998253778,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 126.7
+  },
+  {
+   "phase": "seed",
+   "i": 3,
+   "action": {
+    "bathy": "flat",
+    "VISC2": 292.2,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 7.862908363342285,
+    "u_rms": 2.8359463214874268,
+    "deep_rms_800": 0.028343038633465767,
+    "surf_max": 6.9138078689575195,
+    "temp_min": 3.999999761581421,
+    "temp_max": 25.94352149963379,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_34c113922dfc",
+   "hidden_grade": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   },
+   "wall_s": 118.1
+  },
+  {
+   "phase": "seed",
+   "i": 4,
+   "action": {
+    "bathy": "mit",
+    "VISC2": 41.8,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 93.39189147949219,
+    "u_rms": 7.953413009643555,
+    "deep_rms_800": 10.318824768066406,
+    "surf_max": 24.123607635498047,
+    "temp_min": 3.7620933055877686,
+    "temp_max": 26.794246673583984,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_afc9d9a1fbec",
+   "hidden_grade": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   },
+   "wall_s": 125.4
+  },
+  {
+   "phase": "seed",
+   "i": 5,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 12.4,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 96.32429504394531,
+    "u_rms": 7.561556339263916,
+    "deep_rms_800": 9.16074275970459,
+    "surf_max": 35.428104400634766,
+    "temp_min": 3.6740753650665283,
+    "temp_max": 25.968334197998047,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_3f186713eb92",
+   "hidden_grade": {
+    "score": 7.763319482015037,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 132.5
+  },
+  {
+   "phase": "seed",
+   "i": 6,
+   "action": {
+    "bathy": "flat",
+    "VISC2": 10.9,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 12.582294464111328,
+    "u_rms": 3.2415647506713867,
+    "deep_rms_800": 0.029861124232411385,
+    "surf_max": 11.493473052978516,
+    "temp_min": 3.999725341796875,
+    "temp_max": 25.928953170776367,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_cc80090e60c7",
+   "hidden_grade": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   },
+   "wall_s": 122.6
+  },
+  {
+   "phase": "seed",
+   "i": 7,
+   "action": {
+    "bathy": "mit",
+    "VISC2": 743.6,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 46.01112365722656,
+    "u_rms": 4.083415508270264,
+    "deep_rms_800": 4.623599052429199,
+    "surf_max": 10.20343017578125,
+    "temp_min": 3.5551090240478516,
+    "temp_max": 26.53035545349121,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_c76b5bdb67ce",
+   "hidden_grade": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   },
+   "wall_s": 120.1
+  },
+  {
+   "phase": "seed",
+   "i": 8,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 1259.7,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 37.068214416503906,
+    "u_rms": 3.0740606784820557,
+    "deep_rms_800": 2.782088041305542,
+    "surf_max": 8.723918914794922,
+    "temp_min": 3.6244373321533203,
+    "temp_max": 25.94675064086914,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_a0a9a4e3dfb9",
+   "hidden_grade": {
+    "score": 3.54471738727691,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 124.0
+  },
+  {
+   "phase": "seed",
+   "i": 9,
+   "action": {
+    "bathy": "flat",
+    "VISC2": 248.8,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 8.074932098388672,
+    "u_rms": 2.8629865646362305,
+    "deep_rms_800": 0.028505956754088402,
+    "surf_max": 7.144406318664551,
+    "temp_min": 3.999999761581421,
+    "temp_max": 25.941545486450195,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_f7140319aefe",
+   "hidden_grade": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   },
+   "wall_s": 121.5
+  },
+  {
+   "phase": "seed",
+   "i": 10,
+   "action": {
+    "bathy": "mit",
+    "VISC2": 477.1,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 45.63468933105469,
+    "u_rms": 4.843801975250244,
+    "deep_rms_800": 5.6958184242248535,
+    "surf_max": 12.292657852172852,
+    "temp_min": 3.4571614265441895,
+    "temp_max": 26.801511764526367,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_b5dd1cbcc90c",
+   "hidden_grade": {
+    "score": null,
+    "valid": false,
+    "reason": "该配置无 err_rms_vs_truth（真值仅 r26steep 可用）"
+   },
+   "wall_s": 120.5
+  },
+  {
+   "phase": "seed",
+   "i": 11,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 178.2,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 75.47047424316406,
+    "u_rms": 5.798660755157471,
+    "deep_rms_800": 7.186557292938232,
+    "surf_max": 23.19122886657715,
+    "temp_min": 3.414611339569092,
+    "temp_max": 26.02152442932129,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_ba0832063990",
+   "hidden_grade": {
+    "score": 6.0610357211578405,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 125.1
+  },
+  {
+   "phase": "adapt",
+   "i": 0,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 2000.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 25.220989227294922,
+    "u_rms": 2.6874520778656006,
+    "deep_rms_800": 2.0208535194396973,
+    "surf_max": 6.337119102478027,
+    "temp_min": 3.7078397274017334,
+    "temp_max": 25.943941116333008,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_0b0a9926a354",
+   "hidden_grade": {
+    "score": 3.1715560695223597,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 124.8,
+   "critic": [],
+   "memory": {
+    "flat": {
+     "sensitivity_per_decade": -0.0007242900836267512,
+     "baseline_at_zero": 0.030055664479732513,
+     "best": {
+      "bathy": "flat",
+      "VISC2": 292.2,
+      "obj": 0.028343038633465767,
+      "valid": true,
+      "u_max": 7.862908363342285,
+      "u_rms": 2.8359463214874268,
+      "surf_max": 6.9138078689575195
+     },
+     "n_obs": 4
+    },
+    "mit": {
+     "sensitivity_per_decade": -2.440936944281929,
+     "baseline_at_zero": 11.676650047302246,
+     "best": {
+      "bathy": "mit",
+      "VISC2": 743.6,
+      "obj": 4.623599052429199,
+      "valid": true,
+      "u_max": 46.01112365722656,
+      "u_rms": 4.083415508270264,
+      "surf_max": 10.20343017578125
+     },
+     "n_obs": 4
+    },
+    "r26steep": {
+     "sensitivity_per_decade": -2.295025877086581,
+     "baseline_at_zero": 9.290669441223145,
+     "best": {
+      "bathy": "r26steep",
+      "VISC2": 2000.0,
+      "obj": 2.0208535194396973,
+      "valid": true,
+      "u_max": 25.220989227294922,
+      "u_rms": 2.6874520778656006,
+      "surf_max": 6.337119102478027
+     },
+     "n_obs": 5
+    },
+    "_contrast": {
+     "r26steep_over_flat_at_zero": 309.1,
+     "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+    }
+   }
+  },
+  {
+   "phase": "adapt",
+   "i": 1,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 719.0,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 51.60509490966797,
+    "u_rms": 3.726341962814331,
+    "deep_rms_800": 4.009424686431885,
+    "surf_max": 12.474435806274414,
+    "temp_min": 3.488595962524414,
+    "temp_max": 25.948246002197266,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_65b97aaf064a",
+   "hidden_grade": {
+    "score": 4.122903858502724,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 123.2,
+   "critic": [],
+   "memory": {
+    "flat": {
+     "sensitivity_per_decade": -0.0007242900836267512,
+     "baseline_at_zero": 0.030055664479732513,
+     "best": {
+      "bathy": "flat",
+      "VISC2": 292.2,
+      "obj": 0.028343038633465767,
+      "valid": true,
+      "u_max": 7.862908363342285,
+      "u_rms": 2.8359463214874268,
+      "surf_max": 6.9138078689575195
+     },
+     "n_obs": 4
+    },
+    "mit": {
+     "sensitivity_per_decade": -2.440936944281929,
+     "baseline_at_zero": 11.676650047302246,
+     "best": {
+      "bathy": "mit",
+      "VISC2": 743.6,
+      "obj": 4.623599052429199,
+      "valid": true,
+      "u_max": 46.01112365722656,
+      "u_rms": 4.083415508270264,
+      "surf_max": 10.20343017578125
+     },
+     "n_obs": 4
+    },
+    "r26steep": {
+     "sensitivity_per_decade": -2.294649015010422,
+     "baseline_at_zero": 9.290669441223145,
+     "best": {
+      "bathy": "r26steep",
+      "VISC2": 2000.0,
+      "obj": 2.0208535194396973,
+      "valid": true,
+      "u_max": 25.220989227294922,
+      "u_rms": 2.6874520778656006,
+      "surf_max": 6.337119102478027
+     },
+     "n_obs": 6
+    },
+    "_contrast": {
+     "r26steep_over_flat_at_zero": 309.1,
+     "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+    }
+   }
+  },
+  {
+   "phase": "adapt",
+   "i": 2,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 1629.8,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 30.14400863647461,
+    "u_rms": 2.846975088119507,
+    "deep_rms_800": 2.33044695854187,
+    "surf_max": 7.293448448181152,
+    "temp_min": 3.67281174659729,
+    "temp_max": 25.945289611816406,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_a7e8bb1334db",
+   "hidden_grade": {
+    "score": 3.3499802424343716,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 121.4,
+   "critic": [],
+   "memory": {
+    "flat": {
+     "sensitivity_per_decade": -0.0007242900836267512,
+     "baseline_at_zero": 0.030055664479732513,
+     "best": {
+      "bathy": "flat",
+      "VISC2": 292.2,
+      "obj": 0.028343038633465767,
+      "valid": true,
+      "u_max": 7.862908363342285,
+      "u_rms": 2.8359463214874268,
+      "surf_max": 6.9138078689575195
+     },
+     "n_obs": 4
+    },
+    "mit": {
+     "sensitivity_per_decade": -2.440936944281929,
+     "baseline_at_zero": 11.676650047302246,
+     "best": {
+      "bathy": "mit",
+      "VISC2": 743.6,
+      "obj": 4.623599052429199,
+      "valid": true,
+      "u_max": 46.01112365722656,
+      "u_rms": 4.083415508270264,
+      "surf_max": 10.20343017578125
+     },
+     "n_obs": 4
+    },
+    "r26steep": {
+     "sensitivity_per_decade": -2.380744905701178,
+     "baseline_at_zero": 9.290669441223145,
+     "best": {
+      "bathy": "r26steep",
+      "VISC2": 2000.0,
+      "obj": 2.0208535194396973,
+      "valid": true,
+      "u_max": 25.220989227294922,
+      "u_rms": 2.6874520778656006,
+      "surf_max": 6.337119102478027
+     },
+     "n_obs": 7
+    },
+    "_contrast": {
+     "r26steep_over_flat_at_zero": 309.1,
+     "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+    }
+   }
+  },
+  {
+   "phase": "adapt",
+   "i": 3,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 448.6,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 55.35218048095703,
+    "u_rms": 4.440152168273926,
+    "deep_rms_800": 5.1487555503845215,
+    "surf_max": 16.196653366088867,
+    "temp_min": 3.3900866508483887,
+    "temp_max": 25.94668197631836,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_2f9903f71189",
+   "hidden_grade": {
+    "score": 4.777603407123995,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 123.1,
+   "critic": [],
+   "memory": {
+    "flat": {
+     "sensitivity_per_decade": -0.0007242900836267512,
+     "baseline_at_zero": 0.030055664479732513,
+     "best": {
+      "bathy": "flat",
+      "VISC2": 292.2,
+      "obj": 0.028343038633465767,
+      "valid": true,
+      "u_max": 7.862908363342285,
+      "u_rms": 2.8359463214874268,
+      "surf_max": 6.9138078689575195
+     },
+     "n_obs": 4
+    },
+    "mit": {
+     "sensitivity_per_decade": -2.440936944281929,
+     "baseline_at_zero": 11.676650047302246,
+     "best": {
+      "bathy": "mit",
+      "VISC2": 743.6,
+      "obj": 4.623599052429199,
+      "valid": true,
+      "u_max": 46.01112365722656,
+      "u_rms": 4.083415508270264,
+      "surf_max": 10.20343017578125
+     },
+     "n_obs": 4
+    },
+    "r26steep": {
+     "sensitivity_per_decade": -2.3512430956087793,
+     "baseline_at_zero": 9.290669441223145,
+     "best": {
+      "bathy": "r26steep",
+      "VISC2": 2000.0,
+      "obj": 2.0208535194396973,
+      "valid": true,
+      "u_max": 25.220989227294922,
+      "u_rms": 2.6874520778656006,
+      "surf_max": 6.337119102478027
+     },
+     "n_obs": 8
+    },
+    "_contrast": {
+     "r26steep_over_flat_at_zero": 309.1,
+     "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+    }
+   }
+  },
+  {
+   "phase": "adapt",
+   "i": 4,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 989.4,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 43.959041595458984,
+    "u_rms": 3.3268754482269287,
+    "deep_rms_800": 3.2791404724121094,
+    "surf_max": 10.225068092346191,
+    "temp_min": 3.5674736499786377,
+    "temp_max": 25.9477481842041,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_198bcc404433",
+   "hidden_grade": {
+    "score": 3.7659287568201965,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 117.4,
+   "critic": [],
+   "memory": {
+    "flat": {
+     "sensitivity_per_decade": -0.0007242900836267512,
+     "baseline_at_zero": 0.030055664479732513,
+     "best": {
+      "bathy": "flat",
+      "VISC2": 292.2,
+      "obj": 0.028343038633465767,
+      "valid": true,
+      "u_max": 7.862908363342285,
+      "u_rms": 2.8359463214874268,
+      "surf_max": 6.9138078689575195
+     },
+     "n_obs": 4
+    },
+    "mit": {
+     "sensitivity_per_decade": -2.440936944281929,
+     "baseline_at_zero": 11.676650047302246,
+     "best": {
+      "bathy": "mit",
+      "VISC2": 743.6,
+      "obj": 4.623599052429199,
+      "valid": true,
+      "u_max": 46.01112365722656,
+      "u_rms": 4.083415508270264,
+      "surf_max": 10.20343017578125
+     },
+     "n_obs": 4
+    },
+    "r26steep": {
+     "sensitivity_per_decade": -2.3722503023390136,
+     "baseline_at_zero": 9.290669441223145,
+     "best": {
+      "bathy": "r26steep",
+      "VISC2": 2000.0,
+      "obj": 2.0208535194396973,
+      "valid": true,
+      "u_max": 25.220989227294922,
+      "u_rms": 2.6874520778656006,
+      "surf_max": 6.337119102478027
+     },
+     "n_obs": 9
+    },
+    "_contrast": {
+     "r26steep_over_flat_at_zero": 309.1,
+     "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+    }
+   }
+  },
+  {
+   "phase": "adapt",
+   "i": 5,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 1814.9,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 27.47742462158203,
+    "u_rms": 2.76143741607666,
+    "deep_rms_800": 2.1631226539611816,
+    "surf_max": 6.735933780670166,
+    "temp_min": 3.6898891925811768,
+    "temp_max": 25.944595336914062,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_5a68b4073b0f",
+   "hidden_grade": {
+    "score": 3.2777470431960083,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 116.1,
+   "critic": [],
+   "memory": {
+    "flat": {
+     "sensitivity_per_decade": -0.0007242900836267512,
+     "baseline_at_zero": 0.030055664479732513,
+     "best": {
+      "bathy": "flat",
+      "VISC2": 292.2,
+      "obj": 0.028343038633465767,
+      "valid": true,
+      "u_max": 7.862908363342285,
+      "u_rms": 2.8359463214874268,
+      "surf_max": 6.9138078689575195
+     },
+     "n_obs": 4
+    },
+    "mit": {
+     "sensitivity_per_decade": -2.440936944281929,
+     "baseline_at_zero": 11.676650047302246,
+     "best": {
+      "bathy": "mit",
+      "VISC2": 743.6,
+      "obj": 4.623599052429199,
+      "valid": true,
+      "u_max": 46.01112365722656,
+      "u_rms": 4.083415508270264,
+      "surf_max": 10.20343017578125
+     },
+     "n_obs": 4
+    },
+    "r26steep": {
+     "sensitivity_per_decade": -2.4297211510991263,
+     "baseline_at_zero": 9.290669441223145,
+     "best": {
+      "bathy": "r26steep",
+      "VISC2": 2000.0,
+      "obj": 2.0208535194396973,
+      "valid": true,
+      "u_max": 25.220989227294922,
+      "u_rms": 2.6874520778656006,
+      "surf_max": 6.337119102478027
+     },
+     "n_obs": 10
+    },
+    "_contrast": {
+     "r26steep_over_flat_at_zero": 309.1,
+     "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+    }
+   }
+  },
+  {
+   "phase": "adapt",
+   "i": 6,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 1444.8,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 33.308685302734375,
+    "u_rms": 2.9487171173095703,
+    "deep_rms_800": 2.532275438308716,
+    "surf_max": 7.944156169891357,
+    "temp_min": 3.652604103088379,
+    "temp_max": 25.946014404296875,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_46946b5fdba8",
+   "hidden_grade": {
+    "score": 3.436718472394884,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 122.8,
+   "critic": [],
+   "memory": {
+    "flat": {
+     "sensitivity_per_decade": -0.0007242900836267512,
+     "baseline_at_zero": 0.030055664479732513,
+     "best": {
+      "bathy": "flat",
+      "VISC2": 292.2,
+      "obj": 0.028343038633465767,
+      "valid": true,
+      "u_max": 7.862908363342285,
+      "u_rms": 2.8359463214874268,
+      "surf_max": 6.9138078689575195
+     },
+     "n_obs": 4
+    },
+    "mit": {
+     "sensitivity_per_decade": -2.440936944281929,
+     "baseline_at_zero": 11.676650047302246,
+     "best": {
+      "bathy": "mit",
+      "VISC2": 743.6,
+      "obj": 4.623599052429199,
+      "valid": true,
+      "u_max": 46.01112365722656,
+      "u_rms": 4.083415508270264,
+      "surf_max": 10.20343017578125
+     },
+     "n_obs": 4
+    },
+    "r26steep": {
+     "sensitivity_per_decade": -2.4595411065972232,
+     "baseline_at_zero": 9.290669441223145,
+     "best": {
+      "bathy": "r26steep",
+      "VISC2": 2000.0,
+      "obj": 2.0208535194396973,
+      "valid": true,
+      "u_max": 25.220989227294922,
+      "u_rms": 2.6874520778656006,
+      "surf_max": 6.337119102478027
+     },
+     "n_obs": 11
+    },
+    "_contrast": {
+     "r26steep_over_flat_at_zero": 309.1,
+     "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+    }
+   }
+  },
+  {
+   "phase": "adapt",
+   "i": 7,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 313.4,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 59.879737854003906,
+    "u_rms": 5.00233793258667,
+    "deep_rms_800": 6.008912086486816,
+    "surf_max": 18.934926986694336,
+    "temp_min": 3.376772165298462,
+    "temp_max": 25.94354248046875,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_075f704062c9",
+   "hidden_grade": {
+    "score": 5.304177744523711,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 123.6,
+   "critic": [],
+   "memory": {
+    "flat": {
+     "sensitivity_per_decade": -0.0007242900836267512,
+     "baseline_at_zero": 0.030055664479732513,
+     "best": {
+      "bathy": "flat",
+      "VISC2": 292.2,
+      "obj": 0.028343038633465767,
+      "valid": true,
+      "u_max": 7.862908363342285,
+      "u_rms": 2.8359463214874268,
+      "surf_max": 6.9138078689575195
+     },
+     "n_obs": 4
+    },
+    "mit": {
+     "sensitivity_per_decade": -2.440936944281929,
+     "baseline_at_zero": 11.676650047302246,
+     "best": {
+      "bathy": "mit",
+      "VISC2": 743.6,
+      "obj": 4.623599052429199,
+      "valid": true,
+      "u_max": 46.01112365722656,
+      "u_rms": 4.083415508270264,
+      "surf_max": 10.20343017578125
+     },
+     "n_obs": 4
+    },
+    "r26steep": {
+     "sensitivity_per_decade": -2.4638816809806126,
+     "baseline_at_zero": 9.290669441223145,
+     "best": {
+      "bathy": "r26steep",
+      "VISC2": 2000.0,
+      "obj": 2.0208535194396973,
+      "valid": true,
+      "u_max": 25.220989227294922,
+      "u_rms": 2.6874520778656006,
+      "surf_max": 6.337119102478027
+     },
+     "n_obs": 12
+    },
+    "_contrast": {
+     "r26steep_over_flat_at_zero": 309.1,
+     "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+    }
+   }
+  },
+  {
+   "phase": "adapt",
+   "i": 8,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 583.8,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 54.803951263427734,
+    "u_rms": 4.0270843505859375,
+    "deep_rms_800": 4.508747577667236,
+    "surf_max": 14.10185718536377,
+    "temp_min": 3.4352033138275146,
+    "temp_max": 25.947925567626953,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_eeea0069c49b",
+   "hidden_grade": {
+    "score": 4.396521712901256,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 119.7,
+   "critic": [],
+   "memory": {
+    "flat": {
+     "sensitivity_per_decade": -0.0007242900836267512,
+     "baseline_at_zero": 0.030055664479732513,
+     "best": {
+      "bathy": "flat",
+      "VISC2": 292.2,
+      "obj": 0.028343038633465767,
+      "valid": true,
+      "u_max": 7.862908363342285,
+      "u_rms": 2.8359463214874268,
+      "surf_max": 6.9138078689575195
+     },
+     "n_obs": 4
+    },
+    "mit": {
+     "sensitivity_per_decade": -2.440936944281929,
+     "baseline_at_zero": 11.676650047302246,
+     "best": {
+      "bathy": "mit",
+      "VISC2": 743.6,
+      "obj": 4.623599052429199,
+      "valid": true,
+      "u_max": 46.01112365722656,
+      "u_rms": 4.083415508270264,
+      "surf_max": 10.20343017578125
+     },
+     "n_obs": 4
+    },
+    "r26steep": {
+     "sensitivity_per_decade": -2.455628175695749,
+     "baseline_at_zero": 9.290669441223145,
+     "best": {
+      "bathy": "r26steep",
+      "VISC2": 2000.0,
+      "obj": 2.0208535194396973,
+      "valid": true,
+      "u_max": 25.220989227294922,
+      "u_rms": 2.6874520778656006,
+      "surf_max": 6.337119102478027
+     },
+     "n_obs": 13
+    },
+    "_contrast": {
+     "r26steep_over_flat_at_zero": 309.1,
+     "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+    }
+   }
+  },
+  {
+   "phase": "adapt",
+   "i": 9,
+   "action": {
+    "bathy": "r26steep",
+    "VISC2": 854.2,
+    "ntimes": 8640,
+    "seed": 0
+   },
+   "obs": {
+    "u_max": 47.84629821777344,
+    "u_rms": 3.5017385482788086,
+    "deep_rms_800": 3.6088266372680664,
+    "surf_max": 11.224857330322266,
+    "temp_min": 3.533550977706909,
+    "temp_max": 25.948110580444336,
+    "valid": true,
+    "crashed": false,
+    "completion_ratio": 1.0
+   },
+   "run_id": "e2_1704350b085f",
+   "hidden_grade": {
+    "score": 3.921191570647939,
+    "valid": true,
+    "metric": "err_rms_vs_truth",
+    "bathy": "r26steep"
+   },
+   "wall_s": 120.6,
+   "critic": [],
+   "memory": {
+    "flat": {
+     "sensitivity_per_decade": -0.0007242900836267512,
+     "baseline_at_zero": 0.030055664479732513,
+     "best": {
+      "bathy": "flat",
+      "VISC2": 292.2,
+      "obj": 0.028343038633465767,
+      "valid": true,
+      "u_max": 7.862908363342285,
+      "u_rms": 2.8359463214874268,
+      "surf_max": 6.9138078689575195
+     },
+     "n_obs": 4
+    },
+    "mit": {
+     "sensitivity_per_decade": -2.440936944281929,
+     "baseline_at_zero": 11.676650047302246,
+     "best": {
+      "bathy": "mit",
+      "VISC2": 743.6,
+      "obj": 4.623599052429199,
+      "valid": true,
+      "u_max": 46.01112365722656,
+      "u_rms": 4.083415508270264,
+      "surf_max": 10.20343017578125
+     },
+     "n_obs": 4
+    },
+    "r26steep": {
+     "sensitivity_per_decade": -2.4587663769362007,
+     "baseline_at_zero": 9.290669441223145,
+     "best": {
+      "bathy": "r26steep",
+      "VISC2": 2000.0,
+      "obj": 2.0208535194396973,
+      "valid": true,
+      "u_max": 25.220989227294922,
+      "u_rms": 2.6874520778656006,
+      "surf_max": 6.337119102478027
+     },
+     "n_obs": 14
+    },
+    "_contrast": {
+     "r26steep_over_flat_at_zero": 309.1,
+     "note": "平底 σ-PGE≡0：该比值即指标对 σ-PGE 的分辨力。比值接近 1 说明指标没在测 σ-PGE。"
+    }
+   }
+  }
+ ]
+}
