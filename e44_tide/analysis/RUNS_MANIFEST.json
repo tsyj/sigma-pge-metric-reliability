@@ -287,5 +287,13 @@
    "in_16lib": false,
    "in_judge15": false
   }
- ]
+ ],
+ "e52_meridional_wind": {
+  "n_runs": 56,
+  "ledger": "ledger/env2_merid_runs.jsonl",
+  "runs_dir": "runs_merid/",
+  "binary_sha256": "76493ce413727c633fc573056afee3809f4e69250129a6000136aa89f557b430",
+  "truth": "truth/merid_1pEm5 (MITgcm, meridWindFile)",
+  "note": "4 旋钮×7 档×2 地形, 全部有效; 技巧评分仅 AKV=1e-5 子集 22 条"
+ }
 }

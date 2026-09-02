@@ -1,0 +1,11 @@
+# E52 转风环境 · 溯源
+- 日期: 2026-09-02_16:06:41
+- 补丁源: build/merid_functionals/ana_smflux.h  sha256=49f5bc39ccc331849f6c62818ce95d266fc95b32f83dd8ad7f1d2aa8d915f321
+- 与原 ana_smflux.h 差异(行数): 20
+- 二进制: bin/coawstM_goai_merid  sha256=76493ce413727c633fc573056afee3809f4e69250129a6000136aa89f557b430
+- 原 v4 二进制 sha256=b50851d95ab35bc60a7545185eb5ec24f2aa9c3c0e36e70620b3e1b711436822
+- MITgcm 真值: truth/merid_1pEm5 由 truth/hires_1pEm5 复制, data 仅改一行: zonalWindFile->meridWindFile(同 windx.bin); mitgcmuv 同源重建二进制; 末刻 |U|max/|V|max = 0.0799/0.0911 (原 0.0911/0.0799, 精确镜像)
+- ROMS 表层镜像验证(同动作 e2_109ca3289 flat, 末 1/3 时段): zonal u_surf/v_surf rms 4.32/9.93 -> merid 9.93/6.63
+- 环境代码: e52/env2_merid.py(由 scripts/env2.py 派生, 差异: BIN/LEDGER/runs_merid/真值读 V/评分 rho_from_v/新增 vu_ratio,v_rms,deep_rms_800_v)
+- 扫描: e52/knob_sweep_merid.py = scripts/knob_sweep.py 同配置(4 旋钮×7 档×2 地形=56), 输出 ledger/knob_sweep_merid.json
+- 判据: e52/metric_search_merid.py = scripts/metric_search.py 同判据(A: rho<=-0.7 vs skill_vs_zero(V 真值); B: 配对抗刷>=0.9)
