@@ -46,7 +46,7 @@ assert X['inter_triple']==0, X['inter_triple']
 assert X['uv_merid']['rho']>-0.7 and not X['uv_merid']['passAB']
 assert X['vu_merid']['paired']<0.9
 print('  PASS: 三重交集 %d; u/v 经向 rho=%+.2f (fail A); v/u 经向 paired=%.2f (fail B)'%(X['inter_triple'],X['uv_merid']['rho'],X['vu_merid']['paired']))
-rows=K['grid']; assert not any(all(c[0]=='过' for c in r) for r in rows), 'kill board 出现全绿行'
-print('  PASS: kill board 无全绿行 (%d×%d)'%(len(rows),len(rows[0])))
+rows=K['grid']; ruler_rows=rows[:4]; assert not any(all(c['verdict']=='过' for c in r) for r in ruler_rows), 'kill board 尺子行出现全绿'
+print('  PASS: kill board 四把尺子无全绿行 (%d×%d, 第 5 行为真值对照)'%(len(rows),len(rows[0])))
 PYX
 echo "SMOKE TEST: ALL PASS (4/4)"
