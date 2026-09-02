@@ -25,6 +25,14 @@ for k,v in R['F2_A8_signed'].items(): print('  A8 %-13s rho=%+.3f p=%.4f -> %s'%
 print('  BH93: u_max %.2f->%.2f (rho=%+.3f); A1 抗刷 %.3f; 代理夸大 %.2f 倍; 技巧全程为负 %s'%(
   B['bh93_umax'][0],B['bh93_umax'][-1],B['rho_bh93'],B['A1_paired_correct'],B['exaggeration'],B['skill_always_negative']))
 PYX
+echo "== 3b/4 E59 无真值预测（读已交付 JSON） =="
+$PY - <<'PYX'
+import json
+R=json.load(open('e59/E59_TRUTHFREE.json'))
+print('  跨环境 AUC=%s (纬向训练->经向测试); f1 抗刷率单特征 AUC=%s'%(R['multi']['auc_test'],R['single']['f1 配对抗刷率']['auc_test']))
+print('  precision@204=%s vs 基率 %s (P3 未命中); 命中率峰值 %s 后回落 %s'%(
+  R['precision_at_204']['precision'],round(R['base_rate_test'],4),R['peak']['hit_rate'],R['tail']['hit_rate']))
+PYX
 echo "== 4/4 自检（与 smoke_test 同源） =="
 bash scripts/smoke_test.sh | tail -2
 echo "REPRODUCE_CORE: DONE"

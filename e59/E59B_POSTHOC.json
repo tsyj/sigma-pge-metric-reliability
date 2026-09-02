@@ -1,0 +1,61 @@
+{
+ "note": "事后分析(post-hoc)，非 PREREG_E59 的预注册内容；用于解释 P3 未命中的原因。",
+ "A>=0.7 (预注册目标)": {
+  "auc_test": 0.8706,
+  "base_rate_test": 0.2797,
+  "precision_at_204": 0.0882,
+  "lift": 0.315,
+  "top1000_precision": 0.674
+ },
+ "|A|>=0.7 (事后: 判别力强度)": {
+  "auc_test": 0.8128,
+  "base_rate_test": 0.5553,
+  "precision_at_204": 0.8284,
+  "lift": 1.492,
+  "top1000_precision": 0.85
+ },
+ "方向可预测性": {
+  "auc_test": 0.9193,
+  "n_test": 8538,
+  "pos_rate": 0.5037,
+  "meaning": "在已知判别力强(|A|>=0.7)的候选里，用无真值特征预测方向 sign(rho) 的 AUC。接近 0.5 即方向不可预测。"
+ },
+ "两阶段协议": {
+  "base_rate_good": 0.2797,
+  "rows": [
+   {
+    "N": 500,
+    "strong": 435,
+    "strong_rate": 0.87,
+    "good": 182,
+    "good_rate": 0.364,
+    "recall_good": 0.0423
+   },
+   {
+    "N": 1000,
+    "strong": 850,
+    "strong_rate": 0.85,
+    "good": 425,
+    "good_rate": 0.425,
+    "recall_good": 0.0988
+   },
+   {
+    "N": 2000,
+    "strong": 1731,
+    "strong_rate": 0.8655,
+    "good": 905,
+    "good_rate": 0.4525,
+    "recall_good": 0.2104
+   },
+   {
+    "N": 4000,
+    "strong": 3480,
+    "strong_rate": 0.87,
+    "good": 1598,
+    "good_rate": 0.3995,
+    "recall_good": 0.3715
+   }
+  ],
+  "reading": "第一阶段用无真值特征把 15376 缩到 top-N（判别力富集），第二阶段只对这 N 个做真值实验定方向。"
+ }
+}

@@ -1,0 +1,166 @@
+{
+ "prereg_sha": "533c3062389e8ad1034beea3100264d9eb16835cdbfb8d08a7c6e8c4c4a99159",
+ "n_train": 15376,
+ "n_test": 15376,
+ "base_rate_train": 0.3154916753381894,
+ "base_rate_test": 0.2797216441207076,
+ "single": {
+  "f1 配对抗刷率": {
+   "auc_test": 0.2005,
+   "auc_train": 0.1426
+  },
+  "f2 平底噪声": {
+   "auc_test": 0.4244,
+   "auc_train": 0.4744
+  },
+  "f3 海山动态范围": {
+   "auc_test": 0.5516,
+   "auc_train": 0.6718
+  },
+  "f4 地形敏感度": {
+   "auc_test": 0.2076,
+   "auc_train": 0.1455
+  },
+  "f5 同分量": {
+   "auc_test": 0.4772,
+   "auc_train": 0.4595
+  },
+  "f6 深度层级差": {
+   "auc_test": 0.4925,
+   "auc_train": 0.4955
+  },
+  "f7 与旋钮秩相关": {
+   "auc_test": 0.6752,
+   "auc_train": 0.7691
+  }
+ },
+ "multi": {
+  "auc_test": 0.8706,
+  "auc_train": 0.9658,
+  "coef": {
+   "f1 配对抗刷率": -2.5717,
+   "f2 平底噪声": -0.1115,
+   "f3 海山动态范围": 0.1931,
+   "f4 地形敏感度": -1.6895,
+   "f5 同分量": -0.0242,
+   "f6 深度层级差": 0.0746,
+   "f7 与旋钮秩相关": 3.4786
+  },
+  "intercept": -2.8192
+ },
+ "precision_at_204": {
+  "precision": 0.0882,
+  "base_rate": 0.2797,
+  "lift": 0.315,
+  "k": 204
+ },
+ "prereg_check": {
+  "P1 f1 单特征 |AUC-0.5|>0.05": true,
+  "P2 多特征 AUC>=0.70": true,
+  "P3 precision@204 >= 3x 基率": false,
+  "P4 f2 单特征 |AUC-0.5|>0.05": true
+ },
+ "posthoc_explanations_tested": [
+  {
+   "hypothesis": "无真值特征只能预测判别力强度 |rho|，不能预测方向 sign(rho)",
+   "test": "在 |A|>=0.7 的 8538 个测试候选里用无真值特征预测方向",
+   "result": "AUC=0.9193，方向比强度(0.8128)更好预测",
+   "verdict": "被数据推翻"
+  },
+  {
+   "hypothesis": "top-204 是训练分布之外的外推失败",
+   "test": "检查 top-204 的 7 个特征是否落在训练集 1-99 分位内",
+   "result": "7/7 全部在内，0 个外推",
+   "verdict": "被数据推翻"
+  },
+  {
+   "hypothesis": "预测分与命中率是非单调(倒 U)关系：预测器自身在极端处失效",
+   "test": "按预测分等频分箱看命中率",
+   "result": "命中率从 0.037 单调升到 0.831（score≈0.028 处），随后在最高分区间跌至 0.691",
+   "verdict": "与数据一致（本条为观察，不是独立检验）"
+  }
+ ],
+ "binned": [
+  {
+   "score_median": 0.0,
+   "hit_rate": 0.0136,
+   "n": 1099
+  },
+  {
+   "score_median": 0.0,
+   "hit_rate": 0.0537,
+   "n": 1098
+  },
+  {
+   "score_median": 1e-05,
+   "hit_rate": 0.0401,
+   "n": 1098
+  },
+  {
+   "score_median": 2e-05,
+   "hit_rate": 0.0237,
+   "n": 1098
+  },
+  {
+   "score_median": 4e-05,
+   "hit_rate": 0.05,
+   "n": 1099
+  },
+  {
+   "score_median": 8e-05,
+   "hit_rate": 0.0565,
+   "n": 1098
+  },
+  {
+   "score_median": 0.00015,
+   "hit_rate": 0.02,
+   "n": 1098
+  },
+  {
+   "score_median": 0.0003,
+   "hit_rate": 0.1521,
+   "n": 1098
+  },
+  {
+   "score_median": 0.0008,
+   "hit_rate": 0.3971,
+   "n": 1098
+  },
+  {
+   "score_median": 0.00223,
+   "hit_rate": 0.444,
+   "n": 1099
+  },
+  {
+   "score_median": 0.00487,
+   "hit_rate": 0.4836,
+   "n": 1098
+  },
+  {
+   "score_median": 0.01139,
+   "hit_rate": 0.6603,
+   "n": 1098
+  },
+  {
+   "score_median": 0.02807,
+   "hit_rate": 0.8306,
+   "n": 1098
+  },
+  {
+   "score_median": 0.06118,
+   "hit_rate": 0.6906,
+   "n": 1099
+  }
+ ],
+ "peak": {
+  "score": 0.02807,
+  "hit_rate": 0.8306,
+  "n": 1098
+ },
+ "tail": {
+  "score": 0.06118,
+  "hit_rate": 0.6906,
+  "n": 1099
+ },
+ "operational_reading": "无真值特征对排序力有实质预测力（跨环境 AUC=0.871，中段命中率峰值 0.831 vs 基率 0.280），但预测器自身在最高分区间失效（跌至 0.691）。可操作的读法是取中段而非顶端；这也是本作品主题在我们自己的工具上的一次复现：一个有判别力的分数，推到极端同样会骗人。"
+}
