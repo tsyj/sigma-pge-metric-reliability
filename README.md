@@ -58,3 +58,7 @@ LLM 实验使用 DeepSeek API（deepseek-v4-pro / v4-flash），全部轨迹（�
 ## 诚实声明
 
 本项目的探索记录包含 10 次撤回与多个负结果（详见台账与文档 §4.2），包括"智能体抓到我们观测接口的 bug""让智能体自己提议指标 30 轮无一通过"。它们与正向发现同样是本作品的一部分。
+
+
+## 复赛（2026-09）
+见 [README_semifinal.md](README_semifinal.md)：第二/第三环境、审计算子 A1–A8、kill board 一键重生成。
