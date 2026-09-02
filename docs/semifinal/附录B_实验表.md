@@ -1,14 +1,14 @@
-# 附录 B · 实验编号 E40–E55 全表与数字出处
+# 附录 B · 实验编号 E40–E58 全表与数字出处
 
-冲突处以 v5 主文为准；v3 合成稿仅作历史版本存于仓库 docs/semifinal/。
+冲突处以 v6 主文为准；v3 合成稿仅作历史版本存于仓库 docs/semifinal/。
 
 | 编号 | 目的 | 环境 / 算例数 | 关键数字 | 出处（仓库路径） |
 |---|---|---|---|---|
-| E40 | 风驱穷举判据 A（ρ≤−0.7 对 skill_vs_zero）+ B（配对抗刷≥0.9） | 风驱 58 r26 + 44 flat（32 对）；15376 候选 | 通过 204；基线 deep_rms_800 ρ=−0.99、B=0.000 | ledger/metric_search.json |
+| E40 | 风驱穷举判据 A（ρ≤−0.7 对 skill_vs_zero）+ B（配对抗刷≥0.9） | 风驱 58 r26 + 44 flat（32 对）；15376 候选 | 通过 204；基线 deep_rms_800（即 u|d800|rms）纬向 ρ=−0.963、经向 ρ=−0.990，两者 B 均=0.000 | ledger/metric_search.json（纬向）、ledger/metric_search_merid.json（经向） |
 | E43 | LLM 提议判据 | 30 轮（20 轮格式有效） | 0 通过；随机基率 1.33% → 20 抽 0 中 p≈0.77 | ledger/agent_metric_v2_*.json |
 | E44 | 内潮三轴扫描（预注册 13 + 加密 7） | 内潮 84 km 20 条 + 在档 3 臂 | u/v ρ=1.0/0.976/0.893（n=5/8/7；预注册口径 1.0/0.943/1.0，n=4/6/4） | e44_tide/analysis/E44_VERDICT_v2.json；PREREG_E44.md（sha 6ec975c0…） |
 | E45 | 陷阱局 / 判据局 / 中性局 | Agent 下单 7 条 | 终选 ag_s3：残余流 3.25、功率 4.15 MW、u/v 3.46 | e44_tide/agent/RESULT_A_*.json、RESULT_An_*.json、RESULT_B_*.json |
-| E47 | u/v 机制（分母贡献） | 22 臂 | 分母贡献 146–170% | e44_tide/analysis/E47_MECH.json |
+| E47 | u/v 机制（分母贡献） | 22 臂 | 分母贡献（相对基准臂的比值区间；按 E47_MECH.json 重算：以 pf_dj 为基 116–157%，以 pf_v4 为基 129–231%。此前正文的 146–170% 取自 e47_mech.py 的 stdout，未落盘，已改为可复算口径） | e44_tide/analysis/E47_MECH.json |
 | E48 | 内潮穷举三轴判据 | 19600 候选 | 报警型 2574（13.1%）/ 可刷型 2580 | e44_tide/analysis/E48_SEARCH.json |
 | E49 | 风驱∩内潮交集 | — | 13（期望 26.8） | e44_tide/analysis/E49_CROSS.json |
 | E50 | u/v 审计：帧敏感 / 窗均 / 盒宽 | 7 臂 + 500 km 5 臂 | 末帧全幅 39–66%；500 km 绝对值 16–18 | e44_tide/analysis/E50_UV_AUDIT.json |
