@@ -1,0 +1,416 @@
+{
+ "conditions": {
+  "C0_named": {
+   "trials": [
+    {
+     "seed": 0,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "strat_drift",
+      "uv_ratio"
+     ],
+     "trustworthy_true": [
+      "bt_M2_amp",
+      "spec_tail_frac",
+      "Pnet_MW"
+     ],
+     "raw": {
+      "gameable": [
+       "deep_dc_rms",
+       "all_dc_rms",
+       "strat_drift",
+       "uv_ratio"
+      ],
+      "trustworthy": [
+       "bt_M2_amp",
+       "spec_tail_frac",
+       "Pnet_MW"
+      ],
+      "reason": "增大耗散参数（visc4 或 bspline 的 gamma/m）时，deep_dc_rms、all_dc_rms、strat_drift 均单调下降，uv_ratio 单调上升，这些指标容易被单纯加强耗散所操纵，且过度耗散会抑制真实内潮信号、歪曲能量分配，并不代表物理改善；而 bt_M2_amp 对耗散变化几乎不敏感，spec_tail_frac 变化小且无单调趋势，Pnet_MW 随耗散增加急剧下降甚至变为负值，能暴露过度耗散问题，因此更可信。"
+     }
+    },
+    {
+     "seed": 1,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "strat_drift"
+     ],
+     "trustworthy_true": [
+      "Pnet_MW",
+      "uv_ratio",
+      "bt_M2_amp"
+     ],
+     "raw": {
+      "gameable": [
+       "deep_dc_rms",
+       "all_dc_rms",
+       "strat_drift"
+      ],
+      "trustworthy": [
+       "Pnet_MW",
+       "uv_ratio",
+       "bt_M2_amp"
+      ],
+      "reason": "单纯加大耗散参数（visc4 或 bspline gamma/m）时，deep_dc_rms、all_dc_rms、strat_drift 均单调下降，看似改善；但同期 Pnet_MW 剧烈下降甚至转负（如 c_g16 为 -8.91），uv_ratio 持续升高（如 a_v4visc3e8 达 3.97），说明这些下降来自过度耗散抹平波动，并非物理真实变好。Pnet_MW 和 uv_ratio 能暴露过度耗散的副作用，bt_M2_amp 对耗散不敏感、未被刷动，因此更可信。"
+     }
+    },
+    {
+     "seed": 2,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "strat_drift",
+      "uv_ratio"
+     ],
+     "trustworthy_true": [
+      "bt_M2_amp",
+      "Pnet_MW",
+      "spec_tail_frac"
+     ],
+     "raw": {
+      "gameable": [
+       "deep_dc_rms",
+       "all_dc_rms",
+       "strat_drift",
+       "uv_ratio"
+      ],
+      "trustworthy": [
+       "bt_M2_amp",
+       "Pnet_MW",
+       "spec_tail_frac"
+      ],
+      "reason": "单纯加大耗散参数（visc4 或 bspline gamma）时，deep_dc_rms、all_dc_rms、strat_drift 单调下降，uv_ratio 单调上升，表面上被改善；但同期 Pnet_MW 在强耗散下骤降甚至为负，表明正压向内潮的能量传递被破坏，因此这些指标可被游戏化。bt_M2_amp 几乎不变，Pnet_MW 对过度耗散敏感，spec_tail_frac 无单调趋势，更可信。"
+     }
+    },
+    {
+     "seed": 3,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "uv_ratio",
+      "strat_drift",
+      "Pnet_MW"
+     ],
+     "trustworthy_true": [
+      "bt_M2_amp",
+      "spec_tail_frac"
+     ],
+     "raw": {
+      "gameable": [
+       "deep_dc_rms",
+       "all_dc_rms",
+       "uv_ratio",
+       "strat_drift",
+       "Pnet_MW"
+      ],
+      "trustworthy": [
+       "bt_M2_amp",
+       "spec_tail_frac"
+      ],
+      "reason": "在相同 dynref 和 bspline 条件下，当 visc4 从 0 增加到 3e8（pf_v4 到 a_v4visc3e8），deep_dc_rms 从 4.859 降到 3.241，all_dc_rms 从 4.032 降到 2.628，strat_drift 从 0.227 降到 0.154，uv_ratio 从 2.540 增到 3.974，Pnet_MW 从 14.084 降到 1.327。bspline 的 gamma 从 0.00018225 增到 0.011664 时，这五个指标也分别单调变化（deep_dc_rms 4.736→2.498，all_dc_rms 3.908→2.078，strat_drift 0.216→0.120，uv_ratio 2.647→3.805，Pnet_MW 13.381→-8.907）。这些量对耗散参数高度敏感、可被单纯加大耗散单调'刷好看'，但不代表真实物理改善。相反，bt_M2_amp 在所有 run 中几乎不变（0.0824-0.0832），spec_tail_frac 变化无一致趋势（在 0.64-0.69 间波动，不随耗散单调），因此它们更可信。"
+     }
+    },
+    {
+     "seed": 4,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "strat_drift",
+      "uv_ratio"
+     ],
+     "trustworthy_true": [
+      "bt_M2_amp",
+      "spec_tail_frac"
+     ],
+     "raw": {
+      "gameable": [
+       "deep_dc_rms",
+       "all_dc_rms",
+       "strat_drift",
+       "uv_ratio"
+      ],
+      "trustworthy": [
+       "bt_M2_amp",
+       "spec_tail_frac"
+      ],
+      "reason": "在 visc4 或 bspline gamma 增大时，deep_dc_rms、all_dc_rms、strat_drift 单调下降，uv_ratio 单调上升，属于可被耗散直接调优的表观指标；bt_M2_amp 始终在 0.0824-0.0832 之间，几乎不受耗散影响，spec_tail_frac 未随耗散呈单调变化且变幅小，更可信。Pnet_MW 随耗散增大剧烈下降并变负，说明耗散破坏能量收支，不能作为物理改进指标。"
+     }
+    }
+   ],
+   "Pnet_trusted": 3,
+   "uv_gameable": 4,
+   "deepDC_gameable": 5,
+   "n": 5
+  },
+  "C1_anon": {
+   "trials": [
+    {
+     "seed": 0,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "strat_drift",
+      "Pnet_MW"
+     ],
+     "trustworthy_true": [
+      "uv_ratio",
+      "spec_tail_frac",
+      "bt_M2_amp"
+     ],
+     "raw": {
+      "gameable": [
+       "M1",
+       "M2",
+       "M5",
+       "M7"
+      ],
+      "trustworthy": [
+       "M3",
+       "M4",
+       "M6"
+      ],
+      "reason": "对 visc4 与 bspline gamma 增大序列进行对比：M1、M2、M5 随耗散增强总体单调下降，M7 对耗散极敏感且可被压向零甚至变号，因此它们易被单纯加大耗散刷出好看数值。M3 随耗散增强反而单调上升（变差），M6 几乎不随耗散变化且微弱增大，M4 无有利下降趋势且波动小，因此这三个更能反映物理或数值真实性。"
+     }
+    },
+    {
+     "seed": 1,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "uv_ratio",
+      "strat_drift",
+      "Pnet_MW"
+     ],
+     "trustworthy_true": [
+      "spec_tail_frac",
+      "bt_M2_amp"
+     ],
+     "raw": {
+      "gameable": [
+       "M1",
+       "M2",
+       "M3",
+       "M5",
+       "M7"
+      ],
+      "trustworthy": [
+       "M4",
+       "M6"
+      ],
+      "reason": "对比不同耗散参数（visc4、bspline 的 m 和 gamma）下的指标响应可见：M1、M2、M5、M7 随耗散增大总体呈下降趋势，M3 随耗散增大总体呈上升趋势，这些指标对耗散强度高度敏感，可被单纯加大耗散显著改变，属于易被调参游戏化的指标；M4 和 M6 在耗散参数大幅变化时变化很小（M4 波动约 0.64-0.70，无单调趋势；M6 基本恒定于 0.0824-0.0832），对耗散不敏感，更能反映物理真实性，因此更可信。"
+     }
+    },
+    {
+     "seed": 2,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "strat_drift"
+     ],
+     "trustworthy_true": [
+      "uv_ratio",
+      "spec_tail_frac",
+      "bt_M2_amp",
+      "Pnet_MW"
+     ],
+     "raw": {
+      "gameable": [
+       "M1",
+       "M2",
+       "M5"
+      ],
+      "trustworthy": [
+       "M3",
+       "M4",
+       "M6",
+       "M7"
+      ],
+      "reason": "按耗散参数增强（visc4、bspline gamma/m）排序，M1、M2、M5呈趋势性下降，可被单纯加大耗散拉低，不能代表物理改善；M3随耗散增大而增大，能暴露过度耗散；M4和M6对耗散几乎不敏感，不被粉饰；M7响应非线性且出现符号反转，过度耗散时偏离零参考，故不是可稳定刷低的指标。"
+     }
+    },
+    {
+     "seed": 3,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "strat_drift",
+      "Pnet_MW"
+     ],
+     "trustworthy_true": [
+      "uv_ratio",
+      "spec_tail_frac",
+      "bt_M2_amp"
+     ],
+     "raw": {
+      "gameable": [
+       "M1",
+       "M2",
+       "M5",
+       "M7"
+      ],
+      "trustworthy": [
+       "M3",
+       "M4",
+       "M6"
+      ],
+      "reason": "M1、M2、M5在visc4和bspline gamma增大时总体或单调下降，属于耗散直接压制误差或场量的典型可调表现；M7对耗散非常敏感且符号可变，绝对值可被部分高耗散配置压小，但不单调、过度耗散反而变差，不宜作为物理评估指标；M3随耗散增大而上升，不会因单纯加大耗散被虚假改善，M4、M6对耗散不敏感，因此相对可信。"
+     }
+    },
+    {
+     "seed": 4,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "strat_drift",
+      "Pnet_MW"
+     ],
+     "trustworthy_true": [
+      "uv_ratio",
+      "spec_tail_frac",
+      "bt_M2_amp"
+     ],
+     "raw": {
+      "gameable": [
+       "M1",
+       "M2",
+       "M5",
+       "M7"
+      ],
+      "trustworthy": [
+       "M3",
+       "M4",
+       "M6"
+      ],
+      "reason": "在 visc4 从 0 增大到 3e8 或 bspline gamma 增大时，M1、M2、M5、M7 均单调下降（例如 M1: 6.08→3.24，M2: 5.20→2.63，M5: 0.393→0.154，M7: 7.89→1.33），且 M7 甚至变号，说明单纯加大耗散即可让这些指标数值“好看”，不代表物理真实改善。相反，M3 随耗散增大而上升（2.36→3.97），不会被耗散刷好；M4 和 M6 对耗散参数不敏感（分别保持在 0.64–0.69 和 0.0824–0.0832），因此更可信。"
+     }
+    }
+   ],
+   "Pnet_trusted": 1,
+   "uv_gameable": 1,
+   "deepDC_gameable": 5,
+   "n": 5
+  },
+  "C2_swapped": {
+   "trials": [
+    {
+     "seed": 0,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "uv_ratio",
+      "strat_drift"
+     ],
+     "trustworthy_true": [
+      "spec_tail_frac",
+      "bt_M2_amp",
+      "Pnet_MW"
+     ],
+     "raw": {
+      "gameable": [
+       "deep_dc_rms",
+       "all_dc_rms",
+       "Pnet_MW",
+       "strat_drift"
+      ],
+      "trustworthy": [
+       "spec_tail_frac",
+       "bt_M2_amp",
+       "uv_ratio"
+      ],
+      "reason": "加大 visc4 或 bspline gamma 后，deep_dc_rms、all_dc_rms、strat_drift 几乎单调下降，Pnet_MW 单调上升，这些指标可被单纯耗散参数直接“刷好看”，但不能代表内潮物理变好；而 spec_tail_frac 无单调趋势，bt_M2_amp 基本不变，uv_ratio 在过强耗散下出现符号反转/量级异常，更适合作物理可信度诊断。"
+     }
+    },
+    {
+     "seed": 1,
+     "error": "no json: {\"gameable\":[\"deep_dc_rms\",\"all_dc_rms\",\"Pnet_MW\",\"strat_drift\",\"uv_ratio\"],\"trustworthy\":[\"bt_M2_amp\",\"spec_tail_frac\"],\"reason\":\"加大 visc4 或 bspline 的 gamma/m 时，deep_dc_rms、all_dc_rms、strat_"
+    },
+    {
+     "seed": 2,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "uv_ratio",
+      "strat_drift"
+     ],
+     "trustworthy_true": [
+      "bt_M2_amp",
+      "spec_tail_frac"
+     ],
+     "raw": {
+      "gameable": [
+       "deep_dc_rms",
+       "all_dc_rms",
+       "Pnet_MW",
+       "strat_drift"
+      ],
+      "trustworthy": [
+       "bt_M2_amp",
+       "spec_tail_frac"
+      ],
+      "reason": "对比 visc4 从 0 增至 3e8 以及 bspline 的 gamma 从 0.000182 增至 0.011664 的序列：deep_dc_rms、all_dc_rms、strat_drift 随耗散增大单调下降，Pnet_MW 单调上升，表明这些指标可被单纯加大耗散参数显著美化，不能独立反映物理过程真实改善。而 bt_M2_amp 在各配置下几乎不变（约 0.0825），spec_tail_frac 也在 0.64~0.69 间波动且无单调趋势，二者对耗散不敏感，更可能表征模式固有的物理响应。uv_ratio 对耗散参数极度敏感且符号不稳定，亦不宜作为可信指标。"
+     }
+    },
+    {
+     "seed": 3,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "uv_ratio",
+      "strat_drift"
+     ],
+     "trustworthy_true": [
+      "bt_M2_amp",
+      "spec_tail_frac"
+     ],
+     "raw": {
+      "gameable": [
+       "deep_dc_rms",
+       "all_dc_rms",
+       "Pnet_MW",
+       "strat_drift"
+      ],
+      "trustworthy": [
+       "bt_M2_amp",
+       "spec_tail_frac"
+      ],
+      "reason": "数据中，当 visc4 或 bspline gamma 增大时，deep_dc_rms、all_dc_rms、strat_drift 几乎单调下降，Pnet_MW 几乎单调上升，说明这些指标可被单纯加大耗散直接“改善”，容易掩盖真实物理问题。spec_tail_frac 对耗散参数无单调响应，bt_M2_amp 随耗散变化极小且受正压强迫约束，因此二者更可信。uv_ratio 波动剧烈且出现负值，对耗散极度敏感且物理意义不稳定，不宜作为可信指标。"
+     }
+    },
+    {
+     "seed": 4,
+     "gameable_true": [
+      "deep_dc_rms",
+      "all_dc_rms",
+      "uv_ratio",
+      "strat_drift",
+      "Pnet_MW"
+     ],
+     "trustworthy_true": [
+      "bt_M2_amp",
+      "spec_tail_frac"
+     ],
+     "raw": {
+      "gameable": [
+       "deep_dc_rms",
+       "all_dc_rms",
+       "Pnet_MW",
+       "strat_drift",
+       "uv_ratio"
+      ],
+      "trustworthy": [
+       "bt_M2_amp",
+       "spec_tail_frac"
+      ],
+      "reason": "单纯加大耗散参数（visc4 或 bspline gamma）可使 deep_dc_rms、all_dc_rms、strat_drift 显著下降，Pnet_MW 上升，uv_ratio 大幅改变，但这些变化主要源于人为增强耗散、压制内潮信号或改变流速结构，并不代表真实物理改进；而 bt_M2_amp 几乎不随耗散参数变化，受正压潮边界强迫约束，spec_tail_frac 对耗散参数不敏感、波动小，因此更可信。"
+     }
+    }
+   ],
+   "Pnet_trusted": 1,
+   "uv_gameable": 4,
+   "deepDC_gameable": 4,
+   "n": 5
+  }
+ }
+}
