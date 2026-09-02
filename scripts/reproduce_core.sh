@@ -33,6 +33,14 @@ print('  跨环境 AUC=%s (纬向训练->经向测试); f1 抗刷率单特征 AU
 print('  precision@204=%s vs 基率 %s (P3 未命中); 命中率峰值 %s 后回落 %s'%(
   R['precision_at_204']['precision'],round(R['base_rate_test'],4),R['peak']['hit_rate'],R['tail']['hit_rate']))
 PYX
+echo "== 3c/4 E60 陡度轴上的抗刷率稳定性 =="
+$PY - <<'PYZ'
+import json
+V=json.load(open('e60/E60_VERDICT.json')); pw=V['pairwise']
+j=[p['jaccard'] for p in pw.values()]; r=[p['spearman'] for p in pw.values()]
+print('  4 档 rx0 两两: Jaccard %.3f-%.3f, 秩相关 %.3f-%.3f (P1 赌<0.5 被推翻)'%(min(j),max(j),min(r),max(r)))
+print('  各档 B>=0.9 比例:', [round(p['frac'],4) for p in V['per_rx'].values()])
+PYZ
 echo "== 4/4 自检（与 smoke_test 同源） =="
 bash scripts/smoke_test.sh | tail -2
 echo "REPRODUCE_CORE: DONE"
