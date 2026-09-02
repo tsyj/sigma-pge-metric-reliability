@@ -1,0 +1,400 @@
+{
+ "F1_null": {
+  "expected": {
+   "zonal_merid": 5.4,
+   "zonal_tide": 26.79,
+   "merid_tide": 53.45,
+   "triple": 0.709
+  },
+  "observed": {
+   "zonal_merid": 88,
+   "zonal_tide": 13,
+   "merid_tide": 2,
+   "triple": 0
+  },
+  "ratio_obs_over_exp": {
+   "zonal_merid": 16.3,
+   "zonal_tide": 0.49,
+   "merid_tide": 0.037
+  },
+  "P0_triple_poisson": 0.492,
+  "note": "独立判据零假设(共同候选空间按 15376 计); 三重交集 0 与零假设一致, 不能作为证据; 证据在贫化/富集与机理"
+ },
+ "F2_A8_signed": {
+  "deep_dc_rms": {
+   "better_direction": "lower",
+   "signed_rho": -0.964,
+   "n": 7,
+   "p_exact_two_sided": 0.0028,
+   "arms": [
+    "pf_dj",
+    "pf_v4",
+    "b_bsplm2",
+    "pf_combo",
+    "b_bsplm6",
+    "c_g16",
+    "a_v4visc3e8"
+   ],
+   "verdict": "死"
+  },
+  "uv_ratio": {
+   "better_direction": "lower",
+   "signed_rho": 0.893,
+   "n": 7,
+   "p_exact_two_sided": 0.0123,
+   "arms": [
+    "pf_dj",
+    "pf_v4",
+    "b_bsplm2",
+    "pf_combo",
+    "b_bsplm6",
+    "c_g16",
+    "a_v4visc3e8"
+   ],
+   "verdict": "过"
+  },
+  "Pnet_MW": {
+   "better_direction": "higher",
+   "signed_rho": 0.857,
+   "n": 7,
+   "p_exact_two_sided": 0.0238,
+   "arms": [
+    "pf_dj",
+    "pf_v4",
+    "b_bsplm2",
+    "pf_combo",
+    "b_bsplm6",
+    "c_g16",
+    "a_v4visc3e8"
+   ],
+   "verdict": "过"
+  },
+  "temp_d400": {
+   "better_direction": "lower",
+   "signed_rho": 0.964,
+   "n": 7,
+   "p_exact_two_sided": 0.0028,
+   "arms": [
+    "pf_dj",
+    "pf_v4",
+    "b_bsplm2",
+    "pf_combo",
+    "b_bsplm6",
+    "c_g16",
+    "a_v4visc3e8"
+   ],
+   "verdict": "过"
+  }
+ },
+ "M1_fisher": {
+  "p_axes": [
+   0.01667,
+   0.0004,
+   0.0123
+  ],
+  "chi2": 32.63,
+  "df": 6,
+  "fisher_p": 1.233755727422012e-05,
+  "note": "三轴共用 pf_combo 基准臂, 非严格独立, 仅作参考; 弃用三 p 乘积"
+ },
+ "M4_prereg_axes": {
+  "prereg": {
+   "m": {
+    "uv_ratio": {
+     "rho": 1.0,
+     "n": 4,
+     "p": 0.0833
+    },
+    "deep_dc_rms": {
+     "rho": -0.8,
+     "n": 4,
+     "p": 0.3333
+    },
+    "Pnet_MW": {
+     "rho": -1.0,
+     "n": 4,
+     "p": 0.0833
+    }
+   },
+   "visc": {
+    "uv_ratio": {
+     "rho": 0.943,
+     "n": 6,
+     "p": 0.0167
+    },
+    "deep_dc_rms": {
+     "rho": -0.943,
+     "n": 6,
+     "p": 0.0167
+    },
+    "Pnet_MW": {
+     "rho": -0.714,
+     "n": 6,
+     "p": 0.1361
+    }
+   },
+   "gam": {
+    "uv_ratio": {
+     "rho": 1.0,
+     "n": 4,
+     "p": 0.0833
+    },
+    "deep_dc_rms": {
+     "rho": -1.0,
+     "n": 4,
+     "p": 0.0833
+    },
+    "Pnet_MW": {
+     "rho": -1.0,
+     "n": 4,
+     "p": 0.0833
+    }
+   }
+  },
+  "post_prereg_arms": [
+   "b_bsplm5",
+   "a_v4visc5e7",
+   "a_v4visc2e8",
+   "c_g0p5",
+   "c_g2",
+   "c_g8",
+   "x_m6g4"
+  ],
+  "note": "加密 7 条为看到首批 13 条结果后追加(2026-09-02 上午), 未预注册; p 同时报两口径"
+ },
+ "M2_phase": {
+  "uv_window_mean": {
+   "c_g4": 3.318,
+   "p_g4_plus": 3.193,
+   "p_g4_minus": 3.198,
+   "rel_change_pct": [
+    -3.8,
+    -3.6
+   ],
+   "source": "E50 补算(本脚本前一次运行, 窗=末11周期逐3帧)"
+  },
+  "uv_lastframe": {
+   "c_g4": 3.4930834734943907,
+   "p_g4_plus": 2.43799592508249,
+   "p_g4_minus": 4.300440523336297
+  },
+  "deep_dc_lastframe": {
+   "c_g4": 3.160789323994536,
+   "p_g4_plus": 5.258073901313829,
+   "p_g4_minus": 5.241272904186754,
+   "rel_change_pct": 66.4
+  },
+  "Pnet_lastframe": {
+   "c_g4": -3.6674611211731953,
+   "p_g4_plus": -3.148853605194552,
+   "p_g4_minus": -3.508967595130193,
+   "rel_change_pct": [
+    -14.1,
+    -4.3
+   ]
+  },
+  "frame_spread_full_range_pct": {
+   "min": 39.0,
+   "max": 66.1,
+   "definition": "(max-min)/mean over last 4 hourly frames, 7 arms"
+  }
+ },
+ "M3_counts": {
+  "wave1_prereg": 13,
+  "wave2_densify": 7,
+  "perturb": 3,
+  "agent": 7,
+  "archived_pf_arms": 3,
+  "km500_new": 2,
+  "merid_wind": 56,
+  "scan_total": 81,
+  "agent_runs": 7,
+  "lists": {
+   "wave1_prereg": [
+    "a_djvisc3e8",
+    "a_v4visc1e7",
+    "a_v4visc1e8",
+    "a_v4visc3e6",
+    "a_v4visc3e7",
+    "a_v4visc3e8",
+    "b_bsplm2",
+    "b_bsplm3",
+    "b_bsplm6",
+    "c_g0p25",
+    "c_g16",
+    "c_g4",
+    "d_flatdj"
+   ],
+   "wave2_densify": [
+    "a_v4visc2e8",
+    "a_v4visc5e7",
+    "b_bsplm5",
+    "c_g0p5",
+    "c_g2",
+    "c_g8",
+    "x_m6g4"
+   ],
+   "perturb": [
+    "p_combo_rerun",
+    "p_g4_minus",
+    "p_g4_plus"
+   ],
+   "agent": [
+    "ag_s1",
+    "ag_s101",
+    "ag_s102",
+    "ag_s103",
+    "ag_s2",
+    "ag_s3",
+    "ag_s5"
+   ]
+  }
+ },
+ "M6_deep_rms_800": {
+  "zonal_subset52": -0.992,
+  "merid22": -0.99,
+  "tide_vs_anchor_signed": -0.964,
+  "note": "风驱两侧为实例内对 skill_vs_zero; 内潮为对 500 km 锚(带符号)"
+ },
+ "M13_mirror": {
+  "A": {
+   "uv": {
+    "zonal": -0.923,
+    "merid": 0.1677
+   },
+   "vu": {
+    "zonal": -0.5762,
+    "merid": -0.9243
+   }
+  },
+  "B": {
+   "uv": {
+    "zonal": 1.0,
+    "merid": 0.8929
+   },
+   "vu": {
+    "zonal": 0.2188,
+    "merid": 0.1071
+   }
+  },
+  "mirror_prediction": "若纯镜像: A(uv,merid)=A(vu,zonal)=-0.58, 实测 +0.17 -> 几何对 A 亦有残余贡献"
+ },
+ "M19_gate_sensitivity": {
+  "1.1": {
+   "gate": 2.597,
+   "inside": [
+    "pf_dj",
+    "pf_v4"
+   ],
+   "pick": "pf_v4",
+   "pick_H": 1.0
+  },
+  "1.2": {
+   "gate": 2.833,
+   "inside": [
+    "pf_dj",
+    "pf_v4",
+    "b_bsplm2"
+   ],
+   "pick": "b_bsplm2",
+   "pick_H": 0.941
+  },
+  "1.3": {
+   "gate": 3.069,
+   "inside": [
+    "pf_dj",
+    "pf_v4",
+    "b_bsplm2"
+   ],
+   "pick": "b_bsplm2",
+   "pick_H": 0.941
+  },
+  "1.5": {
+   "gate": 3.541,
+   "inside": [
+    "pf_dj",
+    "pf_v4",
+    "b_bsplm2",
+    "pf_combo",
+    "b_bsplm6"
+   ],
+   "pick": "b_bsplm6",
+   "pick_H": 0.466
+  }
+ },
+ "M27_temp_A4": {
+  "values": [
+   3.9959683418273926,
+   3.9956870079040527,
+   3.995645523071289
+  ],
+  "rel_change_pct": [
+   -0.007,
+   -0.008
+  ]
+ },
+ "M27_Pnet_A1": {
+  "flat": -4.553281088304748e-06,
+  "dj": 7.894257942032854,
+  "note": "换平底读数从 7.9 到 0: 变好看 -> 死"
+ },
+ "m3_collinearity_arms": {
+  "n": 22,
+  "arms": [
+   "pf_dj",
+   "pf_v4",
+   "pf_combo",
+   "a_djvisc3e8",
+   "a_v4visc1e7",
+   "a_v4visc1e8",
+   "a_v4visc2e8",
+   "a_v4visc3e6",
+   "a_v4visc3e7",
+   "a_v4visc3e8",
+   "a_v4visc5e7",
+   "b_bsplm2",
+   "b_bsplm3",
+   "b_bsplm5",
+   "b_bsplm6",
+   "c_g0p25",
+   "c_g0p5",
+   "c_g16",
+   "c_g2",
+   "c_g4",
+   "c_g8",
+   "x_m6g4"
+  ],
+  "uv_deepDC": -0.923
+ },
+ "m4_merid_truth_arms": {
+  "n_with_truth": 22,
+  "n_without": 6,
+  "without": [
+   [
+    "e2_7167f10e6ef8",
+    0.001
+   ],
+   [
+    "e2_bd046d7ffb14",
+    0.0001
+   ],
+   [
+    "e2_24d71298a83d",
+    0.1
+   ],
+   [
+    "e2_423a87445e0e",
+    0.01
+   ],
+   [
+    "e2_16efdad9880d",
+    1.0
+   ],
+   [
+    "e2_5512d55442a2",
+    0.3
+   ]
+  ],
+  "reason": "E52 首轮仅生成 viscAz=1e-5 的转向真值; AKV_BAK≠1e-5 的 6 条无评分"
+ }
+}

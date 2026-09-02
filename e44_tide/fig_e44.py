@@ -55,7 +55,7 @@ normpanel(axc,at,np.arange(8),['0','3e6','1e7','3e7','5e7','1e8','2e8','3e8'],'�
 axd=fig.add_subplot(G[1,1]); F.panel(axd,'d')
 ct=['c_g0p25','c_g0p5','pf_combo','c_g2','c_g4','c_g8','c_g16']
 normpanel(axd,ct,np.arange(7),['×¼','×½','×1','×2','×4','×8','×16'],'B 样条强度（相对生产值）')
-fig.suptitle('换一种物理驱动，残余流代理仍被刷穿，而 u/v 比值仍然报警',
+fig.suptitle('内潮三轴扫描：残余流变好看、u/v 单调报警——后续审计见 kill board',
              fontsize=16.5,fontweight='bold',y=0.965)
 fig.savefig(E+'figs/fig_e44_main.png',dpi=300)
 print('saved v3')

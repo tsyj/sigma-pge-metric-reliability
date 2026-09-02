@@ -1,0 +1,246 @@
+{
+ "zonal_pass": 204,
+ "merid_pass": 454,
+ "tide_alarm": 2574,
+ "deep_u_diag45": {
+  "rho": -0.9898,
+  "paired": 0.0,
+  "passAB": false
+ },
+ "deep_v_diag45": {
+  "rho": -0.9898,
+  "paired": 0.0,
+  "passAB": false
+ },
+ "merid_tide_list": [
+  {
+   "num": "w|all|max",
+   "den": "w|d400|max"
+  },
+  {
+   "num": "w|all|max",
+   "den": "w|d200|max"
+  },
+  {
+   "num": "u|s50|mean_abs",
+   "den": "v|s50|rms"
+  }
+ ],
+ "uv_zonal": {
+  "rho": -0.923,
+  "paired": 1.0,
+  "passAB": true
+ },
+ "uv_merid": {
+  "rho": -0.9729,
+  "paired": 0.25,
+  "passAB": false
+ },
+ "uv_tide": true,
+ "vu_zonal": {
+  "rho": -0.5762,
+  "paired": 0.2188,
+  "passAB": false
+ },
+ "vu_merid": {
+  "rho": 0.1011,
+  "paired": 0.8214,
+  "passAB": false
+ },
+ "vu_tide": false,
+ "inter_zonal_merid": 140,
+ "inter_zonal_tide": 13,
+ "inter_merid_tide": 3,
+ "inter_triple": 1,
+ "triple_list": [
+  {
+   "num": "u|s50|mean_abs",
+   "den": "v|s50|rms",
+   "zonal": {
+    "rho": -0.8413,
+    "paired": 1.0,
+    "passAB": true
+   },
+   "merid": {
+    "rho": -0.7527,
+    "paired": 1.0,
+    "passAB": true
+   }
+  }
+ ],
+ "family_zonal_merid": [
+  [
+   [
+    "u",
+    "w"
+   ],
+   53
+  ],
+  [
+   [
+    "v",
+    "w"
+   ],
+   18
+  ],
+  [
+   [
+    "w",
+    "w"
+   ],
+   16
+  ],
+  [
+   [
+    "temp",
+    "temp"
+   ],
+   14
+  ],
+  [
+   [
+    "u",
+    "v"
+   ],
+   8
+  ],
+  [
+   [
+    "u",
+    "u"
+   ],
+   7
+  ],
+  [
+   [
+    "v",
+    "v"
+   ],
+   7
+  ],
+  [
+   [
+    "w",
+    "v"
+   ],
+   7
+  ]
+ ],
+ "family_triple": [
+  [
+   [
+    "u",
+    "v"
+   ],
+   1
+  ]
+ ],
+ "family_merid": [
+  [
+   [
+    "u",
+    "w"
+   ],
+   125
+  ],
+  [
+   [
+    "v",
+    "w"
+   ],
+   124
+  ],
+  [
+   [
+    "w",
+    "w"
+   ],
+   78
+  ],
+  [
+   [
+    "w",
+    "v"
+   ],
+   22
+  ],
+  [
+   [
+    "u",
+    "u"
+   ],
+   19
+  ],
+  [
+   [
+    "temp",
+    "temp"
+   ],
+   18
+  ],
+  [
+   [
+    "u",
+    "v"
+   ],
+   18
+  ],
+  [
+   [
+    "v",
+    "v"
+   ],
+   18
+  ]
+ ],
+ "prereg_check": {
+  "P1": "中",
+  "P2": "反驳",
+  "P3": "反驳",
+  "P4": "中",
+  "values": {
+   "P1_both_fail_AB": true,
+   "P2_B_uv_ge_0p9": false,
+   "P2_B_vu_lt_0p5": false,
+   "P3_A_uv_in": false,
+   "P3_A_vu_in": false,
+   "P4_deep_rank": -0.9898,
+   "P4_deep_B": 0.0
+  },
+  "expected_under_independence": {
+   "zonal_diag45": 6.023413111342352,
+   "diag45_tide": 59.62224489795918,
+   "triple_z45t": 0.7910339463568986,
+   "diag45_merid90": 12.017299687825181
+  },
+  "P0_triple_poisson": 0.453,
+  "angle_trajectory_uv": {
+   "deg0": [
+    -0.923,
+    1.0
+   ],
+   "deg45": [
+    -0.9729,
+    0.25
+   ],
+   "deg90": [
+    0.1677,
+    0.8929
+   ]
+  },
+  "angle_trajectory_vu": {
+   "deg0": [
+    -0.5762,
+    0.2188
+   ],
+   "deg45": [
+    0.1011,
+    0.8214
+   ],
+   "deg90": [
+    -0.9243,
+    0.1071
+   ]
+  }
+ }
+}

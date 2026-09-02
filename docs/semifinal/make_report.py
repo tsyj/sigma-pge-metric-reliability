@@ -53,13 +53,16 @@ E44CAP=('图 5　内潮环境三轴扫描（84 km，同相位口径，末帧版�
  '（相对最轻档）：u/v 比值单调爬升报警，深层残余流缓降"变好看"，环带波功率（仅作环境内游戏分数）坠落；'
  '(c) 双谐波黏性八档与 (d) B 样条强度七档：残余流一路变好看，功率在 (d) 自 ×2 档后穿零反向，u/v 比值两轴'
  '均单调报警（黏性轴最低两档一处约 3% 回落，如实呈现）。')
+CAP_KB='''图 1　kill board：四把代表尺子 + 隐藏真值对照行 × 八项审计。† 残余流行：风驱侧为 deep_rms_800，内潮侧为 deep_dc_rms。行：环带波功率（我们论文头条）、深层残余流、深水温度（内潮穷举三轴满分冠军，实为 ≈4 °C 的深水温度本身）、u/v 比值（风驱穷举冠军）、隐藏真值（对照）。每格判定按 KILLBOARD.json 的 rules 字段判读，格内为关键数与出处；python scorecard.py 一键重生成。'''
+CAP_E52='''图 2　转向经向风后的判据得分与交集计数。(a) u/v 与 v/u 在纬向风、经向风下的排序力（−ρ，对隐藏技巧评分，越高越好）与配对抗刷分率；虚线为判据阈值 A 0.7 / B 0.9。(b) 三个环境各自通过判据的候选数与两两、三重交集（对数轴，风驱空间 15376 / 内潮 19600）；竖线为独立随机判据的期望——三重交集 0 与期望 0.71 无差别，纬向∩内潮与经向∩内潮贫化、纬向∩经向富集 16 倍。'''
+CAP_E44='''图 3　内潮三轴扫描（84 km，同相位口径，末帧版；(b) 的 m=5、(c) 的 5e7/2e8、(d) 的 ×½/×2/×8 为预注册后加密臂）。(a) 500 km 自参照模态锚：第一模全档≈1.00，第二模 0.94→0.68→0.47；(b–d) 三条旋钮轴上的可见读数（相对基准档）：u/v 单调报警、残余流变好看、环带功率坠落并在 (d) 穿零——但见图 1 后续审计。'''
 lines=md.split('\n')
 i=0
 while i<len(lines):
     ln=lines[i].rstrip()
     if not ln: i+=1; continue
     if ln.startswith('> '):
-        if 'v4' in SRC and not ln.startswith('> 初赛定稿'):
+        if ('v4' in SRC or 'v5' in SRC) and not ln.startswith('> 初赛定稿'):
             para(ln[2:],10.5,ea='楷体',space=6,color=(60,60,60),italic=True)
         i+=1; continue
     if ln.startswith('|'):
@@ -79,11 +82,11 @@ while i<len(lines):
             para(t,14,True,'黑体',8)
         else:
             para(t,12 if lvl==2 else 11,True,'黑体',6)
-        if lvl==1 and t.startswith('第四问'):
+        if lvl==1 and t.startswith('第四问') and 'v5' not in SRC:
             if 'v4' in SRC:
-                fig(FIG2+'fig_killboard_print.png','图 1　kill board：四把尺子 × 八个审计算子。行：环带波功率（我们论文头条）、深层残余流（常用代理）、深水温度（内潮穷举三轴满分冠军，实为 ≈4 °C 的深水温度本身）、u/v 比值（风驱穷举冠军）；列：A1–A8 审计算子。格内为判定、关键数与出处（analysis/*.json），python scorecard.py 一键重生成。没有一行全绿。',14.5)
-                fig(FIG2+'fig_e52.png','图 2　第三种强迫（经向风）下的判据得分与交集漏斗。(a) u/v 与 v/u 两把比值尺子在纬向风、经向风下的排序力（−ρ 对隐藏技巧评分）与配对抗刷分率；虚线为判据阈值 0.7 / 0.9。(b) 三个环境各自通过判据的候选数与两两、三重交集：三重交集为 0。',15.0)
-                fig(FIG2+'fig_e44_main.png','图 3　内潮环境三轴扫描（84 km，同相位口径，末帧版）。(a) 500 km 隐藏锚：第一模全档≈1.00，第二模 0.94→0.68→0.47；(b–d) 三条旋钮轴上的可见读数（相对基准档）：u/v 单调报警，残余流"变好看"，环带功率坠落并在 (d) 穿零。',15.5)
+                fig(FIG2+'fig_killboard_print.png','图 1　kill board：四把代表尺子 + 隐藏真值对照行 × 八项审计。† 残余流行：风驱侧为 deep_rms_800，内潮侧为 deep_dc_rms。行：环带波功率（我们论文头条）、深层残余流、深水温度（内潮穷举三轴满分冠军，实为 ≈4 °C 的深水温度本身）、u/v 比值（风驱穷举冠军）、隐藏真值（对照）。每格判定按 KILLBOARD.json 的 rules 字段判读，格内为关键数与出处；python scorecard.py 一键重生成。',14.5)
+                fig(FIG2+'fig_e52.png','图 2　转向经向风后的判据得分与交集计数。(a) u/v 与 v/u 在纬向风、经向风下的排序力（−ρ，对隐藏技巧评分，越高越好）与配对抗刷分率；虚线为判据阈值 A 0.7 / B 0.9。(b) 三个环境各自通过判据的候选数与两两、三重交集（对数轴，风驱空间 15376 / 内潮 19600）；竖线为独立随机判据的期望——三重交集 0 与期望 0.71 无差别，纬向∩内潮与经向∩内潮贫化、纬向∩经向富集 16 倍。',15.0)
+                fig(FIG2+'fig_e44_main.png','图 3　内潮三轴扫描（84 km，同相位口径，末帧版；(b) 的 m=5、(c) 的 5e7/2e8、(d) 的 ×½/×2/×8 为预注册后加密臂）。(a) 500 km 自参照模态锚：第一模全档≈1.00，第二模 0.94→0.68→0.47；(b–d) 三条旋钮轴上的可见读数（相对基准档）：u/v 单调报警、残余流变好看、环带功率坠落并在 (d) 穿零——但见图 1 后续审计。',15.5)
             else:
                 fig(FIG2+'fig_e44_main.png',E44CAP,15.5)
         i+=1; continue
@@ -95,6 +98,41 @@ while i<len(lines):
         para(ln,9,ea='宋体',space=8,color=(70,70,70))
         i+=1; continue
     para(ln,10.5)
+    if 'v5' in SRC and ln.startswith('**参照系**'):
+        fig(FIG2+'fig_killboard_print.png',CAP_KB,14.5); fig(FIG2+'fig_e52.png',CAP_E52,15.0); fig(FIG2+'fig_e44_main.png',CAP_E44,15.5)
     i+=1
+# ---- 附录合订 (v5) ----
+if 'v5' in SRC:
+    from docx.enum.text import WD_BREAK
+    def page_break(): d.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
+    def md_block(text):
+        ls=text.split('\n'); k=0
+        while k<len(ls):
+            ln=ls[k].rstrip()
+            if not ln or ln=='---': k+=1; continue
+            mm=re.match(r'^(#{1,3}) (.+)$',ln)
+            if mm: para(mm.group(2),13 if len(mm.group(1))==1 else 11.5,True,'黑体',6); k+=1; continue
+            if ln.startswith('|'):
+                blk=[]
+                while k<len(ls) and ls[k].strip().startswith('|'): blk.append(ls[k]); k+=1
+                table(blk); continue
+            if ln.startswith('> '): para(ln[2:],10,ea='楷体',space=4,color=(80,80,80),italic=True); k+=1; continue
+            para(ln,10.5); k+=1
+    page_break(); para('附录 A · 初赛定稿正文（原文，2026-08-16 提交版）',14,True,'黑体',8)
+    md_block(open(F+'初赛终稿_提取.txt').read())
+    page_break(); md_block(open(F+'附录B_实验表.md').read())
+    page_break(); md_block(open(F+'附录C_ARENA规格.md').read())
+    # 页码
+    from docx.oxml import OxmlElement
+    for sec in d.sections:
+        fp=sec.footer.paragraphs[0]; fp.alignment=WD_ALIGN_PARAGRAPH.CENTER
+        run=fp.add_run(); 
+        for tag,txt_ in (('begin',None),('instr','PAGE'),('end',None)):
+            if tag=='instr':
+                el=OxmlElement('w:instrText'); el.set(qn('xml:space'),'preserve'); el.text='PAGE'
+            else:
+                el=OxmlElement('w:fldChar'); el.set(qn('w:fldCharType'),tag)
+            run._r.append(el)
+        run.font.size=Pt(9)
 d.save(F+OUT)
 print('docx saved')
