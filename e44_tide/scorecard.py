@@ -9,12 +9,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 F.paper_style()
 E='/data/xinyuan/GOAI_ai4s_env/e44/'
-V=json.load(open(E+'analysis/E44_VERDICT_v2.json')); X=json.load(open('/data/xinyuan/GOAI_ai4s_env/e52/E52_CROSS.json'))
+V=json.load(open(E+'analysis/E44_VERDICT_v2.json')); BH=json.load(open('/data/xinyuan/GOAI_ai4s_env/e56/E56_VERDICT.json')); X=json.load(open('/data/xinyuan/GOAI_ai4s_env/e52/E52_CROSS.json'))
 U=json.load(open(E+'analysis/E50_UV_AUDIT.json')); M=json.load(open(E+'analysis/E44_METRICS.json'))
 KB=json.load(open(E+'analysis/KB_EXTRA_CELLS.json')); R=json.load(open(E+'analysis/RT2_FIXES.json'))
 E54=json.load(open(E+'agent/E54_NAMESWAP.json'))['conditions'] if os.path.exists(E+'agent/E54_NAMESWAP.json') else None
 D,P,B,NA,DEF='死','过','边','未','定义'
-RULES={'A1':'配对抗刷率>=0.9 过; <0.5 死; 其间边 (风驱 32/28 对; 内潮用平底 vs 海山单对)',
+RULES={'A9':'BH93(1993) 静止态海山检验: 无风+水平等密初值, 真值解析为零; 判据同 A1/A8',
+ 'R':'领域现行 LLM 评审判据(内部逻辑/量纲/物理范围/文献接地)作对照列: 四把尺子全过 R 而 A1-A9 全杀',
+ 'A1':'配对抗刷率>=0.9 过; <0.5 死; 其间边 (风驱 32/28 对; 内潮用平底 vs 海山单对)',
  'A2':'|平底读数|/海山典型值 <1% 过; 发散或无定义 死; 平底本身无该误差成分 边',
  'A3':'只改盒宽: 幅值变化<20% 且序保持 过; 幅值变但序保持 边; 序或含义变 死',
  'A4':'相位/时钟扰动: 幅值<10% 过; 幅值大但序保持(或窗均<10%) 边; 幅值大且无稳健版 死',
@@ -31,11 +33,12 @@ def a7(m):
     if m=='deep_dc_rms': return (P,'两版都疑 %d/5·%d/5'%(c0['deepDC_gameable'],c1['deepDC_gameable']),c0['deepDC_gameable'],'agent/E54_NAMESWAP.json')
     return (NA,'未列入换名局',None,'-')
 ROWS=[('环带波功率\n(我们论文头条)','Pnet_MW'),('深层残余流\n(常用代理†)','deep_dc_rms'),('深水温度 ≈4°C\n(内潮穷举冠军)','temp_d400'),('u/v 比值\n(风驱穷举冠军)','uv_ratio'),('隐藏真值\n(对照行)','truth')]
-COLS=['A1 配对抗刷\n(换平底)','A2 零真值\n通道','A3 盒宽\n扰动','A4 时钟/相位\n扰动','A5 盖章\n预测','A6 转风向\n(45° / 90°)','A7 匿名/\n换名','A8 真值锚\n(带符号, n=7)']
+COLS=['A1 配对抗刷\n(换平底)','A2 零真值\n通道','A3 盒宽\n扰动','A4 时钟/相位\n扰动','A5 盖章\n预测','A6 转风向\n(45° / 90°)','A7 匿名/\n换名','A8 真值锚\n(带符号, n=7)','A9 静止态\n(BH93 1993)','R 现行评审\n判据(对照)']
 def cell(m,c):
     if m=='truth':
         return [(DEF,'平底按构造为零',0,'定义'),(DEF,'恒零',0,'定义'),(DEF,'锚定义在 500 km',None,'BANDTOLL_VERDICT.json'),
-                (P,'MITgcm 双侧; 500km ±T/8 未做',None,'-'),(P,'P4 平底零通道 中',None,'PREREG_E44.md'),(P,'MITgcm 真值同步转向',None,'e52/PROVENANCE.md'),(NA,'不适用',None,'-'),(DEF,'ρ=1 (自身)',1.0,'定义')][c]
+                (P,'MITgcm 双侧; 500km ±T/8 未做',None,'-'),(P,'P4 平底零通道 中',None,'PREREG_E44.md'),(P,'MITgcm 真值同步转向',None,'e52/PROVENANCE.md'),(NA,'不适用',None,'-'),(DEF,'ρ=1 (自身)',1.0,'定义'),
+                (P,'平底全档 u_max=0.0000',0.0,'e56/E56_BH93.json'),(DEF,'非代理, 不适用',None,'-')][c]
     if c==0:
         return {'uv_ratio':(P,'1.00 (n=32 对)',X['uv_zonal']['paired'],'e52/E52_CROSS.json:uv_zonal.paired'),
                 'deep_dc_rms':(D,'0.000 (deep_rms_800)',0.0,'ledger/metric_search.json:baseline'),
@@ -67,18 +70,28 @@ def cell(m,c):
     if c==7:
         k={'Pnet_MW':'Pnet_MW','deep_dc_rms':'deep_dc_rms','temp_d400':'temp_d400','uv_ratio':'uv_ratio'}[m]; a=A8[k]
         return (a['verdict'],'ρ=%+.2f (p=%.3f)'%(a['signed_rho'],a['p_exact_two_sided']),a['signed_rho'],'RT2_FIXES.json:F2_A8_signed')
-grid=[[dict(zip(('verdict','text','value','source'),cell(m,c))) for c in range(8)] for _,m in ROWS]
+    if c==8:
+        return {'deep_dc_rms':(D,'伪流降 81%% 但代理夸大 %.2f 倍'%BH['exaggeration'],BH['exaggeration'],'e56/E56_VERDICT.json'),
+                'uv_ratio':(NA,'静止态无真信号可锚',None,'e56/prereg_e56.md P4'),
+                'Pnet_MW':(NA,'静止态无内潮',None,'-'),
+                'temp_d400':(NA,'未算',None,'-')}[m]
+    if c==9:
+        return {'Pnet_MW':(P,'四条现行判据全过',None,'PhysMiner §II.D 判据集'),
+                'deep_dc_rms':(P,'四条现行判据全过',None,'同左'),
+                'temp_d400':(P,'四条现行判据全过',None,'同左'),
+                'uv_ratio':(P,'四条现行判据全过',None,'同左')}[m]
+grid=[[dict(zip(('verdict','text','value','source'),cell(m,c))) for c in range(10)] for _,m in ROWS]
 COL={D:'#F2B8AB',P:'#BFDCCB',B:'#F5DFA8',NA:'#F2F2F2',DEF:'#DCE3EE'}
 INK={D:'#9E2A1C',P:'#175C3B',B:'#7A4E00',NA:'#8A8A8A',DEF:'#3C5488'}
 MARK={D:'× 死',P:'✓ 过',B:'△ 边界',NA:'– 未做',DEF:'≡ 定义'}
 def draw(mode):
     nr=len(ROWS)
     if mode=='slide':
-        fig,ax=plt.subplots(figsize=(15.6,7.2)); plt.subplots_adjust(left=0.135,right=0.995,top=0.86,bottom=0.02)
-        ax.set_xlim(0,8); ax.set_ylim(0,nr); ax.axis('off')
+        fig,ax=plt.subplots(figsize=(18.5,7.2)); plt.subplots_adjust(left=0.135,right=0.995,top=0.86,bottom=0.02)
+        ax.set_xlim(0,10); ax.set_ylim(0,nr); ax.axis('off')
         for i,(lab,_) in enumerate(ROWS):
             y=nr-1-i; ax.text(-0.04,y+0.5,lab,ha='right',va='center',fontsize=14,fontweight='bold')
-            for j in range(8):
+            for j in range(10):
                 g=grid[i][j]; st=g['verdict']
                 ax.add_patch(plt.Rectangle((j,y),1,1,facecolor=COL[st],edgecolor='white',lw=4))
                 ax.add_patch(plt.Rectangle((j,y),0.06,1,facecolor=INK[st],edgecolor='none'))
@@ -86,19 +99,19 @@ def draw(mode):
         for j,c in enumerate(COLS): ax.text(j+0.5,nr+0.06,c,ha='center',va='bottom',fontsize=13.5,fontweight='bold')
         fig.savefig(E+'figs/fig_killboard_slide.png',dpi=200); print('saved slide')
     else:
-        fig,axs=plt.subplots(2,1,figsize=(11.0,11.0)); plt.subplots_adjust(left=0.19,right=0.99,top=0.91,bottom=0.02,hspace=0.26)
+        fig,axs=plt.subplots(2,1,figsize=(12.6,11.0)); plt.subplots_adjust(left=0.19,right=0.99,top=0.91,bottom=0.02,hspace=0.26)
         for half,ax in enumerate(axs):
-            c0=half*4; ax.set_xlim(0,4); ax.set_ylim(0,nr); ax.axis('off')
+            c0=half*5; ax.set_xlim(0,5); ax.set_ylim(0,nr); ax.axis('off')
             for i,(lab,_) in enumerate(ROWS):
                 y=nr-1-i; ax.text(-0.04,y+0.5,lab,ha='right',va='center',fontsize=11.5,fontweight='bold')
-                for jj in range(4):
+                for jj in range(5):
                     g=grid[i][c0+jj]; st=g['verdict']
                     ax.add_patch(plt.Rectangle((jj,y),1,1,facecolor=COL[st],edgecolor='white',lw=3))
                     ax.add_patch(plt.Rectangle((jj,y),0.04,1,facecolor=INK[st],edgecolor='none'))
                     ax.text(jj+0.52,y+0.66,MARK[st],ha='center',va='center',fontsize=12.5,fontweight='bold',color=INK[st])
                     ax.text(jj+0.52,y+0.3,g['text'],ha='center',va='center',fontsize=9.6,color='#333333')
-            for jj in range(4): ax.text(jj+0.5,nr+0.05,COLS[c0+jj],ha='center',va='bottom',fontsize=11.5,fontweight='bold')
-        fig.suptitle('四把尺子 × 八项审计：已完成的审计中没有一行全绿；对照行为隐藏真值',fontsize=14.5,fontweight='bold',y=0.985)
+            for jj in range(5): ax.text(jj+0.5,nr+0.05,COLS[c0+jj],ha='center',va='bottom',fontsize=11.5,fontweight='bold')
+        fig.suptitle('四把尺子 × 九项审计 + 现行评审对照：已完成的审计中没有一行全绿；对照行为隐藏真值',fontsize=14.5,fontweight='bold',y=0.985)
         fig.savefig(E+'figs/fig_killboard_print.png',dpi=300); print('saved print')
 draw('slide'); draw('print')
 json.dump(dict(rows=[r[1] for r in ROWS],cols=COLS,rules=RULES,grid=grid,legend={D:'死亡',P:'通过',B:'边界',NA:'未做/不适用',DEF:'按定义成立'},

@@ -17,6 +17,46 @@
 | E54 | 换名 ×5 | 15 次调用 | 真名 3/5·4/5 → 匿名 1/5·1/5 | e44_tide/agent/E54_NAMESWAP.json |
 | E55 | 45° 风（预注册 P1–P4） | 56 条（22 带真值） | P1 中、P2 反驳、P3 反驳、P4 中；u/v A −0.97 B 0.25；v/u A +0.10 B 0.82；纬向∩45°∩内潮 = 1（期望 0.79） | e55/PREREG_E55.md（sha ec1b1ecf…）、e55/E55_CROSS.json:prereg_check |
 | 500 km 锚 | 逐模态远场功率 | 在档 5 臂 + 补跑 2 | m2/m4/m6 第二模 0.94/0.68/0.47；γ16 0.25；VISC4 3e8 0.52 | e44_tide/analysis/ANSWER_KEY_500KM.json、upstream/BANDTOLL_VERDICT.json |
+| E56 | BH93 静止态检验（预注册 A9） | 14 条（7 档 VISC2 × 2 地形） | 平底全档 u_max=0.0000；陡海山 99.72→18.79（ρ=−1.000, p=0.0004）；A1 抗刷 0.000；代理夸大 1.69 倍；技巧全程为负 −8.48→−1.46（P3 被反驳） | e56/prereg_e56.md（sha 7792b30e…）、e56/E56_BH93.json、E56_VERDICT.json |
+| E57 | 双目标 (A,B) 全候选分析 | 15376 候选 | ρ(A,B)=−0.674；两关同过 204 vs 独立期望 2159（贫化 10.6×）；Pareto 前沿 5 点；乌托邦角为空；阈值 (0.5,0.7)→(0.9,1.0) 通过数 739→9 | e44_tide/analysis/E57_PARETO.json、E57_AB.npz、fig_pareto.png |
 | 审计原件 | 盒宽 / 时钟 | 在档 | 摆 7.24×；4.58→7.89 | e44_tide/analysis/upstream/DOMWIDTH_RESULT.json、PHASEFIX_TABLE.md |
 
 经向∩内潮的 2 把：见 e52/E52_CROSS.json（family_merid 字段；三重列表为空即无一在纬向通过）；45°∩内潮的 3 把：w|all|max / w|d400|max、w|all|max / w|d200|max、u|s50|mean_abs / v|s50|rms（e55/E55_CROSS.json:merid_tide_list）。
+
+
+---
+
+# 参考文献（正文引用，按首次出现顺序）
+
+数值海洋学侧：
+1. Strathern M. (1997) "Improving ratings": audit in the British University system. *European Review* 5(3):305–321.（古德哈特定律的经典表述）
+2. Haney R.L. (1991) On the pressure gradient force over steep topography in sigma coordinate ocean models. *JPO* 21:610–619. DOI 10.1175/1520-0485(1991)021<0610:OTPGFO>2.0.CO;2
+3. **Beckmann A. & Haidvogel D.B. (1993)** Numerical simulation of flow around a tall isolated seamount. Part I. *JPO* 23:1736–1753. DOI 10.1175/1520-0485(1993)023<1736:NSOFAA>2.0.CO;2（本作品 A9 的社区标准来源）
+4. Mellor G.L., Oey L.-Y. & Ezer T. (1998) Sigma coordinate pressure gradient errors and the seamount problem. *JTECH* 15:1122–1131. DOI 10.1175/1520-0426(1998)015<1122:SCPGEA>2.0.CO;2
+5. Shchepetkin A.F. & McWilliams J.C. (2003) A method for computing horizontal pressure-gradient force in an oceanic model with a nonaligned vertical coordinate. *JGR* 108(C3):3090. DOI 10.1029/2001JC001047
+6. Berntsen J. (2002) Internal pressure errors in sigma-coordinate ocean models. *JTECH* 19:1403–1414. DOI 10.1175/1520-0426(2002)019<1403:IPEISC>2.0.CO;2
+7. Schifano V. et al. (2025) 陡地形区数值混合与参数化混合的不一致. *JAMES*. DOI 10.1029/2024MS004768
+8. Stow C.A. et al. (2009) Skill assessment for coupled biological/physical models of marine systems. *J. Marine Systems* 76:4–15. DOI 10.1016/j.jmarsys.2008.03.011（RMSD 奖励方差低估）
+9. Gleckler P.J., Taylor K.E. & Doutriaux C. (2008) Performance metrics for climate models. *JGR* 113:D06104. DOI 10.1029/2007JD008972（换一个变量排名就翻）
+
+评测方法学侧：
+10. **Skalse J. et al. (2022)** Defining and Characterizing Reward Hacking. *NeurIPS 2022*. arXiv:2209.13085（定理 1 预言"没有一行全绿"；Def 1 = 我们的 A1）
+11. **Karwowski J. et al. (2023)** Goodhart's Law in Reinforcement Learning. arXiv:2310.09144（命题 2 给 A8 理论名字；推论 1 说明"门"是定理性质）
+12. Manheim D. & Garrabrant S. (2018) Categorizing Variants of Goodhart's Law. arXiv:1803.04585（四分类；正文使用其术语处已核对定义）
+13. Blum A. & Hardt M. (2015) The Ladder: A Reliable Leaderboard for Machine Learning Competitions. arXiv:1502.04585（藏起来的 holdout 在自适应查询下必被过拟合）
+14. Sai A.B. et al. (2021) Perturbation CheckLists for Evaluating NLG Evaluation Metrics. *EMNLP 2021*. arXiv:2109.05771（多指标 × 多扰动 × 没有一把全过的同构体裁）
+15. Ye J. et al. (2024) Justice or Prejudice? Quantifying Biases in LLM-as-a-Judge (CALM). arXiv:2410.02736（Compassion-Fade = A7 的先行）
+16. Starace G. et al. (2025) PaperBench. arXiv:2504.01848（JudgeEval：唯一正面"给评分器打分"，但依赖与人类金标一致）
+17. Chan J.S. et al. (2024) MLE-bench. arXiv:2410.07095（抹掉赛事出处的**阴性**对照 8.5%→8.4%）
+18. Workflow Closure Is Not Scientific Closure in Autonomous Research. arXiv:2605.26200（closure through the world；H 的 Weak/Mitigated 分级）
+19. CVEvolve: Autonomous Algorithm Discovery. arXiv:2605.11359（开发集/holdout 分离曲线）
+20. AEvo: Harnessing Agentic Evolution. arXiv:2605.13821（隐藏评测器的现行做法；去 harness 后 2/3 进入 reward hacking）
+21. CMIP-Forge. arXiv:2606.17076（相位论证换度量并改变排序 = A4 的先行；同模型评审 = 零认知独立性）
+22. ScientistOne: Chain of Evidence. arXiv:2605.26340（Case 1 型失效）
+23. Kosmos. arXiv:2511.02824（"不存在可靠评估 claim 准确性的自动方法"）
+24. FIRE-Bench. arXiv:2602.02905（Agent 不会构造控制组）
+25. Moran & Morato (2025) Exploration–Exploitation in Active Learning with Surrogate Reliability. arXiv:2508.18170（单标量压双目标失真 = 4.1 的标准表述）
+26. Do We Need the Entire Pareto Front? arXiv:2604.09417（多目标下全支配点近乎先验为空）
+27. Foucart C. et al. (2023) Deep RL for Adaptive Mesh Refinement. arXiv:2103.01342（TrueError 不是性能上界 = 好排序器不等于好尺子）
+
+> 引用核验：数值海洋学侧 DOI 经 Crossref 核实；方法学侧 arXiv 编号取自本团队文献库 `资料/文献/`（manifest 含标题与抓取记录）。**2026 年新条目在提交前逐条打开 abs 页确认。**

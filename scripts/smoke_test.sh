@@ -49,4 +49,13 @@ print('  PASS: 三重交集 %d; u/v 经向 rho=%+.2f (fail A); v/u 经向 paired
 rows=K['grid']; ruler_rows=rows[:4]; assert not any(all(c['verdict']=='过' for c in r) for r in ruler_rows), 'kill board 尺子行出现全绿'
 print('  PASS: kill board 四把尺子无全绿行 (%d×%d, 第 5 行为真值对照)'%(len(rows),len(rows[0])))
 PYX
-echo "SMOKE TEST: ALL PASS (4/4)"
+echo "[5/5] 六项必交件与 secret"
+for f in baselines/BASELINES.md scripts/reproduce_core.sh DISCLOSURE.md LICENSE e44_tide/analysis/KILLBOARD.json; do
+  [ -f "$f" ] || { echo "  FAIL: 缺 $f"; exit 1; }
+done
+n=$(ls e44_tide/agent/*.jsonl 2>/dev/null | wc -l); [ "$n" -ge 3 ] || { echo "  FAIL: 探索日志 JSONL 少于 3 个"; exit 1; }
+PAT="sk-[A-Za-z0-9]{16,}|$(printf '\345\257\206\347\240\201')|100\.(9[0-9]|1[0-2][0-9])\.[0-9]+\.[0-9]+|BEGIN [A-Z ]*PRIVATE KEY"
+if grep -rInE "$PAT" . --exclude-dir=.git --exclude=smoke_test.sh -q 2>/dev/null; then
+  echo "  FAIL: 疑似 secret:"; grep -rInE "$PAT" . --exclude-dir=.git --exclude=smoke_test.sh 2>/dev/null | head -3; exit 1; fi
+echo "  PASS: 交付件齐全（参照系/一键复现/披露/许可/kill board/$n 份轨迹），无 secret"
+echo "SMOKE TEST: ALL PASS (5/5)"

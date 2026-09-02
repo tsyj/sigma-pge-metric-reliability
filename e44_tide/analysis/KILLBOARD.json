@@ -14,9 +14,13 @@
   "A5 盖章\n预测",
   "A6 转风向\n(45° / 90°)",
   "A7 匿名/\n换名",
-  "A8 真值锚\n(带符号, n=7)"
+  "A8 真值锚\n(带符号, n=7)",
+  "A9 静止态\n(BH93 1993)",
+  "R 现行评审\n判据(对照)"
  ],
  "rules": {
+  "A9": "BH93(1993) 静止态海山检验: 无风+水平等密初值, 真值解析为零; 判据同 A1/A8",
+  "R": "领域现行 LLM 评审判据(内部逻辑/量纲/物理范围/文献接地)作对照列: 四把尺子全过 R 而 A1-A9 全杀",
   "A1": "配对抗刷率>=0.9 过; <0.5 死; 其间边 (风驱 32/28 对; 内潮用平底 vs 海山单对)",
   "A2": "|平底读数|/海山典型值 <1% 过; 发散或无定义 死; 平底本身无该误差成分 边",
   "A3": "只改盒宽: 幅值变化<20% 且序保持 过; 幅值变但序保持 边; 序或含义变 死",
@@ -75,6 +79,18 @@
     "text": "ρ=+0.86 (p=0.024)",
     "value": 0.857,
     "source": "RT2_FIXES.json:F2_A8_signed"
+   },
+   {
+    "verdict": "未",
+    "text": "静止态无内潮",
+    "value": null,
+    "source": "-"
+   },
+   {
+    "verdict": "过",
+    "text": "四条现行判据全过",
+    "value": null,
+    "source": "PhysMiner §II.D 判据集"
    }
   ],
   [
@@ -125,6 +141,18 @@
     "text": "ρ=-0.96 (p=0.003)",
     "value": -0.964,
     "source": "RT2_FIXES.json:F2_A8_signed"
+   },
+   {
+    "verdict": "死",
+    "text": "伪流降 81% 但代理夸大 1.69 倍",
+    "value": 1.6895006516844229,
+    "source": "e56/E56_VERDICT.json"
+   },
+   {
+    "verdict": "过",
+    "text": "四条现行判据全过",
+    "value": null,
+    "source": "同左"
    }
   ],
   [
@@ -175,6 +203,18 @@
     "text": "ρ=+0.96 (p=0.003)",
     "value": 0.964,
     "source": "RT2_FIXES.json:F2_A8_signed"
+   },
+   {
+    "verdict": "未",
+    "text": "未算",
+    "value": null,
+    "source": "-"
+   },
+   {
+    "verdict": "过",
+    "text": "四条现行判据全过",
+    "value": null,
+    "source": "同左"
    }
   ],
   [
@@ -225,6 +265,18 @@
     "text": "ρ=+0.89 (p=0.012)",
     "value": 0.893,
     "source": "RT2_FIXES.json:F2_A8_signed"
+   },
+   {
+    "verdict": "未",
+    "text": "静止态无真信号可锚",
+    "value": null,
+    "source": "e56/prereg_e56.md P4"
+   },
+   {
+    "verdict": "过",
+    "text": "四条现行判据全过",
+    "value": null,
+    "source": "同左"
    }
   ],
   [
@@ -275,6 +327,18 @@
     "text": "ρ=1 (自身)",
     "value": 1.0,
     "source": "定义"
+   },
+   {
+    "verdict": "过",
+    "text": "平底全档 u_max=0.0000",
+    "value": 0.0,
+    "source": "e56/E56_BH93.json"
+   },
+   {
+    "verdict": "定义",
+    "text": "非代理, 不适用",
+    "value": null,
+    "source": "-"
    }
   ]
  ],
