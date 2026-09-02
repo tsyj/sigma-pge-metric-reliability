@@ -41,6 +41,13 @@ j=[p['jaccard'] for p in pw.values()]; r=[p['spearman'] for p in pw.values()]
 print('  4 档 rx0 两两: Jaccard %.3f-%.3f, 秩相关 %.3f-%.3f (P1 赌<0.5 被推翻)'%(min(j),max(j),min(r),max(r)))
 print('  各档 B>=0.9 比例:', [round(p['frac'],4) for p in V['per_rx'].values()])
 PYZ
+echo "== 3d/4 E61 Agent 挑尺子（读已交付 JSON） =="
+$PY - <<'PYW'
+import json
+S=json.load(open('e61/E61_AGENT_PICKS.json'))
+print('  8 局均值: 逻辑回归 %.3f > 低B启发式 %.3f > Agent %.3f > 随机 %.3f'%(S['logistic'],S['b_heuristic'],S['agent'],S['random']))
+print('  符号检验 p: Agent>随机 %.4f (不显著); Agent>逻辑回归 %.2f'%(S['p_agent_gt_random_sign'],S['p_agent_gt_logistic_sign']))
+PYW
 echo "== 4/4 自检（与 smoke_test 同源） =="
 bash scripts/smoke_test.sh | tail -2
 echo "REPRODUCE_CORE: DONE"
