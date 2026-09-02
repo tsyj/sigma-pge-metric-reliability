@@ -1,0 +1,291 @@
+{
+ "note": "pf_dj/pf_v4/pf_combo 为在档 phasefix 三臂(另见 phasefix_20260829/): 判据局15=三臂+A/B/C 12条; 16库=15+平底",
+ "rows": [
+  {
+   "tag": "a_djvisc3e8",
+   "group": "A黏性轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "44cd70b7c19d",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "a_v4visc1e7",
+   "group": "A黏性轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "d23fe3389f08",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "a_v4visc1e8",
+   "group": "A黏性轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "0b094b4f9973",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "a_v4visc2e8",
+   "group": "A黏性轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "04fb6e561290",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "a_v4visc3e6",
+   "group": "A黏性轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "2652ec65adeb",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "a_v4visc3e7",
+   "group": "A黏性轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "4d503d05733c",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "a_v4visc3e8",
+   "group": "A黏性轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "da41ec28d070",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "a_v4visc5e7",
+   "group": "A黏性轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "f4ef2d196fd8",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "ag_s1",
+   "group": "Agent陷阱局",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "c54bd2a6944d",
+   "in_16lib": false,
+   "in_judge15": false
+  },
+  {
+   "tag": "ag_s2",
+   "group": "Agent陷阱局",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "30f1e4fcd6b3",
+   "in_16lib": false,
+   "in_judge15": false
+  },
+  {
+   "tag": "ag_s3",
+   "group": "Agent陷阱局",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "b3b23ec0242a",
+   "in_16lib": false,
+   "in_judge15": false
+  },
+  {
+   "tag": "ag_s5",
+   "group": "Agent陷阱局",
+   "done": false,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "aabe71309fe0",
+   "in_16lib": false,
+   "in_judge15": false
+  },
+  {
+   "tag": "b_bsplm2",
+   "group": "B节点距轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "0cf25cf40b15",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "b_bsplm3",
+   "group": "B节点距轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "2a22f071ce1a",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "b_bsplm5",
+   "group": "B节点距轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "58363bfb9fb9",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "b_bsplm6",
+   "group": "B节点距轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "3e5ea02fe2b9",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "c_g0p25",
+   "group": "C强度轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "e6adbbd5b514",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "c_g0p5",
+   "group": "C强度轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "d9717267dce6",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "c_g16",
+   "group": "C强度轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "5faa5d3f494a",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "c_g2",
+   "group": "C强度轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "05a247194911",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "c_g4",
+   "group": "C强度轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "8d7a1f5efc6d",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "c_g8",
+   "group": "C强度轴",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "933bdccb739a",
+   "in_16lib": true,
+   "in_judge15": true
+  },
+  {
+   "tag": "d_flatdj",
+   "group": "D平底零通道",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "e8e63e5eb84b",
+   "in_16lib": true,
+   "in_judge15": false
+  },
+  {
+   "tag": "p_combo_rerun",
+   "group": "P相位微扰",
+   "done": false,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "fa2269a01161",
+   "in_16lib": false,
+   "in_judge15": false
+  },
+  {
+   "tag": "p_g4_minus",
+   "group": "P相位微扰",
+   "done": false,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "7e7a7e6944e7",
+   "in_16lib": false,
+   "in_judge15": false
+  },
+  {
+   "tag": "p_g4_plus",
+   "group": "P相位微扰",
+   "done": false,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "e22c5aa29137",
+   "in_16lib": false,
+   "in_judge15": false
+  },
+  {
+   "tag": "x_m6g4",
+   "group": "X交叉项",
+   "done": true,
+   "t_start": "",
+   "t_end": "",
+   "inputs_md5_sha256": "dce97a70ab2b",
+   "in_16lib": false,
+   "in_judge15": false
+  },
+  {
+   "tag": "e44g16",
+   "group": "500km锚补跑(红队自查)",
+   "done": true,
+   "path": "/data/xinyuan/zpg_roms_dev/pge_test/bandtoll_20260830/e44g16",
+   "in_16lib": false,
+   "in_judge15": false
+  },
+  {
+   "tag": "e44v4x",
+   "group": "500km锚补跑(红队自查)",
+   "done": true,
+   "path": "/data/xinyuan/zpg_roms_dev/pge_test/bandtoll_20260830/e44v4x",
+   "in_16lib": false,
+   "in_judge15": false
+  }
+ ]
+}

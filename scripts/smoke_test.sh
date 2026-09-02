@@ -1,0 +1,40 @@
+#!/bin/bash
+# 一键 smoke test：不依赖模式数据，校验提交包自洽性（~10 秒）
+set -e
+cd "$(dirname "$0")/.."
+PY=${PYTHON:-python3}
+echo "[1/3] 预注册文档 sha256 校验"
+sha256sum -c e44_tide/PREREG_E44.sha256 --quiet && echo "  PASS: PREREG_E44.md 未被改动（盖章时间: $(cat e44_tide/PREREG_E44.stamp)）"
+echo "[2/3] E44 判读可从指标表独立重算（Spearman 自实现，不用 scipy）"
+$PY - <<'PYX'
+import json
+M=json.load(open('e44_tide/analysis/E44_METRICS.json'))
+V=json.load(open('e44_tide/analysis/E44_VERDICT.json'))
+def sp(a,b):
+    n=len(a); ra=sorted(range(n),key=lambda i:a[i]); rb=sorted(range(n),key=lambda i:b[i])
+    ka=[0]*n; kb=[0]*n
+    for r,i in enumerate(ra): ka[i]=r
+    for r,i in enumerate(rb): kb[i]=r
+    ma=sum(ka)/n; mb=sum(kb)/n
+    num=sum((ka[i]-ma)*(kb[i]-mb) for i in range(n))
+    den=(sum((x-ma)**2 for x in ka)*sum((x-mb)**2 for x in kb))**0.5
+    return num/den
+bt=['b_bsplm2','b_bsplm3','pf_combo','b_bsplm6']; m=[2,3,4,6]
+uv=[M[t]['uv_ratio'] for t in bt]
+r=sp(m,uv)
+assert abs(r-V['C1_rank_vs_m']['uv_ratio']['spearman_vs_m'])<1e-6, (r, '!=', V['C1_rank_vs_m']['uv_ratio']['spearman_vs_m'])
+print('  PASS: uv_ratio m-axis Spearman = %+.3f == verdict'%r)
+dc=[M[t]['deep_dc_rms'] for t in ['pf_v4','a_v4visc3e6','a_v4visc1e7','a_v4visc3e7','a_v4visc1e8','a_v4visc3e8']]
+assert min(range(6),key=lambda i:dc[i])==5, 'deepDC best 应在 VISC4=3e8 端'
+print('  PASS: deep_dc_rms 被极端黏性刷穿（best@3e8）可重算')
+PYX
+echo "[3/3] 500 km 判分锚一致性"
+$PY - <<'PYX'
+import json
+K=json.load(open('e44_tide/analysis/ANSWER_KEY_500KM.json'))
+m2=K['mode2_ratio']; m1=K['mode1_ratio']
+assert m2['m2']>m2['m4']>m2['m6'], '第二模应单调挨刀'
+assert all(abs(m1[k]-1.0)<0.01 for k in m1), '第一模应全档无损'
+print('  PASS: 锚结构（第一模≈1.00, 第二模 %.3f→%.3f→%.3f 单调）'%(m2['m2'],m2['m4'],m2['m6']))
+PYX
+echo "SMOKE TEST: ALL PASS"

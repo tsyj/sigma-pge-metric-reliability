@@ -1,0 +1,5 @@
+740f160e7710e6b8a930cf284576f4c9  coawstM_dnn_tide
+205fb76adb3cfe0298e01b97a650772e  dnn_tidebody.on
+7538bb98ff64b7261388f6f90671d989  grid.nc
+b182c85c1da11be0394d425852967af1  ini_clean.nc
+51f66e0a5908b8a2eaa969c839cc3aa5  ocean_run.in

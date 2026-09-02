@@ -1,0 +1,47 @@
+{
+ "seat0": {
+  "picks": [
+   "c_g4",
+   "a_v4visc1e8",
+   "c_g0p25",
+   "c_g16",
+   "pf_dj",
+   "a_v4visc1e7"
+  ],
+  "best": "c_g16",
+  "best_deepDC": 2.498,
+  "best_Pnet": -8.907
+ },
+ "seat1": {
+  "picks": [
+   "pf_v4",
+   "b_bsplm3",
+   "c_g0p25",
+   "a_djvisc3e8",
+   "a_v4visc1e7",
+   "b_bsplm6"
+  ],
+  "best": "b_bsplm6",
+  "best_deepDC": 3.736,
+  "best_Pnet": 2.574
+ },
+ "seat2": {
+  "picks": [
+   "c_g4",
+   "c_g16",
+   "pf_dj",
+   "a_djvisc3e8",
+   "b_bsplm6",
+   "a_v4visc3e7"
+  ],
+  "best": "c_g16",
+  "best_deepDC": 2.498,
+  "best_Pnet": -8.907
+ },
+ "agent_taskA": {
+  "final": "ag_s3",
+  "deepDC": 3.245,
+  "Pnet": 4.146
+ },
+ "note": "\u540c\u9884\u7b97(6 \u6b21\u8bc4\u4f30)\u968f\u673a\u57fa\u7ebf; \u5e93=16 \u51cf ag_*; \u79cd\u5b50 0/1/2 \u56fa\u5b9a"
+}

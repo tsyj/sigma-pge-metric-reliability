@@ -1,0 +1,288 @@
+{
+ "prereg": "PREREG_BANDTOLL.md",
+ "prereg_sha256": "5d3e93024678cae09a4821d6c8da21918f3ee7894e5457907ddd5944968323a6",
+ "predictions": "BANDTOLL_PREDICTIONS.md",
+ "predictions_sha256": "af5e05ba38558c973ed2f7b3a49524f932b03edaee876eb88b27765a27c80741",
+ "predictions_sha256_stamped": "af5e05ba38558c973ed2f7b3a49524f932b03edaee876eb88b27765a27c80741",
+ "gates": {
+  "anchor_frozen3": {
+   "PASS": true
+  },
+  "health": {
+   "k2": {
+    "PASS": true,
+    "rc": "RC=0",
+    "nan": 0,
+    "blowup": 0,
+    "dnn_error": 0,
+    "normal_end": 1,
+    "his_nrec_log": 433,
+    "switch_ok": true,
+    "wall_s": 19253
+   },
+   "k6": {
+    "PASS": true,
+    "rc": "RC=0",
+    "nan": 0,
+    "blowup": 0,
+    "dnn_error": 0,
+    "normal_end": 1,
+    "his_nrec_log": 433,
+    "switch_ok": true,
+    "wall_s": 19041
+   }
+  },
+  "barotropic": {
+   "values": {
+    "dj": 0.09964515645555024,
+    "v4": 0.09964052418864594,
+    "m4_combo": 0.09963824729629624,
+    "k2": 0.09964038085584602,
+    "k6": 0.09963277817859575
+   },
+   "spread": 0.00012423900227176432,
+   "tol": 0.05,
+   "PASS": true
+  },
+  "modal_G2": {
+   "PASS": true
+  },
+  "modal_G3_part_i": {
+   "PASS": true
+  },
+  "modal_G5": {
+   "PASS": true,
+   "values": {
+    "k2": {
+     "nrec": 433,
+     "nrec_ok": true,
+     "h_ghost_max_abs": 0.0,
+     "ot_same_as_first": true
+    },
+    "k6": {
+     "nrec": 433,
+     "nrec_ok": true,
+     "h_ghost_max_abs": 0.0,
+     "ot_same_as_first": true
+    }
+   }
+  },
+  "modal_G1_G4_G6_design": {
+   "note": "设计输入逐字 = 在档 DESIGN_PAPER.json, 在档已判 PASS",
+   "arch": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "G5": true,
+    "G6": true
+   }
+  },
+  "field_health_report_only": {
+   "k2": {
+    "zeta_max_abs_m": 0.2730197310447693,
+    "zr_check_max_abs_m": 0.00012206881319798413,
+    "h_ghost_err_m": 0.0,
+    "cfl": {
+     "Cu_max": 0.015133094787597657,
+     "Cv_max": 0.014493305683135987,
+     "Cw_max": 0.07832613997680679,
+     "u_max_m_s": 1.0088729858398438,
+     "v_max_m_s": 0.9662203788757324,
+     "Hz_min_m": 3.238939171476564,
+     "n_active_cells": 825552
+    }
+   },
+   "k6": {
+    "zeta_max_abs_m": 0.27287134528160095,
+    "zr_check_max_abs_m": 0.00012206988049001666,
+    "h_ghost_err_m": 0.0,
+    "cfl": {
+     "Cu_max": 0.011622199416160583,
+     "Cv_max": 0.009583156406879425,
+     "Cw_max": 0.058160051326356044,
+     "u_max_m_s": 0.7748132944107056,
+     "v_max_m_s": 0.6388770937919617,
+     "Hz_min_m": 3.2390248310987975,
+     "n_active_cells": 825552
+    }
+   }
+  },
+  "hard_summary": {
+   "anchor": true,
+   "health_k2": true,
+   "health_k6": true,
+   "bt": true,
+   "G2": true,
+   "G3i": true,
+   "G5": true
+  }
+ },
+ "readings": {
+  "P_n_v4_W_MID_MW": [
+   90.43833063621216,
+   0.9177091077354355,
+   0.5338020868762131,
+   0.01303011949937173
+  ],
+  "P_n_v4_W_POST_MW": [
+   79.81002247685463,
+   15.17427813080391,
+   0.8670667720752198,
+   0.3141893392696052
+  ],
+  "anchor_m4": {
+   "R1_mid": 0.9991152492677815,
+   "R2_mid": 0.6837490917444093,
+   "R3_post": 0.6576252165221836
+  },
+  "new_arms": {
+   "k2": {
+    "R1_over_v4": 1.001820932888481,
+    "R2_over_v4": 0.9413494777073559,
+    "R3_over_v4_W_POST": 0.9234394650386868,
+    "R1_over_dj": 0.9455298181253194,
+    "R2_over_dj": 0.9377501493671258,
+    "R3_over_dj_W_POST": 1.0039261261153483,
+    "P_n_W_MID_MW": [
+     90.60301276684696,
+     0.8638849892540358,
+     0.5347420757634643,
+     0.012179367982896181
+    ],
+    "P_n_W_POST_MW": [
+     80.05524159913638,
+     14.527602553194036,
+     0.8006836761579619,
+     0.2773656607588051
+    ],
+    "R_total_over_v4": 1.0011968028770293,
+    "R_total_over_dj": 0.9470288032361618
+   },
+   "k6": {
+    "R1_over_v4": 0.9997891488831218,
+    "R2_over_v4": 0.466339373285782,
+    "R3_over_v4_W_POST": 0.5767443817396223,
+    "R1_over_dj": 0.9436121976225034,
+    "R2_over_dj": 0.46455628574796276,
+    "R3_over_dj_W_POST": 0.6270132205086052,
+    "P_n_W_MID_MW": [
+     90.41926161318891,
+     0.4279638901599972,
+     0.5282272779795008,
+     0.0045479677688872394
+    ],
+    "P_n_W_POST_MW": [
+     79.07529026622615,
+     4.60977887159907,
+     0.5000758893874926,
+     0.06379567826401715
+    ],
+    "R_total_over_v4": 0.9942171876185448,
+    "R_total_over_dj": 0.9404268078379571
+   }
+  },
+  "arch_totals": {
+   "R_combo_m4_over_v4": 0.9958070283764293,
+   "R_combo_m4_over_dj": 0.9419306330458971
+  }
+ },
+ "cells": {
+  "C1": {
+   "value": 1.001820932888481,
+   "interval": [
+    0.97,
+    1.03
+   ],
+   "hit": true
+  },
+  "C2": {
+   "value": 0.9997891488831218,
+   "interval": [
+    0.97,
+    1.03
+   ],
+   "hit": true
+  },
+  "C3": {
+   "value": 0.9413494777073559,
+   "edge_branch": [
+    0.92,
+    1.03
+   ],
+   "cap_branch": [
+    0.6,
+    0.86
+   ],
+   "hit": true,
+   "branch": "带缘支",
+   "transition": false
+  },
+  "C4": {
+   "value": 0.466339373285782,
+   "interval": [
+    0.36,
+    0.57
+   ],
+   "hit": true
+  },
+  "C5": {
+   "value": 0.4750101044215739,
+   "threshold": 0.13,
+   "hit": true
+  }
+ },
+ "aux": {
+  "A1_R3_k2": {
+   "value": 0.9234394650386868,
+   "interval": [
+    0.63,
+    0.94
+   ],
+   "inside": true
+  },
+  "A2_R3_k6": {
+   "value": 0.5767443817396223,
+   "interval": [
+    0.19,
+    0.38
+   ],
+   "inside": false
+  },
+  "A3_mode3_worse_than_mode2_at_k6": {
+   "R3_k6": 0.5767443817396223,
+   "R2_k6": 0.466339373285782,
+   "holds": false
+  },
+  "A4_jia_aux_line_k6_R3_ge_0p55": {
+   "triggered": true,
+   "note": "触发 = 定价模型强烈失准(甲辅助线,不判死)"
+  }
+ },
+ "refutation_lines": {
+  "F1": {
+   "cond": "R2(k6/v4) >= 0.62",
+   "value": 0.466339373285782,
+   "triggered": false
+  },
+  "F2": {
+   "cond": "R2(k2/v4) < 0.55",
+   "value": 0.9413494777073559,
+   "triggered": false
+  },
+  "F3": {
+   "cond": "min(R1) < 0.93",
+   "value": 0.9997891488831218,
+   "triggered": false
+  },
+  "F4": {
+   "cond": "R2(k2)-R2(k6) < 0.08",
+   "value": 0.4750101044215739,
+   "triggered": false
+  }
+ },
+ "verdict": "BAND_TOLL_CONFIRMED",
+ "jia_scale_label": "CONFIRMED",
+ "miss_cells": [],
+ "answer": "判定 BAND_TOLL_CONFIRMED(甲级差 CONFIRMED)。R1: k2 1.0018 / k6 0.9998;R2: k2 0.9413 / k6 0.4663(差 0.4750);R3(W_POST): k2 0.9234 / k6 0.5767。不中格: 无"
+}

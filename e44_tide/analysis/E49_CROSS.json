@@ -1,0 +1,210 @@
+{
+ "wind_passAB": 204,
+ "tide_alarm": 2574,
+ "intersection": 13,
+ "uv_in_intersection": true,
+ "uv_wind": {
+  "rho": -0.923,
+  "paired": 1.0,
+  "passA": true,
+  "passAB": true
+ },
+ "uv_tide": {
+  "alarm": true,
+  "minrho": 0.893
+ },
+ "tempd400_wind": {
+  "rho": 0.853,
+  "paired": 1.0,
+  "passA": false,
+  "passAB": false
+ },
+ "tempd400_tide": {
+  "alarm": true,
+  "minrho": 1.0
+ },
+ "intersection_list": [
+  {
+   "num": "u|s200|p95",
+   "den": "v|s200|mean_abs",
+   "wind": {
+    "rho": -0.7732,
+    "paired": 1.0,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.976
+   }
+  },
+  {
+   "num": "u|s200|rms",
+   "den": "v|s200|mean_abs",
+   "wind": {
+    "rho": -0.8244,
+    "paired": 1.0,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.976
+   }
+  },
+  {
+   "num": "u|s200|rms",
+   "den": "v|s200|rms",
+   "wind": {
+    "rho": -0.9168,
+    "paired": 1.0,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.976
+   }
+  },
+  {
+   "num": "u|s50|mean_abs",
+   "den": "v|s50|mean_abs",
+   "wind": {
+    "rho": -0.8726,
+    "paired": 1.0,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.976
+   }
+  },
+  {
+   "num": "u|s50|mean_abs",
+   "den": "v|s50|rms",
+   "wind": {
+    "rho": -0.8413,
+    "paired": 1.0,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.976
+   }
+  },
+  {
+   "num": "u|s50|p95",
+   "den": "v|s200|mean_abs",
+   "wind": {
+    "rho": -0.7088,
+    "paired": 1.0,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.976
+   }
+  },
+  {
+   "num": "u|s50|rms",
+   "den": "v|s50|mean_abs",
+   "wind": {
+    "rho": -0.9189,
+    "paired": 0.9688,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.976
+   }
+  },
+  {
+   "num": "u|s50|rms",
+   "den": "v|s50|rms",
+   "wind": {
+    "rho": -0.9294,
+    "paired": 1.0,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.929
+   }
+  },
+  {
+   "num": "u|s50|mean_abs",
+   "den": "v|s50|p95",
+   "wind": {
+    "rho": -0.9335,
+    "paired": 1.0,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.9
+   }
+  },
+  {
+   "num": "u|all|rms",
+   "den": "v|all|mean_abs",
+   "wind": {
+    "rho": -0.923,
+    "paired": 1.0,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.893
+   }
+  },
+  {
+   "num": "u|s50|p95",
+   "den": "v|s200|rms",
+   "wind": {
+    "rho": -0.7528,
+    "paired": 0.9375,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.9
+   }
+  },
+  {
+   "num": "u|s50|rms",
+   "den": "v|all|p95",
+   "wind": {
+    "rho": -0.7483,
+    "paired": 0.9375,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.893
+   }
+  },
+  {
+   "num": "u|s50|rms",
+   "den": "v|s50|p95",
+   "wind": {
+    "rho": -0.9672,
+    "paired": 0.9062,
+    "passA": true,
+    "passAB": true
+   },
+   "tide": {
+    "alarm": true,
+    "minrho": 0.9
+   }
+  }
+ ]
+}

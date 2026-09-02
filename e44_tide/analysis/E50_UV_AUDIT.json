@@ -1,0 +1,111 @@
+{
+ "frame_sensitivity": {
+  "pf_dj": {
+   "frames": [
+    2.361,
+    2.447,
+    2.088,
+    1.588
+   ],
+   "spread_pct": 40.5
+  },
+  "pf_v4": {
+   "frames": [
+    2.54,
+    2.577,
+    2.184,
+    1.7
+   ],
+   "spread_pct": 39.0
+  },
+  "pf_combo": {
+   "frames": [
+    3.075,
+    3.1,
+    2.527,
+    1.853
+   ],
+   "spread_pct": 47.3
+  },
+  "b_bsplm2": {
+   "frames": [
+    2.734,
+    2.813,
+    2.356,
+    1.777
+   ],
+   "spread_pct": 42.8
+  },
+  "b_bsplm6": {
+   "frames": [
+    3.417,
+    3.565,
+    2.926,
+    1.969
+   ],
+   "spread_pct": 53.7
+  },
+  "c_g16": {
+   "frames": [
+    3.805,
+    4.097,
+    3.224,
+    1.939
+   ],
+   "spread_pct": 66.1
+  },
+  "a_v4visc3e8": {
+   "frames": [
+    3.974,
+    4.191,
+    3.393,
+    2.082
+   ],
+   "spread_pct": 61.8
+  }
+ },
+ "window_stats": {
+  "pf_dj": {
+   "mean": 2.245,
+   "std": 0.509,
+   "lastframe": 2.361
+  },
+  "pf_v4": {
+   "mean": 2.293,
+   "std": 0.513,
+   "lastframe": 2.54
+  },
+  "pf_combo": {
+   "mean": 2.988,
+   "std": 0.979,
+   "lastframe": 3.075
+  },
+  "b_bsplm2": {
+   "mean": 2.564,
+   "std": 0.665,
+   "lastframe": 2.734
+  },
+  "b_bsplm6": {
+   "mean": 3.377,
+   "std": 1.137,
+   "lastframe": 3.417
+  },
+  "c_g16": {
+   "mean": 3.644,
+   "std": 1.444,
+   "lastframe": 3.805
+  },
+  "a_v4visc3e8": {
+   "mean": 3.723,
+   "std": 1.502,
+   "lastframe": 3.974
+  }
+ },
+ "boxwidth_500km": {
+  "ps_dj": 16.232,
+  "ps_v4": 17.105,
+  "ps_combo_m4": 17.85,
+  "k2": 17.356,
+  "k6": 17.936
+ }
+}

@@ -1,0 +1,6 @@
+== Task A 陷阱局 ==
+  A step1 -> None run 未完赛(可能数值不稳),这本身是有效观测
+  A step2 -> None run 未完赛(可能数值不稳),这本身是有效观测
+  A step3 -> None run 未完赛(可能数值不稳),这本身是有效观测
+  A step4 -> None bspline 需要 dynref=true(模式约束)
+  A step5 -> None run 未完赛(可能数值不稳),这本身是有效观测

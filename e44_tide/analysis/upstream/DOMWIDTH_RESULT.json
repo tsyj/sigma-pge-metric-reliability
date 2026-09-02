@@ -1,0 +1,1610 @@
+{
+ "prereg": "PREREG_DOMWIDTH.md",
+ "frozen": {
+  "base_Pnet_MW": 1.807162158758922,
+  "anchor_rtol": 1e-09,
+  "bt_report_tol": 0.05,
+  "main_up": 0.3,
+  "main_down": 0.1,
+  "w_halfwidth": 0.21713829470615414,
+  "c2_MIT30": 0.6125763073621778,
+  "OMEGA": 0.000140519,
+  "F0": 5.463337479696344e-05,
+  "DX": 2000.0
+ },
+ "pred_nominal": {
+  "84": 1.0,
+  "86": 1.323,
+  "88": 1.592,
+  "90": 1.621,
+  "94": 1.059,
+  "126": 0.747,
+  "168": 0.459
+ },
+ "pred_periodic": {
+  "84": 1.0,
+  "86": 1.351,
+  "88": 1.838,
+  "90": 2.433,
+  "94": 2.979,
+  "126": 2.465,
+  "168": 0.508
+ },
+ "flags": [],
+ "pipeline": {
+  "harvest_cotax_b_md5": "2a3d1cca169097f19e7f10a157234b1f",
+  "harvest_zl_md5": "46d1f99bc70f764d6d2e76b640e964b9",
+  "harvest_dw_md5": "b15c0e9db0b3b6b9aec01b1480502ca7"
+ },
+ "anchor": {
+  "base_Pnet_MW": 1.807162158758922,
+  "frozen": 1.807162158758922,
+  "rel_err": 0.0,
+  "geom_bitexact": true,
+  "flux_bitexact_vs_archive_geom": true,
+  "PASS": true,
+  "base_metrics": {
+   "nrec": 145,
+   "nlev": 30,
+   "t_first_day": 4.0,
+   "t_last_day": 10.0,
+   "zmode": "zq",
+   "zr_check_max_abs_m": 0.00012206941482872935,
+   "zeta_max_abs_m": 0.0556216686964035,
+   "h_his_vs_grid_ghostcol_max_abs_m": 0.012319576137088006,
+   "U_bt_M2_allrows": 0.08821293923068488,
+   "U_bt_M2_interior": 0.0981331696893959,
+   "norm_Ubt_sq": 0.007781522647716504,
+   "P_rad_W": 1807162.1587589218,
+   "P_ring_W": 1916322.9105529694,
+   "Fmag_ann_mean_W_m": 199.5781870091247,
+   "Fr_ann_mean_W_m": 25.669917027825594,
+   "Fr_ann_min_W_m": -169.37683011147558,
+   "uniform_Fx_W_m": -190.35077359516964,
+   "uniform_Fy_W_m": 18.9902574561736,
+   "uniform_Fmag_W_m": 191.2957053530771,
+   "Pplus_raw_MW": 4.5998500024163125,
+   "Pminus_raw_MW": -2.792687843657389,
+   "Pnet_raw_MW": 1.807162158758922,
+   "Pplus_demean_MW": 2.1934644860505106,
+   "Pminus_demean_MW": -0.3863023272915887,
+   "Pnet_demean_MW": 1.807162158758922,
+   "Pnet_uniform_MW": 9.094947017729283e-17,
+   "Pplus_uniform_MW": 4.280333230172201,
+   "Pminus_uniform_MW": -4.280333230172201,
+   "Fmag_ann_mean_demean_W_m": 69.825881706273,
+   "net_identity_resid_MW": 0.0,
+   "annulus_cells": 176
+  }
+ },
+ "per_case": {
+  "dom84km_archive": {
+   "nrec": 145,
+   "nlev": 30,
+   "t_first_day": 4.0,
+   "t_last_day": 10.0,
+   "zmode": "zq",
+   "zr_check_max_abs_m": 0.00012206941482872935,
+   "zeta_max_abs_m": 0.0556216686964035,
+   "h_his_vs_grid_ghostcol_max_abs_m": 0.012319576137088006,
+   "U_bt_M2_allrows": 0.08821293923068488,
+   "U_bt_M2_interior": 0.0981331696893959,
+   "norm_Ubt_sq": 0.007781522647716504,
+   "P_rad_W": 1807162.1587589218,
+   "P_ring_W": 1916322.9105529694,
+   "Fmag_ann_mean_W_m": 199.5781870091247,
+   "Fr_ann_mean_W_m": 25.669917027825594,
+   "Fr_ann_min_W_m": -169.37683011147558,
+   "uniform_Fx_W_m": -190.35077359516964,
+   "uniform_Fy_W_m": 18.9902574561736,
+   "uniform_Fmag_W_m": 191.2957053530771,
+   "Pplus_raw_MW": 4.5998500024163125,
+   "Pminus_raw_MW": -2.792687843657389,
+   "Pnet_raw_MW": 1.807162158758922,
+   "Pplus_demean_MW": 2.1934644860505106,
+   "Pminus_demean_MW": -0.3863023272915887,
+   "Pnet_demean_MW": 1.807162158758922,
+   "Pnet_uniform_MW": 9.094947017729283e-17,
+   "Pplus_uniform_MW": 4.280333230172201,
+   "Pminus_uniform_MW": -4.280333230172201,
+   "Fmag_ann_mean_demean_W_m": 69.825881706273,
+   "net_identity_resid_MW": 0.0,
+   "annulus_cells": 176,
+   "tag": "dom84km_archive",
+   "nx": 42,
+   "ny": 42,
+   "Lm": 40,
+   "Mm": 40,
+   "L_nominal_km": 84.0,
+   "L_periodic_km": 80.0,
+   "seamount_center_m": [
+    40000.0,
+    40000.0
+   ],
+   "center_offset_m": [
+    0.0,
+    0.0
+   ],
+   "c_modes": [
+    2.1169072856022226,
+    0.6125763073621778,
+    0.4489785893989868
+   ],
+   "c_modes_ref_1m": [
+    2.117033029267536,
+    0.5772865719667697,
+    0.3502410778705321
+   ],
+   "lambda_n_m": [
+    102738.81328245251,
+    29729.862659258142,
+    21790.055605084734
+   ],
+   "L_over_lambda_nominal": [
+    0.8176072636644612,
+    2.8254419121523138,
+    3.854969510972634
+   ],
+   "detune_nominal": [
+    0.18239273633553876,
+    0.17455808784768623,
+    0.14503048902736593
+   ],
+   "L_over_lambda_periodic": [
+    0.778673584442344,
+    2.6908970591926797,
+    3.6713995342596517
+   ],
+   "detune_periodic": [
+    0.22132641555765598,
+    0.30910294080732026,
+    0.3286004657403483
+   ],
+   "source": "zroms_s0b_20260827/zq30_tide (在档, 只读引用)",
+   "DONE": "RC=0",
+   "gate": "archive"
+  },
+  "dom86km": {
+   "nrec": 145,
+   "nlev": 30,
+   "t_first_day": 4.0,
+   "t_last_day": 10.0,
+   "zmode": "zq",
+   "zr_check_max_abs_m": 0.00012206815745230415,
+   "zeta_max_abs_m": 0.05687589570879936,
+   "h_his_vs_grid_ghostcol_max_abs_m": 0.01593506498966235,
+   "U_bt_M2_allrows": 0.088524303690714,
+   "U_bt_M2_interior": 0.09819373106728811,
+   "norm_Ubt_sq": 0.00783655234392576,
+   "P_rad_W": 1511433.428610939,
+   "P_ring_W": 1610433.3570986132,
+   "Fmag_ann_mean_W_m": 213.75741050413788,
+   "Fr_ann_mean_W_m": 21.469224838223568,
+   "Fr_ann_min_W_m": -204.64264754509256,
+   "uniform_Fx_W_m": -199.83476565614927,
+   "uniform_Fy_W_m": 3.7426095000130175,
+   "uniform_Fmag_W_m": 199.86980935278265,
+   "Pplus_raw_MW": 4.669131888530795,
+   "Pminus_raw_MW": -3.1576984599198568,
+   "Pnet_raw_MW": 1.511433428610939,
+   "Pplus_demean_MW": 2.3936801407429042,
+   "Pminus_demean_MW": -0.8822467121319646,
+   "Pnet_demean_MW": 1.511433428610939,
+   "Pnet_uniform_MW": 0.0,
+   "Pplus_uniform_MW": 4.4832652321671045,
+   "Pminus_uniform_MW": -4.483265232167105,
+   "Fmag_ann_mean_demean_W_m": 76.94643255896182,
+   "net_identity_resid_MW": 0.0,
+   "annulus_cells": 176,
+   "tag": "dom86km",
+   "nx": 43,
+   "ny": 43,
+   "Lm": 41,
+   "Mm": 41,
+   "L_nominal_km": 86.0,
+   "L_periodic_km": 82.0,
+   "seamount_center_m": [
+    40000.0,
+    40000.0
+   ],
+   "center_offset_m": [
+    -1000.0,
+    -1000.0
+   ],
+   "c_modes": [
+    2.1169072856022226,
+    0.6125763073621778,
+    0.4489785893989868
+   ],
+   "c_modes_ref_1m": [
+    2.117033029267536,
+    0.5772865719667697,
+    0.3502410778705321
+   ],
+   "lambda_n_m": [
+    102738.81328245251,
+    29729.862659258142,
+    21790.055605084734
+   ],
+   "L_over_lambda_nominal": [
+    0.8370741032755198,
+    2.892714338632131,
+    3.9467544993291255
+   ],
+   "detune_nominal": [
+    0.1629258967244802,
+    0.10728566136786899,
+    0.053245500670874524
+   ],
+   "L_over_lambda_periodic": [
+    0.7981404240534026,
+    2.758169485672497,
+    3.7631845226161427
+   ],
+   "detune_periodic": [
+    0.20185957594659742,
+    0.24183051432750302,
+    0.23681547738385733
+   ],
+   "source": "/data/xinyuan/zpg_roms_dev/pge_test/domwidth_20260828/dom86km/",
+   "DONE": "RC=0",
+   "gate": {
+    "dir": "dom86km/",
+    "mode": "prod",
+    "checks": {
+     "rc_zero": true,
+     "tidebody_active": true,
+     "dynref_off": true,
+     "no_zqinit_error": true,
+     "zqinit_badcols_zero": true,
+     "no_nan": true,
+     "no_blowup": true,
+     "nrec_log_ok": true,
+     "normal_end": true,
+     "nrec_file_ok": true,
+     "finite": true,
+     "uv_below_1ms": true,
+     "h_min_520": true
+    },
+    "rc": "RC=0",
+    "zqinit_badcols": 0,
+    "nan_hits": 0,
+    "blowup_hits": 0,
+    "his_nrec_log": 241,
+    "zqinit_shape": [
+     -3,
+     44,
+     0,
+     42
+    ],
+    "his_file": "his_dom86km.nc",
+    "his_nrec": 241,
+    "max_abs_u": 0.4999702274799347,
+    "max_abs_v": 0.37916550040245056,
+    "max_abs_zeta": 0.06574606150388718,
+    "temp_range": [
+     3.8500547409057617,
+     26.13032341003418
+    ],
+    "h_range": [
+     520.0,
+     2999.9999999973443
+    ],
+    "shape": [
+     241,
+     30,
+     43,
+     43
+    ],
+    "PASS": true
+   },
+   "inputs_md5": {
+    "grid": "8954422ed1c414d94298fc4e679bbacc",
+    "bin": "66870e06fe6dffc63730f72c4af3e5ef",
+    "ini": "8d5190cf1d783ff4e627f3ed015aa0b3"
+   },
+   "md5": {
+    "ocean_run.in": "6f0dde23bdca27ee4da72e66f3a6e512",
+    "coawstM_s0_zq": "c3780bc6589dfafd4940e62d619601d6",
+    "grid_dw43.nc": "8954422ed1c414d94298fc4e679bbacc",
+    "ini_zq_dw43.nc": "8d5190cf1d783ff4e627f3ed015aa0b3",
+    "gt3_zwtraj.bin": "66870e06fe6dffc63730f72c4af3e5ef",
+    "dnn_tidebody.on": "205fb76adb3cfe0298e01b97a650772e"
+   },
+   "topo_bitexact_window": [
+    42,
+    42
+   ],
+   "h_min": 520.0,
+   "h_max": 2999.999999999285,
+   "rx1_max": 11.663064603132593,
+   "summit_kb": 15
+  },
+  "dom88km": {
+   "nrec": 145,
+   "nlev": 30,
+   "t_first_day": 4.0,
+   "t_last_day": 10.0,
+   "zmode": "zq",
+   "zr_check_max_abs_m": 0.00012206754854560131,
+   "zeta_max_abs_m": 0.07694124430418015,
+   "h_his_vs_grid_ghostcol_max_abs_m": 0.0036154888525743445,
+   "U_bt_M2_allrows": 0.08881651671847574,
+   "U_bt_M2_interior": 0.09824749248339232,
+   "norm_Ubt_sq": 0.00788837364200328,
+   "P_rad_W": 2070871.7842338474,
+   "P_ring_W": 2209791.739629624,
+   "Fmag_ann_mean_W_m": 298.38346732668884,
+   "Fr_ann_mean_W_m": 29.415792389685336,
+   "Fr_ann_min_W_m": -323.8385355389567,
+   "uniform_Fx_W_m": -282.39235691811706,
+   "uniform_Fy_W_m": 3.642492012862753,
+   "uniform_Fmag_W_m": 282.4158476322336,
+   "Pplus_raw_MW": 6.298495322772815,
+   "Pminus_raw_MW": -4.2276235385389676,
+   "Pnet_raw_MW": 2.0708717842338475,
+   "Pplus_demean_MW": 4.034462783410073,
+   "Pminus_demean_MW": -1.9635909991762248,
+   "Pnet_demean_MW": 2.0708717842338475,
+   "Pnet_uniform_MW": 1.1368683772161604e-17,
+   "Pplus_uniform_MW": 6.335433333853236,
+   "Pminus_uniform_MW": -6.335433333853236,
+   "Fmag_ann_mean_demean_W_m": 113.25824830857536,
+   "net_identity_resid_MW": 0.0,
+   "annulus_cells": 176,
+   "tag": "dom88km",
+   "nx": 44,
+   "ny": 44,
+   "Lm": 42,
+   "Mm": 42,
+   "L_nominal_km": 88.0,
+   "L_periodic_km": 84.0,
+   "seamount_center_m": [
+    42000.0,
+    42000.0
+   ],
+   "center_offset_m": [
+    0.0,
+    0.0
+   ],
+   "c_modes": [
+    2.1169072856022226,
+    0.6125763073621778,
+    0.4489785893989868
+   ],
+   "c_modes_ref_1m": [
+    2.117033029267536,
+    0.5772865719667697,
+    0.3502410778705321
+   ],
+   "lambda_n_m": [
+    102738.81328245251,
+    29729.862659258142,
+    21790.055605084734
+   ],
+   "L_over_lambda_nominal": [
+    0.8565409428865784,
+    2.959986765111948,
+    4.038539487685616
+   ],
+   "detune_nominal": [
+    0.14345905711342155,
+    0.040013234888052196,
+    0.038539487685616436
+   ],
+   "L_over_lambda_periodic": [
+    0.8176072636644612,
+    2.8254419121523138,
+    3.854969510972634
+   ],
+   "detune_periodic": [
+    0.18239273633553876,
+    0.17455808784768623,
+    0.14503048902736593
+   ],
+   "source": "/data/xinyuan/zpg_roms_dev/pge_test/domwidth_20260828/dom88km/",
+   "DONE": "RC=0",
+   "gate": {
+    "dir": "dom88km/",
+    "mode": "prod",
+    "checks": {
+     "rc_zero": true,
+     "tidebody_active": true,
+     "dynref_off": true,
+     "no_zqinit_error": true,
+     "zqinit_badcols_zero": true,
+     "no_nan": true,
+     "no_blowup": true,
+     "nrec_log_ok": true,
+     "normal_end": true,
+     "nrec_file_ok": true,
+     "finite": true,
+     "uv_below_1ms": true,
+     "h_min_520": true
+    },
+    "rc": "RC=0",
+    "zqinit_badcols": 0,
+    "nan_hits": 0,
+    "blowup_hits": 0,
+    "his_nrec_log": 241,
+    "zqinit_shape": [
+     -3,
+     46,
+     0,
+     44
+    ],
+    "his_file": "his_dom88km.nc",
+    "his_nrec": 241,
+    "max_abs_u": 0.5003631114959717,
+    "max_abs_v": 0.37986403703689575,
+    "max_abs_zeta": 0.07884545624256134,
+    "temp_range": [
+     3.8387577533721924,
+     26.3099308013916
+    ],
+    "h_range": [
+     520.0,
+     2999.9999999973443
+    ],
+    "shape": [
+     241,
+     30,
+     44,
+     44
+    ],
+    "PASS": true
+   },
+   "inputs_md5": {
+    "grid": "99849ddc7a0d508f65c737cc58999323",
+    "bin": "896adcbd43936c6f24f06bc181a62e7e",
+    "ini": "64452f0347c7576b348064682b11dc84"
+   },
+   "md5": {
+    "ocean_run.in": "29638d9ca7285f0ddfc872dbe57a4c77",
+    "coawstM_s0_zq": "c3780bc6589dfafd4940e62d619601d6",
+    "grid_dw44.nc": "99849ddc7a0d508f65c737cc58999323",
+    "ini_zq_dw44.nc": "64452f0347c7576b348064682b11dc84",
+    "gt3_zwtraj.bin": "896adcbd43936c6f24f06bc181a62e7e",
+    "dnn_tidebody.on": "205fb76adb3cfe0298e01b97a650772e"
+   },
+   "topo_bitexact_window": [
+    42,
+    42
+   ],
+   "h_min": 520.0,
+   "h_max": 2999.999999999285,
+   "rx1_max": 11.663064603132593,
+   "summit_kb": 15
+  },
+  "dom90km": {
+   "nrec": 145,
+   "nlev": 30,
+   "t_first_day": 4.0,
+   "t_last_day": 10.0,
+   "zmode": "zq",
+   "zr_check_max_abs_m": 0.00012204418180772336,
+   "zeta_max_abs_m": 0.08290857821702957,
+   "h_his_vs_grid_ghostcol_max_abs_m": 0.004610296114151424,
+   "U_bt_M2_allrows": 0.08909232945141861,
+   "U_bt_M2_interior": 0.09829707579517753,
+   "norm_Ubt_sq": 0.00793744316708011,
+   "P_rad_W": 4461794.2090169685,
+   "P_ring_W": 4798926.643065172,
+   "Fmag_ann_mean_W_m": 653.5172172498325,
+   "Fr_ann_mean_W_m": 63.377758650809206,
+   "Fr_ann_min_W_m": -584.9041377344097,
+   "uniform_Fx_W_m": -633.3197860174708,
+   "uniform_Fy_W_m": 3.8034010425286806,
+   "uniform_Fmag_W_m": 633.331206574179,
+   "Pplus_raw_MW": 13.924725873183478,
+   "Pminus_raw_MW": -9.462931664166506,
+   "Pnet_raw_MW": 4.461794209016969,
+   "Pplus_demean_MW": 7.3880417870935915,
+   "Pminus_demean_MW": -2.926247578076623,
+   "Pnet_demean_MW": 4.461794209016969,
+   "Pnet_uniform_MW": 0.0,
+   "Pplus_uniform_MW": 14.208441500020173,
+   "Pminus_uniform_MW": -14.208441500020173,
+   "Fmag_ann_mean_demean_W_m": 217.09031819489056,
+   "net_identity_resid_MW": 0.0,
+   "annulus_cells": 176,
+   "tag": "dom90km",
+   "nx": 45,
+   "ny": 45,
+   "Lm": 43,
+   "Mm": 43,
+   "L_nominal_km": 90.0,
+   "L_periodic_km": 86.0,
+   "seamount_center_m": [
+    42000.0,
+    42000.0
+   ],
+   "center_offset_m": [
+    -1000.0,
+    -1000.0
+   ],
+   "c_modes": [
+    2.1169072856022226,
+    0.6125763073621778,
+    0.4489785893989868
+   ],
+   "c_modes_ref_1m": [
+    2.117033029267536,
+    0.5772865719667697,
+    0.3502410778705321
+   ],
+   "lambda_n_m": [
+    102738.81328245251,
+    29729.862659258142,
+    21790.055605084734
+   ],
+   "L_over_lambda_nominal": [
+    0.876007782497637,
+    3.027259191591765,
+    4.130324476042108
+   ],
+   "detune_nominal": [
+    0.123992217502363,
+    0.027259191591765042,
+    0.13032447604210784
+   ],
+   "L_over_lambda_periodic": [
+    0.8370741032755198,
+    2.892714338632131,
+    3.9467544993291255
+   ],
+   "detune_periodic": [
+    0.1629258967244802,
+    0.10728566136786899,
+    0.053245500670874524
+   ],
+   "source": "/data/xinyuan/zpg_roms_dev/pge_test/domwidth_20260828/dom90km/",
+   "DONE": "RC=0",
+   "gate": {
+    "dir": "dom90km/",
+    "mode": "prod",
+    "checks": {
+     "rc_zero": true,
+     "tidebody_active": true,
+     "dynref_off": true,
+     "no_zqinit_error": true,
+     "zqinit_badcols_zero": true,
+     "no_nan": true,
+     "no_blowup": true,
+     "nrec_log_ok": true,
+     "normal_end": true,
+     "nrec_file_ok": true,
+     "finite": true,
+     "uv_below_1ms": true,
+     "h_min_520": true
+    },
+    "rc": "RC=0",
+    "zqinit_badcols": 0,
+    "nan_hits": 0,
+    "blowup_hits": 0,
+    "his_nrec_log": 241,
+    "zqinit_shape": [
+     -3,
+     46,
+     0,
+     44
+    ],
+    "his_file": "his_dom90km.nc",
+    "his_nrec": 241,
+    "max_abs_u": 0.501521646976471,
+    "max_abs_v": 0.38047486543655396,
+    "max_abs_zeta": 0.08616270124912262,
+    "temp_range": [
+     3.7570111751556396,
+     26.085704803466797
+    ],
+    "h_range": [
+     520.0,
+     2999.9999999998195
+    ],
+    "shape": [
+     241,
+     30,
+     45,
+     45
+    ],
+    "PASS": true
+   },
+   "inputs_md5": {
+    "grid": "837c72a445a693d2ffa6f61e0c394c72",
+    "bin": "9a34255168bdf68e5dc361dd39ab501f",
+    "ini": "53468938466ef77355d94c84406d1b54"
+   },
+   "md5": {
+    "ocean_run.in": "1adb7efa0dc9c32b30ab4bcea9233e98",
+    "coawstM_s0_zq": "c3780bc6589dfafd4940e62d619601d6",
+    "grid_dw45.nc": "837c72a445a693d2ffa6f61e0c394c72",
+    "ini_zq_dw45.nc": "53468938466ef77355d94c84406d1b54",
+    "gt3_zwtraj.bin": "9a34255168bdf68e5dc361dd39ab501f",
+    "dnn_tidebody.on": "205fb76adb3cfe0298e01b97a650772e"
+   },
+   "topo_bitexact_window": [
+    42,
+    42
+   ],
+   "h_min": 520.0,
+   "h_max": 2999.9999999999545,
+   "rx1_max": 11.663064603132593,
+   "summit_kb": 15
+  },
+  "dom94km": {
+   "nrec": 145,
+   "nlev": 30,
+   "t_first_day": 4.0,
+   "t_last_day": 10.0,
+   "zmode": "zq",
+   "zr_check_max_abs_m": 0.00012205521943542408,
+   "zeta_max_abs_m": 0.1044936552643776,
+   "h_his_vs_grid_ghostcol_max_abs_m": 0.001251490893537266,
+   "U_bt_M2_allrows": 0.08966226808181492,
+   "U_bt_M2_interior": 0.0984501407241311,
+   "norm_Ubt_sq": 0.008039322317575247,
+   "P_rad_W": 10946866.733169332,
+   "P_ring_W": 11926894.510583213,
+   "Fmag_ann_mean_W_m": 999.2101474667459,
+   "Fr_ann_mean_W_m": 155.4952660961553,
+   "Fr_ann_min_W_m": -881.7886522719232,
+   "uniform_Fx_W_m": -977.2231258481595,
+   "uniform_Fy_W_m": 109.05319689265546,
+   "uniform_Fmag_W_m": 983.2891931903636,
+   "Pplus_raw_MW": 26.863175194186987,
+   "Pminus_raw_MW": -15.916308461017648,
+   "Pnet_raw_MW": 10.946866733169331,
+   "Pplus_demean_MW": 14.454396285539616,
+   "Pminus_demean_MW": -3.507529552370283,
+   "Pnet_demean_MW": 10.946866733169331,
+   "Pnet_uniform_MW": -2.728484105318785e-16,
+   "Pplus_uniform_MW": 22.002418640971417,
+   "Pminus_uniform_MW": -22.002418640971417,
+   "Fmag_ann_mean_demean_W_m": 326.93594412464955,
+   "net_identity_resid_MW": 0.0,
+   "annulus_cells": 176,
+   "tag": "dom94km",
+   "nx": 47,
+   "ny": 47,
+   "Lm": 45,
+   "Mm": 45,
+   "L_nominal_km": 94.0,
+   "L_periodic_km": 90.0,
+   "seamount_center_m": [
+    44000.0,
+    44000.0
+   ],
+   "center_offset_m": [
+    -1000.0,
+    -1000.0
+   ],
+   "c_modes": [
+    2.1169072856022226,
+    0.6125763073621778,
+    0.4489785893989868
+   ],
+   "c_modes_ref_1m": [
+    2.117033029267536,
+    0.5772865719667697,
+    0.3502410778705321
+   ],
+   "lambda_n_m": [
+    102738.81328245251,
+    29729.862659258142,
+    21790.055605084734
+   ],
+   "L_over_lambda_nominal": [
+    0.9149414617197542,
+    3.1618040445513986,
+    4.313894452755091
+   ],
+   "detune_nominal": [
+    0.08505853828024579,
+    0.16180404455139863,
+    0.31389445275509065
+   ],
+   "L_over_lambda_periodic": [
+    0.876007782497637,
+    3.027259191591765,
+    4.130324476042108
+   ],
+   "detune_periodic": [
+    0.123992217502363,
+    0.027259191591765042,
+    0.13032447604210784
+   ],
+   "source": "/data/xinyuan/zpg_roms_dev/pge_test/domwidth_20260828/dom94km/",
+   "DONE": "RC=0",
+   "gate": {
+    "dir": "dom94km/",
+    "mode": "prod",
+    "checks": {
+     "rc_zero": true,
+     "tidebody_active": true,
+     "dynref_off": true,
+     "no_zqinit_error": true,
+     "zqinit_badcols_zero": true,
+     "no_nan": true,
+     "no_blowup": true,
+     "nrec_log_ok": true,
+     "normal_end": true,
+     "nrec_file_ok": true,
+     "finite": true,
+     "uv_below_1ms": true,
+     "h_min_520": true
+    },
+    "rc": "RC=0",
+    "zqinit_badcols": 0,
+    "nan_hits": 0,
+    "blowup_hits": 0,
+    "his_nrec_log": 241,
+    "zqinit_shape": [
+     -3,
+     48,
+     0,
+     46
+    ],
+    "his_file": "his_dom94km.nc",
+    "his_nrec": 241,
+    "max_abs_u": 0.5625473260879517,
+    "max_abs_v": 0.3816770315170288,
+    "max_abs_zeta": 0.1044936552643776,
+    "temp_range": [
+     3.8358781337738037,
+     26.966873168945312
+    ],
+    "h_range": [
+     520.0,
+     2999.999999999989
+    ],
+    "shape": [
+     241,
+     30,
+     47,
+     47
+    ],
+    "PASS": true
+   },
+   "inputs_md5": {
+    "grid": "06ac0019e237d201c42beebcd99fcbef",
+    "bin": "9e48640f29777fa57909f36eecd90ada",
+    "ini": "f0ba781c1c819c8ee3f014a342107df7"
+   },
+   "md5": {
+    "ocean_run.in": "949768bdae1ac312c3e2ea53ca4d4a15",
+    "coawstM_s0_zq": "c3780bc6589dfafd4940e62d619601d6",
+    "grid_dw47.nc": "06ac0019e237d201c42beebcd99fcbef",
+    "ini_zq_dw47.nc": "f0ba781c1c819c8ee3f014a342107df7",
+    "gt3_zwtraj.bin": "9e48640f29777fa57909f36eecd90ada",
+    "dnn_tidebody.on": "205fb76adb3cfe0298e01b97a650772e"
+   },
+   "topo_bitexact_window": [
+    42,
+    42
+   ],
+   "h_min": 520.0,
+   "h_max": 2999.9999999999973,
+   "rx1_max": 11.663064603132593,
+   "summit_kb": 15
+  },
+  "dom126km": {
+   "nrec": 145,
+   "nlev": 30,
+   "t_first_day": 4.0,
+   "t_last_day": 10.0,
+   "zmode": "zq",
+   "zr_check_max_abs_m": 0.00012206464998598676,
+   "zeta_max_abs_m": 0.0843762680888176,
+   "h_his_vs_grid_ghostcol_max_abs_m": 3.778950485866517e-09,
+   "U_bt_M2_allrows": 0.0928572882760051,
+   "U_bt_M2_interior": 0.09932538747574207,
+   "norm_Ubt_sq": 0.008622475985973115,
+   "P_rad_W": 8313712.692279381,
+   "P_ring_W": 8825306.96333943,
+   "Fmag_ann_mean_W_m": 415.2483292644622,
+   "Fr_ann_mean_W_m": 118.09250983351393,
+   "Fr_ann_min_W_m": -671.0640393114387,
+   "uniform_Fx_W_m": 358.2737103875628,
+   "uniform_Fy_W_m": 14.098602971093277,
+   "uniform_Fmag_W_m": 358.5510035693775,
+   "Pplus_raw_MW": 16.29192367985648,
+   "Pminus_raw_MW": -7.978210987577097,
+   "Pnet_raw_MW": 8.313712692279381,
+   "Pplus_demean_MW": 11.705661675583373,
+   "Pminus_demean_MW": -3.391948983303994,
+   "Pnet_demean_MW": 8.313712692279381,
+   "Pnet_uniform_MW": 1.8189894035458566e-16,
+   "Pplus_uniform_MW": 8.037820967267914,
+   "Pminus_uniform_MW": -8.037820967267914,
+   "Fmag_ann_mean_demean_W_m": 326.29439349661556,
+   "net_identity_resid_MW": 0.0,
+   "annulus_cells": 176,
+   "tag": "dom126km",
+   "nx": 63,
+   "ny": 63,
+   "Lm": 61,
+   "Mm": 61,
+   "L_nominal_km": 126.0,
+   "L_periodic_km": 122.0,
+   "seamount_center_m": [
+    60000.0,
+    60000.0
+   ],
+   "center_offset_m": [
+    -1000.0,
+    -1000.0
+   ],
+   "c_modes": [
+    2.1169072856022226,
+    0.6125763073621778,
+    0.4489785893989868
+   ],
+   "c_modes_ref_1m": [
+    2.117033029267536,
+    0.5772865719667697,
+    0.3502410778705321
+   ],
+   "lambda_n_m": [
+    102738.81328245251,
+    29729.862659258142,
+    21790.055605084734
+   ],
+   "L_over_lambda_nominal": [
+    1.226410895496692,
+    4.23816286822847,
+    5.782454266458951
+   ],
+   "detune_nominal": [
+    0.2264108954966919,
+    0.23816286822847044,
+    0.21754573354104867
+   ],
+   "L_over_lambda_periodic": [
+    1.1874772162745746,
+    4.103618015268837,
+    5.5988842897459685
+   ],
+   "detune_periodic": [
+    0.1874772162745746,
+    0.10361801526883685,
+    0.4011157102540315
+   ],
+   "source": "/data/xinyuan/zpg_roms_dev/pge_test/domwidth_20260828/dom126km/",
+   "DONE": "RC=0",
+   "gate": {
+    "dir": "dom126km/",
+    "mode": "prod",
+    "checks": {
+     "rc_zero": true,
+     "tidebody_active": true,
+     "dynref_off": true,
+     "no_zqinit_error": true,
+     "zqinit_badcols_zero": true,
+     "no_nan": true,
+     "no_blowup": true,
+     "nrec_log_ok": true,
+     "normal_end": true,
+     "nrec_file_ok": true,
+     "finite": true,
+     "uv_below_1ms": true,
+     "h_min_520": true
+    },
+    "rc": "RC=0",
+    "zqinit_badcols": 0,
+    "nan_hits": 0,
+    "blowup_hits": 0,
+    "his_nrec_log": 241,
+    "zqinit_shape": [
+     -3,
+     64,
+     0,
+     62
+    ],
+    "his_file": "his_dom126km.nc",
+    "his_nrec": 241,
+    "max_abs_u": 0.5058379173278809,
+    "max_abs_v": 0.3874790370464325,
+    "max_abs_zeta": 0.0843762680888176,
+    "temp_range": [
+     3.8934669494628906,
+     25.938512802124023
+    ],
+    "h_range": [
+     520.0,
+     3000.0
+    ],
+    "shape": [
+     241,
+     30,
+     63,
+     63
+    ],
+    "PASS": true
+   },
+   "inputs_md5": {
+    "grid": "ec08bb8ba4bd7760a213a8398dea40ef",
+    "bin": "90e55e5457e89a9ca5bef34df45cb0ce",
+    "ini": "938ab1b8d6b0091b427b8eb22ed0e651"
+   },
+   "md5": {
+    "ocean_run.in": "10b0a8fac91294f2f47091a0615baa6f",
+    "coawstM_s0_zq": "c3780bc6589dfafd4940e62d619601d6",
+    "grid_dw63.nc": "ec08bb8ba4bd7760a213a8398dea40ef",
+    "ini_zq_dw63.nc": "938ab1b8d6b0091b427b8eb22ed0e651",
+    "gt3_zwtraj.bin": "90e55e5457e89a9ca5bef34df45cb0ce",
+    "dnn_tidebody.on": "205fb76adb3cfe0298e01b97a650772e"
+   },
+   "topo_bitexact_window": [
+    42,
+    42
+   ],
+   "h_min": 520.0,
+   "h_max": 3000.0,
+   "rx1_max": 11.663064603132593,
+   "summit_kb": 15
+  },
+  "dom168km": {
+   "nrec": 145,
+   "nlev": 30,
+   "t_first_day": 4.0,
+   "t_last_day": 10.0,
+   "zmode": "zq",
+   "zr_check_max_abs_m": 0.00012207023792143445,
+   "zeta_max_abs_m": 0.08994708210229874,
+   "h_his_vs_grid_ghostcol_max_abs_m": 0.0,
+   "U_bt_M2_allrows": 0.09477620551402136,
+   "U_bt_M2_interior": 0.09958718271520609,
+   "norm_Ubt_sq": 0.008982529131636012,
+   "P_rad_W": 3340911.482876545,
+   "P_ring_W": 3508126.7378317933,
+   "Fmag_ann_mean_W_m": 110.86751886794991,
+   "Fr_ann_mean_W_m": 47.45612901813274,
+   "Fr_ann_min_W_m": -53.70951787562756,
+   "uniform_Fx_W_m": -58.22388904456391,
+   "uniform_Fy_W_m": 25.813485068625507,
+   "uniform_Fmag_W_m": 63.68953812724537,
+   "Pplus_raw_MW": 3.681549554409141,
+   "Pminus_raw_MW": -0.3406380715325954,
+   "Pnet_raw_MW": 3.340911482876545,
+   "Pplus_demean_MW": 3.71261093824313,
+   "Pminus_demean_MW": -0.37169945536658405,
+   "Pnet_demean_MW": 3.340911482876545,
+   "Pnet_uniform_MW": 0.0,
+   "Pplus_uniform_MW": 1.42769392021435,
+   "Pminus_uniform_MW": -1.42769392021435,
+   "Fmag_ann_mean_demean_W_m": 101.6259301396216,
+   "net_identity_resid_MW": 0.0,
+   "annulus_cells": 176,
+   "tag": "dom168km",
+   "nx": 84,
+   "ny": 84,
+   "Lm": 82,
+   "Mm": 82,
+   "L_nominal_km": 168.0,
+   "L_periodic_km": 164.0,
+   "seamount_center_m": [
+    82000.0,
+    82000.0
+   ],
+   "center_offset_m": [
+    0.0,
+    0.0
+   ],
+   "c_modes": [
+    2.1169072856022226,
+    0.6125763073621778,
+    0.4489785893989868
+   ],
+   "c_modes_ref_1m": [
+    2.117033029267536,
+    0.5772865719667697,
+    0.3502410778705321
+   ],
+   "lambda_n_m": [
+    102738.81328245251,
+    29729.862659258142,
+    21790.055605084734
+   ],
+   "L_over_lambda_nominal": [
+    1.6352145273289225,
+    5.6508838243046275,
+    7.709939021945268
+   ],
+   "detune_nominal": [
+    0.3647854726710775,
+    0.34911617569537245,
+    0.29006097805473186
+   ],
+   "L_over_lambda_periodic": [
+    1.5962808481068052,
+    5.516338971344994,
+    7.526369045232285
+   ],
+   "detune_periodic": [
+    0.40371915189319485,
+    0.48366102865500604,
+    0.47363095476771466
+   ],
+   "source": "/data/xinyuan/zpg_roms_dev/pge_test/domwidth_20260828/dom168km/",
+   "DONE": "RC=0",
+   "gate": {
+    "dir": "dom168km/",
+    "mode": "prod",
+    "checks": {
+     "rc_zero": true,
+     "tidebody_active": true,
+     "dynref_off": true,
+     "no_zqinit_error": true,
+     "zqinit_badcols_zero": true,
+     "no_nan": true,
+     "no_blowup": true,
+     "nrec_log_ok": true,
+     "normal_end": true,
+     "nrec_file_ok": true,
+     "finite": true,
+     "uv_below_1ms": true,
+     "h_min_520": true
+    },
+    "rc": "RC=0",
+    "zqinit_badcols": 0,
+    "nan_hits": 0,
+    "blowup_hits": 0,
+    "his_nrec_log": 241,
+    "zqinit_shape": [
+     -3,
+     86,
+     0,
+     84
+    ],
+    "his_file": "his_dom168km.nc",
+    "his_nrec": 241,
+    "max_abs_u": 0.5095816254615784,
+    "max_abs_v": 0.3903506398200989,
+    "max_abs_zeta": 0.0907863974571228,
+    "temp_range": [
+     3.887174606323242,
+     25.9360408782959
+    ],
+    "h_range": [
+     520.0,
+     3000.0
+    ],
+    "shape": [
+     241,
+     30,
+     84,
+     84
+    ],
+    "PASS": true
+   },
+   "inputs_md5": {
+    "grid": "fbb26678fc922bf1dfd16def25e8fc1d",
+    "bin": "46b0c55cb3bd62970da87d9259cd934e",
+    "ini": "3a989918b3c0d1df98c9f766bc19d5d7"
+   },
+   "md5": {
+    "ocean_run.in": "955d42d9508fc3e3c663139b80043d1c",
+    "coawstM_s0_zq": "c3780bc6589dfafd4940e62d619601d6",
+    "grid_dw84.nc": "fbb26678fc922bf1dfd16def25e8fc1d",
+    "ini_zq_dw84.nc": "3a989918b3c0d1df98c9f766bc19d5d7",
+    "gt3_zwtraj.bin": "46b0c55cb3bd62970da87d9259cd934e",
+    "dnn_tidebody.on": "205fb76adb3cfe0298e01b97a650772e"
+   },
+   "topo_bitexact_window": [
+    42,
+    42
+   ],
+   "h_min": 520.0,
+   "h_max": 3000.0,
+   "rx1_max": 11.663064603132593,
+   "summit_kb": 15
+  }
+ },
+ "P_of_r_MW": {
+  "r_mid_km": [
+   2.0,
+   4.0,
+   6.0,
+   8.0,
+   10.0,
+   12.0,
+   14.0,
+   16.0,
+   18.0,
+   20.0,
+   22.0,
+   24.0,
+   26.0,
+   28.0,
+   30.0
+  ],
+  "dom84km_archive": [
+   -0.006818046146958484,
+   0.3684185348179415,
+   0.8749919552694312,
+   1.3398307537771832,
+   1.630839283326566,
+   1.9894660416276513,
+   2.186242934027762,
+   2.155537982999741,
+   2.1143140479884894,
+   2.0891461928365542,
+   2.431052001898166,
+   2.448811093107592,
+   2.2995636116512035,
+   1.9445215791678145,
+   1.748973762549223
+  ],
+  "dom86km": [
+   -0.0702876470441051,
+   0.19371903785880026,
+   0.7336109670846698,
+   1.208299777955145,
+   1.2565530649602277,
+   1.5702417698034379,
+   1.8268531881637362,
+   1.836345219929708,
+   1.596667408502404,
+   1.5308644561732565,
+   1.5166159143265392,
+   1.6353086855351746,
+   1.9364425990452512,
+   2.055574541586781,
+   2.030855435370191
+  ],
+  "dom88km": [
+   -0.06452764268645958,
+   0.23919060532907335,
+   0.9305965857079836,
+   1.3143985710301718,
+   1.8025396221811218,
+   2.2486184786324594,
+   2.5244048832723,
+   2.5761763137548352,
+   2.4507636936286437,
+   2.356561600971481,
+   1.5574313525069028,
+   1.8279524524706265,
+   2.737683340818764,
+   2.6326649001073683,
+   2.550921583822865
+  ],
+  "dom90km": [
+   0.12813154904817464,
+   0.43918046078341144,
+   1.1062416197582616,
+   2.701709873800268,
+   4.336847298427854,
+   4.483877864070854,
+   5.187581291970534,
+   6.456459963949921,
+   6.551872052952798,
+   5.937005100227139,
+   6.6317031817616945,
+   7.320590005861577,
+   7.100118217768495,
+   6.621518065033594,
+   7.822636833590799
+  ],
+  "dom94km": [
+   0.02716996504776459,
+   0.657127766235521,
+   3.012749654417932,
+   5.997339058081063,
+   9.107899329538112,
+   10.544789770057895,
+   13.877939100094,
+   17.730785360929875,
+   17.08607433548495,
+   19.823831056686384,
+   20.144881497133767,
+   20.515736466991424,
+   19.61634612667322,
+   18.354115330408693,
+   19.73763896013843
+  ],
+  "dom126km": [
+   0.04739101341573731,
+   0.9611051802588902,
+   2.899279582840009,
+   5.76137353131442,
+   8.004965881571135,
+   9.31307876703302,
+   9.918188305098607,
+   10.071396037410402,
+   10.74966316819999,
+   10.682488681394453,
+   11.371044895695398,
+   11.161630207893298,
+   10.783081161246526,
+   10.909896454237671,
+   10.347546066188706
+  ],
+  "dom168km": [
+   0.026661288878828227,
+   0.5912420843460438,
+   1.5469924559640935,
+   2.5795244319878523,
+   3.231657024381896,
+   3.622570399985313,
+   3.8206246908742165,
+   3.8961717081477447,
+   3.795090416563115,
+   3.8116997361611675,
+   3.701104740217948,
+   3.742208277866433,
+   3.729384686857406,
+   3.732507096139513,
+   3.875778592238752
+  ]
+ },
+ "uniform_component": {
+  "dom84km_archive": {
+   "annulus_uniform_Fmag_W_m": 191.2957053530771,
+   "annulus_mean_Fmag_W_m": 199.5781870091247,
+   "annulus_uniform_fraction": 0.9585000656626422,
+   "domain_uniform_Fmag_W_m": 149.4658739767211,
+   "domain_mean_Fmag_W_m": 159.58703904531555,
+   "domain_uniform_fraction": 0.9365790284152055,
+   "n_annulus_cells": 176,
+   "n_domain_cells": 1600
+  },
+  "dom86km": {
+   "annulus_uniform_Fmag_W_m": 199.86980935278265,
+   "annulus_mean_Fmag_W_m": 213.75741050413788,
+   "annulus_uniform_fraction": 0.9350310189546088,
+   "domain_uniform_Fmag_W_m": 151.28725674950945,
+   "domain_mean_Fmag_W_m": 171.81248107330723,
+   "domain_uniform_fraction": 0.8805370588005171,
+   "n_annulus_cells": 176,
+   "n_domain_cells": 1681
+  },
+  "dom88km": {
+   "annulus_uniform_Fmag_W_m": 282.4158476322336,
+   "annulus_mean_Fmag_W_m": 298.38346732668884,
+   "annulus_uniform_fraction": 0.9464862452416879,
+   "domain_uniform_Fmag_W_m": 280.557030529519,
+   "domain_mean_Fmag_W_m": 300.16393444697707,
+   "domain_uniform_fraction": 0.9346793479583686,
+   "n_annulus_cells": 176,
+   "n_domain_cells": 1764
+  },
+  "dom90km": {
+   "annulus_uniform_Fmag_W_m": 633.331206574179,
+   "annulus_mean_Fmag_W_m": 653.5172172498325,
+   "annulus_uniform_fraction": 0.9691117385390374,
+   "domain_uniform_Fmag_W_m": 791.8001613975191,
+   "domain_mean_Fmag_W_m": 800.4821996618992,
+   "domain_uniform_fraction": 0.989153989597711,
+   "n_annulus_cells": 176,
+   "n_domain_cells": 1849
+  },
+  "dom94km": {
+   "annulus_uniform_Fmag_W_m": 983.2891931903636,
+   "annulus_mean_Fmag_W_m": 999.2101474667459,
+   "annulus_uniform_fraction": 0.9840664605771409,
+   "domain_uniform_Fmag_W_m": 1589.0811518623898,
+   "domain_mean_Fmag_W_m": 1596.6754650944815,
+   "domain_uniform_fraction": 0.9952436713670912,
+   "n_annulus_cells": 176,
+   "n_domain_cells": 2025
+  },
+  "dom126km": {
+   "annulus_uniform_Fmag_W_m": 358.5510035693775,
+   "annulus_mean_Fmag_W_m": 415.2483292644622,
+   "annulus_uniform_fraction": 0.863461640422458,
+   "domain_uniform_Fmag_W_m": 579.4792900722666,
+   "domain_mean_Fmag_W_m": 664.1697294734541,
+   "domain_uniform_fraction": 0.8724867520410347,
+   "n_annulus_cells": 176,
+   "n_domain_cells": 3721
+  },
+  "dom168km": {
+   "annulus_uniform_Fmag_W_m": 63.68953812724537,
+   "annulus_mean_Fmag_W_m": 110.86751886794991,
+   "annulus_uniform_fraction": 0.5744652606784099,
+   "domain_uniform_Fmag_W_m": 4.465881941079226,
+   "domain_mean_Fmag_W_m": 28.443018603764436,
+   "domain_uniform_fraction": 0.1570115325413515,
+   "n_annulus_cells": 176,
+   "n_domain_cells": 6724
+  }
+ },
+ "delta_vs_84km": {
+  "dom84km_archive": 0.0,
+  "dom86km": -0.16364260878009762,
+  "dom88km": 0.14592471638296675,
+  "dom90km": 1.4689506624469881,
+  "dom94km": 5.057490015554082,
+  "dom126km": 3.600424290639677,
+  "dom168km": 0.8487059762090933
+ },
+ "ratio_vs_84km": {
+  "dom84km_archive": 1.0,
+  "dom86km": 0.8363573912199024,
+  "dom88km": 1.1459247163829667,
+  "dom90km": 2.468950662446988,
+  "dom94km": 6.057490015554083,
+  "dom126km": 4.600424290639677,
+  "dom168km": 1.8487059762090932
+ },
+ "judgement": {
+  "baseline_Pnet_MW": 1.807162158758922,
+  "main_case": "dom90km",
+  "main_delta": 1.4689506624469881,
+  "main_branch": "RESONANCE_CONTROLLED (本量由域共振控制; 84 km 域上不能对任何环带通量发证)",
+  "curve_shape": "PEAK_AT_PERIODIC (极大值落在真实周期记法预测的位置)",
+  "observed_peak": "dom94km",
+  "spread_of_ratio": 5.221132624334181,
+  "predicted_peak_nominal": "dom90km",
+  "predicted_peak_periodic": "dom94km",
+  "obs_over_pred_nominal": {
+   "dom84km_archive": 1.0,
+   "dom86km": 0.6321673403022694,
+   "dom88km": 0.7198019575269891,
+   "dom90km": 1.5231034314910474,
+   "dom94km": 5.720009457558152,
+   "dom126km": 6.158533186933972,
+   "dom168km": 4.027681865379288
+  },
+  "obs_over_pred_periodic": {
+   "dom84km_archive": 1.0,
+   "dom86km": 0.6190654265136213,
+   "dom88km": 0.6234628489570003,
+   "dom90km": 1.0147762689876647,
+   "dom94km": 2.0333971183464525,
+   "dom126km": 1.8662978866692403,
+   "dom168km": 3.6391849925375848
+  },
+  "P_of_r_far_field": {
+   "dom84km_archive": {
+    "P16": 2.155537982999741,
+    "P26": 2.2995636116512035,
+    "P30": 1.748973762549223,
+    "rise_16_to_26": 0.06681655799496984,
+    "rise_16_to_30": -0.1886138048399061,
+    "all_bins": {
+     "r2": -0.006818046146958484,
+     "r4": 0.3684185348179415,
+     "r6": 0.8749919552694312,
+     "r8": 1.3398307537771832,
+     "r10": 1.630839283326566,
+     "r12": 1.9894660416276513,
+     "r14": 2.186242934027762,
+     "r16": 2.155537982999741,
+     "r18": 2.1143140479884894,
+     "r20": 2.0891461928365542,
+     "r22": 2.431052001898166,
+     "r24": 2.448811093107592,
+     "r26": 2.2995636116512035,
+     "r28": 1.9445215791678145,
+     "r30": 1.748973762549223
+    }
+   },
+   "dom86km": {
+    "P16": 1.836345219929708,
+    "P26": 1.9364425990452512,
+    "P30": 2.030855435370191,
+    "rise_16_to_26": 0.05450902043319221,
+    "rise_16_to_30": 0.10592246671784758,
+    "all_bins": {
+     "r2": -0.0702876470441051,
+     "r4": 0.19371903785880026,
+     "r6": 0.7336109670846698,
+     "r8": 1.208299777955145,
+     "r10": 1.2565530649602277,
+     "r12": 1.5702417698034379,
+     "r14": 1.8268531881637362,
+     "r16": 1.836345219929708,
+     "r18": 1.596667408502404,
+     "r20": 1.5308644561732565,
+     "r22": 1.5166159143265392,
+     "r24": 1.6353086855351746,
+     "r26": 1.9364425990452512,
+     "r28": 2.055574541586781,
+     "r30": 2.030855435370191
+    }
+   },
+   "dom88km": {
+    "P16": 2.5761763137548352,
+    "P26": 2.737683340818764,
+    "P30": 2.550921583822865,
+    "rise_16_to_26": 0.06269253629947734,
+    "rise_16_to_30": -0.009803183810490428,
+    "all_bins": {
+     "r2": -0.06452764268645958,
+     "r4": 0.23919060532907335,
+     "r6": 0.9305965857079836,
+     "r8": 1.3143985710301718,
+     "r10": 1.8025396221811218,
+     "r12": 2.2486184786324594,
+     "r14": 2.5244048832723,
+     "r16": 2.5761763137548352,
+     "r18": 2.4507636936286437,
+     "r20": 2.356561600971481,
+     "r22": 1.5574313525069028,
+     "r24": 1.8279524524706265,
+     "r26": 2.737683340818764,
+     "r28": 2.6326649001073683,
+     "r30": 2.550921583822865
+    }
+   },
+   "dom90km": {
+    "P16": 6.456459963949921,
+    "P26": 7.100118217768495,
+    "P30": 7.822636833590799,
+    "rise_16_to_26": 0.09969213120076369,
+    "rise_16_to_30": 0.21159844206717277,
+    "all_bins": {
+     "r2": 0.12813154904817464,
+     "r4": 0.43918046078341144,
+     "r6": 1.1062416197582616,
+     "r8": 2.701709873800268,
+     "r10": 4.336847298427854,
+     "r12": 4.483877864070854,
+     "r14": 5.187581291970534,
+     "r16": 6.456459963949921,
+     "r18": 6.551872052952798,
+     "r20": 5.937005100227139,
+     "r22": 6.6317031817616945,
+     "r24": 7.320590005861577,
+     "r26": 7.100118217768495,
+     "r28": 6.621518065033594,
+     "r30": 7.822636833590799
+    }
+   },
+   "dom94km": {
+    "P16": 17.730785360929875,
+    "P26": 19.61634612667322,
+    "P30": 19.73763896013843,
+    "rise_16_to_26": 0.1063438943826039,
+    "rise_16_to_30": 0.11318469872353734,
+    "all_bins": {
+     "r2": 0.02716996504776459,
+     "r4": 0.657127766235521,
+     "r6": 3.012749654417932,
+     "r8": 5.997339058081063,
+     "r10": 9.107899329538112,
+     "r12": 10.544789770057895,
+     "r14": 13.877939100094,
+     "r16": 17.730785360929875,
+     "r18": 17.08607433548495,
+     "r20": 19.823831056686384,
+     "r22": 20.144881497133767,
+     "r24": 20.515736466991424,
+     "r26": 19.61634612667322,
+     "r28": 18.354115330408693,
+     "r30": 19.73763896013843
+    }
+   },
+   "dom126km": {
+    "P16": 10.071396037410402,
+    "P26": 10.783081161246526,
+    "P30": 10.347546066188706,
+    "rise_16_to_26": 0.07066399942893278,
+    "rise_16_to_30": 0.027419240366731566,
+    "all_bins": {
+     "r2": 0.04739101341573731,
+     "r4": 0.9611051802588902,
+     "r6": 2.899279582840009,
+     "r8": 5.76137353131442,
+     "r10": 8.004965881571135,
+     "r12": 9.31307876703302,
+     "r14": 9.918188305098607,
+     "r16": 10.071396037410402,
+     "r18": 10.74966316819999,
+     "r20": 10.682488681394453,
+     "r22": 11.371044895695398,
+     "r24": 11.161630207893298,
+     "r26": 10.783081161246526,
+     "r28": 10.909896454237671,
+     "r30": 10.347546066188706
+    }
+   },
+   "dom168km": {
+    "P16": 3.8961717081477447,
+    "P26": 3.729384686857406,
+    "P30": 3.875778592238752,
+    "rise_16_to_26": -0.042807923722034784,
+    "rise_16_to_30": -0.005234141982589232,
+    "all_bins": {
+     "r2": 0.026661288878828227,
+     "r4": 0.5912420843460438,
+     "r6": 1.5469924559640935,
+     "r8": 2.5795244319878523,
+     "r10": 3.231657024381896,
+     "r12": 3.622570399985313,
+     "r14": 3.8206246908742165,
+     "r16": 3.8961717081477447,
+     "r18": 3.795090416563115,
+     "r20": 3.8116997361611675,
+     "r22": 3.701104740217948,
+     "r24": 3.742208277866433,
+     "r26": 3.729384686857406,
+     "r28": 3.732507096139513,
+     "r30": 3.875778592238752
+    }
+   }
+  },
+  "uniform_fraction": {
+   "dom84km_archive": 0.9585000656626422,
+   "dom86km": 0.9350310189546088,
+   "dom88km": 0.9464862452416879,
+   "dom90km": 0.9691117385390374,
+   "dom94km": 0.9840664605771409,
+   "dom126km": 0.863461640422458,
+   "dom168km": 0.5744652606784099
+  },
+  "uniform_fraction_domain": {
+   "dom84km_archive": 0.9365790284152055,
+   "dom86km": 0.8805370588005171,
+   "dom88km": 0.9346793479583686,
+   "dom90km": 0.989153989597711,
+   "dom94km": 0.9952436713670912,
+   "dom126km": 0.8724867520410347,
+   "dom168km": 0.1570115325413515
+  },
+  "barotropic": {
+   "dom84km_archive": {
+    "U_bt_interior": 0.0981331696893959,
+    "U_bt_allrows": 0.08821293923068488,
+    "rel_diff_vs_84km": 0.0
+   },
+   "dom86km": {
+    "U_bt_interior": 0.09819373106728811,
+    "U_bt_allrows": 0.088524303690714,
+    "rel_diff_vs_84km": 0.0006171346353521721
+   },
+   "dom88km": {
+    "U_bt_interior": 0.09824749248339232,
+    "U_bt_allrows": 0.08881651671847574,
+    "rel_diff_vs_84km": 0.0011649760662808563
+   },
+   "dom90km": {
+    "U_bt_interior": 0.09829707579517753,
+    "U_bt_allrows": 0.08909232945141861,
+    "rel_diff_vs_84km": 0.0016702416349173546
+   },
+   "dom94km": {
+    "U_bt_interior": 0.0984501407241311,
+    "U_bt_allrows": 0.08966226808181492,
+    "rel_diff_vs_84km": 0.0032300091369559768
+   },
+   "dom126km": {
+    "U_bt_interior": 0.09932538747574207,
+    "U_bt_allrows": 0.0928572882760051,
+    "rel_diff_vs_84km": 0.012148978679886737
+   },
+   "dom168km": {
+    "U_bt_interior": 0.09958718271520609,
+    "U_bt_allrows": 0.09477620551402136,
+    "rel_diff_vs_84km": 0.014816733530694357
+   }
+  }
+ },
+ "modes": {
+  "ladder": "MIT30 (10x10 + 10x50 + 10x240 m)",
+  "c1_c2_c3": [
+   2.1169072856022226,
+   0.6125763073621778,
+   0.4489785893989868
+  ],
+  "c1_c2_c3_ref_1m": [
+   2.117033029267536,
+   0.5772865719667697,
+   0.3502410778705321
+  ],
+  "keff": 0.00012946344549445037,
+  "note": "本轮所有算例层表相同, 因此 c1/c2/c3 全同; 只有域宽 L 变, 失谐 dn 随之变"
+ },
+ "disclosures": [
+  "只改域宽: 地形解析式/离散取样(重叠窗口逐位)/层表/准 z 映射配方/DT/NDTFAST/强迫/读数环带与时窗全部不变; ocean_run.in 差分恰 12 行 6 键",
+  "名义域宽 = rho 点数 x dx (= 网格 xl, 第三路审查与任务书的记法); 真实东西周期 = Lm x dx, 两者差 4 km; 两套都报, 曲线形状两套各判一次",
+  "Lm 为奇数的算例山心比域心偏 1 km (南北墙两侧距离差 2 km); 优先保住地形离散取样逐位不变, 见判据 §1.1 第 2 条",
+  "域越大平底水域越多; 环带均匀分量占比与 P(r) 远端行为本来就会随之变, 这正是副判要看的量",
+  "单一海山/单一层表/单一坐标/单一 10 天时窗/单一 6-16 km 环带; 结论不外推到 sigma 算例, 不外推到论文正文那座原山",
+  "本轮不跑 sigma 坐标的域宽对照, 因此\"域宽效应对 sigma 是否同样大\"不在本轮回答范围内",
+  "正压 M2 振幅随域宽的变化只报不否决 (域宽变了正压响应本来可能变)"
+ ]
+}

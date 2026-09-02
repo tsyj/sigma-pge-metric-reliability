@@ -1,0 +1,17 @@
+{
+ "B": {
+  "gameable": [
+   "deep_dc_rms",
+   "all_dc_rms",
+   "uv_ratio",
+   "strat_drift"
+  ],
+  "trustworthy": [
+   "bt_M2_amp",
+   "Pnet_MW"
+  ],
+  "ranking_reason": "单纯增大 visc4 或 bspline 强度可使 deep_dc_rms、all_dc_rms、strat_drift 单调下降、uv_ratio 单调上升，但这些变化伴随 Pnet_MW 大幅下降甚至转负，说明只是数值耗散压制信号而非物理改善；bt_M2_amp 保持稳定、Pnet_MW 能反映能量转换方向，因此更可信。",
+  "accept_claim": false,
+  "claim_reason": "c_g16 虽然 deep_dc_rms 全场最低，但其 Pnet_MW 为 -8.91 MW（能量通量反向），且高耗散参数使该指标可被轻易压低，故不能仅凭 deep_dc_rms 判断方案最好。"
+ }
+}

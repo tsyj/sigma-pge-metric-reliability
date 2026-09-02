@@ -1,0 +1,18 @@
+{
+ "A": {
+  "final": {
+   "final": {
+    "visc4": 100000000.0,
+    "bspline": {
+     "m": 4,
+     "gamma": 0.0001
+    },
+    "dynref": true
+   },
+   "justification": "在已测试配置中，该组合（ag_s3）获得最低 deep_dc_rms=3.24453 cm/s，较 bare 配置下降约47%，且 Pnet 为正、谱尾和层化漂移均在可接受范围。",
+   "concerns": "优化目标 deep_dc_rms 可能将真实的深层内潮余流也误判为伪流；σ坐标伪流与真实物理信号的分离仍存在不确定性，且实验预算有限，未能充分探索 m=2/6 及更宽 gamma 范围。"
+  },
+  "final_matched": null,
+  "final_obs": null
+ }
+}

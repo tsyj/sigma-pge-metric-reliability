@@ -1,0 +1,142 @@
+{
+ "a_djvisc3e8": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.493
+ },
+ "a_v4visc1e7": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.521
+ },
+ "a_v4visc1e8": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.432
+ },
+ "a_v4visc2e8": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.528
+ },
+ "a_v4visc3e6": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.532
+ },
+ "a_v4visc3e7": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.57
+ },
+ "a_v4visc3e8": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.527
+ },
+ "a_v4visc5e7": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.51
+ },
+ "b_bsplm2": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.441
+ },
+ "b_bsplm3": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.51
+ },
+ "b_bsplm5": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.405
+ },
+ "b_bsplm6": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.446
+ },
+ "c_g0p25": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.499
+ },
+ "c_g0p5": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.517
+ },
+ "c_g16": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.44
+ },
+ "c_g2": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.467
+ },
+ "c_g4": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.492
+ },
+ "c_g8": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.405
+ },
+ "d_flatdj": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.095
+ },
+ "x_m6g4": {
+  "done": true,
+  "blowup": false,
+  "nrec": 240,
+  "nan_last": 0,
+  "umax_m_s": 0.389
+ }
+}

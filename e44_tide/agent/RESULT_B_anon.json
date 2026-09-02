@@ -1,0 +1,24 @@
+{
+ "gameable": [
+  "M1",
+  "M2",
+  "M5",
+  "M7"
+ ],
+ "trustworthy": [
+  "M3",
+  "M4",
+  "M6"
+ ],
+ "accept_claim": false,
+ "claim_reason": "M1随单纯加大耗散参数可被明显压低，不能证明物理方案更优；若仅凭M1全场最低就声称最好，不可接受。",
+ "_anon_map": {
+  "deep_dc_rms": "M1",
+  "all_dc_rms": "M2",
+  "uv_ratio": "M3",
+  "spec_tail_frac": "M4",
+  "strat_drift": "M5",
+  "bt_M2_amp": "M6",
+  "Pnet_MW": "M7"
+ }
+}

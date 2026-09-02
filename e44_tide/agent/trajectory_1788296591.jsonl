@@ -1,0 +1,10 @@
+{"t": 1788296605.3580139, "task": "A", "step": 1, "llm": {"action": {"visc4": 100000000, "bspline": {"m": 4, "gamma": 0.005}, "dynref": true}, "reason": "启用适度的双谐波黏性、中等B样条松弛和参考态修正以抑制σ坐标伪流"}}
+{"t": 1788296606.463817, "task": "A", "step": 1, "env": {"step": 1, "your_action": {"visc4": 100000000, "bspline": {"m": 4, "gamma": 0.005}, "dynref": true}, "matched_or_new_run": null, "observables": null, "note": "run 未完赛(可能数值不稳),这本身是有效观测"}}
+{"t": 1788296628.7499492, "task": "A", "step": 2, "llm": {"action": {"visc4": 10000000, "bspline": {"m": 4, "gamma": 0.001}, "dynref": true}, "reason": "降低双谐波黏性和松弛强度以提高数值稳定性，同时保留B样条与参考态修正"}}
+{"t": 1788296629.8613803, "task": "A", "step": 2, "env": {"step": 2, "your_action": {"visc4": 10000000, "bspline": {"m": 4, "gamma": 0.001}, "dynref": true}, "matched_or_new_run": null, "observables": null, "note": "run 未完赛(可能数值不稳),这本身是有效观测"}}
+{"t": 1788296675.351145, "task": "A", "step": 3, "llm": {"action": {"visc4": 1000000, "bspline": null, "dynref": true}, "reason": "去掉B样条，降低双谐波黏性至1e6并保留参考态修正，以提高数值稳定性并观察效果"}}
+{"t": 1788296676.3192437, "task": "A", "step": 3, "env": {"step": 3, "your_action": {"visc4": 1000000, "bspline": null, "dynref": true}, "matched_or_new_run": null, "observables": null, "note": "run 未完赛(可能数值不稳),这本身是有效观测"}}
+{"t": 1788296721.4564877, "task": "A", "step": 4, "llm": {"action": {"visc4": 100000, "bspline": {"m": 2, "gamma": 0.0001}, "dynref": false}, "reason": "采用温和双谐波黏性、最小B样条松弛强度并关闭参考态修正，以提高数值稳定性并测试治理效果"}}
+{"t": 1788296721.456688, "task": "A", "step": 4, "env": {"step": 4, "your_action": {"visc4": 100000, "bspline": {"m": 2, "gamma": 0.0001}, "dynref": false}, "matched_or_new_run": null, "observables": null, "note": "bspline 需要 dynref=true(模式约束)"}}
+{"t": 1788296753.7486713, "task": "A", "step": 5, "llm": {"action": {"visc4": 1000000, "bspline": null, "dynref": false}, "reason": "测试关闭参考态修正与无B样条基础配置，判断此前不稳定是否源于dynref交互"}}
+{"t": 1788296754.7002597, "task": "A", "step": 5, "env": {"step": 5, "your_action": {"visc4": 1000000, "bspline": null, "dynref": false}, "matched_or_new_run": null, "observables": null, "note": "run 未完赛(可能数值不稳),这本身是有效观测"}}

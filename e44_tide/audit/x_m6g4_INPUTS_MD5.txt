@@ -1,0 +1,10 @@
+88a0f6fb41b0e55acb961b3897b7cee7  bspline_smooth.bin
+740f160e7710e6b8a930cf284576f4c9  coawstM_dnn_tide
+d41d8cd98f00b204e9800998ecf8427e  dnn_bspline.on
+d41d8cd98f00b204e9800998ecf8427e  dnn_dynref.on
+3e97c1cb6cd177ecace4c9a42f25353f  dnn_lamalpha.txt
+205fb76adb3cfe0298e01b97a650772e  dnn_tidebody.on
+32ff77202adb876bc10ca190a0b37094  dynref_coef.bin
+7538bb98ff64b7261388f6f90671d989  grid.nc
+b182c85c1da11be0394d425852967af1  ini_clean.nc
+0302b69868dd4126b873503e0d24a6b2  ocean_run.in
