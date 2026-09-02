@@ -19,6 +19,8 @@
 | 500 km 锚 | 逐模态远场功率 | 在档 5 臂 + 补跑 2 | m2/m4/m6 第二模 0.94/0.68/0.47；γ16 0.25；VISC4 3e8 0.52 | e44_tide/analysis/ANSWER_KEY_500KM.json、upstream/BANDTOLL_VERDICT.json |
 | E56 | BH93 静止态检验（预注册 A9） | 14 条（7 档 VISC2 × 2 地形） | 平底全档 u_max=0.0000；陡海山 99.72→18.79（ρ=−1.000, p=0.0004）；A1 抗刷 0.000；代理夸大 1.69 倍；技巧全程为负 −8.48→−1.46（P3 被反驳） | e56/prereg_e56.md（sha 7792b30e…）、e56/E56_BH93.json、E56_VERDICT.json |
 | E57 | 双目标 (A,B) 全候选分析 | 15376 候选 | ρ(A,B)=−0.674；两关同过 204 vs 独立期望 2159（贫化 10.6×）；Pareto 前沿 5 点；乌托邦角为空；阈值 (0.5,0.7)→(0.9,1.0) 通过数 739→9 | e44_tide/analysis/E57_PARETO.json、E57_AB.npz、fig_pareto.png |
+| E58 | 判定三值化 + 信噪比门 | 零机时 | 抗刷率按 Wilson CI 三值化：u/v 纬向 32/32 CI[0.893,1.000] → **待定**；经向 25/28 CI[0.728,0.963] → 待定；45° 7/28、v/u 纬向 7/32、v/u 经向 3/28 → 确定死。SNR 门（IQR/中位数，32 臂）：深水温度 0.3% vs u/v 24% / 残余流 28% / 环带功率 445% | e44_tide/analysis/E58_TRIVALENT.json |
+| 时间台账 | 算例时刻记录 | 43 条 | e44/e52/e55 用 DONE 文件 mtime（当时未写 T_START）；e56 为运行时写入的真起止时刻。差异如实记录，不追溯补造 | e44_tide/analysis/TIME_LEDGER.json |
 | 审计原件 | 盒宽 / 时钟 | 在档 | 摆 7.24×；4.58→7.89 | e44_tide/analysis/upstream/DOMWIDTH_RESULT.json、PHASEFIX_TABLE.md |
 
 经向∩内潮的 2 把：见 e52/E52_CROSS.json（family_merid 字段；三重列表为空即无一在纬向通过）；45°∩内潮的 3 把：w|all|max / w|d400|max、w|all|max / w|d200|max、u|s50|mean_abs / v|s50|rms（e55/E55_CROSS.json:merid_tide_list）。

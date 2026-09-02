@@ -8,13 +8,15 @@ import figstyle as F
 import matplotlib.pyplot as plt
 import numpy as np
 F.paper_style()
+UND='待定'
 E='/data/xinyuan/GOAI_ai4s_env/e44/'
 V=json.load(open(E+'analysis/E44_VERDICT_v2.json')); BH=json.load(open('/data/xinyuan/GOAI_ai4s_env/e56/E56_VERDICT.json')); X=json.load(open('/data/xinyuan/GOAI_ai4s_env/e52/E52_CROSS.json'))
 U=json.load(open(E+'analysis/E50_UV_AUDIT.json')); M=json.load(open(E+'analysis/E44_METRICS.json'))
 KB=json.load(open(E+'analysis/KB_EXTRA_CELLS.json')); R=json.load(open(E+'analysis/RT2_FIXES.json'))
 E54=json.load(open(E+'agent/E54_NAMESWAP.json'))['conditions'] if os.path.exists(E+'agent/E54_NAMESWAP.json') else None
 D,P,B,NA,DEF='死','过','边','未','定义'
-RULES={'A9':'BH93(1993) 静止态海山检验: 无风+水平等密初值, 真值解析为零; 判据同 A1/A8',
+RULES={'三值化':'A1 类抗刷率格子按 Wilson CI 三值化: 区间完全在 0.9 一侧才判过/死, 跨过判 U(未判定)。u/v 纬向 32/32 CI[0.893,1.000] 即为 U —— 本协议能可靠判死, 不能可靠认证 (E58_TRIVALENT.json)',
+ 'A9':'BH93(1993) 静止态海山检验: 无风+水平等密初值, 真值解析为零; 判据同 A1/A8',
  'R':'领域现行 LLM 评审判据(内部逻辑/量纲/物理范围/文献接地)作对照列: 四把尺子全过 R 而 A1-A9 全杀',
  'A1':'配对抗刷率>=0.9 过; <0.5 死; 其间边 (风驱 32/28 对; 内潮用平底 vs 海山单对)',
  'A2':'|平底读数|/海山典型值 <1% 过; 发散或无定义 死; 平底本身无该误差成分 边',
@@ -40,7 +42,7 @@ def cell(m,c):
                 (P,'MITgcm 双侧; 500km ±T/8 未做',None,'-'),(P,'P4 平底零通道 中',None,'PREREG_E44.md'),(P,'MITgcm 真值同步转向',None,'e52/PROVENANCE.md'),(NA,'不适用',None,'-'),(DEF,'ρ=1 (自身)',1.0,'定义'),
                 (P,'平底全档 u_max=0.0000',0.0,'e56/E56_BH93.json'),(DEF,'非代理, 不适用',None,'-')][c]
     if c==0:
-        return {'uv_ratio':(P,'1.00 (n=32 对)',X['uv_zonal']['paired'],'e52/E52_CROSS.json:uv_zonal.paired'),
+        return {'uv_ratio':(UND,'32/32 CI[0.89,1.00]',X['uv_zonal']['paired'],'E58_TRIVALENT.json:uv_zonal_paired'),
                 'deep_dc_rms':(D,'0.000 (deep_rms_800)',0.0,'ledger/metric_search.json:baseline'),
                 'temp_d400':(P,'1.00',1.0,'e44_tide/analysis/E49_CROSS.json:tempd400_wind.paired'),
                 'Pnet_MW':(D,'平底 0 / 海山 7.9 → 变好看',M['d_flatdj']['Pnet_MW'],'E44_METRICS.json:d_flatdj.Pnet_MW')}[m]
@@ -81,9 +83,9 @@ def cell(m,c):
                 'temp_d400':(P,'四条现行判据全过',None,'同左'),
                 'uv_ratio':(P,'四条现行判据全过',None,'同左')}[m]
 grid=[[dict(zip(('verdict','text','value','source'),cell(m,c))) for c in range(10)] for _,m in ROWS]
-COL={D:'#F2B8AB',P:'#BFDCCB',B:'#F5DFA8',NA:'#F2F2F2',DEF:'#DCE3EE'}
-INK={D:'#9E2A1C',P:'#175C3B',B:'#7A4E00',NA:'#8A8A8A',DEF:'#3C5488'}
-MARK={D:'× 死',P:'✓ 过',B:'△ 边界',NA:'– 未做',DEF:'≡ 定义'}
+COL={UND:'#EDE7F6',D:'#F2B8AB',P:'#BFDCCB',B:'#F5DFA8',NA:'#F2F2F2',DEF:'#DCE3EE'}
+INK={UND:'#5E2E8F',D:'#9E2A1C',P:'#175C3B',B:'#7A4E00',NA:'#8A8A8A',DEF:'#3C5488'}
+MARK={UND:'? 待定',D:'× 死',P:'✓ 过',B:'△ 边界',NA:'– 未做',DEF:'≡ 定义'}
 def draw(mode):
     nr=len(ROWS)
     if mode=='slide':
