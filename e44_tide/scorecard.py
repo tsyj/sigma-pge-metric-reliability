@@ -15,10 +15,10 @@ U=json.load(open(E+'analysis/E50_UV_AUDIT.json')); M=json.load(open(E+'analysis/
 KB=json.load(open(E+'analysis/KB_EXTRA_CELLS.json')); R=json.load(open(E+'analysis/RT2_FIXES.json'))
 E54=json.load(open(E+'agent/E54_NAMESWAP.json'))['conditions'] if os.path.exists(E+'agent/E54_NAMESWAP.json') else None
 D,P,B,NA,DEF='死','过','边','未','定义'
-RULES={'三值化':'A1 类抗刷率格子按 Wilson CI 三值化: 区间完全在 0.9 一侧才判过/死, 跨过判 U(未判定)。u/v 纬向 32/32 CI[0.893,1.000] 即为 U —— 本协议能可靠判死, 不能可靠认证 (E58_TRIVALENT.json)',
+RULES={'三值化':'A1 类抗糊弄的程度格子按 Wilson CI 三值化: 区间完全在 0.9 一侧才判过/死, 跨过判 U(未判定)。u/v 纬向 32/32 CI[0.893,1.000] 即为 U —— 本协议能可靠判死, 不能可靠认证 (E58_TRIVALENT.json)',
  'A9':'BH93(1993) 静止态海山检验: 无风+水平等密初值, 真值解析为零; 判据同 A1/A8',
  'R':'领域现行 LLM 评审判据(内部逻辑/量纲/物理范围/文献接地)作对照列: 四把尺子全过 R 而 A1-A9 逐项检验下没有一把能全部通过',
- 'A1':'配对抗刷率>=0.9 过; <0.5 死; 其间边 (风驱 32/28 对; 内潮用平底 vs 海山单对)',
+ 'A1':'配对抗糊弄的程度>=0.9 过; <0.5 死; 其间边 (风驱 32/28 对; 内潮用平底 vs 海山单对)',
  'A2':'|平底读数|/海山典型值 <1% 过; 发散或无定义 死; 平底本身无该误差成分 边',
  'A3':'只改盒宽: 幅值变化<20% 且序保持 过; 幅值变但序保持 边; 序或含义变 死',
  'A4':'相位/时钟扰动: 幅值<10% 过; 幅值大但序保持(或窗均<10%) 边; 幅值大且无稳健版 死',
@@ -35,7 +35,7 @@ def a7(m):
     if m=='deep_dc_rms': return (P,'两版都疑 %d/5·%d/5'%(c0['deepDC_gameable'],c1['deepDC_gameable']),c0['deepDC_gameable'],'agent/E54_NAMESWAP.json')
     return (NA,'未列入换名局',None,'-')
 ROWS=[('环带波功率\n(我们论文头条)','Pnet_MW'),('深层残余流\n(常用代理†)','deep_dc_rms'),('深水温度 ≈4°C\n(内潮穷举冠军)','temp_d400'),('u/v 比值\n(风驱穷举冠军)','uv_ratio'),('隐藏真值\n(对照行)','truth')]
-COLS=['A1 配对抗刷\n(换平底)','A2 零真值\n通道','A3 盒宽\n扰动','A4 时钟/相位\n扰动','A5 盖章\n预测','A6 转风向\n(45° / 90°)','A7 匿名/\n换名','A8 真值锚\n(带符号, n=7)','A9 静止态\n(BH93 1993)','R 现行评审\n判据(对照)']
+COLS=['A1 配对抗糊弄\n(换平底)','A2 零真值\n通道','A3 盒宽\n扰动','A4 时钟/相位\n扰动','A5 提前登记\n的预测','A6 转风向\n(45° / 90°)','A7 匿名/\n换名','A8 真值锚\n(带符号, n=7)','A9 静止态\n(BH93 1993)','R 现行评审\n判据(对照)']
 def cell(m,c):
     if m=='truth':
         return [(DEF,'平底按构造为零',0,'定义'),(DEF,'恒零',0,'定义'),(DEF,'锚定义在 500 km',None,'BANDTOLL_VERDICT.json'),

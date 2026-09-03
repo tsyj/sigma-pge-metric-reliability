@@ -15,32 +15,32 @@ plt.subplots_adjust(wspace=0.30,top=0.82,bottom=0.14,left=0.08,right=0.98)
 # (a) 逐局对比
 ax=axs[0]; F.panel(ax,'a')
 seeds=[g['seed'] for g in S['games']]
-series=[('逻辑回归（七参数）','logistic',GREEN,'-o'),('低 B 启发式（单特征）','b_heuristic',AMBER,'-^'),
-        ('Agent（deepseek-v4-pro）','agent',BLUE,'-s'),('随机（每局 200 次重采样）','random',GRAY,'--')]
+series=[('七参数的简单线性模型','logistic',GREEN,'-o'),('只看单条线索的土办法','b_heuristic',AMBER,'-^'),
+        ('语言模型','agent',BLUE,'-s'),('随机挑（每局重采样 200 次）','random',GRAY,'--')]
 for lab,k,c,st in series:
     v=[g[k] for g in S['games']]
     ax.plot(seeds,v,st,color=c,lw=2.2,ms=8,label='%s  均值 %.3f'%(lab,np.mean(v)))
 ax.set_xticks(seeds); ax.set_xlabel('局（独立随机抽样，种子 0–7）')
-ax.set_ylabel('所选 10 个候选里真正有排序力的比例')
+ax.set_ylabel('挑出的 10 个里真正排得准的比例')
 ax.set_ylim(0,1.0); ax.legend(loc='upper left',fontsize=10.2,ncol=1)
-ax.set_title('同样的 40 个候选、同样的七个无真值特征、不给真值',fontsize=12.5,fontweight='bold',pad=9)
+ax.set_title('同样 40 个候选、同样的线索、都不给真值',fontsize=12.5,fontweight='bold',pad=9)
 # (b) 按 Agent 自述方向分组
 ax=axs[1]; F.panel(ax,'b')
-gp=P['groups']; labs=['说对方向\n（抗刷低更好）','说反方向\n（抗刷高更好）','没说清 /\n混合']
-keys=['用对_低抗刷','用反_高抗刷','未表态或混合']
+gp=P['groups']; labs=['说对方向','说反方向','没说清']
+keys=['用对_低抗糊弄','用反_高抗糊弄','未表态或混合']
 vals=[gp[k]['mean'] for k in keys]; ns=[gp[k]['n'] for k in keys]
 cols=[GREEN,RED,GRAY]
 b=ax.bar(range(3),vals,0.6,color=cols)
 for i,(v,n) in enumerate(zip(vals,ns)):
     ax.text(i,v+0.02,'%.2f\n(n=%d)'%(v,n),ha='center',fontsize=11)
 ax.axhline(S['logistic'],color=GREEN,ls='--',lw=1.5)
-ax.text(2.42,S['logistic']+0.015,'逻辑回归 %.2f'%S['logistic'],ha='right',fontsize=10,color=GREEN)
+ax.text(2.42,S['logistic']+0.015,'线性模型 %.2f'%S['logistic'],ha='right',fontsize=10,color=GREEN)
 ax.axhline(S['random'],color=GRAY,ls=':',lw=1.5)
 ax.text(2.42,S['random']+0.015,'随机 %.2f'%S['random'],ha='right',fontsize=10,color=GRAY)
 ax.set_xticks(range(3)); ax.set_xticklabels(labs,fontsize=10.5); ax.set_ylim(0,0.82)
 ax.set_ylabel('该组平均命中率')
-ax.set_title('方向说对时接近线性模型，说不清就回到随机',fontsize=12.5,fontweight='bold',pad=9)
-fig.suptitle('Agent 挑尺子：不是读不出规律，是读出规律的过程不可重复（n=8，单模型，探索性）',
+ax.set_title('说对方向时接近线性模型，说不清就掉回随机',fontsize=12.5,fontweight='bold',pad=9)
+fig.suptitle('语言模型能读出规律，但读不稳（n=8，单模型，探索性）',
              fontsize=14.5,fontweight='bold',y=0.955)
 fig.savefig(G+'e44/figs/fig_agent_picks.png',dpi=300)
 print('saved fig_agent_picks.png')
