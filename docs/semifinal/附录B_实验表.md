@@ -23,6 +23,7 @@
 | E59 | 无真值特征预测排序力（预注册） | 15376 训练(纬向) + 15376 测试(经向) | 跨环境 AUC=0.8706；单特征 f1 抗刷率 AUC=0.2005（负向）、f7 旋钮秩相关 0.6752；P3 未命中：precision@204=0.0882 < 基率 0.2797216441207076；命中率非单调，峰值 0.8306 后回落至 0.6906（最极端 0.5% 为 0.052）；两条事后解释（方向不可测、外推失败）均被数据推翻并留档 | e59/PREREG_E59.md（sha 533c3062…）、e59/E59_TRUTHFREE.json、E59B_POSTHOC.json |
 | E60 | 抗刷率在陡度轴上的稳定性（预注册） | 56 条（4 档 rx0 × 2 地形 × 7 档 VISC2），全部完赛 | B≥0.9 集合的 Jaccard 0.817–0.968、秩相关 0.734–0.953（**P1 赌 <0.5 被推翻**）；四档通过比例 44.4–44.6%；u|d800|rms 全陡度 B=0.000（P2 命中）；P4 未命中（风驱下平底有真实风生流约 14 cm/s，预注册前提写错） | e60/PREREG_E60.md（sha af8fe044…）、e60/E60_RX0.json、E60_VERDICT.json |
 | E61 | Agent 在同等信息条件下挑尺子（预注册） | 8 局 × 40 候选，deepseek-v4-pro | 命中率 逻辑回归 0.675 > 低B启发式 0.500 > Agent 0.412 > 随机 0.283；**P2 命中**（8 局无一胜出，符号检验 p=1.00）；**P1 未命中**（Agent>随机 p=0.1445，不显著）；P3 部分推翻（抗刷率仅 5/8 被引用，方向 4 局用对 1 局用反）；事后分组：说对方向 3 局 0.60、说反/没说清 5 局 0.30 | e61/PREREG_E61.md（sha 67d3ede0…）、e61/E61_AGENT_PICKS.json、E61B_POSTHOC.json、trajectory_e61.jsonl |
+| E62 | A7 换名局跨模型复核 | 3 条件 × 5 次，deepseek-v4-flash（同题面、同 n） | 核心效应逐位复现：环带功率真名被信 3/5 → 匿名 1/5（与 pro 完全一致）；换名局穿外衣的 u/v 被疑 5/5（pro 4/5）；阴性对照两模型均稳定；**模型依赖部分**：真名下 u/v 被疑 pro 4/5 vs flash 2/5 | e44_tide/agent/E62_NAMESWAP_XMODEL.json、analysis/E62_XMODEL_COMPARE.json、e44_tide/e62_nameswap_xmodel.py |
 | 时间台账 | 算例时刻记录 | 43 条 | e44/e52/e55 用 DONE 文件 mtime（当时未写 T_START）；e56 为运行时写入的真起止时刻。差异如实记录，不追溯补造 | e44_tide/analysis/TIME_LEDGER.json |
 | 审计原件 | 盒宽 / 时钟 | 在档 | 摆 7.24×；4.58→7.89 | e44_tide/analysis/upstream/DOMWIDTH_RESULT.json、PHASEFIX_TABLE.md |
 

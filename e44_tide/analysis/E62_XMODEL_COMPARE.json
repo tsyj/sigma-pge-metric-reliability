@@ -1,0 +1,38 @@
+{
+ "note": "A7 跨模型复核：同题面、同 n=5，只换模型",
+ "v4_pro": {
+  "C0_named": {
+   "Pnet_trusted": 3,
+   "uv_gameable": 4,
+   "deepDC_gameable": 5
+  },
+  "C1_anon": {
+   "Pnet_trusted": 1,
+   "uv_gameable": 1,
+   "deepDC_gameable": 5
+  },
+  "C2_swapped": {
+   "Pnet_trusted": 1,
+   "uv_gameable": 4,
+   "deepDC_gameable": 4
+  }
+ },
+ "v4_flash": {
+  "C0_named": {
+   "Pnet_trusted": 3,
+   "uv_gameable": 2,
+   "deepDC_gameable": 5
+  },
+  "C1_anon": {
+   "Pnet_trusted": 1,
+   "uv_gameable": 1,
+   "deepDC_gameable": 4
+  },
+  "C2_swapped": {
+   "Pnet_trusted": 2,
+   "uv_gameable": 5,
+   "deepDC_gameable": 5
+  }
+ },
+ "core_effect": "环带功率(有名字的头条指标)真名被信 3/5 -> 匿名 1/5，两个模型逐位一致；u/v 方向一致(下降)但幅度不同(pro 4->1, flash 2->1)"
+}
