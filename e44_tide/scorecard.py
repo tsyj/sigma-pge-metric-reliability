@@ -17,7 +17,7 @@ E54=json.load(open(E+'agent/E54_NAMESWAP.json'))['conditions'] if os.path.exists
 D,P,B,NA,DEF='死','过','边','未','定义'
 RULES={'三值化':'A1 类抗刷率格子按 Wilson CI 三值化: 区间完全在 0.9 一侧才判过/死, 跨过判 U(未判定)。u/v 纬向 32/32 CI[0.893,1.000] 即为 U —— 本协议能可靠判死, 不能可靠认证 (E58_TRIVALENT.json)',
  'A9':'BH93(1993) 静止态海山检验: 无风+水平等密初值, 真值解析为零; 判据同 A1/A8',
- 'R':'领域现行 LLM 评审判据(内部逻辑/量纲/物理范围/文献接地)作对照列: 四把尺子全过 R 而 A1-A9 全杀',
+ 'R':'领域现行 LLM 评审判据(内部逻辑/量纲/物理范围/文献接地)作对照列: 四把尺子全过 R 而 A1-A9 逐项检验下没有一把能全部通过',
  'A1':'配对抗刷率>=0.9 过; <0.5 死; 其间边 (风驱 32/28 对; 内潮用平底 vs 海山单对)',
  'A2':'|平底读数|/海山典型值 <1% 过; 发散或无定义 死; 平底本身无该误差成分 边',
  'A3':'只改盒宽: 幅值变化<20% 且序保持 过; 幅值变但序保持 边; 序或含义变 死',
@@ -113,7 +113,7 @@ def draw(mode):
                     ax.text(jj+0.52,y+0.66,MARK[st],ha='center',va='center',fontsize=12.5,fontweight='bold',color=INK[st])
                     ax.text(jj+0.52,y+0.3,g['text'],ha='center',va='center',fontsize=9.6,color='#333333')
             for jj in range(5): ax.text(jj+0.5,nr+0.05,COLS[c0+jj],ha='center',va='bottom',fontsize=11.5,fontweight='bold')
-        fig.suptitle('四把尺子 × 九项审计 + 现行评审对照：已完成的审计中没有一行全绿；对照行为隐藏真值',fontsize=14.5,fontweight='bold',y=0.985)
+        fig.suptitle('四把尺子 × 九项审计 + 现行评审对照：已完成的审计中没有一把尺子通过全部九项；对照行为隐藏真值',fontsize=14.5,fontweight='bold',y=0.985)
         fig.savefig(E+'figs/fig_killboard_print.png',dpi=300); print('saved print')
 draw('slide'); draw('print')
 json.dump(dict(rows=[r[1] for r in ROWS],cols=COLS,rules=RULES,grid=grid,legend={D:'死亡',P:'通过',B:'边界',NA:'未做/不适用',DEF:'按定义成立'},

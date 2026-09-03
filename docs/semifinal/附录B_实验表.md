@@ -46,7 +46,7 @@
 9. Gleckler P.J., Taylor K.E. & Doutriaux C. (2008) Performance metrics for climate models. *JGR* 113:D06104. DOI 10.1029/2007JD008972（换一个变量排名就翻）
 
 评测方法学侧：
-10. **Skalse J. et al. (2022)** Defining and Characterizing Reward Hacking. *NeurIPS 2022*. arXiv:2209.13085（定理 1 预言"没有一行全绿"；Def 1 = 我们的 A1）
+10. **Skalse J. et al. (2022)** Defining and Characterizing Reward Hacking. *NeurIPS 2022*. arXiv:2209.13085（定理 1 预言"不会有任何一把尺子通过全部审计"；Def 1 = 我们的 A1）
 11. **Karwowski J. et al. (2023)** Goodhart's Law in Reinforcement Learning. arXiv:2310.09144（命题 2 给 A8 理论名字；推论 1 说明"门"是定理性质）
 12. Manheim D. & Garrabrant S. (2018) Categorizing Variants of Goodhart's Law. arXiv:1803.04585（四分类；正文使用其术语处已核对定义）
 13. Blum A. & Hardt M. (2015) The Ladder: A Reliable Leaderboard for Machine Learning Competitions. arXiv:1502.04585（藏起来的 holdout 在自适应查询下必被过拟合）

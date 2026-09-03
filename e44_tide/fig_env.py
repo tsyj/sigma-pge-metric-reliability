@@ -1,6 +1,6 @@
 #!/home/xinyuan/anaconda3/envs/numpy1/bin/python
 # -*- coding: utf-8 -*-
-"""图: 环境四元组 (K, V, H, A) —— 重点是 A 也砍向 H 自己"""
+"""图: 环境四元组 (K, V, H, A) —— 重点是审计算子也用来审隐藏判分自身"""
 import sys
 sys.path.insert(0,'/data/xinyuan/GOAI_ai4s_env/scripts')
 import figstyle as F
@@ -21,7 +21,7 @@ def arrow(x1,y1,x2,y2,c,lw=2.0,style='->',rad=0.0,ls='-'):
 # 求解器
 box(37,26,26,10,'σ 坐标求解器 ROMS\n48×48×13 · 一条 2 min','#EAEEF4',BLUE,13,BLUE,True)
 # K 旋钮
-box(4,26,26,10,'K　可调旋钮\n地形 / VISC2 / VISC4 / AKV_BAK\nTNU2 / 步数 / 种子 / m / γ','#FFF6E8',AMBER,11,'#7A4E00')
+box(4,26,26,10,'K　可调旋钮\n地形 / 水平黏性 / 四阶黏性\n背景垂向黏性 / 温度扩散\n积分步数 / 参考态修正强度','#FFF6E8',AMBER,11,'#7A4E00')
 arrow(30,31,37,31,AMBER,2.4)
 # V 可见读数
 box(37,42,26,9,'V　可见读数（公开）\n流速 / 温度 / 比值 / 完赛标志\nAgent 只看得到这一层','#E9F3EC',GREEN,11.5,GREEN)
@@ -31,20 +31,20 @@ box(37,7,26,12,'H　隐藏判分（保密）\n风驱：MITgcm z 坐标独立求�
 arrow(50,26,50,19,RED,2.2,'->',0,'--')
 ax.text(52.4,22.4,'不回传',fontsize=10,color=RED,style='italic')
 # A 审计算子
-box(70,20,26,24,'A　审计算子（一等公民）\n\nA1 配对抗刷　A2 零真值通道\nA3 盒宽　　　A4 时钟/相位\nA5 盖章预测　A6 转风向\nA7 匿名换名　A8 带符号锚\nA9 静止态 BH93 (1993)','#F3EDFA',PUR,11,'#3F1E63')
+box(70,20,26,24,'A　审计算子（环境的第四项）\n\nA1 配对抗刷　A2 零真值通道\nA3 盒宽　　　A4 时钟/相位\nA5 盖章预测　A6 转风向\nA7 匿名换名　A8 带符号锚\nA9 静止态 BH93 (1993)','#F3EDFA',PUR,11,'#3F1E63')
 # A 砍 V
 arrow(70,44,63,47,PUR,2.6,'-|>',-0.25)
 ax.text(63.5,50.6,'审 V：读数配不配当判据',fontsize=11,color=PUR,ha='left')
 # A 砍 H —— 关键一笔
 arrow(70,22,63,13,PUR,2.8,'-|>',0.25)
-ax.text(63.5,4.0,'审 H：把刀砍向我们自己的锚\n（A3 盒宽摆 7.24× / A4 时钟 4.58→7.89）',
+ax.text(63.5,4.0,'审 H：同一套算子也用来审我们自己的判分锚\n（A3 盒宽摆 7.24× / A4 时钟 4.58→7.89）',
         fontsize=11,color=PUR,ha='left',fontweight='bold',linespacing=1.4)
 # Agent
 box(4,42,26,9,'Agent\n只见 V，下单改 K\n对手 / 评审 / 提议者','#F4F4F6',GRAY,11.5,'#3A3F45')
 arrow(30,46.5,37,46.5,GRAY,2.0)
 arrow(17,42,17,36,GRAY,2.0,'->',-0.3)
 ax.text(6.2,38.6,'下单真跑',fontsize=10,color=GRAY)
-ax.set_title('探索环境四元组 (K, V, H, A)：审计算子是环境的一等公民，且被砍向隐藏判分自身',
+ax.set_title('探索环境四元组 (K, V, H, A)：审计算子是环境的第四项，并且用来审隐藏判分自身',
              fontsize=15,fontweight='bold',pad=16)
 fig.savefig('/data/xinyuan/GOAI_ai4s_env/e44/figs/fig_env.png',dpi=300)
 print('saved fig_env.png')
