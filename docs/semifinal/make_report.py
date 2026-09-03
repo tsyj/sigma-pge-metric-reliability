@@ -1,7 +1,7 @@
 #!/home/xinyuan/anaconda3/envs/numpy1/bin/python
 # -*- coding: utf-8 -*-
 """复赛报告 md -> docx（官方模板视觉规范：标题 #1F4D78 / 强调 #0B2545 / 次要 #5A6573 / 表格底纹 #F4F6F9，
-中文微软雅黑 + 西文 Calibri；图与图注按锚点插入；附录 A/B/C 合订；页码）
+中文微软雅黑 + 西文 Calibri；图与图注按锚点插入；附录 A/B/C/D 合订；页码）
 用法: make_report.py <主文.md> <输出.docx>
 """
 import re, sys, docx
@@ -31,7 +31,7 @@ EA = '微软雅黑'; EA_HEAD = '微软雅黑'; LATIN = 'Calibri'; MONO = 'Consol
 
 d = docx.Document()
 for s in d.sections:
-    s.top_margin = s.bottom_margin = Cm(2.0); s.left_margin = s.right_margin = Cm(2.2)
+    s.top_margin = s.bottom_margin = Cm(1.8); s.left_margin = s.right_margin = Cm(2.0)
 
 
 def set_fonts(rpr_owner, latin=LATIN, ea=EA):
@@ -44,9 +44,9 @@ def set_fonts(rpr_owner, latin=LATIN, ea=EA):
 
 
 st = d.styles['Normal']
-st.font.name = LATIN; st.font.size = Pt(10.5); st.font.color.rgb = C_BODY
+st.font.name = LATIN; st.font.size = Pt(10); st.font.color.rgb = C_BODY
 set_fonts(st.element)
-st.paragraph_format.space_after = Pt(4); st.paragraph_format.line_spacing = 1.28
+st.paragraph_format.space_after = Pt(4); st.paragraph_format.line_spacing = 1.1
 for name, sz in (('Heading 1', 16), ('Heading 2', 12.5), ('Heading 3', 11.5)):
     hs = d.styles[name]
     hs.font.name = LATIN; hs.font.size = Pt(sz); hs.font.bold = True; hs.font.color.rgb = C_TITLE
@@ -62,7 +62,7 @@ def unescape(t):
     return t.replace('\\|', '|')
 
 
-def add_runs(p, t, size=10.5, bold=False, ea=EA, color=None, italic=False, bold_color=C_EMPH):
+def add_runs(p, t, size=10, bold=False, ea=EA, color=None, italic=False, bold_color=C_EMPH):
     for part in TOK.split(t):
         if not part: continue
         is_b = part.startswith('**') and part.endswith('**')
@@ -81,11 +81,11 @@ def add_runs(p, t, size=10.5, bold=False, ea=EA, color=None, italic=False, bold_
     return p
 
 
-def para(t, size=10.5, bold=False, ea=EA, space=4, align=None, color=None, italic=False, indent=None,
+def para(t, size=10, bold=False, ea=EA, space=4, align=None, color=None, italic=False, indent=None,
          hanging=None, bold_color=C_EMPH, style=None):
     p = d.add_paragraph(style=style) if style else d.add_paragraph()
     add_runs(p, t, size, bold, ea, color, italic, bold_color)
-    p.paragraph_format.space_after = Pt(space); p.paragraph_format.line_spacing = 1.28
+    p.paragraph_format.space_after = Pt(space); p.paragraph_format.line_spacing = 1.1
     if align is not None: p.alignment = align
     if indent is not None: p.paragraph_format.left_indent = Cm(indent)
     if hanging is not None: p.paragraph_format.first_line_indent = Cm(-hanging)
@@ -116,7 +116,7 @@ def _pbdr(p, color=FILL_HEAD, sz='18', fill=None):
         ppr.insert_element_before(shd, *SUCC[1:])
 
 
-def quote(t, size=10.5, space=3):
+def quote(t, size=10, space=3):
     """md 引用块：左侧深蓝竖线 + 浅蓝灰底，文字灰蓝，粗体藏蓝"""
     p = para(t, size, ea=EA, space=space, color=C_MINOR, indent=0.5)
     p.paragraph_format.right_indent = Cm(0.3)
@@ -124,22 +124,22 @@ def quote(t, size=10.5, space=3):
     return p
 
 
-def bullet(t, size=10.5):
+def bullet(t, size=10):
     p = d.add_paragraph()
     r = p.add_run('• '); r.font.size = Pt(size); r.font.color.rgb = C_TITLE; set_fonts(r.element)
     add_runs(p, t, size)
     p.paragraph_format.left_indent = Cm(0.75); p.paragraph_format.first_line_indent = Cm(-0.45)
-    p.paragraph_format.space_after = Pt(3); p.paragraph_format.line_spacing = 1.28
+    p.paragraph_format.space_after = Pt(3); p.paragraph_format.line_spacing = 1.1
     return p
 
 
-def numbered(t, size=10.5):
+def numbered(t, size=10):
     m = re.match(r'^(\d+)\. (.*)$', t)
     p = d.add_paragraph()
     r = p.add_run(m.group(1) + '. '); r.font.size = Pt(size); r.font.bold = True; r.font.color.rgb = C_TITLE; set_fonts(r.element)
     add_runs(p, m.group(2), size)
     p.paragraph_format.left_indent = Cm(0.75); p.paragraph_format.first_line_indent = Cm(-0.6)
-    p.paragraph_format.space_after = Pt(3); p.paragraph_format.line_spacing = 1.28
+    p.paragraph_format.space_after = Pt(3); p.paragraph_format.line_spacing = 1.1
     return p
 
 
@@ -167,12 +167,12 @@ def table(rows_):
     for i, row in enumerate(cells):
         for j in range(ncol):
             cell = tb.cell(i, j); cell.text = ''
-            pr = cell.paragraphs[0]; pr.paragraph_format.space_after = Pt(1); pr.paragraph_format.line_spacing = 1.15
+            pr = cell.paragraphs[0]; pr.paragraph_format.space_after = Pt(1); pr.paragraph_format.line_spacing = 1.1
             txt = row[j] if j < len(row) else ''
             if i == 0:
-                add_runs(pr, txt, 9, True, EA, C_WHITE, bold_color=None); _shade(cell, FILL_HEAD)
+                add_runs(pr, txt, 8.5, True, EA, C_WHITE, bold_color=None); _shade(cell, FILL_HEAD)
             else:
-                add_runs(pr, txt, 9, False, EA, C_BODY)
+                add_runs(pr, txt, 8.5, False, EA, C_BODY)
                 if i % 2 == 0: _shade(cell, FILL_ZEBRA)
     # 表头行跨页重复
     trpr = tb.rows[0]._tr.get_or_add_trPr(); h = OxmlElement('w:tblHeader'); h.set(qn('w:val'), 'true'); trpr.append(h)
@@ -188,19 +188,19 @@ def fig(path, cap, width=15.5):
 
 CAPFIG = {'图 1': FIG1 + 'fig_truth_sigma_vs_z.png', '图 2': FIG1 + 'fig_env.png',
           '图 3': FIG1 + 'fig_llm.png', '图 4': FIG1 + 'fig_metric.png'}
-E44CAP = ('图 5　内潮环境三轴扫描（84 km，同相位口径，末帧版）。(a) 500 km 隐藏锚：B 样条节点距 2/4/6 档的'
+E44CAP = ('图 5　内潮环境三轴扫描（84 km，同一相位，末帧版）。(a) 500 km 隐藏锚：B 样条节点距 2/4/6 档的'
           '逐垂向模态远场功率保留比——第一模全档≈1.00，第二模 0.94→0.68→0.47；(b) 同一轴上 84 km 的三个可见读数'
           '（相对最轻档）：u/v 比值单调爬升报警，深层残余流缓降"变好看"，环带波功率（在本环境中只作展示、不参与判定）坠落；'
           '(c) 双谐波黏性八档与 (d) B 样条强度七档：残余流一路变好看，功率在 (d) 自 ×2 档后穿零反向，u/v 比值两轴'
           '均单调报警（黏性轴最低两档一处约 3% 回落，如实呈现）。')
 CAP_ENV = '''图 1　探索环境四元组 (K, V, H, A)。K 是 Agent 可拧的旋钮，V 是公开读数（Agent 只看得到这一层），H 是保密判分（风驱侧为 MITgcm z 坐标独立求解器真值，内潮侧为 500 km 自参照锚，共用平底与静止态两条按构造零真值的通道），A 是九个审计算子。与文献中「把评测器藏起来」的现行做法相比，本环境的区别在于把 A 列为环境定义的第四项，并且用同一套算子同时审 V 与 H 自身——A3 只改盒宽就让隐藏判分侧的环带功率摆 7.24 倍，A4 修一行初值时钟让它从 4.58 变 7.89 MW。'''
-CAP_AG = '''图 6　Agent 在与逻辑回归完全相同的信息条件下挑尺子（每局 40 个候选、七个无真值特征、不给真值，8 局）。(a) 逐局命中率：逻辑回归均值 0.675、低 B 单特征启发式 0.500、Agent 0.412、随机 0.283；Agent 8 局无一胜过逻辑回归。(b) 事后按 Agent 自述的抗刷率使用方向分组：说对方向的 3 局达 0.60（逼近线性模型），说反或没说清的 5 局回落到 0.30（随机水平）。结论是"稳定性而非能力"构成瓶颈；n=8、单模型、探索性，不作统计推断。'''
-CAP_ASYM = '''图 5　两关的不对称。(a) 同一把 u/v 尺子在 0°/45°/90° 三个强迫方向下的两关得分：排序力 A 从 0.92 经 0.97 掉到 −0.17（变号），抗刷率 B 则在 1.00/0.25/0.89 之间摆动。(b) 四档地形陡度 rx0 两两比较：「B≥0.9 的候选集合」的 Jaccard 为 0.82–0.97，B 的候选间秩相关 0.73–0.95，预注册赌它掉到 0.5 以下（灰线）被推翻。结论：抗刷率是尺子自身的结构性质，对地形稳健；排序力是尺子与特定物理场景的匹配度，对强迫方向敏感。'''
-CAP_TF = '''图 4　无真值预测器的命中率曲线（纬向风上训练，经向风上评估）。横轴是七个无真值特征经一次拟合的逻辑回归给出的预测分（对数轴），纵轴是该箱内真正通过排序力判据的比例，虚线为随机基率 0.2797216441207076。命中率从 0.037 升到峰值 0.8306，随后在最高分一箱回落到 0.6906；只取最极端的 0.5%（77 个）时跌至 0.052。跨环境 AUC = 0.8706。预测器在中段确有判别力，但在极端处与它所审判的那些代理指标一样失效——可操作的读法是取中段而非顶端。'''
-CAP_PAR = '''图 3　排序力 A 与抗刷率 B 的双目标平面（风驱环境全部 15376 个候选）。(a) 灰点为全体候选，蓝点为两关同时通过者（204 个），橙线为 Pareto 前沿（5 点），紫星为乌托邦角 (1,1)——实测为空；虚线/点线为本文阈值 A≥0.7 / B≥0.9。knee 为前沿上到两端连线垂距最大的折中点，它在风驱环境两关全过，却不在跨内潮的 13 个交集里。(b) 阈值敏感性：A、B 阈值组合下的通过数，蓝框为本文口径。两关 Spearman = −0.674，两关同过 204 个而独立期望 2159 个（贫化 10.6 倍）。'''
+CAP_AG = '''图 6　Agent 在与简单线性模型完全相同的信息条件下挑尺子（每局 40 个候选、七个不需要真值的线索、不给真值，8 局）。(a) 逐局命中率：简单线性模型均值 0.675、低 B 单特征启发式 0.500、Agent 0.412、随机 0.283；Agent 8 局无一胜过简单线性模型。(b) 事后按 Agent 自述的抗糊弄的程度使用方向分组：说对方向的 3 局达 0.60（逼近线性模型），说反或没说清的 5 局回落到 0.30（随机水平）。结论是"稳定性而非能力"构成瓶颈；n=8、单模型、探索性，不作统计推断。'''
+CAP_ASYM = '''图 5　两关的不对称。(a) 同一把 u/v 尺子在 0°/45°/90° 三个强迫方向下的两关得分：排得准的程度 A 从 0.92 经 0.97 掉到 −0.17（变号），抗糊弄的程度 B 则在 1.00/0.25/0.89 之间摆动。(b) 四档地形陡度 rx0 两两比较：「B≥0.9 的候选集合」的 Jaccard 为 0.82–0.97，B 的候选间秩相关 0.73–0.95，预注册赌它掉到 0.5 以下（灰线）被推翻。结论：抗糊弄的程度是尺子自身的结构性质，对地形稳健；排得准的程度是尺子与特定物理场景的匹配度，对强迫方向敏感。'''
+CAP_TF = '''图 4　无真值预测器的命中率曲线（纬向风上训练，经向风上评估）。横轴是七个不需要真值的线索经一次拟合的简单线性模型给出的预测分（对数轴），纵轴是该箱内真正通过排得准的程度判据的比例，虚线为随机基率 0.2797216441207076。命中率从 0.037 升到峰值 0.8306，随后在最高分一箱回落到 0.6906；只取最极端的 0.5%（77 个）时跌至 0.052。跨环境 AUC = 0.871。预测器在中段确有判别力，但在极端处与它所审判的那些代理指标一样失效——可操作的读法是取中段而非顶端。'''
+CAP_PAR = '''图 3　排得准的程度 A 与抗糊弄的程度 B 的双目标平面（风驱环境全部 15376 个候选）。(a) 灰点为全体候选，蓝点为两关同时通过者（204 个），橙线为 Pareto 前沿（5 点），紫星为乌托邦角 (1,1)——实测为空；虚线/点线为本文阈值 A≥0.7 / B≥0.9。knee 为前沿上到两端连线垂距最大的折中点，它在风驱环境两关全过，却不在跨内潮的 13 个交集里。(b) 阈值敏感性：A、B 阈值组合下的通过数，蓝框为本文计算方式。两关 Spearman = −0.674，两关同过 204 个而独立期望 2159 个（贫化 10.6 倍）。'''
 CAP_KB = '''图 2　kill board：四把代表尺子 + 隐藏真值对照行 × 九项审计 + R 对照列。A9 为 Beckmann & Haidvogel (1993) 静止态海山检验；R 列为领域现行的 LLM 评审判据（内部逻辑/量纲/物理范围/文献接地）——四把尺子全过 R，而 A1–A9 逐项检验下没有一把能全部通过。† 残余流行：风驱侧为 deep_rms_800，内潮侧为 deep_dc_rms。行：环带波功率（我们论文头条）、深层残余流、深水温度（内潮穷举三轴满分冠军，实为 ≈4 °C 的深水温度本身）、u/v 比值（风驱穷举冠军）、隐藏真值（对照）。每格判定按 KILLBOARD.json 的 rules 字段判读，格内为关键数与出处；python scorecard.py 一键重生成。'''
-CAP_E52 = '''图 2　转向经向风后的判据得分与交集计数。(a) u/v 与 v/u 在纬向风、经向风下的排序力（−ρ，对隐藏技巧评分，越高越好）与配对抗刷分率；虚线为判据阈值 A 0.7 / B 0.9。(b) 三个环境各自通过判据的候选数与两两、三重交集（对数轴，风驱空间 15376 / 内潮 19600）；竖线为独立随机判据的期望——三重交集 0 与期望 0.71 无差别，纬向∩内潮与经向∩内潮贫化、纬向∩经向富集 16 倍。'''
-CAP_E44 = '''图 3　内潮三轴扫描（84 km，同相位口径，末帧版；(b) 的 m=5、(c) 的 5e7/2e8、(d) 的 ×½/×2/×8 为预注册后加密臂）。(a) 500 km 自参照模态锚：第一模全档≈1.00，第二模 0.94→0.68→0.47；(b–d) 三条旋钮轴上的可见读数（相对基准档）：u/v 单调报警、残余流变好看、环带功率坠落并在 (d) 穿零——但见图 1 后续审计。'''
+CAP_E52 = '''图 2　转向经向风后的判据得分与交集计数。(a) u/v 与 v/u 在纬向风、经向风下的排得准的程度（−ρ，对隐藏技巧评分，越高越好）与配对抗糊弄的程度率；虚线为判据阈值 A 0.7 / B 0.9。(b) 三个环境各自通过判据的候选数与两两、三重交集（对数轴，风驱空间 15376 / 内潮 19600）；竖线为独立随机判据的期望——三重交集 0 与期望 0.71 无差别，纬向∩内潮与经向∩内潮贫化、纬向∩经向富集 16 倍。'''
+CAP_E44 = '''图 3　内潮三轴扫描（84 km，同一相位，末帧版；(b) 的 m=5、(c) 的 5e7/2e8、(d) 的 ×½/×2/×8 为预注册后加密组）。(a) 500 km 自参照模态锚：第一模全档≈1.00，第二模 0.94→0.68→0.47；(b–d) 三条旋钮轴上的可见读数（相对基准档）：u/v 单调报警、残余流变好看、环带功率坠落并在 (d) 穿零——但见图 1 后续审计。'''
 
 V6 = 'v6' in SRC
 IS_V5 = 'v5' in SRC
@@ -210,7 +210,7 @@ def body_line(ln):
     """普通行：列表 / 段落"""
     if re.match(r'^[-*] ', ln): bullet(ln[2:]); return
     if re.match(r'^\d+\. ', ln): numbered(ln); return
-    para(ln, 10.5)
+    para(ln, 10)
 
 
 lines = md.split('\n')
@@ -242,7 +242,7 @@ while i < len(lines):
         lvl = len(m.group(1)); t = m.group(2)
         # v6：图 4/5/6 放在 4.9 之前（4.6–4.8 正文引用处之后）
         if V6 and lvl == 2 and t.startswith('4.9 '):
-            fig(FIG2 + 'fig_truthfree.png', CAP_TF, 14.0); fig(FIG2 + 'fig_asym.png', CAP_ASYM, 15.0); fig(FIG2 + 'fig_agent_picks.png', CAP_AG, 15.0)
+            fig(FIG2 + 'fig_truthfree.png', CAP_TF, 9.0); fig(FIG2 + 'fig_asym.png', CAP_ASYM, 9.5); fig(FIG2 + 'fig_agent_picks.png', CAP_AG, 9.5)
         if lvl == 1 and t.startswith('谁来给尺子打分'):
             p = para(t, 20, True, EA_HEAD, 4, WD_ALIGN_PARAGRAPH.CENTER, color=C_TITLE, bold_color=None)
             p.paragraph_format.space_before = Pt(6)
@@ -263,7 +263,7 @@ while i < len(lines):
             else:
                 fig(FIG2 + 'fig_e44_main.png', E44CAP, 15.5)
         if V6 and lvl == 2 and t.startswith('2.1 '):
-            fig(FIG2 + 'fig_env.png', CAP_ENV, 15.5)
+            fig(FIG2 + 'fig_env.png', CAP_ENV, 10.5)
         i += 1; continue
     cm = re.match(r'^(图 \d)　', ln)
     if cm and cm.group(1) in CAPFIG:
@@ -274,8 +274,8 @@ while i < len(lines):
         i += 1; continue
     body_line(ln)
     if (IS_V5 or V6) and ln.startswith('**参照系**'):
-        fig(FIG2 + 'fig_killboard_print.png', CAP_KB, 14.5)
-        if V6: fig(FIG2 + 'fig_pareto.png', CAP_PAR, 15.5)
+        fig(FIG2 + 'fig_killboard_print.png', CAP_KB, 10.0)
+        if V6: fig(FIG2 + 'fig_pareto.png', CAP_PAR, 9.5)
         if not V6:
             fig(FIG2 + 'fig_e52.png', CAP_E52, 15.0); fig(FIG2 + 'fig_e44_main.png', CAP_E44, 15.5)
     i += 1
@@ -300,10 +300,11 @@ if IS_V5 or V6:
                 table(blk); continue
             if ln.startswith('> '): quote(ln[2:], 10); k += 1; continue
             body_line(ln); k += 1
-    page_break(); heading('附录 A · 初赛定稿正文（原文，2026-08-16 提交版）', 1, 0)
+    hA = heading('附录 A · 初赛定稿正文（原文，2026-08-16 提交版）', 1, 0); hA.paragraph_format.page_break_before = True
     md_block(open(F + '初赛终稿_提取.txt').read(), plain_headings=True)
     page_break(); md_block(open(F + '附录B_实验表.md').read())
     page_break(); md_block(open(F + '附录C_ARENA规格.md').read())
+    page_break(); md_block(open(F + '附录D_实验细节.md').read())
     # 页码（页脚居中，灰蓝小字）
     for sec in d.sections:
         fp = sec.footer.paragraphs[0]; fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
