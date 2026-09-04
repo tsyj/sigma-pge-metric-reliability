@@ -38,14 +38,19 @@ print('           → 能可靠判死，不能可靠认证')
 V=json.load(open('e60/E60_VERDICT.json')); j=[p['jaccard'] for p in V['pairwise'].values()]
 print('  陡度轴：4 种陡度 两两 Jaccard %.2f–%.2f → 抗糊弄的程度对地形稳健（预注册赌<0.5，被推翻）'%(min(j),max(j)))
 PYX
-bar "── 4/4  Agent 与线性模型同台 ────────────────────────────"
+bar "── 4/4  这套探索产出了什么科学结论 ──────────────────────"
 $PY - <<'PYX'
 import json
-S=json.load(open('e61/E61_AGENT_PICKS.json'))
-print('  8 局同等信息条件：简单线性模型 %.3f > 单特征启发式 %.3f > Agent %.3f > 随机 %.3f'%(
-  S['logistic'],S['b_heuristic'],S['agent'],S['random']))
-print('  Agent 8 局无一胜出；说对方向的 3 局达 0.60，说不清的 5 局回落 0.30')
-print('  → 瓶颈是稳定性，不是能力')
+V=json.load(open('e56/E56_VERDICT.json'))
+u=V['bh93_umax']; sk=V['skill_range']
+print('  把本领域用了三十多年的公认基准（BH93 1993 静止态检验）放进同一张表：')
+print()
+print('    伪流最大值    %6.2f → %5.2f cm/s（降 %.0f%%）  读数说「改进了」'%(u[0],min(u),V['proxy_drop']*100))
+print('    独立真值技巧  %6.2f → %5.2f              全程为负，从没转正'%(sk[0],sk[1]))
+print('    代理把改进夸大 %.2f 倍；平底上抗糊弄率 %.3f'%(V['exaggeration'],V['A1_paired_correct']))
+print()
+print('  → 结论不是「它被刷穿了」，而是「它无判别力」：')
+print('     方向和真值一致（ρ=%.1f），但它报的改进幅度不能当真'%V['rho_bh93'])
 PYX
 bar "──────────────────────────────────────────────────────────"
 echo "  全部数字单一真源：e44_tide/analysis/、e52/、e55/、e56/、e59/、e60/、e61/ 下的 JSON"
