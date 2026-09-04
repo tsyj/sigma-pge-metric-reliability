@@ -24,7 +24,7 @@ bar "── 2/4  主结论的定量支柱：两关互斥 ───────�
 $PY - <<'PYX'
 import json
 P=json.load(open('e44_tide/analysis/E57_PARETO.json'))
-print('  全部 %d 个候选：ρ(排序力,抗刷率) = %.3f'%(P['n_candidates'],P['spearman_A_B']))
+print('  全部 %d 个候选：ρ(排得准的程度,抗糊弄的程度) = %.3f'%(P['n_candidates'],P['spearman_A_B']))
 print('  两关同过 %d 个 vs 独立期望 %.0f 个 → 贫化 %.1f 倍'%(P['n_both'],P['independent_expect'],P['independent_expect']/P['n_both']))
 print('  乌托邦角 (1,1) 实测%s'%('被占据' if P['utopia_occupied'] else '为空'))
 PYX
@@ -36,13 +36,13 @@ r=T['rows']['uv_zonal_paired']
 print('  三值化：u/v 纬向 %d/%d 满分，Wilson CI[%.3f,%.3f] → 判「%s」'%(r['k'],r['n'],r['ci'][0],r['ci'][1],r['verdict_vs_0p9']))
 print('           → 能可靠判死，不能可靠认证')
 V=json.load(open('e60/E60_VERDICT.json')); j=[p['jaccard'] for p in V['pairwise'].values()]
-print('  陡度轴：4 档 rx0 两两 Jaccard %.2f–%.2f → 抗刷率对地形稳健（预注册赌<0.5，被推翻）'%(min(j),max(j)))
+print('  陡度轴：4 种陡度 两两 Jaccard %.2f–%.2f → 抗糊弄的程度对地形稳健（预注册赌<0.5，被推翻）'%(min(j),max(j)))
 PYX
 bar "── 4/4  Agent 与线性模型同台 ────────────────────────────"
 $PY - <<'PYX'
 import json
 S=json.load(open('e61/E61_AGENT_PICKS.json'))
-print('  8 局同等信息条件：逻辑回归 %.3f > 单特征启发式 %.3f > Agent %.3f > 随机 %.3f'%(
+print('  8 局同等信息条件：简单线性模型 %.3f > 单特征启发式 %.3f > Agent %.3f > 随机 %.3f'%(
   S['logistic'],S['b_heuristic'],S['agent'],S['random']))
 print('  Agent 8 局无一胜出；说对方向的 3 局达 0.60，说不清的 5 局回落 0.30')
 print('  → 瓶颈是稳定性，不是能力')

@@ -5,6 +5,26 @@
 import os, re, sys, json, time, shutil, subprocess, hashlib
 import concurrent.futures as cf
 import numpy as np, netCDF4 as nc
+# --- 可移植性垫片：开发机行为不变；换台机器时自动改用仓库内的文件 ---
+import os as _o, sys as _s
+_H=_o.path.dirname(_o.path.abspath(__file__))
+_R=_H if _o.path.isdir(_o.path.join(_H,'e44_tide')) else _o.path.dirname(_H)
+for _d in (_o.path.join(_R,'scripts'), _o.path.join(_R,'e44_tide'), _R):
+    if _o.path.isdir(_d) and _d not in _s.path: _s.path.insert(0,_d)
+if not _o.path.isdir('/data/xinyuan/GOAI_ai4s_env'):
+    # 评委机器：把开发路径重定向到仓库内
+    _real_open=open
+    def open(f,*a,**k):
+        if isinstance(f,str) and f.startswith('/data/xinyuan/GOAI_ai4s_env/'):
+            rel=f.replace('/data/xinyuan/GOAI_ai4s_env/','')
+            for _b in (_R, _o.path.join(_R,'e44_tide')):
+                _p=_o.path.join(_b,rel)
+                if _o.path.exists(_p): return _real_open(_p,*a,**k)
+                _p2=_o.path.join(_b,_o.path.basename(rel))
+                if _o.path.exists(_p2): return _real_open(_p2,*a,**k)
+        return _real_open(f,*a,**k)
+# --- 垫片结束 ---
+
 G='/data/xinyuan/GOAI_ai4s_env/'; E=G+'e56/'; P='/data/xinyuan/zpg_roms_dev/pge_test/'
 BIN='coawstM_goai_rest'; BASE=G+'runs/r26_repro/'
 GRD={'r26steep':'pge_grid_r26steep.nc','flat':'pge_grid_flat48_noN.nc'}

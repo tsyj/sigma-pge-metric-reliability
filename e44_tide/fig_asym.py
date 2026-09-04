@@ -6,6 +6,26 @@ sys.path.insert(0,'/data/xinyuan/GOAI_ai4s_env/scripts')
 import figstyle as F
 import matplotlib.pyplot as plt
 import numpy as np
+# --- 可移植性垫片：开发机行为不变；换台机器时自动改用仓库内的文件 ---
+import os as _o, sys as _s
+_H=_o.path.dirname(_o.path.abspath(__file__))
+_R=_H if _o.path.isdir(_o.path.join(_H,'e44_tide')) else _o.path.dirname(_H)
+for _d in (_o.path.join(_R,'scripts'), _o.path.join(_R,'e44_tide'), _R):
+    if _o.path.isdir(_d) and _d not in _s.path: _s.path.insert(0,_d)
+if not _o.path.isdir('/data/xinyuan/GOAI_ai4s_env'):
+    # 评委机器：把开发路径重定向到仓库内
+    _real_open=open
+    def open(f,*a,**k):
+        if isinstance(f,str) and f.startswith('/data/xinyuan/GOAI_ai4s_env/'):
+            rel=f.replace('/data/xinyuan/GOAI_ai4s_env/','')
+            for _b in (_R, _o.path.join(_R,'e44_tide')):
+                _p=_o.path.join(_b,rel)
+                if _o.path.exists(_p): return _real_open(_p,*a,**k)
+                _p2=_o.path.join(_b,_o.path.basename(rel))
+                if _o.path.exists(_p2): return _real_open(_p2,*a,**k)
+        return _real_open(f,*a,**k)
+# --- 垫片结束 ---
+
 F.paper_style()
 BLUE='#3C5488'; RED='#B03A2E'; GREEN='#175C3B'; GRAY='#848D96'
 G='/data/xinyuan/GOAI_ai4s_env/'

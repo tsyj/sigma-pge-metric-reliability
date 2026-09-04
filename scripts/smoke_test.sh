@@ -4,7 +4,7 @@ set -e
 cd "$(dirname "$0")/.."
 PY=${PYTHON:-python3}
 echo "[1/4] 预注册文档 sha256 校验"
-sha256sum -c e44_tide/PREREG_E44.sha256 --quiet && echo "  PASS: PREREG_E44.md 未被改动（盖章时间: $(cat e44_tide/PREREG_E44.stamp)）"
+sha256sum -c e44_tide/PREREG_E44.sha256 --quiet && echo "  PASS: PREREG_E44.md 未被改动（提前登记时间: $(cat e44_tide/PREREG_E44.stamp)）"
 echo "[2/4] E44 判读可从指标表独立重算（Spearman 自实现，不用 scipy）"
 $PY - <<'PYX'
 import json
@@ -26,7 +26,7 @@ assert abs(r-V['C1_rank_vs_m']['uv_ratio']['spearman_vs_m'])<1e-6, (r, '!=', V['
 print('  PASS: uv_ratio m-axis Spearman = %+.3f == verdict'%r)
 dc=[M[t]['deep_dc_rms'] for t in ['pf_v4','a_v4visc3e6','a_v4visc1e7','a_v4visc3e7','a_v4visc1e8','a_v4visc3e8']]
 assert min(range(6),key=lambda i:dc[i])==5, 'deepDC best 应在 VISC4=3e8 端'
-print('  PASS: deep_dc_rms 被极端黏性刷穿（best@3e8）可重算')
+print('  PASS: deep_dc_rms 被极端黏性糊弄过去（best@3e8）可重算')
 PYX
 echo "[3/4] 500 km 判分锚一致性"
 $PY - <<'PYX'

@@ -1,0 +1,38 @@
+{
+ "note": "三个风向（纬向/经向/45°）的交集，判据与阈值逐字沿用 E40",
+ "n_zonal": 204,
+ "n_merid": 407,
+ "n_diag45": 454,
+ "inter_zonal_merid": 88,
+ "inter_zonal_diag45": 140,
+ "inter_merid_diag45": 333,
+ "inter_three_winds": 80,
+ "expected_if_independent": 0.159,
+ "enrichment": 501.8,
+ "sample": [
+  [
+   "v|d200|rms",
+   "w|d400|max"
+  ],
+  [
+   "v|d400|rms",
+   "v|d1500|max"
+  ],
+  [
+   "v|d400|p95",
+   "u|d1500|max"
+  ],
+  [
+   "v|d200|p95",
+   "w|d800|max"
+  ],
+  [
+   "temp|d400|p95",
+   "temp|all|rms"
+  ],
+  [
+   "w|all|rms",
+   "w|d400|rms"
+  ]
+ ]
+}
