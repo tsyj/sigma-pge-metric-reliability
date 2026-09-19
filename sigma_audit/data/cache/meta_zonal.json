@@ -1,0 +1,11 @@
+{
+ "env": "zonal",
+ "n_steep": 58,
+ "n_flat": 44,
+ "n_pairs": 32,
+ "n_keys": 124,
+ "ledger": "ledger/env2_runs.jsonl",
+ "reg_from": "regraded",
+ "built": "2026-09-17 10:08:09",
+ "elapsed_s": 2.4
+}

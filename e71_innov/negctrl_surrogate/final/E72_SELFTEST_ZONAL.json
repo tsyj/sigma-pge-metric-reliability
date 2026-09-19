@@ -1,0 +1,365 @@
+{
+ "note": "E72 自检：正式版流水线在纬向逐字复现 E71B/C/E（同一代码路径将用于留出域）；确定性输出（无时间戳），供封存记录 sha256",
+ "all_match": true,
+ "n_checks": 58,
+ "n_mismatch": 0,
+ "checks": [
+  {
+   "item": "B.n_candidates",
+   "mine": 15376,
+   "pilot": 15376,
+   "match": true
+  },
+  {
+   "item": "B.n_pairs",
+   "mine": 32,
+   "pilot": 32,
+   "match": true
+  },
+  {
+   "item": "B.struct.rho_D_A_raw32",
+   "mine": 0.9144,
+   "pilot": 0.9144,
+   "match": true
+  },
+  {
+   "item": "B.struct.rho_D_A_diff",
+   "mine": 0.8831,
+   "pilot": 0.8831,
+   "match": true
+  },
+  {
+   "item": "B.struct.rho_D_A_logr",
+   "mine": 0.9204,
+   "pilot": 0.9204,
+   "match": true
+  },
+  {
+   "item": "B.struct.p_D_A_raw32",
+   "mine": 0.0004997501249375312,
+   "pilot": 0.0004997501249375312,
+   "match": true
+  },
+  {
+   "item": "B.struct.p_D_A_diff",
+   "mine": 0.0004997501249375312,
+   "pilot": 0.0004997501249375312,
+   "match": true
+  },
+  {
+   "item": "B.struct.p_D_A_logr",
+   "mine": 0.0004997501249375312,
+   "pilot": 0.0004997501249375312,
+   "match": true
+  },
+  {
+   "item": "B.struct.rho_D_A_e65_all58",
+   "mine": 0.9762,
+   "pilot": 0.9762,
+   "match": true
+  },
+  {
+   "item": "B.struct.rho_Dc_A_diff",
+   "mine": 0.949,
+   "pilot": 0.949,
+   "match": true
+  },
+  {
+   "item": "B.struct.rho_Dc_A_logr",
+   "mine": 0.9978,
+   "pilot": 0.9978,
+   "match": true
+  },
+  {
+   "item": "B.struct.rho_A65_A32",
+   "mine": 0.9792,
+   "pilot": 0.9792,
+   "match": true
+  },
+  {
+   "item": "B.struct.rho_A32_Alogr",
+   "mine": 0.6051,
+   "pilot": 0.6051,
+   "match": true
+  },
+  {
+   "item": "B.struct.rho_A32_Adiff",
+   "mine": 0.4953,
+   "pilot": 0.4953,
+   "match": true
+  },
+  {
+   "item": "B.gates.raw32.nA07",
+   "mine": 3635,
+   "pilot": 3635,
+   "match": true
+  },
+  {
+   "item": "B.gates.raw32.nA07_absD_le05",
+   "mine": 30,
+   "pilot": 30,
+   "match": true
+  },
+  {
+   "item": "B.gates.raw32.maxA_absD_le03",
+   "mine": 0.5927,
+   "pilot": 0.5927,
+   "match": true
+  },
+  {
+   "item": "B.gates.raw32.n_absD_le03",
+   "mine": 2428,
+   "pilot": 2428,
+   "match": true
+  },
+  {
+   "item": "B.gates.diff.nA07",
+   "mine": 5140,
+   "pilot": 5140,
+   "match": true
+  },
+  {
+   "item": "B.gates.diff.nA07_absD_le05",
+   "mine": 113,
+   "pilot": 113,
+   "match": true
+  },
+  {
+   "item": "B.gates.diff.maxA_absD_le03",
+   "mine": 0.5927,
+   "pilot": 0.5927,
+   "match": true
+  },
+  {
+   "item": "B.gates.diff.n_absD_le03",
+   "mine": 2131,
+   "pilot": 2131,
+   "match": true
+  },
+  {
+   "item": "B.gates.logr.nA07",
+   "mine": 2052,
+   "pilot": 2052,
+   "match": true
+  },
+  {
+   "item": "B.gates.logr.nA07_absD_le05",
+   "mine": 39,
+   "pilot": 39,
+   "match": true
+  },
+  {
+   "item": "B.gates.logr.maxA_absD_le03",
+   "mine": 0.5832,
+   "pilot": 0.5832,
+   "match": true
+  },
+  {
+   "item": "B.gates.logr.n_absD_le03",
+   "mine": 2913,
+   "pilot": 2913,
+   "match": true
+  },
+  {
+   "item": "E.rho_A32_B65",
+   "mine": -0.651,
+   "pilot": -0.651,
+   "match": true
+  },
+  {
+   "item": "E.rho_Adiff_B65",
+   "mine": -0.2661,
+   "pilot": -0.2661,
+   "match": true
+  },
+  {
+   "item": "E.rho_Alogr_B65",
+   "mine": -0.2943,
+   "pilot": -0.2943,
+   "match": true
+  },
+  {
+   "item": "E.both_raw32.n_both",
+   "mine": 137,
+   "pilot": 137,
+   "match": true
+  },
+  {
+   "item": "E.both_raw32.n_both_absD_le05",
+   "mine": 0,
+   "pilot": 0,
+   "match": true
+  },
+  {
+   "item": "E.both_diff.n_both",
+   "mine": 1145,
+   "pilot": 1145,
+   "match": true
+  },
+  {
+   "item": "E.both_diff.n_both_absD_le05",
+   "mine": 82,
+   "pilot": 82,
+   "match": true
+  },
+  {
+   "item": "E.both_logr.n_both",
+   "mine": 224,
+   "pilot": 224,
+   "match": true
+  },
+  {
+   "item": "E.both_logr.n_both_absD_le05",
+   "mine": 8,
+   "pilot": 8,
+   "match": true
+  },
+  {
+   "item": "C.n_ok",
+   "mine": 15376,
+   "pilot": 15376,
+   "match": true
+  },
+  {
+   "item": "C.err_improvement_ratio",
+   "mine": 2.301,
+   "pilot": 2.301,
+   "match": true
+  },
+  {
+   "item": "C.rho_raw_err.mean",
+   "mine": 0.0005,
+   "pilot": 0.0005,
+   "match": true
+  },
+  {
+   "item": "C.rho_raw_err.frac_ge075",
+   "mine": 0.3417,
+   "pilot": 0.3417,
+   "match": true
+  },
+  {
+   "item": "C.rho_raw_err.frac_le0",
+   "mine": 0.5047,
+   "pilot": 0.5047,
+   "match": true
+  },
+  {
+   "item": "C.rho_lr_err.mean",
+   "mine": 0.0001,
+   "pilot": 0.0001,
+   "match": true
+  },
+  {
+   "item": "C.rho_lr_err.frac_ge075",
+   "mine": 0.3662,
+   "pilot": 0.3662,
+   "match": true
+  },
+  {
+   "item": "C.rho_lr_err.frac_le0",
+   "mine": 0.5053,
+   "pilot": 0.5053,
+   "match": true
+  },
+  {
+   "item": "C.range_reduction.frac_lr_lt_raw",
+   "mine": 0.5823,
+   "pilot": 0.5823,
+   "match": true
+  },
+  {
+   "item": "C.range_reduction.median_range_raw",
+   "mine": 1.0432,
+   "pilot": 1.0432,
+   "match": true
+  },
+  {
+   "item": "C.range_reduction.median_range_lr",
+   "mine": 1.0108,
+   "pilot": 1.0108,
+   "match": true
+  },
+  {
+   "item": "C.overstatement.median_OS_raw",
+   "mine": 0.0,
+   "pilot": 0.0,
+   "match": true
+  },
+  {
+   "item": "C.overstatement.median_OS_lr",
+   "mine": 0.0,
+   "pilot": 0.0,
+   "match": true
+  },
+  {
+   "item": "C.overstatement.frac_absOS_raw_gt2",
+   "mine": 0.1839,
+   "pilot": 0.1839,
+   "match": true
+  },
+  {
+   "item": "C.overstatement.frac_absOS_lr_gt2",
+   "mine": 0.2159,
+   "pilot": 0.2159,
+   "match": true
+  },
+  {
+   "item": "C.overstatement.frac_OS_raw_lt0",
+   "mine": 0.4946,
+   "pilot": 0.4946,
+   "match": true
+  },
+  {
+   "item": "C.overstatement.frac_OS_lr_lt0",
+   "mine": 0.4972,
+   "pilot": 0.4972,
+   "match": true
+  },
+  {
+   "item": "C.overstatement.frac_absOS_shrinks",
+   "mine": 0.4731,
+   "pilot": 0.4731,
+   "match": true
+  },
+  {
+   "item": "C.demo.u_all_max.improvement_raw",
+   "mine": 5.21,
+   "pilot": 5.21,
+   "match": true
+  },
+  {
+   "item": "C.demo.u_all_max.logratio_span",
+   "mine": 0.987,
+   "pilot": 0.987,
+   "match": true
+  },
+  {
+   "item": "C.demo.u_d800_rms.improvement_raw",
+   "mine": 5.71,
+   "pilot": 5.71,
+   "match": true
+  },
+  {
+   "item": "C.demo.u_d800_rms.logratio_span",
+   "mine": 1.383,
+   "pilot": 1.383,
+   "match": true
+  },
+  {
+   "item": "SEEDS.zonal_survival",
+   "mine": 82,
+   "pilot": 82,
+   "match": true
+  }
+ ],
+ "zonal_sweep_reference": {
+  "note": "纬向 sweep 上 P7 类量的参考读数（已知数据，非预测）",
+  "tau_HV": 1.0,
+  "abs_tau_HV": 1.0,
+  "posctrl_err_verdict": "判死(与旋钮共线)",
+  "h_source": "skill_vs_zero",
+  "u_d800_rms_improvement": 5.71,
+  "u_d800_rms_lr_at_vmax": 4.341
+ }
+}

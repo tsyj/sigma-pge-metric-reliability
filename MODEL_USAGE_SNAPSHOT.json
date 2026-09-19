@@ -1,0 +1,358 @@
+{
+  "snapshot_at": "2026-09-18T13:59:09.047692+08:00",
+  "scope": "E70 已结束后的本地日志只读快照；状态行含重试及停止标记，不等于有效样本或计费调用。Claude 原账本随包；其他渠道原账本只留本地，汇总随包。",
+  "sources": [
+    {
+      "source": "results/claude.jsonl",
+      "sha256": "0f9ba20f57d9d30333dc0ba9a3856f5ea819b02e1278de8172a6307e498a8727",
+      "bytes": 1886980,
+      "rows": 872,
+      "models": [
+        {
+          "channel": "claude",
+          "requested_model": "claude-opus-5",
+          "actual_model": "claude-haiku-4-5-20251001",
+          "status_rows": {
+            "ok": 90,
+            "parse_fail": 1
+          }
+        },
+        {
+          "channel": "claude",
+          "requested_model": "claude-sonnet-5",
+          "actual_model": "claude-haiku-4-5-20251001",
+          "status_rows": {
+            "tool_use": 19,
+            "ok": 5
+          }
+        },
+        {
+          "channel": "claude",
+          "requested_model": "claude-sonnet-5",
+          "actual_model": null,
+          "status_rows": {
+            "gave_up": 85,
+            "channel_error": 325
+          }
+        },
+        {
+          "channel": "claude",
+          "requested_model": "claude-haiku-4-5-20251001",
+          "actual_model": "claude-haiku-4-5-20251001",
+          "status_rows": {
+            "tool_use": 144,
+            "ok": 36,
+            "parse_fail": 1
+          }
+        },
+        {
+          "channel": "claude",
+          "requested_model": "claude-haiku-4-5-20251001",
+          "actual_model": null,
+          "status_rows": {
+            "gave_up": 54,
+            "channel_error": 112
+          }
+        }
+      ]
+    },
+    {
+      "source": "results/codex.jsonl",
+      "sha256": "cf29484b7b6fd107b88b7253634f63a059802290dbfa10631ec1090216ca9775",
+      "bytes": 500356,
+      "rows": 180,
+      "models": [
+        {
+          "channel": "codex",
+          "requested_model": "gpt-5.6-sol",
+          "actual_model": null,
+          "status_rows": {
+            "ok": 90
+          }
+        },
+        {
+          "channel": "codex",
+          "requested_model": "gpt-6-astra",
+          "actual_model": null,
+          "status_rows": {
+            "ok": 90
+          }
+        }
+      ]
+    },
+    {
+      "source": "results/openai_compat_deepseek.jsonl",
+      "sha256": "b5e670901c7f545a9f14f992e75d72235714a484e4f6d0f086b0551cd12c4be9",
+      "bytes": 473744,
+      "rows": 195,
+      "models": [
+        {
+          "channel": "openai_compat/deepseek",
+          "requested_model": "deepseek-v4-pro",
+          "actual_model": "deepseek-v4-pro",
+          "status_rows": {
+            "ok": 90,
+            "parse_fail": 4
+          }
+        },
+        {
+          "channel": "openai_compat/deepseek",
+          "requested_model": "deepseek-v4-flash",
+          "actual_model": "deepseek-flash",
+          "status_rows": {
+            "ok": 90,
+            "parse_fail": 10
+          }
+        },
+        {
+          "channel": "openai_compat/deepseek",
+          "requested_model": "deepseek-v4-flash",
+          "actual_model": null,
+          "status_rows": {
+            "channel_error": 1
+          }
+        }
+      ]
+    },
+    {
+      "source": "results/openai_compat_siliconflow_A.jsonl",
+      "sha256": "5dbc07212ccae9b58f79b327ab90fc659e500c9d59261b172b686b8365b3e51e",
+      "bytes": 682729,
+      "rows": 235,
+      "models": [
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "deepseek-ai/DeepSeek-V4-Pro",
+          "actual_model": "deepseek-ai/DeepSeek-V4-Pro",
+          "status_rows": {
+            "ok": 89
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "zai-org/GLM-5.3",
+          "actual_model": "zai-org/GLM-5.3",
+          "status_rows": {
+            "ok": 90
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "zai-org/GLM-5.3",
+          "actual_model": null,
+          "status_rows": {
+            "channel_error": 16
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "deepseek-ai/DeepSeek-V4-Pro",
+          "actual_model": null,
+          "status_rows": {
+            "channel_error": 39,
+            "gave_up": 1
+          }
+        }
+      ]
+    },
+    {
+      "source": "results/openai_compat_siliconflow_A2.jsonl",
+      "sha256": "92349ba36a2552dee4affd3074d966d1ae645ebbdf189169dba7811732167e78",
+      "bytes": 329686,
+      "rows": 129,
+      "models": [
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "Pro/moonshotai/Kimi-K2.6",
+          "actual_model": "Pro/moonshotai/Kimi-K2.6",
+          "status_rows": {
+            "ok": 89
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "Pro/moonshotai/Kimi-K2.6",
+          "actual_model": null,
+          "status_rows": {
+            "channel_error": 39,
+            "gave_up": 1
+          }
+        }
+      ]
+    },
+    {
+      "source": "results/openai_compat_siliconflow_A3.jsonl",
+      "sha256": "8ae0c62e480d3431583c808762503080ff980d9ad3fa1b2ee4ccb2bf99afa11c",
+      "bytes": 237432,
+      "rows": 90,
+      "models": [
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "Qwen/Qwen3.5-122B-A10B",
+          "actual_model": "Qwen/Qwen3.5-122B-A10B",
+          "status_rows": {
+            "ok": 90
+          }
+        }
+      ]
+    },
+    {
+      "source": "results/openai_compat_siliconflow_B.jsonl",
+      "sha256": "823aa6c640aaf8333a72193902a2dae613be79e92cc44566cc49fa5b3195d5d8",
+      "bytes": 2196705,
+      "rows": 650,
+      "models": [
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "tencent/Hy4-preview",
+          "actual_model": null,
+          "status_rows": {
+            "channel_error": 128,
+            "gave_up": 31
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "meituan-longcat/LongCat-2.0",
+          "actual_model": "meituan-longcat/LongCat-2.0",
+          "status_rows": {
+            "ok": 90
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "stepfun-ai/Step-3.5-Flash",
+          "actual_model": "stepfun-ai/Step-3.5-Flash",
+          "status_rows": {
+            "ok": 90,
+            "parse_fail": 2
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "stepfun-ai/Step-3.5-Flash",
+          "actual_model": null,
+          "status_rows": {
+            "channel_error": 1
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "inclusionAI/Ling-flash-2.0",
+          "actual_model": "inclusionAI/Ling-flash-2.0",
+          "status_rows": {
+            "parse_fail": 126,
+            "ok": 72
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "inclusionAI/Ling-flash-2.0",
+          "actual_model": null,
+          "status_rows": {
+            "gave_up": 18
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "ByteDance-Seed/Seed-OSS-36B-Instruct",
+          "actual_model": "ByteDance-Seed/Seed-OSS-36B-Instruct",
+          "status_rows": {
+            "ok": 90
+          }
+        },
+        {
+          "channel": "openai_compat/siliconflow",
+          "requested_model": "tencent/Hy4-preview",
+          "actual_model": "tencent/Hy4-preview",
+          "status_rows": {
+            "ok": 2
+          }
+        }
+      ]
+    }
+  ],
+  "claude_evidence": {
+    "models": [
+      {
+        "requested_model": "claude-haiku-4-5-20251001",
+        "status_rows": {
+          "tool_use": 144,
+          "gave_up": 54,
+          "ok": 36,
+          "parse_fail": 1,
+          "channel_error": 112
+        },
+        "accepted_by_condition": {
+          "C0_named": 18,
+          "C1_anon": 18,
+          "C2_swapped": 0
+        },
+        "actual_model_fields": [
+          "claude-haiku-4-5-20251001"
+        ],
+        "accepted_usage_keys": [
+          {
+            "keys": [
+              "claude-haiku-4-5-20251001"
+            ],
+            "rows": 36
+          }
+        ]
+      },
+      {
+        "requested_model": "claude-opus-5",
+        "status_rows": {
+          "ok": 90,
+          "parse_fail": 1
+        },
+        "accepted_by_condition": {
+          "C0_named": 30,
+          "C1_anon": 30,
+          "C2_swapped": 30
+        },
+        "actual_model_fields": [
+          "claude-haiku-4-5-20251001"
+        ],
+        "accepted_usage_keys": [
+          {
+            "keys": [
+              "claude-haiku-4-5-20251001",
+              "claude-opus-5"
+            ],
+            "rows": 90
+          }
+        ]
+      },
+      {
+        "requested_model": "claude-sonnet-5",
+        "status_rows": {
+          "tool_use": 19,
+          "ok": 5,
+          "gave_up": 85,
+          "channel_error": 325
+        },
+        "accepted_by_condition": {
+          "C0_named": 5,
+          "C1_anon": 0,
+          "C2_swapped": 0
+        },
+        "actual_model_fields": [
+          "claude-haiku-4-5-20251001"
+        ],
+        "accepted_usage_keys": [
+          {
+            "keys": [
+              "claude-haiku-4-5-20251001",
+              "claude-sonnet-5"
+            ],
+            "rows": 5
+          }
+        ]
+      }
+    ],
+    "summary_counts_match": true,
+    "identity_caveat": "源 run_claude.py:58-66 将 sorted(modelUsage.keys())[0] 写为 actual_model；多键时无法从该字段唯一确定最终回答模型。Opus/Sonnet 的成功行同时包含对应请求名与 Haiku 用量键；不是改名或替换证据。",
+    "extractor_source_sha256": "996a161edd66c3c25fb3210b4d209e3c20f64c4deb50d5b081b748259754ce26"
+  }
+}

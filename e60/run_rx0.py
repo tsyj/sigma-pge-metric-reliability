@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E60: 陡度轴上的抗刷率稳定性。造例逻辑沿用 env2.py step()（含 VISC2 回显自检），只换网格/初值。"""
 import os, re, time, json, shutil, subprocess

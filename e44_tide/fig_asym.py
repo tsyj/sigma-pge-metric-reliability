@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """图: 两关的不对称——排得准的程度换强迫方向就崩，抗糊弄的程度换地形陡度不崩"""
 import sys, json

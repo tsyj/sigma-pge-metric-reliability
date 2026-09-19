@@ -1,0 +1,93 @@
+{
+ "module": "shortcut_theorem",
+ "script": "e73e_verdict.py",
+ "script_sha": "e45dc7141f2e6a3f68fdc66795b700b7eeb677428b43d2342765e59c8ee4f408",
+ "prereg_sha": "238377f14ca258aeeee5238a19b27e2e7f33e2ae63ba2f38c7a360270f7bc607",
+ "date": "2026-09-17T15:34:38+0800",
+ "axes_source": "multienv_metrology/final/E71_FINAL_AXES.npz",
+ "axes_sha256": "4711080967c5fe6001f2af3b08cf5269237fa20f16fcccef821ac7b26aadf898",
+ "n_45": 22,
+ "n_common": 15376,
+ "low_n": false,
+ "k5_degenerate": false,
+ "anchors": {
+  "rho_AB": true,
+  "rho_DA": true,
+  "rho_DB": true,
+  "n_S_A": true,
+  "escapees": true,
+  "gate45_band": true
+ },
+ "gate45_band_checkable": true,
+ "pipeline_suspect": false,
+ "script_integrity": {
+  "table_rows": 5,
+  "e73e_self": true,
+  "e73d_in_map": true,
+  "e73b_on_disk": true,
+  "e73t_in_tail": true,
+  "tail_prereg_sha": true
+ },
+ "script_mismatch": false,
+ "predictions": {
+  "P1": {
+   "stat": 0.9579,
+   "threshold": ">=0.80",
+   "passed": true
+  },
+  "P2": {
+   "stat": 0.9747,
+   "threshold": ">=0.90",
+   "n_conf": 13913,
+   "passed": true
+  },
+  "P3a": {
+   "stat": 0.00011807577710615133,
+   "threshold": "p<0.05",
+   "n_surv45_in_S_A": 140,
+   "n_dead_in_S_A": 64,
+   "passed": true
+  },
+  "P3b": {
+   "stat": 0.1737390526602835,
+   "threshold": "p<0.05",
+   "n_triple": 80,
+   "passed": false
+  },
+  "P4": {
+   "stat": 1.0,
+   "threshold": "P1>0 且 mean_ratio>=0.9",
+   "passed": true
+  },
+  "P5": {
+   "stat": 0.0754,
+   "threshold": "<=0.5",
+   "passed": true
+  },
+  "P6": {
+   "stat": 1,
+   "threshold": "<=4",
+   "n_escapees": 12,
+   "passed": true
+  }
+ },
+ "counted_pass": "6/7",
+ "sensitivity_flips": {
+  "P1": false
+ },
+ "aux_tail": {
+  "H1": {
+   "rho": 0.1615,
+   "p": 0.0002,
+   "direction_confirmed": true
+  },
+  "H2": {
+   "p": null,
+   "direction_confirmed": false
+  },
+  "n_used": 15376,
+  "n_excluded_lt16": 0,
+  "counted": false,
+  "note": "盘上数据附验，不计入真预测（PREREG §6）"
+ }
+}

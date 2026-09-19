@@ -1,0 +1,166 @@
+{
+ "script": "e73b_insample.py",
+ "date": "2026-09-17",
+ "n_candidates": 15376,
+ "heldout_untouched": [
+  "runs_diag45",
+  "e60",
+  "e56",
+  "e44"
+ ],
+ "c_zonal": {
+  "n": 58,
+  "c_argsort": 0.9507828601310406,
+  "c_avgrank": 0.9512600387704236
+ },
+ "c_merid": {
+  "n": 22,
+  "c_argsort": 0.9920948616600791,
+  "c_avgrank": 0.9943214082907441
+ },
+ "anchors": {
+  "rho_AB_argsort": -0.6742,
+  "rho_AB_avgrank": -0.7322,
+  "rho_DA_argsort": 0.9762,
+  "rho_DB_argsort": -0.661,
+  "n_S_A": 204
+ },
+ "partial_trio": {
+  "raw_avgrank": -0.7322,
+  "partial_given_D": -0.198,
+  "partial_given_absD": -0.7321,
+  "rho_APz_B_argsort": -0.4778,
+  "merid_raw_argsort": -0.6362,
+  "merid_partial_given_D": 0.1792,
+  "note": "三联同框：控 signed-D 掉七成、控 |D| 纹丝不动——一致性检查而非中介证明（观察性+共线）。"
+ },
+ "identity_delta_argsort": {
+  "c": 0.9508,
+  "q": [
+   0.0401,
+   0.1111,
+   0.1254,
+   0.1562,
+   0.1789
+  ],
+  "frac_within_0p1": 0.8621
+ },
+ "identity_delta_avgrank": {
+  "c": 0.9513,
+  "q": [
+   0.0398,
+   0.1108,
+   0.1254,
+   0.1566,
+   0.1789
+  ],
+  "frac_within_0p1": 0.8624
+ },
+ "escapees": {
+  "n": 12,
+  "all_ratio_type": true,
+  "D_mean": 0.9086,
+  "names": [
+   [
+    "u|all|rms",
+    "v|all|mean_abs"
+   ],
+   [
+    "u|d1500|p95",
+    "u|d1500|max"
+   ],
+   [
+    "u|d1500|p95",
+    "v|d1500|max"
+   ],
+   [
+    "u|d1500|p95",
+    "v|d1500|rms"
+   ],
+   [
+    "u|d1500|p95",
+    "w|d1500|rms"
+   ],
+   [
+    "u|s200|rms",
+    "v|s200|rms"
+   ],
+   [
+    "u|s50|mean_abs",
+    "v|s50|p95"
+   ],
+   [
+    "u|s50|rms",
+    "v|s50|mean_abs"
+   ],
+   [
+    "u|s50|rms",
+    "v|s50|p95"
+   ],
+   [
+    "u|s50|rms",
+    "v|s50|rms"
+   ],
+   [
+    "v|d1500|p95",
+    "v|d1500|max"
+   ],
+   [
+    "w|d200|mean_abs",
+    "w|d400|mean_abs"
+   ]
+  ],
+  "A_m": [
+   -0.168,
+   0.88,
+   0.863,
+   0.854,
+   0.914,
+   -0.957,
+   0.284,
+   -0.224,
+   0.185,
+   -0.945,
+   0.832,
+   0.674
+  ],
+  "B_m": [
+   0.893,
+   1.0,
+   0.071,
+   0.036,
+   0.393,
+   0.893,
+   0.821,
+   0.107,
+   0.821,
+   0.893,
+   1.0,
+   1.0
+  ],
+  "merid_strict_survive": 0,
+  "merid_standard_survive": 2
+ },
+ "merid_rehearsal": {
+  "c_used": 0.9921,
+  "P1_rankcorr_argsort": 0.9102,
+  "P1_rankcorr_avgrank": 0.9102,
+  "P2_sign_hit_confident": {
+   "n": 13913,
+   "hit": 0.9449
+  },
+  "P2_sign_hit_all": 0.9218,
+  "P3_residual_MW": {
+   "n_surv": 88,
+   "within_S_A_p": 1.6536089985233907e-05,
+   "vs_all_rest_p": 1.4230077492502596e-08,
+   "med_surv": 0.05,
+   "med_S_A_dead": 0.1021,
+   "med_rest": 0.1198
+  },
+  "P4_k5": {
+   "median_ratio": 1.0,
+   "sign_stable_frac": 1.0
+  }
+ }
+}

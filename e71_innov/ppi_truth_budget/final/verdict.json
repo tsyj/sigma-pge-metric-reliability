@@ -1,0 +1,135 @@
+{
+ "prereg_seal": "80e93dc96a0ffbf749d5c1ecc3e069f0b492638bdc7a47874e6c178ee9cc00a2  PREREG_ppi_truth_budget.md",
+ "verdicts": {
+  "P1": "FALSE",
+  "P2": "TRUE",
+  "P4": "TRUE",
+  "P5": "FALSE",
+  "P6": "TRUE",
+  "P7": "FALSE"
+ },
+ "counted_predictions": [
+  "P1",
+  "P2",
+  "P4",
+  "P5",
+  "P6",
+  "P7"
+ ],
+ "n_true": 3,
+ "n_false": 3,
+ "n_ambiguous": 0,
+ "verification_assertions_not_counted": {
+  "V1_n_pop": {
+   "expect": 58,
+   "got": 58,
+   "ok": true
+  },
+  "V2_spur_key": {
+   "expect": "u|all|rms",
+   "got": "u|all|rms",
+   "ok": true
+  },
+  "V3_grade_spotcheck": {
+   "pass": true
+  },
+  "V4_e59_rows": {
+   "expect": 15376,
+   "got": 15376,
+   "ok": true
+  },
+  "V5_selftest": {
+   "ok": true
+  },
+  "V6_multipliers": {
+   "this_protocol": {
+    "terrain": 2.048317844278895,
+    "visc": 4.407077737202322,
+    "short": 1.9380643321654167
+   },
+   "short_pairing": "matched",
+   "initial_round_fig_llm": {
+    "terrain": 224.0,
+    "visc": 62.0,
+    "short": 28.0
+   },
+   "note": "两口径不同，只并列不互替，不设容差门"
+  },
+  "V6b_init62": {
+   "arith_ratio": 62.00142959256612,
+   "rounds_to_62": true,
+   "matches": [
+    {
+     "ref50": "e2_04ac56d390ce",
+     "visc30000": "e2_9e957e1b688e",
+     "src": "obs",
+     "key": "deep_rms_800",
+     "ref_value": 8.673704147338867,
+     "brushed_value": 0.13991740345954895
+    }
+   ],
+   "n_ref50": 1,
+   "n_visc30000": 1
+  },
+  "V7_path_sets": {
+   "expect": {
+    "n_pop": 58,
+    "B_T": 32,
+    "B_V": 3,
+    "B_S_ledger": 6,
+    "B_S_with_his": 5,
+    "B_S_matched": 4,
+    "B_V_in_U": 3
+   },
+   "got": {
+    "n_pop": 58,
+    "B_T": 32,
+    "B_V": 3,
+    "B_S_ledger": 6,
+    "B_S_with_his": 5,
+    "B_S_matched": 4,
+    "B_V_in_U": 3
+   },
+   "ok": true,
+   "n_terrain_collected": 32,
+   "n_visc_collected": 3
+  },
+  "V8_old_P3": {
+   "statement": "saving(D,16) >= saving(umax,16)",
+   "value": true,
+   "saving_D_16": 3.1855504030791417,
+   "saving_umax_16": 2.6314005188602323,
+   "Atr_lookup": {
+    "Atr[u|all|rms]": {
+     "index": 3844,
+     "value": 0.9507828601310406
+    },
+    "Atr[u|all|max]": {
+     "index": 3472,
+     "value": 0.9478913531637394
+    },
+    "rebuilt_A_matches_Atr": true,
+    "n_rebuilt_zonal": 15376,
+    "n_Atr": 15376
+   },
+   "descr": {
+    "descr_minus_spearman_fD_skill": 0.9508443815558768,
+    "descr_minus_spearman_obs_umax_skill": 0.9477683103140668,
+    "descr_spearman_fD_Y": 0.9821587867975023,
+    "descr_spearman_obs_umax_Y": 0.9483835245624288
+   },
+   "counted": false
+  }
+ },
+ "thresholds": {
+  "COV_MEAN_MIN": 0.86,
+  "P90_MAE_RATIO_MAX": 1.0,
+  "P90_N": 16,
+  "NEFF_D_MIN": 2.0,
+  "NEFF_N": 16,
+  "NAIVE_COV_MAX": 0.5,
+  "PPI_MIX_COV_MIN": 0.85,
+  "MIN_POP": 40,
+  "MIN_BRUSHED": 3
+ }
+}

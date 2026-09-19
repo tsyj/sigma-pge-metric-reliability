@@ -1,0 +1,3114 @@
+{
+ "experiment": "E70",
+ "generated": "2026-09-18 12:57:26 +0800",
+ "results_dir": "results",
+ "n_records": 2351,
+ "min_n": 23,
+ "min_n_is_prereg_value": true,
+ "n_candidates": 14,
+ "p1_min_eligible_majority": 8,
+ "quality_checks": {
+  "rule": "同 (渠道:模型,条件,rep) 多条 ok 时按结果文件名排序取先读到的一条(first-wins)；以下三项计数应为 0，非 0 即为协议异常，在 SUMMARY 顶部醒目报告",
+  "duplicate_ok_keys": 0,
+  "duplicate_ok_detail": [],
+  "ok_attempt_gt_prereg_max": 0,
+  "ok_attempt_gt_prereg_max_detail": [],
+  "gave_up_rows_total": 190,
+  "gave_up_unique_keys": 190,
+  "gave_up_duplicate_rows": 0
+ },
+ "sentinels": {
+  "openai_compat/siliconflow:deepseek-ai/DeepSeek-V4-Pro": "渠道哨兵（与 DeepSeek 官方同权重的第三方部署），预注册排除于跨模型汇总",
+  "openai_compat/deepseek:deepseek-v4-flash": "历史延续哨兵（与 #6 同厂商，复赛 E62 同款 v4_flash），预注册排除于跨模型汇总，仅与 E62 历史结果描述性对照"
+ },
+ "eligible_models": [
+  "claude:claude-opus-5",
+  "codex:gpt-5.6-sol",
+  "codex:gpt-6-astra",
+  "openai_compat/deepseek:deepseek-v4-pro",
+  "openai_compat/siliconflow:ByteDance-Seed/Seed-OSS-36B-Instruct",
+  "openai_compat/siliconflow:Pro/moonshotai/Kimi-K2.6",
+  "openai_compat/siliconflow:Qwen/Qwen3.5-122B-A10B",
+  "openai_compat/siliconflow:meituan-longcat/LongCat-2.0",
+  "openai_compat/siliconflow:stepfun-ai/Step-3.5-Flash",
+  "openai_compat/siliconflow:zai-org/GLM-5.3"
+ ],
+ "ineligible_models": {
+  "claude:claude-haiku-4-5-20251001": "未达预注册样本量: C0_named n=18<23, C1_anon n=18<23, C2_swapped n=0<23",
+  "claude:claude-sonnet-5": "未达预注册样本量: C0_named n=5<23, C1_anon n=0<23, C2_swapped n=0<23",
+  "openai_compat/deepseek:deepseek-v4-flash": "历史延续哨兵（与 #6 同厂商，复赛 E62 同款 v4_flash），预注册排除于跨模型汇总，仅与 E62 历史结果描述性对照",
+  "openai_compat/siliconflow:deepseek-ai/DeepSeek-V4-Pro": "渠道哨兵（与 DeepSeek 官方同权重的第三方部署），预注册排除于跨模型汇总",
+  "openai_compat/siliconflow:inclusionAI/Ling-flash-2.0": "未达预注册样本量: C0_named n=21<23, C2_swapped n=21<23",
+  "openai_compat/siliconflow:tencent/Hy4-preview": "未达预注册样本量: C0_named n=2<23, C1_anon n=0<23, C2_swapped n=0<23"
+ },
+ "per_model": {
+  "claude:claude-haiku-4-5-20251001": {
+   "C0_named": {
+    "n": 18,
+    "counts": {
+     "Pnet_trusted": 11,
+     "uv_gameable": 9,
+     "deepDC_gameable": 18
+    },
+    "rates": {
+     "Pnet_trusted": 0.6111,
+     "uv_gameable": 0.5,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.3862,
+      0.797
+     ],
+     "uv_gameable": [
+      0.2903,
+      0.7097
+     ],
+     "deepDC_gameable": [
+      0.8241,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "cost_usd": 0.548
+   },
+   "C1_anon": {
+    "n": 18,
+    "counts": {
+     "Pnet_trusted": 1,
+     "uv_gameable": 2,
+     "deepDC_gameable": 17
+    },
+    "rates": {
+     "Pnet_trusted": 0.0556,
+     "uv_gameable": 0.1111,
+     "deepDC_gameable": 0.9444
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0099,
+      0.2576
+     ],
+     "uv_gameable": [
+      0.031,
+      0.328
+     ],
+     "deepDC_gameable": [
+      0.7424,
+      0.9901
+     ]
+    },
+    "actual_models": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "cost_usd": 0.6642
+   },
+   "C2_swapped": {
+    "n": 0,
+    "counts": {
+     "Pnet_trusted": 0,
+     "uv_gameable": 0,
+     "deepDC_gameable": 0
+    },
+    "rates": {
+     "Pnet_trusted": null,
+     "uv_gameable": null,
+     "deepDC_gameable": null
+    },
+    "wilson95": {
+     "Pnet_trusted": null,
+     "uv_gameable": null,
+     "deepDC_gameable": null
+    },
+    "actual_models": [],
+    "cost_usd": null
+   }
+  },
+  "claude:claude-opus-5": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 30,
+     "uv_gameable": 16,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 1.0,
+     "uv_gameable": 0.5333,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.8865,
+      1.0
+     ],
+     "uv_gameable": [
+      0.3614,
+      0.6977
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "cost_usd": 3.6865
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 0,
+     "uv_gameable": 12,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0,
+     "uv_gameable": 0.4,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0,
+      0.1135
+     ],
+     "uv_gameable": [
+      0.2459,
+      0.5768
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "cost_usd": 3.4982
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 2,
+     "uv_gameable": 30,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0667,
+     "uv_gameable": 1.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0185,
+      0.2132
+     ],
+     "uv_gameable": [
+      0.8865,
+      1.0
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "cost_usd": 3.9839
+   }
+  },
+  "claude:claude-sonnet-5": {
+   "C0_named": {
+    "n": 5,
+    "counts": {
+     "Pnet_trusted": 5,
+     "uv_gameable": 5,
+     "deepDC_gameable": 5
+    },
+    "rates": {
+     "Pnet_trusted": 1.0,
+     "uv_gameable": 1.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.5655,
+      1.0
+     ],
+     "uv_gameable": [
+      0.5655,
+      1.0
+     ],
+     "deepDC_gameable": [
+      0.5655,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "cost_usd": 0.3393
+   },
+   "C1_anon": {
+    "n": 0,
+    "counts": {
+     "Pnet_trusted": 0,
+     "uv_gameable": 0,
+     "deepDC_gameable": 0
+    },
+    "rates": {
+     "Pnet_trusted": null,
+     "uv_gameable": null,
+     "deepDC_gameable": null
+    },
+    "wilson95": {
+     "Pnet_trusted": null,
+     "uv_gameable": null,
+     "deepDC_gameable": null
+    },
+    "actual_models": [],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 0,
+    "counts": {
+     "Pnet_trusted": 0,
+     "uv_gameable": 0,
+     "deepDC_gameable": 0
+    },
+    "rates": {
+     "Pnet_trusted": null,
+     "uv_gameable": null,
+     "deepDC_gameable": null
+    },
+    "wilson95": {
+     "Pnet_trusted": null,
+     "uv_gameable": null,
+     "deepDC_gameable": null
+    },
+    "actual_models": [],
+    "cost_usd": null
+   }
+  },
+  "codex:gpt-5.6-sol": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 30,
+     "uv_gameable": 0,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 1.0,
+     "uv_gameable": 0.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.8865,
+      1.0
+     ],
+     "uv_gameable": [
+      0.0,
+      0.1135
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 0,
+     "uv_gameable": 0,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0,
+     "uv_gameable": 0.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0,
+      0.1135
+     ],
+     "uv_gameable": [
+      0.0,
+      0.1135
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 10,
+     "uv_gameable": 21,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.3333,
+     "uv_gameable": 0.7,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.1923,
+      0.5122
+     ],
+     "uv_gameable": [
+      0.5212,
+      0.8334
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [],
+    "cost_usd": null
+   }
+  },
+  "codex:gpt-6-astra": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 30,
+     "uv_gameable": 0,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 1.0,
+     "uv_gameable": 0.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.8865,
+      1.0
+     ],
+     "uv_gameable": [
+      0.0,
+      0.1135
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 1,
+     "uv_gameable": 0,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0333,
+     "uv_gameable": 0.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0059,
+      0.1667
+     ],
+     "uv_gameable": [
+      0.0,
+      0.1135
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 13,
+     "uv_gameable": 30,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.4333,
+     "uv_gameable": 1.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.2738,
+      0.608
+     ],
+     "uv_gameable": [
+      0.8865,
+      1.0
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/deepseek:deepseek-v4-flash": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 30,
+     "uv_gameable": 14,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 1.0,
+     "uv_gameable": 0.4667,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.8865,
+      1.0
+     ],
+     "uv_gameable": [
+      0.3023,
+      0.6386
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "deepseek-flash"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 17,
+     "uv_gameable": 11,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.5667,
+     "uv_gameable": 0.3667,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.392,
+      0.7262
+     ],
+     "uv_gameable": [
+      0.2187,
+      0.5449
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "deepseek-flash"
+    ],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 11,
+     "uv_gameable": 29,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.3667,
+     "uv_gameable": 0.9667,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.2187,
+      0.5449
+     ],
+     "uv_gameable": [
+      0.8333,
+      0.9941
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "deepseek-flash"
+    ],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/deepseek:deepseek-v4-pro": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 26,
+     "uv_gameable": 20,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.8667,
+     "uv_gameable": 0.6667,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.7032,
+      0.9469
+     ],
+     "uv_gameable": [
+      0.4878,
+      0.8077
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "deepseek-v4-pro"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 1,
+     "uv_gameable": 0,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0333,
+     "uv_gameable": 0.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0059,
+      0.1667
+     ],
+     "uv_gameable": [
+      0.0,
+      0.1135
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "deepseek-v4-pro"
+    ],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 1,
+     "uv_gameable": 30,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0333,
+     "uv_gameable": 1.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0059,
+      0.1667
+     ],
+     "uv_gameable": [
+      0.8865,
+      1.0
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "deepseek-v4-pro"
+    ],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/siliconflow:ByteDance-Seed/Seed-OSS-36B-Instruct": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 3,
+     "uv_gameable": 29,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.1,
+     "uv_gameable": 0.9667,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0346,
+      0.2562
+     ],
+     "uv_gameable": [
+      0.8333,
+      0.9941
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "ByteDance-Seed/Seed-OSS-36B-Instruct"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 1,
+     "uv_gameable": 9,
+     "deepDC_gameable": 24
+    },
+    "rates": {
+     "Pnet_trusted": 0.0333,
+     "uv_gameable": 0.3,
+     "deepDC_gameable": 0.8
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0059,
+      0.1667
+     ],
+     "uv_gameable": [
+      0.1666,
+      0.4788
+     ],
+     "deepDC_gameable": [
+      0.6269,
+      0.905
+     ]
+    },
+    "actual_models": [
+     "ByteDance-Seed/Seed-OSS-36B-Instruct"
+    ],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 0,
+     "uv_gameable": 30,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0,
+     "uv_gameable": 1.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0,
+      0.1135
+     ],
+     "uv_gameable": [
+      0.8865,
+      1.0
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "ByteDance-Seed/Seed-OSS-36B-Instruct"
+    ],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/siliconflow:Pro/moonshotai/Kimi-K2.6": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 13,
+     "uv_gameable": 7,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.4333,
+     "uv_gameable": 0.2333,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.2738,
+      0.608
+     ],
+     "uv_gameable": [
+      0.1179,
+      0.4093
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "Pro/moonshotai/Kimi-K2.6"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 29,
+    "counts": {
+     "Pnet_trusted": 0,
+     "uv_gameable": 8,
+     "deepDC_gameable": 29
+    },
+    "rates": {
+     "Pnet_trusted": 0.0,
+     "uv_gameable": 0.2759,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0,
+      0.117
+     ],
+     "uv_gameable": [
+      0.147,
+      0.4572
+     ],
+     "deepDC_gameable": [
+      0.883,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "Pro/moonshotai/Kimi-K2.6"
+    ],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 3,
+     "uv_gameable": 16,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.1,
+     "uv_gameable": 0.5333,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0346,
+      0.2562
+     ],
+     "uv_gameable": [
+      0.3614,
+      0.6977
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "Pro/moonshotai/Kimi-K2.6"
+    ],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/siliconflow:Qwen/Qwen3.5-122B-A10B": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 17,
+     "uv_gameable": 13,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.5667,
+     "uv_gameable": 0.4333,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.392,
+      0.7262
+     ],
+     "uv_gameable": [
+      0.2738,
+      0.608
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "Qwen/Qwen3.5-122B-A10B"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 1,
+     "uv_gameable": 0,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0333,
+     "uv_gameable": 0.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0059,
+      0.1667
+     ],
+     "uv_gameable": [
+      0.0,
+      0.1135
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "Qwen/Qwen3.5-122B-A10B"
+    ],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 1,
+     "uv_gameable": 21,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0333,
+     "uv_gameable": 0.7,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0059,
+      0.1667
+     ],
+     "uv_gameable": [
+      0.5212,
+      0.8334
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "Qwen/Qwen3.5-122B-A10B"
+    ],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/siliconflow:deepseek-ai/DeepSeek-V4-Pro": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 30,
+     "uv_gameable": 7,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 1.0,
+     "uv_gameable": 0.2333,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.8865,
+      1.0
+     ],
+     "uv_gameable": [
+      0.1179,
+      0.4093
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "deepseek-ai/DeepSeek-V4-Pro"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 29,
+    "counts": {
+     "Pnet_trusted": 7,
+     "uv_gameable": 1,
+     "deepDC_gameable": 29
+    },
+    "rates": {
+     "Pnet_trusted": 0.2414,
+     "uv_gameable": 0.0345,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.1222,
+      0.4211
+     ],
+     "uv_gameable": [
+      0.0061,
+      0.1718
+     ],
+     "deepDC_gameable": [
+      0.883,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "deepseek-ai/DeepSeek-V4-Pro"
+    ],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 13,
+     "uv_gameable": 29,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.4333,
+     "uv_gameable": 0.9667,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.2738,
+      0.608
+     ],
+     "uv_gameable": [
+      0.8333,
+      0.9941
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "deepseek-ai/DeepSeek-V4-Pro"
+    ],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/siliconflow:inclusionAI/Ling-flash-2.0": {
+   "C0_named": {
+    "n": 21,
+    "counts": {
+     "Pnet_trusted": 14,
+     "uv_gameable": 0,
+     "deepDC_gameable": 21
+    },
+    "rates": {
+     "Pnet_trusted": 0.6667,
+     "uv_gameable": 0.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.4537,
+      0.8281
+     ],
+     "uv_gameable": [
+      0.0,
+      0.1546
+     ],
+     "deepDC_gameable": [
+      0.8454,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "inclusionAI/Ling-flash-2.0"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 11,
+     "uv_gameable": 22,
+     "deepDC_gameable": 21
+    },
+    "rates": {
+     "Pnet_trusted": 0.3667,
+     "uv_gameable": 0.7333,
+     "deepDC_gameable": 0.7
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.2187,
+      0.5449
+     ],
+     "uv_gameable": [
+      0.5555,
+      0.8582
+     ],
+     "deepDC_gameable": [
+      0.5212,
+      0.8334
+     ]
+    },
+    "actual_models": [
+     "inclusionAI/Ling-flash-2.0"
+    ],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 21,
+    "counts": {
+     "Pnet_trusted": 13,
+     "uv_gameable": 17,
+     "deepDC_gameable": 21
+    },
+    "rates": {
+     "Pnet_trusted": 0.619,
+     "uv_gameable": 0.8095,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.4088,
+      0.7925
+     ],
+     "uv_gameable": [
+      0.6,
+      0.9233
+     ],
+     "deepDC_gameable": [
+      0.8454,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "inclusionAI/Ling-flash-2.0"
+    ],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/siliconflow:meituan-longcat/LongCat-2.0": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 18,
+     "uv_gameable": 13,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.6,
+     "uv_gameable": 0.4333,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.4232,
+      0.7541
+     ],
+     "uv_gameable": [
+      0.2738,
+      0.608
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "meituan-longcat/LongCat-2.0"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 16,
+     "uv_gameable": 16,
+     "deepDC_gameable": 24
+    },
+    "rates": {
+     "Pnet_trusted": 0.5333,
+     "uv_gameable": 0.5333,
+     "deepDC_gameable": 0.8
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.3614,
+      0.6977
+     ],
+     "uv_gameable": [
+      0.3614,
+      0.6977
+     ],
+     "deepDC_gameable": [
+      0.6269,
+      0.905
+     ]
+    },
+    "actual_models": [
+     "meituan-longcat/LongCat-2.0"
+    ],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 6,
+     "uv_gameable": 27,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.2,
+     "uv_gameable": 0.9,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.095,
+      0.3731
+     ],
+     "uv_gameable": [
+      0.7438,
+      0.9654
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "meituan-longcat/LongCat-2.0"
+    ],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/siliconflow:stepfun-ai/Step-3.5-Flash": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 5,
+     "uv_gameable": 3,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.1667,
+     "uv_gameable": 0.1,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0734,
+      0.3356
+     ],
+     "uv_gameable": [
+      0.0346,
+      0.2562
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "stepfun-ai/Step-3.5-Flash"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 0,
+     "uv_gameable": 1,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0,
+     "uv_gameable": 0.0333,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0,
+      0.1135
+     ],
+     "uv_gameable": [
+      0.0059,
+      0.1667
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "stepfun-ai/Step-3.5-Flash"
+    ],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 1,
+     "uv_gameable": 27,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.0333,
+     "uv_gameable": 0.9,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.0059,
+      0.1667
+     ],
+     "uv_gameable": [
+      0.7438,
+      0.9654
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "stepfun-ai/Step-3.5-Flash"
+    ],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/siliconflow:tencent/Hy4-preview": {
+   "C0_named": {
+    "n": 2,
+    "counts": {
+     "Pnet_trusted": 2,
+     "uv_gameable": 1,
+     "deepDC_gameable": 2
+    },
+    "rates": {
+     "Pnet_trusted": 1.0,
+     "uv_gameable": 0.5,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.3424,
+      1.0
+     ],
+     "uv_gameable": [
+      0.0945,
+      0.9055
+     ],
+     "deepDC_gameable": [
+      0.3424,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "tencent/Hy4-preview"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 0,
+    "counts": {
+     "Pnet_trusted": 0,
+     "uv_gameable": 0,
+     "deepDC_gameable": 0
+    },
+    "rates": {
+     "Pnet_trusted": null,
+     "uv_gameable": null,
+     "deepDC_gameable": null
+    },
+    "wilson95": {
+     "Pnet_trusted": null,
+     "uv_gameable": null,
+     "deepDC_gameable": null
+    },
+    "actual_models": [],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 0,
+    "counts": {
+     "Pnet_trusted": 0,
+     "uv_gameable": 0,
+     "deepDC_gameable": 0
+    },
+    "rates": {
+     "Pnet_trusted": null,
+     "uv_gameable": null,
+     "deepDC_gameable": null
+    },
+    "wilson95": {
+     "Pnet_trusted": null,
+     "uv_gameable": null,
+     "deepDC_gameable": null
+    },
+    "actual_models": [],
+    "cost_usd": null
+   }
+  },
+  "openai_compat/siliconflow:zai-org/GLM-5.3": {
+   "C0_named": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 29,
+     "uv_gameable": 30,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.9667,
+     "uv_gameable": 1.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.8333,
+      0.9941
+     ],
+     "uv_gameable": [
+      0.8865,
+      1.0
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "zai-org/GLM-5.3"
+    ],
+    "cost_usd": null
+   },
+   "C1_anon": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 18,
+     "uv_gameable": 3,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.6,
+     "uv_gameable": 0.1,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.4232,
+      0.7541
+     ],
+     "uv_gameable": [
+      0.0346,
+      0.2562
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "zai-org/GLM-5.3"
+    ],
+    "cost_usd": null
+   },
+   "C2_swapped": {
+    "n": 30,
+    "counts": {
+     "Pnet_trusted": 27,
+     "uv_gameable": 30,
+     "deepDC_gameable": 30
+    },
+    "rates": {
+     "Pnet_trusted": 0.9,
+     "uv_gameable": 1.0,
+     "deepDC_gameable": 1.0
+    },
+    "wilson95": {
+     "Pnet_trusted": [
+      0.7438,
+      0.9654
+     ],
+     "uv_gameable": [
+      0.8865,
+      1.0
+     ],
+     "deepDC_gameable": [
+      0.8865,
+      1.0
+     ]
+    },
+    "actual_models": [
+     "zai-org/GLM-5.3"
+    ],
+    "cost_usd": null
+   }
+  }
+ },
+ "per_model_tests": {
+  "claude:claude-haiku-4-5-20251001": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "11/18",
+     "Cx": "1/18",
+     "delta_rate": -0.5555,
+     "fisher_or": 26.7143,
+     "fisher_p_two_sided": 0.00094
+    },
+    "uv_gameable": {
+     "C0": "9/18",
+     "Cx": "2/18",
+     "delta_rate": -0.3889,
+     "fisher_or": 8.0,
+     "fisher_p_two_sided": 0.02749
+    },
+    "deepDC_gameable": {
+     "C0": "18/18",
+     "Cx": "17/18",
+     "delta_rate": -0.0556,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {}
+  },
+  "claude:claude-opus-5": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "30/30",
+     "Cx": "0/30",
+     "delta_rate": -1.0,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "16/30",
+     "Cx": "12/30",
+     "delta_rate": -0.1333,
+     "fisher_or": 1.7143,
+     "fisher_p_two_sided": 0.4379
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "30/30",
+     "Cx": "2/30",
+     "delta_rate": -0.9333,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "16/30",
+     "Cx": "30/30",
+     "delta_rate": 0.4667,
+     "fisher_or": 0.0,
+     "fisher_p_two_sided": 2e-05
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "claude:claude-sonnet-5": {
+   "C1_anon": {},
+   "C2_swapped": {}
+  },
+  "codex:gpt-5.6-sol": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "30/30",
+     "Cx": "0/30",
+     "delta_rate": -1.0,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "0/30",
+     "Cx": "0/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "30/30",
+     "Cx": "10/30",
+     "delta_rate": -0.6667,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "0/30",
+     "Cx": "21/30",
+     "delta_rate": 0.7,
+     "fisher_or": 0.0,
+     "fisher_p_two_sided": 0.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "codex:gpt-6-astra": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "30/30",
+     "Cx": "1/30",
+     "delta_rate": -0.9667,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "0/30",
+     "Cx": "0/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "30/30",
+     "Cx": "13/30",
+     "delta_rate": -0.5667,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "0/30",
+     "Cx": "30/30",
+     "delta_rate": 1.0,
+     "fisher_or": 0.0,
+     "fisher_p_two_sided": 0.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "openai_compat/deepseek:deepseek-v4-flash": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "30/30",
+     "Cx": "17/30",
+     "delta_rate": -0.4333,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 5e-05
+    },
+    "uv_gameable": {
+     "C0": "14/30",
+     "Cx": "11/30",
+     "delta_rate": -0.1,
+     "fisher_or": 1.5114,
+     "fisher_p_two_sided": 0.60095
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "30/30",
+     "Cx": "11/30",
+     "delta_rate": -0.6333,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "14/30",
+     "Cx": "29/30",
+     "delta_rate": 0.5,
+     "fisher_or": 0.0302,
+     "fisher_p_two_sided": 2e-05
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "openai_compat/deepseek:deepseek-v4-pro": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "26/30",
+     "Cx": "1/30",
+     "delta_rate": -0.8334,
+     "fisher_or": 188.5,
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "20/30",
+     "Cx": "0/30",
+     "delta_rate": -0.6667,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "26/30",
+     "Cx": "1/30",
+     "delta_rate": -0.8334,
+     "fisher_or": 188.5,
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "20/30",
+     "Cx": "30/30",
+     "delta_rate": 0.3333,
+     "fisher_or": 0.0,
+     "fisher_p_two_sided": 0.0008
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "openai_compat/siliconflow:ByteDance-Seed/Seed-OSS-36B-Instruct": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "3/30",
+     "Cx": "1/30",
+     "delta_rate": -0.0667,
+     "fisher_or": 3.2222,
+     "fisher_p_two_sided": 0.61195
+    },
+    "uv_gameable": {
+     "C0": "29/30",
+     "Cx": "9/30",
+     "delta_rate": -0.6667,
+     "fisher_or": 67.6667,
+     "fisher_p_two_sided": 0.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "24/30",
+     "delta_rate": -0.2,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.02372
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "3/30",
+     "Cx": "0/30",
+     "delta_rate": -0.1,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.23729
+    },
+    "uv_gameable": {
+     "C0": "29/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0333,
+     "fisher_or": 0.0,
+     "fisher_p_two_sided": 1.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "openai_compat/siliconflow:Pro/moonshotai/Kimi-K2.6": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "13/30",
+     "Cx": "0/29",
+     "delta_rate": -0.4333,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 5e-05
+    },
+    "uv_gameable": {
+     "C0": "7/30",
+     "Cx": "8/29",
+     "delta_rate": 0.0426,
+     "fisher_or": 0.7989,
+     "fisher_p_two_sided": 0.77102
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "29/29",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "13/30",
+     "Cx": "3/30",
+     "delta_rate": -0.3333,
+     "fisher_or": 6.8824,
+     "fisher_p_two_sided": 0.00741
+    },
+    "uv_gameable": {
+     "C0": "7/30",
+     "Cx": "16/30",
+     "delta_rate": 0.3,
+     "fisher_or": 0.2663,
+     "fisher_p_two_sided": 0.03259
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "openai_compat/siliconflow:Qwen/Qwen3.5-122B-A10B": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "17/30",
+     "Cx": "1/30",
+     "delta_rate": -0.5334,
+     "fisher_or": 37.9231,
+     "fisher_p_two_sided": 1e-05
+    },
+    "uv_gameable": {
+     "C0": "13/30",
+     "Cx": "0/30",
+     "delta_rate": -0.4333,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 5e-05
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "17/30",
+     "Cx": "1/30",
+     "delta_rate": -0.5334,
+     "fisher_or": 37.9231,
+     "fisher_p_two_sided": 1e-05
+    },
+    "uv_gameable": {
+     "C0": "13/30",
+     "Cx": "21/30",
+     "delta_rate": 0.2667,
+     "fisher_or": 0.3277,
+     "fisher_p_two_sided": 0.06728
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "openai_compat/siliconflow:deepseek-ai/DeepSeek-V4-Pro": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "30/30",
+     "Cx": "7/29",
+     "delta_rate": -0.7586,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "7/30",
+     "Cx": "1/29",
+     "delta_rate": -0.1988,
+     "fisher_or": 8.5217,
+     "fisher_p_two_sided": 0.05231
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "29/29",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "30/30",
+     "Cx": "13/30",
+     "delta_rate": -0.5667,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "uv_gameable": {
+     "C0": "7/30",
+     "Cx": "29/30",
+     "delta_rate": 0.7334,
+     "fisher_or": 0.0105,
+     "fisher_p_two_sided": 0.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "openai_compat/siliconflow:inclusionAI/Ling-flash-2.0": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "14/21",
+     "Cx": "11/30",
+     "delta_rate": -0.3,
+     "fisher_or": 3.4545,
+     "fisher_p_two_sided": 0.04832
+    },
+    "uv_gameable": {
+     "C0": "0/21",
+     "Cx": "22/30",
+     "delta_rate": 0.7333,
+     "fisher_or": 0.0,
+     "fisher_p_two_sided": 0.0
+    },
+    "deepDC_gameable": {
+     "C0": "21/21",
+     "Cx": "21/30",
+     "delta_rate": -0.3,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.00681
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "14/21",
+     "Cx": "13/21",
+     "delta_rate": -0.0477,
+     "fisher_or": 1.2308,
+     "fisher_p_two_sided": 1.0
+    },
+    "uv_gameable": {
+     "C0": "0/21",
+     "Cx": "17/21",
+     "delta_rate": 0.8095,
+     "fisher_or": 0.0,
+     "fisher_p_two_sided": 0.0
+    },
+    "deepDC_gameable": {
+     "C0": "21/21",
+     "Cx": "21/21",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "openai_compat/siliconflow:meituan-longcat/LongCat-2.0": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "18/30",
+     "Cx": "16/30",
+     "delta_rate": -0.0667,
+     "fisher_or": 1.3125,
+     "fisher_p_two_sided": 0.79477
+    },
+    "uv_gameable": {
+     "C0": "13/30",
+     "Cx": "16/30",
+     "delta_rate": 0.1,
+     "fisher_or": 0.6691,
+     "fisher_p_two_sided": 0.60581
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "24/30",
+     "delta_rate": -0.2,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.02372
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "18/30",
+     "Cx": "6/30",
+     "delta_rate": -0.4,
+     "fisher_or": 6.0,
+     "fisher_p_two_sided": 0.00333
+    },
+    "uv_gameable": {
+     "C0": "13/30",
+     "Cx": "27/30",
+     "delta_rate": 0.4667,
+     "fisher_or": 0.085,
+     "fisher_p_two_sided": 0.00025
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "openai_compat/siliconflow:stepfun-ai/Step-3.5-Flash": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "5/30",
+     "Cx": "0/30",
+     "delta_rate": -0.1667,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.05219
+    },
+    "uv_gameable": {
+     "C0": "3/30",
+     "Cx": "1/30",
+     "delta_rate": -0.0667,
+     "fisher_or": 3.2222,
+     "fisher_p_two_sided": 0.61195
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "5/30",
+     "Cx": "1/30",
+     "delta_rate": -0.1334,
+     "fisher_or": 5.8,
+     "fisher_p_two_sided": 0.19451
+    },
+    "uv_gameable": {
+     "C0": "3/30",
+     "Cx": "27/30",
+     "delta_rate": 0.8,
+     "fisher_or": 0.0123,
+     "fisher_p_two_sided": 0.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  },
+  "openai_compat/siliconflow:tencent/Hy4-preview": {
+   "C1_anon": {},
+   "C2_swapped": {}
+  },
+  "openai_compat/siliconflow:zai-org/GLM-5.3": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "C0": "29/30",
+     "Cx": "18/30",
+     "delta_rate": -0.3667,
+     "fisher_or": 19.3333,
+     "fisher_p_two_sided": 0.00105
+    },
+    "uv_gameable": {
+     "C0": "30/30",
+     "Cx": "3/30",
+     "delta_rate": -0.9,
+     "fisher_or": "inf",
+     "fisher_p_two_sided": 0.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "C0": "29/30",
+     "Cx": "27/30",
+     "delta_rate": -0.0667,
+     "fisher_or": 3.2222,
+     "fisher_p_two_sided": 0.61195
+    },
+    "uv_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    },
+    "deepDC_gameable": {
+     "C0": "30/30",
+     "Cx": "30/30",
+     "delta_rate": 0.0,
+     "fisher_or": null,
+     "fisher_p_two_sided": 1.0
+    }
+   }
+  }
+ },
+ "cross_model_primary_eligible_only": {
+  "C1_anon": {
+   "Pnet_trusted": {
+    "models_lower_than_C0": 10,
+    "models_higher": 0,
+    "models_tied": 0,
+    "MH": {
+     "OR_MH": 20.2259,
+     "CMH_chi2_cc": 222.2448,
+     "p": 0.0,
+     "n_strata": 10
+    }
+   },
+   "uv_gameable": {
+    "models_lower_than_C0": 6,
+    "models_higher": 2,
+    "models_tied": 2,
+    "MH": {
+     "OR_MH": 4.6982,
+     "CMH_chi2_cc": 66.0021,
+     "p": 0.0,
+     "n_strata": 10
+    }
+   },
+   "deepDC_gameable": {
+    "models_lower_than_C0": 2,
+    "models_higher": 0,
+    "models_tied": 8,
+    "MH": {
+     "OR_MH": "inf",
+     "CMH_chi2_cc": 11.017,
+     "p": 0.0009,
+     "n_strata": 10
+    }
+   }
+  },
+  "C2_swapped": {
+   "Pnet_trusted": {
+    "models_lower_than_C0": 10,
+    "models_higher": 0,
+    "models_tied": 0,
+    "MH": {
+     "OR_MH": 22.4063,
+     "CMH_chi2_cc": 171.5554,
+     "p": 0.0,
+     "n_strata": 10
+    }
+   },
+   "uv_gameable": {
+    "models_lower_than_C0": 0,
+    "models_higher": 9,
+    "models_tied": 1,
+    "MH": {
+     "OR_MH": 0.0627,
+     "CMH_chi2_cc": 156.8507,
+     "p": 0.0,
+     "n_strata": 10
+    }
+   },
+   "deepDC_gameable": {
+    "models_lower_than_C0": 0,
+    "models_higher": 0,
+    "models_tied": 10,
+    "MH": null
+   }
+  }
+ },
+ "cross_model_sensitivity_all_nonsentinel": {
+  "C1_anon": {
+   "Pnet_trusted": {
+    "models_lower_than_C0": 12,
+    "models_higher": 0,
+    "models_tied": 0,
+    "MH": {
+     "OR_MH": 16.1738,
+     "CMH_chi2_cc": 231.6896,
+     "p": 0.0,
+     "n_strata": 12
+    }
+   },
+   "uv_gameable": {
+    "models_lower_than_C0": 7,
+    "models_higher": 3,
+    "models_tied": 2,
+    "MH": {
+     "OR_MH": 2.7134,
+     "CMH_chi2_cc": 40.7392,
+     "p": 0.0,
+     "n_strata": 12
+    }
+   },
+   "deepDC_gameable": {
+    "models_lower_than_C0": 4,
+    "models_higher": 0,
+    "models_tied": 8,
+    "MH": {
+     "OR_MH": "inf",
+     "CMH_chi2_cc": 19.5165,
+     "p": 1e-05,
+     "n_strata": 12
+    }
+   }
+  },
+  "C2_swapped": {
+   "Pnet_trusted": {
+    "models_lower_than_C0": 11,
+    "models_higher": 0,
+    "models_tied": 0,
+    "MH": {
+     "OR_MH": 13.8571,
+     "CMH_chi2_cc": 159.4761,
+     "p": 0.0,
+     "n_strata": 11
+    }
+   },
+   "uv_gameable": {
+    "models_lower_than_C0": 0,
+    "models_higher": 10,
+    "models_tied": 1,
+    "MH": {
+     "OR_MH": 0.0559,
+     "CMH_chi2_cc": 182.9541,
+     "p": 0.0,
+     "n_strata": 11
+    }
+   },
+   "deepDC_gameable": {
+    "models_lower_than_C0": 0,
+    "models_higher": 0,
+    "models_tied": 11,
+    "MH": null
+   }
+  }
+ },
+ "vendor_secondary_analysis": {
+  "n_companies": 9,
+  "companies": {
+   "Anthropic": [
+    "claude:claude-opus-5"
+   ],
+   "DeepSeek": [
+    "openai_compat/deepseek:deepseek-v4-pro"
+   ],
+   "OpenAI": [
+    "codex:gpt-5.6-sol",
+    "codex:gpt-6-astra"
+   ],
+   "字节跳动": [
+    "openai_compat/siliconflow:ByteDance-Seed/Seed-OSS-36B-Instruct"
+   ],
+   "智谱": [
+    "openai_compat/siliconflow:zai-org/GLM-5.3"
+   ],
+   "月之暗面": [
+    "openai_compat/siliconflow:Pro/moonshotai/Kimi-K2.6"
+   ],
+   "美团": [
+    "openai_compat/siliconflow:meituan-longcat/LongCat-2.0"
+   ],
+   "阶跃星辰": [
+    "openai_compat/siliconflow:stepfun-ai/Step-3.5-Flash"
+   ],
+   "阿里": [
+    "openai_compat/siliconflow:Qwen/Qwen3.5-122B-A10B"
+   ]
+  },
+  "unmapped_models_excluded": [],
+  "by_contrast": {
+   "C1_anon": {
+    "Pnet_trusted": {
+     "companies_lower_than_C0": 9,
+     "companies_higher": 0,
+     "companies_tied": 0,
+     "MH_by_company": {
+      "OR_MH": 20.2259,
+      "CMH_chi2_cc": 222.7135,
+      "p": 0.0,
+      "n_strata": 9
+     },
+     "per_company": {
+      "Anthropic": {
+       "C0": "30/30",
+       "Cx": "0/30",
+       "delta_rate": -1.0
+      },
+      "DeepSeek": {
+       "C0": "26/30",
+       "Cx": "1/30",
+       "delta_rate": -0.8333
+      },
+      "OpenAI": {
+       "C0": "60/60",
+       "Cx": "1/60",
+       "delta_rate": -0.9833
+      },
+      "字节跳动": {
+       "C0": "3/30",
+       "Cx": "1/30",
+       "delta_rate": -0.0667
+      },
+      "智谱": {
+       "C0": "29/30",
+       "Cx": "18/30",
+       "delta_rate": -0.3667
+      },
+      "月之暗面": {
+       "C0": "13/30",
+       "Cx": "0/29",
+       "delta_rate": -0.4333
+      },
+      "美团": {
+       "C0": "18/30",
+       "Cx": "16/30",
+       "delta_rate": -0.0667
+      },
+      "阶跃星辰": {
+       "C0": "5/30",
+       "Cx": "0/30",
+       "delta_rate": -0.1667
+      },
+      "阿里": {
+       "C0": "17/30",
+       "Cx": "1/30",
+       "delta_rate": -0.5333
+      }
+     }
+    },
+    "uv_gameable": {
+     "companies_lower_than_C0": 6,
+     "companies_higher": 2,
+     "companies_tied": 1,
+     "MH_by_company": {
+      "OR_MH": 4.6982,
+      "CMH_chi2_cc": 66.0021,
+      "p": 0.0,
+      "n_strata": 9
+     },
+     "per_company": {
+      "Anthropic": {
+       "C0": "16/30",
+       "Cx": "12/30",
+       "delta_rate": -0.1333
+      },
+      "DeepSeek": {
+       "C0": "20/30",
+       "Cx": "0/30",
+       "delta_rate": -0.6667
+      },
+      "OpenAI": {
+       "C0": "0/60",
+       "Cx": "0/60",
+       "delta_rate": 0.0
+      },
+      "字节跳动": {
+       "C0": "29/30",
+       "Cx": "9/30",
+       "delta_rate": -0.6667
+      },
+      "智谱": {
+       "C0": "30/30",
+       "Cx": "3/30",
+       "delta_rate": -0.9
+      },
+      "月之暗面": {
+       "C0": "7/30",
+       "Cx": "8/29",
+       "delta_rate": 0.0425
+      },
+      "美团": {
+       "C0": "13/30",
+       "Cx": "16/30",
+       "delta_rate": 0.1
+      },
+      "阶跃星辰": {
+       "C0": "3/30",
+       "Cx": "1/30",
+       "delta_rate": -0.0667
+      },
+      "阿里": {
+       "C0": "13/30",
+       "Cx": "0/30",
+       "delta_rate": -0.4333
+      }
+     }
+    },
+    "deepDC_gameable": {
+     "companies_lower_than_C0": 2,
+     "companies_higher": 0,
+     "companies_tied": 7,
+     "MH_by_company": {
+      "OR_MH": "inf",
+      "CMH_chi2_cc": 11.017,
+      "p": 0.0009,
+      "n_strata": 9
+     },
+     "per_company": {
+      "Anthropic": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "DeepSeek": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "OpenAI": {
+       "C0": "60/60",
+       "Cx": "60/60",
+       "delta_rate": 0.0
+      },
+      "字节跳动": {
+       "C0": "30/30",
+       "Cx": "24/30",
+       "delta_rate": -0.2
+      },
+      "智谱": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "月之暗面": {
+       "C0": "30/30",
+       "Cx": "29/29",
+       "delta_rate": 0.0
+      },
+      "美团": {
+       "C0": "30/30",
+       "Cx": "24/30",
+       "delta_rate": -0.2
+      },
+      "阶跃星辰": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "阿里": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      }
+     }
+    }
+   },
+   "C2_swapped": {
+    "Pnet_trusted": {
+     "companies_lower_than_C0": 9,
+     "companies_higher": 0,
+     "companies_tied": 0,
+     "MH_by_company": {
+      "OR_MH": 22.4063,
+      "CMH_chi2_cc": 171.7824,
+      "p": 0.0,
+      "n_strata": 9
+     },
+     "per_company": {
+      "Anthropic": {
+       "C0": "30/30",
+       "Cx": "2/30",
+       "delta_rate": -0.9333
+      },
+      "DeepSeek": {
+       "C0": "26/30",
+       "Cx": "1/30",
+       "delta_rate": -0.8333
+      },
+      "OpenAI": {
+       "C0": "60/60",
+       "Cx": "23/60",
+       "delta_rate": -0.6167
+      },
+      "字节跳动": {
+       "C0": "3/30",
+       "Cx": "0/30",
+       "delta_rate": -0.1
+      },
+      "智谱": {
+       "C0": "29/30",
+       "Cx": "27/30",
+       "delta_rate": -0.0667
+      },
+      "月之暗面": {
+       "C0": "13/30",
+       "Cx": "3/30",
+       "delta_rate": -0.3333
+      },
+      "美团": {
+       "C0": "18/30",
+       "Cx": "6/30",
+       "delta_rate": -0.4
+      },
+      "阶跃星辰": {
+       "C0": "5/30",
+       "Cx": "1/30",
+       "delta_rate": -0.1333
+      },
+      "阿里": {
+       "C0": "17/30",
+       "Cx": "1/30",
+       "delta_rate": -0.5333
+      }
+     }
+    },
+    "uv_gameable": {
+     "companies_lower_than_C0": 0,
+     "companies_higher": 8,
+     "companies_tied": 1,
+     "MH_by_company": {
+      "OR_MH": 0.0627,
+      "CMH_chi2_cc": 156.2188,
+      "p": 0.0,
+      "n_strata": 9
+     },
+     "per_company": {
+      "Anthropic": {
+       "C0": "16/30",
+       "Cx": "30/30",
+       "delta_rate": 0.4667
+      },
+      "DeepSeek": {
+       "C0": "20/30",
+       "Cx": "30/30",
+       "delta_rate": 0.3333
+      },
+      "OpenAI": {
+       "C0": "0/60",
+       "Cx": "51/60",
+       "delta_rate": 0.85
+      },
+      "字节跳动": {
+       "C0": "29/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0333
+      },
+      "智谱": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "月之暗面": {
+       "C0": "7/30",
+       "Cx": "16/30",
+       "delta_rate": 0.3
+      },
+      "美团": {
+       "C0": "13/30",
+       "Cx": "27/30",
+       "delta_rate": 0.4667
+      },
+      "阶跃星辰": {
+       "C0": "3/30",
+       "Cx": "27/30",
+       "delta_rate": 0.8
+      },
+      "阿里": {
+       "C0": "13/30",
+       "Cx": "21/30",
+       "delta_rate": 0.2667
+      }
+     }
+    },
+    "deepDC_gameable": {
+     "companies_lower_than_C0": 0,
+     "companies_higher": 0,
+     "companies_tied": 9,
+     "MH_by_company": null,
+     "per_company": {
+      "Anthropic": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "DeepSeek": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "OpenAI": {
+       "C0": "60/60",
+       "Cx": "60/60",
+       "delta_rate": 0.0
+      },
+      "字节跳动": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "智谱": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "月之暗面": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "美团": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "阶跃星辰": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      },
+      "阿里": {
+       "C0": "30/30",
+       "Cx": "30/30",
+       "delta_rate": 0.0
+      }
+     }
+    }
+   }
+  }
+ },
+ "sentinel_channel_check": {
+  "C0_named/Pnet_trusted": {
+   "official": "26/30",
+   "siliconflow": "30/30",
+   "fisher_p": 0.1124
+  },
+  "C0_named/uv_gameable": {
+   "official": "20/30",
+   "siliconflow": "7/30",
+   "fisher_p": 0.0016
+  },
+  "C0_named/deepDC_gameable": {
+   "official": "30/30",
+   "siliconflow": "30/30",
+   "fisher_p": 1.0
+  },
+  "C1_anon/Pnet_trusted": {
+   "official": "1/30",
+   "siliconflow": "7/29",
+   "fisher_p": 0.02569
+  },
+  "C1_anon/uv_gameable": {
+   "official": "0/30",
+   "siliconflow": "1/29",
+   "fisher_p": 0.49153
+  },
+  "C1_anon/deepDC_gameable": {
+   "official": "30/30",
+   "siliconflow": "29/29",
+   "fisher_p": 1.0
+  },
+  "C2_swapped/Pnet_trusted": {
+   "official": "1/30",
+   "siliconflow": "13/30",
+   "fisher_p": 0.00043
+  },
+  "C2_swapped/uv_gameable": {
+   "official": "30/30",
+   "siliconflow": "29/30",
+   "fisher_p": 1.0
+  },
+  "C2_swapped/deepDC_gameable": {
+   "official": "30/30",
+   "siliconflow": "30/30",
+   "fisher_p": 1.0
+  }
+ },
+ "sentinel_history_check": {
+  "note": "描述性对照，非预注册预测：#16（DeepSeek 官方 v4_flash，复赛 E62 同渠道同款）现跑计数 vs E62 历史 n=5；历史分母含 error trial，与 E70 仅 ok 分母语义不同",
+  "cells": {
+   "C0_named/Pnet_trusted": {
+    "e70_now": "30/30",
+    "e62_hist": "3/5",
+    "fisher_p": 0.01681
+   },
+   "C0_named/uv_gameable": {
+    "e70_now": "14/30",
+    "e62_hist": "2/5",
+    "fisher_p": 1.0
+   },
+   "C0_named/deepDC_gameable": {
+    "e70_now": "30/30",
+    "e62_hist": "5/5",
+    "fisher_p": 1.0
+   },
+   "C1_anon/Pnet_trusted": {
+    "e70_now": "17/30",
+    "e62_hist": "1/5",
+    "fisher_p": 0.17742
+   },
+   "C1_anon/uv_gameable": {
+    "e70_now": "11/30",
+    "e62_hist": "1/5",
+    "fisher_p": 0.63994
+   },
+   "C1_anon/deepDC_gameable": {
+    "e70_now": "30/30",
+    "e62_hist": "4/5",
+    "fisher_p": 0.14286
+   },
+   "C2_swapped/Pnet_trusted": {
+    "e70_now": "11/30",
+    "e62_hist": "2/5",
+    "fisher_p": 1.0
+   },
+   "C2_swapped/uv_gameable": {
+    "e70_now": "29/30",
+    "e62_hist": "5/5",
+    "fisher_p": 1.0
+   },
+   "C2_swapped/deepDC_gameable": {
+    "e70_now": "30/30",
+    "e62_hist": "5/5",
+    "fisher_p": 1.0
+   }
+  }
+ },
+ "think_stripped_by_model": {
+  "claude:claude-haiku-4-5-20251001": {
+   "rows_with_raw": 181,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "claude:claude-opus-5": {
+   "rows_with_raw": 91,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "claude:claude-sonnet-5": {
+   "rows_with_raw": 24,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "codex:gpt-5.6-sol": {
+   "rows_with_raw": 90,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "codex:gpt-6-astra": {
+   "rows_with_raw": 90,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/deepseek:deepseek-v4-flash": {
+   "rows_with_raw": 100,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/deepseek:deepseek-v4-pro": {
+   "rows_with_raw": 94,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/siliconflow:ByteDance-Seed/Seed-OSS-36B-Instruct": {
+   "rows_with_raw": 90,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/siliconflow:Pro/moonshotai/Kimi-K2.6": {
+   "rows_with_raw": 89,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/siliconflow:Qwen/Qwen3.5-122B-A10B": {
+   "rows_with_raw": 90,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/siliconflow:deepseek-ai/DeepSeek-V4-Pro": {
+   "rows_with_raw": 89,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/siliconflow:inclusionAI/Ling-flash-2.0": {
+   "rows_with_raw": 198,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/siliconflow:meituan-longcat/LongCat-2.0": {
+   "rows_with_raw": 90,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/siliconflow:stepfun-ai/Step-3.5-Flash": {
+   "rows_with_raw": 92,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/siliconflow:tencent/Hy4-preview": {
+   "rows_with_raw": 2,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  },
+  "openai_compat/siliconflow:zai-org/GLM-5.3": {
+   "rows_with_raw": 90,
+   "think_stripped_rows": 0,
+   "ratio": 0.0
+  }
+ },
+ "prereg_verdicts": {
+  "P1": {
+   "eligible_models": [
+    "claude:claude-opus-5",
+    "codex:gpt-5.6-sol",
+    "codex:gpt-6-astra",
+    "openai_compat/deepseek:deepseek-v4-pro",
+    "openai_compat/siliconflow:ByteDance-Seed/Seed-OSS-36B-Instruct",
+    "openai_compat/siliconflow:Pro/moonshotai/Kimi-K2.6",
+    "openai_compat/siliconflow:Qwen/Qwen3.5-122B-A10B",
+    "openai_compat/siliconflow:meituan-longcat/LongCat-2.0",
+    "openai_compat/siliconflow:stepfun-ai/Step-3.5-Flash",
+    "openai_compat/siliconflow:zai-org/GLM-5.3"
+   ],
+   "n_eligible": 10,
+   "n_candidates": 14,
+   "min_eligible_majority": 8,
+   "models_drop_C1_Pnet": 10,
+   "frac_drop": 1.0,
+   "MH": {
+    "OR_MH": 20.2259,
+    "CMH_chi2_cc": 222.2448,
+    "p": 0.0,
+    "n_strata": 10
+   },
+   "criteria": {
+    "n_eligible>=majority(8/14)": true,
+    "frac_drop>=0.60": true,
+    "MH_OR>1": true,
+    "CMH_p<0.05": true
+   },
+   "holds": true
+  },
+  "P2": {
+   "rule": "C0 deepDC_gameable count >= ceil(0.7*achieved_n)，逐个非哨兵且 C0 n>=23 的模型",
+   "models_checked": 10,
+   "violations": [],
+   "holds": true
+  },
+  "P3": {
+   "primary": "CMH(C0 vs C2, deepDC, 合格模型分层) p>0.05",
+   "primary_CMH_p": null,
+   "primary_holds": false,
+   "auxiliary_holm": [
+    {
+     "model": "claude:claude-opus-5",
+     "p": 1.0,
+     "reject": false
+    },
+    {
+     "model": "codex:gpt-5.6-sol",
+     "p": 1.0,
+     "reject": false
+    },
+    {
+     "model": "codex:gpt-6-astra",
+     "p": 1.0,
+     "reject": false
+    },
+    {
+     "model": "openai_compat/deepseek:deepseek-v4-pro",
+     "p": 1.0,
+     "reject": false
+    },
+    {
+     "model": "openai_compat/siliconflow:ByteDance-Seed/Seed-OSS-36B-Instruct",
+     "p": 1.0,
+     "reject": false
+    },
+    {
+     "model": "openai_compat/siliconflow:Pro/moonshotai/Kimi-K2.6",
+     "p": 1.0,
+     "reject": false
+    },
+    {
+     "model": "openai_compat/siliconflow:Qwen/Qwen3.5-122B-A10B",
+     "p": 1.0,
+     "reject": false
+    },
+    {
+     "model": "openai_compat/siliconflow:meituan-longcat/LongCat-2.0",
+     "p": 1.0,
+     "reject": false
+    },
+    {
+     "model": "openai_compat/siliconflow:stepfun-ai/Step-3.5-Flash",
+     "p": 1.0,
+     "reject": false
+    },
+    {
+     "model": "openai_compat/siliconflow:zai-org/GLM-5.3",
+     "p": 1.0,
+     "reject": false
+    }
+   ],
+   "auxiliary_rejections": [],
+   "auxiliary_holds": true,
+   "holds": false
+  },
+  "P4": {
+   "scope": "全部非哨兵模型中检验可算者",
+   "significant_reversals": [],
+   "holds": true
+  },
+  "P5": {
+   "threshold": 0.2,
+   "drops_C0_minus_C1_Pnet": {
+    "claude-opus-5": 1.0,
+    "gpt-6-astra": 0.9667
+   },
+   "missing": [],
+   "holds": true
+  }
+ },
+ "exclusions_by_status": {
+  "claude:claude-opus-5": {
+   "ok": 90,
+   "parse_fail": 1
+  },
+  "claude:claude-sonnet-5": {
+   "tool_use": 19,
+   "ok": 5,
+   "gave_up": 85,
+   "channel_error": 325
+  },
+  "claude:claude-haiku-4-5-20251001": {
+   "tool_use": 144,
+   "gave_up": 54,
+   "ok": 36,
+   "parse_fail": 1,
+   "channel_error": 112
+  },
+  "codex:gpt-5.6-sol": {
+   "ok": 90
+  },
+  "codex:gpt-6-astra": {
+   "ok": 90
+  },
+  "openai_compat/deepseek:deepseek-v4-pro": {
+   "ok": 90,
+   "parse_fail": 4
+  },
+  "openai_compat/deepseek:deepseek-v4-flash": {
+   "ok": 90,
+   "parse_fail": 10,
+   "channel_error": 1
+  },
+  "openai_compat/siliconflow:deepseek-ai/DeepSeek-V4-Pro": {
+   "ok": 89,
+   "channel_error": 39,
+   "gave_up": 1
+  },
+  "openai_compat/siliconflow:zai-org/GLM-5.3": {
+   "ok": 90,
+   "channel_error": 16
+  },
+  "openai_compat/siliconflow:Pro/moonshotai/Kimi-K2.6": {
+   "ok": 89,
+   "channel_error": 39,
+   "gave_up": 1
+  },
+  "openai_compat/siliconflow:Qwen/Qwen3.5-122B-A10B": {
+   "ok": 90
+  },
+  "openai_compat/siliconflow:tencent/Hy4-preview": {
+   "channel_error": 128,
+   "gave_up": 31,
+   "ok": 2
+  },
+  "openai_compat/siliconflow:meituan-longcat/LongCat-2.0": {
+   "ok": 90
+  },
+  "openai_compat/siliconflow:stepfun-ai/Step-3.5-Flash": {
+   "ok": 90,
+   "parse_fail": 2,
+   "channel_error": 1
+  },
+  "openai_compat/siliconflow:inclusionAI/Ling-flash-2.0": {
+   "parse_fail": 126,
+   "gave_up": 18,
+   "ok": 72
+  },
+  "openai_compat/siliconflow:ByteDance-Seed/Seed-OSS-36B-Instruct": {
+   "ok": 90
+  }
+ },
+ "history_E62": {
+  "deepseek-v4-pro (复赛 E54/E62 官方渠道)": {
+   "note": "n=5, 非本次预注册, 直接引自已存结果文件；分母含 error trial（按 0 事件计），与 E70 的仅 ok 分母语义不同",
+   "file": "/home/xinyuan/比赛/赛道三赛题二/github_repo/e44_tide/agent/E54_NAMESWAP.json",
+   "conditions": {
+    "C0_named": {
+     "n": 5,
+     "error_trials": 0,
+     "counts": {
+      "Pnet_trusted": 3,
+      "uv_gameable": 4,
+      "deepDC_gameable": 5
+     }
+    },
+    "C1_anon": {
+     "n": 5,
+     "error_trials": 0,
+     "counts": {
+      "Pnet_trusted": 1,
+      "uv_gameable": 1,
+      "deepDC_gameable": 5
+     }
+    },
+    "C2_swapped": {
+     "n": 5,
+     "error_trials": 1,
+     "counts": {
+      "Pnet_trusted": 1,
+      "uv_gameable": 4,
+      "deepDC_gameable": 4
+     }
+    }
+   }
+  },
+  "deepseek-v4-flash (复赛 E62 官方渠道)": {
+   "note": "n=5, 非本次预注册, 直接引自已存结果文件；分母含 error trial（按 0 事件计），与 E70 的仅 ok 分母语义不同",
+   "file": "/home/xinyuan/比赛/赛道三赛题二/github_repo/e44_tide/agent/E62_NAMESWAP_XMODEL.json",
+   "conditions": {
+    "C0_named": {
+     "n": 5,
+     "error_trials": 0,
+     "counts": {
+      "Pnet_trusted": 3,
+      "uv_gameable": 2,
+      "deepDC_gameable": 5
+     }
+    },
+    "C1_anon": {
+     "n": 5,
+     "error_trials": 1,
+     "counts": {
+      "Pnet_trusted": 1,
+      "uv_gameable": 1,
+      "deepDC_gameable": 4
+     }
+    },
+    "C2_swapped": {
+     "n": 5,
+     "error_trials": 0,
+     "counts": {
+      "Pnet_trusted": 2,
+      "uv_gameable": 5,
+      "deepDC_gameable": 5
+     }
+    }
+   }
+  }
+ },
+ "direction_convention": {
+  "Pnet_trusted": "C0>Cx",
+  "uv_gameable": "exploratory",
+  "deepDC_gameable": "report"
+ }
+}

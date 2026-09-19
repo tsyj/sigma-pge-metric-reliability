@@ -1,0 +1,11 @@
+{
+ "env": "merid",
+ "n_steep": 22,
+ "n_flat": 28,
+ "n_pairs": 28,
+ "n_keys": 124,
+ "ledger": "ledger/env2_merid_runs.jsonl",
+ "reg_from": "hidden",
+ "built": "2026-09-17 10:08:11",
+ "elapsed_s": 1.5
+}

@@ -1,0 +1,154 @@
+{
+ "note": "negctrl_surrogate 机械判分：只读 E72_VALID.json，阈值冻结于 PREREG §5 与本脚本 TH；真预测 6 条（P1–P4、P6、P7），原 P5 降级为 V4 见 descriptive_P5_demo",
+ "prereg_sha": "c64f1390037f9dce4a0be13a4b0179ed26d9919285a1e9897e4b445f3695a611",
+ "valid_sha": "0763fbddaa68591b6b0e3fa1da852c3e6cd9faf65befbbacc215b6d11d2fbdfd",
+ "runtime_valid_py_sha": "5b0919b7f594d3a17126e0718d1060c12ac931266c84e7b6a23f9d07301a57e6",
+ "runtime_verdict_py_sha": "7c482d7e2cc69056f6e1d823584d2552e75e5d5194db7ecab212a0af4df0ff12",
+ "deviations_present": false,
+ "thresholds": {
+  "P1_rho_min": 0.5,
+  "P1_point": [
+   0.8,
+   0.95
+  ],
+  "P2_surv_min": 0.3,
+  "P2_enrich_min": 5.0,
+  "P3_rho_min": -0.45,
+  "P4_maxA_max": 0.7,
+  "P5_impr_min": 3.0,
+  "P5_lr_min": 3.0,
+  "P6_frac_max": 0.55,
+  "P7_abstau_min": 0.85,
+  "MIN_PAIRS": 20,
+  "MIN_SWEEP": 5
+ },
+ "predictions": {
+  "P1": {
+   "verdict": "TRUE",
+   "per_domain": {
+    "merid": {
+     "status": "PASS",
+     "rho_D_A_logr": 0.8012,
+     "perm_p": 0.0004997501249375312,
+     "in_point_range": true,
+     "secondary_diff": 0.7372,
+     "secondary_scipy": 0.8012
+    },
+    "diag45": {
+     "status": "PASS",
+     "rho_D_A_logr": 0.8711,
+     "perm_p": 0.0004997501249375312,
+     "in_point_range": true,
+     "secondary_diff": 0.8545,
+     "secondary_scipy": 0.8711
+    }
+   }
+  },
+  "P2": {
+   "verdict": "TRUE",
+   "per_domain": {
+    "merid": {
+     "status": "PASS",
+     "surv_rate": 0.9024,
+     "n_survive": 74,
+     "enrichment": 6.164,
+     "base_frac": 0.146397,
+     "n_absent": 0
+    },
+    "diag45": {
+     "status": "PASS",
+     "surv_rate": 0.439,
+     "n_survive": 36,
+     "enrichment": 8.699,
+     "base_frac": 0.050468,
+     "n_absent": 0
+    }
+   }
+  },
+  "P3": {
+   "verdict": "TRUE",
+   "per_domain": {
+    "merid": {
+     "status": "PASS",
+     "rho_Adiff_B": -0.3533,
+     "raw_contrast": -0.6127,
+     "secondary_scipy": -0.3119
+    },
+    "diag45": {
+     "status": "PASS",
+     "rho_Adiff_B": -0.3697,
+     "raw_contrast": -0.6168,
+     "secondary_scipy": -0.3634
+    }
+   }
+  },
+  "P4": {
+   "verdict": "FALSE",
+   "per_domain": {
+    "merid": {
+     "status": "FAIL",
+     "maxA_absD_le03": 0.7247,
+     "n_absD_le03": 3179
+    },
+    "diag45": {
+     "status": "PASS",
+     "maxA_absD_le03": 0.6612,
+     "n_absD_le03": 3552
+    }
+   }
+  },
+  "P6": {
+   "verdict": "FALSE",
+   "per_domain": {
+    "merid": {
+     "status": "FAIL",
+     "frac_absOS_shrinks": 0.5643,
+     "n_ok": 15376
+    },
+    "diag45": {
+     "status": "PASS",
+     "frac_absOS_shrinks": 0.453,
+     "n_ok": 15376
+    }
+   }
+  },
+  "P7": {
+   "verdict": "TRUE",
+   "per_domain": {
+    "merid": {
+     "status": "PASS",
+     "abs_tau_HV": 1.0,
+     "posctrl_descriptive": "判死(与旋钮共线)",
+     "h_source": "skill_vs_zero"
+    },
+    "diag45": {
+     "status": "PASS",
+     "abs_tau_HV": 1.0,
+     "posctrl_descriptive": "判死(与旋钮共线)",
+     "h_source": "skill_vs_zero"
+    }
+   }
+  }
+ },
+ "descriptive_P5_demo": {
+  "note": "验证性断言 V4（PREREG §1.4）：原 P5 门槛照印，不计入任何计数",
+  "would_be": "TRUE",
+  "per_domain": {
+   "merid": {
+    "status": "PASS",
+    "improvement_raw": 5.66,
+    "lr_at_vmax": 6.877
+   },
+   "diag45": {
+    "status": "PASS",
+    "improvement_raw": 5.71,
+    "lr_at_vmax": 4.757
+   }
+  }
+ },
+ "n_true": 4,
+ "n_false": 2,
+ "n_ambiguous": 0,
+ "n_predictions": 6,
+ "generated": "2026-09-17T14:57:21+0800"
+}

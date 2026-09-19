@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E58: (1) 判定三值化——对 rho 与抗刷率做 bootstrap/二项 CI, 区间跨阈值的标 U(未判定)
        (2) SNR 门——给 |rho| 判据加一条最粗信噪比门, 看深水温度"伪冠军"是否被淘汰"""

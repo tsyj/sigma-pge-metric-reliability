@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import json
 E='/data/xinyuan/GOAI_ai4s_env/e44/'; F='/home/xinyuan/比赛/赛道三赛题二/复赛/'

@@ -1,0 +1,153 @@
+{
+ "entry": "audit_battery_meta/posthoc_ties",
+ "when": "2026-09-17T17:18:38+0800",
+ "preregistered": false,
+ "affects_verdict": false,
+ "code_sha": "69c5acccaea4ec40d1971f23231416982fba1d628505a469da732e99f6ecb527",
+ "prereg_sha": "7b641565f778ba909f6cff4583d8b7a8be896e59561e15b07a54fc3ce79679d9",
+ "question": "变异电池的差分杀死是否依赖 argsort 并列破法（主口径）",
+ "main": {
+  "classes": {
+   "unit_scale": [
+    0,
+    5
+   ],
+   "mono_norm": [
+    0,
+    5
+   ],
+   "sign_flip": [
+    5,
+    0
+   ],
+   "wrong_region": [
+    5,
+    0
+   ],
+   "wrong_layer": [
+    2,
+    3
+   ],
+   "irrelevant_num": [
+    3,
+    0
+   ],
+   "clip_cheat": [
+    5,
+    0
+   ],
+   "boxwidth_dep": [
+    0,
+    4
+   ]
+  },
+  "rate": 0.5405405405405406
+ },
+ "avgrank": {
+  "classes": {
+   "unit_scale": [
+    0,
+    5
+   ],
+   "mono_norm": [
+    0,
+    5
+   ],
+   "sign_flip": [
+    5,
+    0
+   ],
+   "wrong_region": [
+    5,
+    0
+   ],
+   "wrong_layer": [
+    2,
+    3
+   ],
+   "irrelevant_num": [
+    3,
+    0
+   ],
+   "clip_cheat": [
+    5,
+    0
+   ],
+   "boxwidth_dep": [
+    0,
+    4
+   ]
+  },
+  "rate": 0.5405405405405406,
+  "wilson95": [
+   0.38384046777409486,
+   0.6896143029949754
+  ],
+  "base_verdicts": {
+   "b1": {
+    "A1": "死",
+    "A2": "未",
+    "A3p": "过",
+    "A4p": "边",
+    "A6": "边",
+    "A8": "过",
+    "A9p": "死"
+   },
+   "b2": {
+    "A1": "死",
+    "A2": "未",
+    "A3p": "过",
+    "A4p": "死",
+    "A6": "边",
+    "A8": "过",
+    "A9p": "死"
+   },
+   "b3": {
+    "A1": "死",
+    "A2": "未",
+    "A3p": "过",
+    "A4p": "过",
+    "A6": "边",
+    "A8": "过",
+    "A9p": "边"
+   },
+   "b4": {
+    "A1": "过",
+    "A2": "未",
+    "A3p": "过",
+    "A4p": "死",
+    "A6": "死",
+    "A8": "过",
+    "A9p": "过"
+   },
+   "b5": {
+    "A1": "过",
+    "A2": "未",
+    "A3p": "边",
+    "A4p": "死",
+    "A6": "边",
+    "A8": "过",
+    "A9p": "过"
+   }
+  }
+ },
+ "changed": [
+  {
+   "id": "M7_b2",
+   "main": [
+    "KILLED",
+    [
+     "A6"
+    ]
+   ],
+   "avgrank": [
+    "KILLED",
+    [
+     "A3p",
+     "A6"
+    ]
+   ]
+  }
+ ],
+ "n_changed": 1
+}

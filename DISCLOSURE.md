@@ -1,51 +1,43 @@
-# 依赖、授权与商业服务披露
+# 依赖、授权与实验模型披露
 
-按《赛道三参赛手册》08 节、官网 FAQ Q20 六项、复赛规则页通用披露要求逐项填写。
+## 交付范围与数据边界
 
-## 一、FAQ Q20 六项
+本版交付本项目的数值试验分析账本、判定 JSON、预注册校验件、离线送检代码与缓存。原始模式输出、求解器源码和二进制不随本版交付。代码用 MIT（`LICENSE`），自产分析数据用 CC BY 4.0（`LICENSE-DATA`）；第三方组件继续适用其自身许可。
 
-**1. 开源/开放范围**　本仓库全部内容开源：两个探索环境（风驱 `scripts/env2.py`、内潮 `e44_tide/`）、第三/四强迫变体（`e52/` 经向风、`e55/` 45°）、BH93 静止态检验（`e56/`）、九项审计算子（A1–A9）脚本、穷举器、Agent harness 与全部轨迹、判读与绘图脚本、参照系交付件（`baselines/`）、全部分析结果 JSON。
-**不开放**：ROMS/MITgcm 的原始 `.nc` 输出（约 4 GB，见第五节）；已投出但未见刊的论文正文（本仓库只引用其数字并给出所在文件）。
+外部报告与论文的审查结果可在决赛展示；展示结果不授予原始数据及文稿的再分发权。这些原始材料不进入公开仓库，也不归入本项目的数据许可。自产数据的授权仅覆盖本项目持有的权利。
 
-**2. 开源协议**　本仓库自有代码采用 **MIT License**（见 `LICENSE`）。第三方组件各依其原协议，见第 3 项。
+## 第三方组件与许可核对
 
-**3. 第三方依赖**
+| 组件 | 实验用途 | 本地证据与交付边界 |
+|---|---|---|
+| ROMS / COAWST 中的 ROMS 组件 | σ 坐标求解器 | 核对本地 `build/src/ROMS/License_ROMS.txt`，原文副本见 `docs/licenses/License_ROMS.txt`；其版本行是 revision 1054（2021-03-06）。ROMS/TOMS Group 2002–2021 版权，许可为 MIT/X。不能由此推断整个耦合系统的所有组件采用同一许可。 |
+| MITgcm | z 坐标参照解 | 构建入口 `build_mitgcm/build.sh`；求解器不在本版中再分发，使用时应核对所取版本的许可。参照解来自另一套代码，不是只改变一个坐标参数的对照。 |
+| Python 数值依赖 | 缓存查表、分析、绘图 | 安装依赖见 `pyproject.toml`，原始实验还使用 netCDF4 等库；依赖各依其自身许可。 |
 
-| 组件 | 用途 | 版本 | 协议/获取 |
-|---|---|---|---|
-| ROMS / COAWST | σ 坐标求解器（被审对象） | ROMS 3.9，本地编译，二进制 sha256 见 `e44_tide/audit/` 与各 `INPUTS_MD5.txt` | ROMS 为学术许可，需在 myroms.org 注册后获取源码；**本仓库不含其源码与二进制** |
-| MITgcm | z 坐标独立真值 | checkpoint 见 `build_mitgcm/`，`mitgcmuv` 由源码重建 | MIT 许可，公开获取 |
-| Python | 分析与绘图 | 3.9；numpy、netCDF4、matplotlib、scipy、python-docx、python-pptx、openai(SDK)、faster-whisper | 各自 BSD/MIT/Apache 类协议 |
-| gfortran / OpenMPI / netCDF | 构建工具链 | gfortran 11.4.0、netCDF 4.8.1/4.9.2 | GPL/BSD |
+ROMS 原文写明：`This Software is open-source and licensed under the following conditions as stated by MIT/X License`。其授权包含使用、复制、修改、合并、发布、分发、再许可及销售，要求保留版权和许可声明，并按原样提供。原文另将用户论坛参与和可用技术支持限于注册用户；不能把注册条件写成学术用途限定。上述文字仅描述本地许可原文，不作版本范围之外的许可推定。
 
-**4. 商业 API 调用情况**　见第二节（手册 08 节五项）。
-**5. 闭源模型使用情况**　DeepSeek `deepseek-v4-pro` 与 `deepseek-v4-flash`（均为 reasoning 模型），用于三个 Agent 实验：陷阱局（目标导向）、中性措辞局、判据局/换名局。**不用于生成本报告正文、不用于生成任何被审计的数值结果**——所有数值由固定代码算出，语言模型只负责"挑下一步试什么"与"当评审给判断"。
-**6. 数据来源与授权边界**　全部数据由本项目自产（ROMS/MITgcm 数值试验），无第三方数据集，无个人信息，无授权限制。地形、初值、强迫的生成脚本随包。
+## 实验角色表
 
-## 二、商业 API / 闭源模型五项（手册 08 节）
+本表仅列实验调用。运行与数值判分由脚本执行；模型的回答属于被测数据，模型给出的判断不替代固定数值判据。
 
-| 项 | 内容 |
-|---|---|
-| **调用环节** | 五处：① 陷阱局 6 轮 × 2 局（目标导向 + 中性措辞）；② 判据局 1 次；③ 换名局 3 条件 × 5 次 = 15 次（`deepseek-v4-pro`）；④ E61 Agent 挑尺子 8 局（`deepseek-v4-pro`，单次 reasoning_tokens 约 1.3 万）；⑤ E62 换名局跨模型复核（`deepseek-v4-flash`，同题面同 n=5）。轨迹全文见 `e44_tide/agent/*.jsonl`、`e61/trajectory_e61.jsonl`。总调用约 56 次（含重试）。 |
-| **费用假设** | DeepSeek 按量计费；本项目全部 LLM 支出以账户余额变化计：复赛新增实验（E61 + E62）实测消耗 **¥2.55**（余额 90.55 → 88.00，2026-09-03 实测）；连同初赛的陷阱局/判据局/换名局，全部 LLM 支出为人民币十元级。**费用不构成复现门槛**：全部结果均可在不调用 LLM 的情况下由 `scripts/reproduce_core.sh` 从已交付 JSON 重算。 |
-| **权限范围** | 仅 chat completions，无文件上传、无工具调用授权、无数据留存要求；API Key 通过环境变量注入，不入库（`scripts/smoke_test.sh` 含 secret 扫描）。 |
-| **可替代方案与迁移成本** | harness 走 OpenAI 兼容接口（`e44_tide/agent_tide.py::_client`），改 `LLM_BASE_URL` + `LLM_MODEL` 两个环境变量即可切换到任意兼容服务或本地开源 reasoning 模型（如 Qwen/DeepSeek-R1 系列自部署）。迁移成本 = 一次环境变量修改；**不需要改动任何判据、审计或分析代码**。 |
-| **对可复现性的影响** | reasoning 模型输出**不可逐位复现**（无 seed 可控、供应商侧版本可变）。因此：(a) 全部轨迹原样存档，报告中每个 Agent 数字都指向具体 JSONL；(b) 所有**结论性数值**（判据、审计、kill board、交集）均不依赖 LLM，可零 LLM 重算；(c) 换名局报 5 次独立调用的计数而非单次结果。 |
+| 角色 | 实际模型与渠道 | 用途与证据 |
+|---|---|---|
+| 实验执行者（提出下一动作或指标）／被试 | DeepSeek 官方 API：`deepseek-v4-pro`、`deepseek-v4-flash` | 初赛与复赛动作选择、指标提议和挑指标；随包 `ledger/agent_*.json`、`e44_tide/agent/*.jsonl`、`e61/trajectory_e61.jsonl`。 |
+| 审查者／被试 | DeepSeek 官方 API：`deepseek-v4-pro`、`deepseek-v4-flash` | 换名题面的可信性与可刷分性判断；`e44_tide/agent/E54_NAMESWAP.json`、`E62_NAMESWAP_XMODEL.json`。 |
+| 审查者／被试（E70） | DeepSeek 官方 API：请求 `deepseek-v4-pro`、`deepseek-v4-flash`；后者成功应答身份为 `deepseek-flash` | 本机日志只读快照中有成功应答，身份原样保留，见 `MODEL_USAGE_SNAPSHOT.json`。 |
+| 审查者／被试（E70） | OpenAI 订阅渠道、实验 CLI：请求 `gpt-5.6-sol`、`gpt-6-astra` | 本机日志有成功记录；`actual_model` 为空，故只披露请求名，不称应答身份已经核实。 |
+| 审查者／被试（E70） | 硅基流动 API：`deepseek-ai/DeepSeek-V4-Pro`、`Qwen/Qwen3.5-122B-A10B`、`zai-org/GLM-5.3`、`Pro/moonshotai/Kimi-K2.6` | 各模型均在只读快照中有成功记录。 |
+| 审查者／被试（E70） | 硅基流动 API：`meituan-longcat/LongCat-2.0`、`stepfun-ai/Step-3.5-Flash`、`inclusionAI/Ling-flash-2.0`、`ByteDance-Seed/Seed-OSS-36B-Instruct` | 各模型均在只读快照中有成功记录；格式解析失败另记，不能算入有效样本。 |
+| 审查者／被试（E70，样本不足） | 硅基流动 API：`tencent/Hy4-preview` | 结束快照中 C0 有 2 条成功记录，C1/C2 为 0，未进入合格主分析集。 |
 
-## 三、采样参数与随机性
+**Claude 渠道已有结果**：Anthropic 实验 CLI 请求 `claude-opus-5`、`claude-sonnet-5`、`claude-haiku-4-5-20251001`，原账本与两份汇总见 [E70 证据说明](e70/README.md)。按请求名分别有 90、5、36 条 ok；Sonnet/Haiku 样本量不足。`actual_model` 来自排序后的首个用量模型键，Opus/Sonnet 的成功行同时有对应请求名与 Haiku 键，因此应答身份仍存在字段歧义，不能把请求名直接当作已核实的最终回答模型。源文件按原字节保留，本轮未重新调用模型。
 
-- LLM：`response_format={"type":"json_object"}`，`max_tokens` 8000–16000（reasoning 模型单次推理可达 1.3 万 token，E61 实测后上调至 16000），`timeout` 300–600 s，最多 4 次重试；**temperature/top_p 未显式设置，使用服务端默认**（此为已知复现性缺口，如实声明）。
-- 数值试验：ROMS 无随机数参与；风驱环境动作空间含 `seed` 旋钮（用于回归测试），本轮全部算例 `seed=0`。
-- 随机基线：Python `random.Random(seed)`，种子 0/1/2 写死在 `e44_tide/analysis/E45_RANDOM_BASELINE.json`。
-- 统计检验：置换检验为**精确枚举**（n≤8 全排列），无抽样随机性。
+## 调用统计、费用与复现限制
 
-## 四、已有项目的使用与本次贡献范围（复赛规则页要求）
+`MODEL_USAGE_SNAPSHOT.json` 从 E70 已结束日志只读提取请求名、身份字段、状态行数及原文件哈希；该元数据文件不含题面、应答原文或凭据。Claude 原账本另随本版交付，并与原汇总逐条件对齐；其他渠道原账本仍只在本地。状态行数含重试与停止标记，不等于有效样本数或计费调用次数。现有材料不足以机算完整 E70 费用，本版不报费用总数。
 
-- **原项目来源**：ROMS/COAWST 与 MITgcm 均为社区开源模式；本作品的 σ-PGE 研究背景来自作者本人在投论文（未见刊，本仓库只引其数字）。
-- **本次贡献范围**：不修改 ROMS/MITgcm 的数值算法；新增的是**环境层与审计层**——(K,V,H,A) 四元组接口、十档参照系、A1–A9 审计算子、穷举器、Agent harness、判读与一键复现管线。
-- **新增创新点**：把评测方法学的扰动审计搬进有独立数值真值的物理环境，并给出跨强迫方向的不可迁移反例。
-- **协议兼容性**：本仓库自有代码 MIT，与 ROMS 学术许可、MITgcm MIT 许可均不冲突；**本仓库不再分发 ROMS 源码或二进制**，使用者需自行按 README 获取并编译。
+DeepSeek 历史实验的详细轨迹以随包账本为准，不继续沿用约数作为完整调用总量。所有模型凭据均不交付。模型输出受服务端版本与采样影响，不能保证逐字复现；离线入口只回读已交付结果，不再调用模型。缓存数值复算也不等于重新运行物理求解器。
 
-## 五、数据获取与体积
+## 预注册与复核边界
 
-原始 `.nc` 输出约 4 GB，未随包。仓库内交付的是**分析级产物**（全部 JSON、审计 md5 清单、Agent 轨迹、图），`scripts/reproduce_core.sh` 可仅凭这些重算全部主结论与主图。完整重跑需按 `README_semifinal.md` 重建 ROMS/MITgcm 并按 `e44_tide/mk_case.py`、`e52/`、`e55/`、`e56/run_bh93.py` 复跑，机时估计见报告第三问。
+本地哈希证明所列字节与登记一致，不能单独证明历史先后顺序。E65/E67b 在运行后向预注册文件追加过内容，校验范围为封存段及全文前缀，见各自核验说明。后续提交日期不能追认历史封存时间。本轮不添加独立外部审查者身份，也不把同一执行链的检查称作外部复核。

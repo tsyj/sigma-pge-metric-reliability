@@ -1,0 +1,509 @@
+{
+ "entry": "audit_battery_meta/module3",
+ "when": "2026-09-17T17:16:14+0800",
+ "selftest": false,
+ "code_sha": "2464864d5f6d137fbe519f08c2af1502f355929f02e0f57f012d0d30054c4217",
+ "yaml_sha": "d3b9b309fe4730bd7456e2f27d0cb972c190525dd51fe245f74718c2d25e5b1d",
+ "killboard_sha": "668769740ccc8ba8699f8557267fc3a021f8e2c53d70178b1f75132bbd747d92",
+ "prereg_sha": "7b641565f778ba909f6cff4583d8b7a8be896e59561e15b07a54fc3ce79679d9",
+ "n_dead_killboard": 13,
+ "n_dead_declared": 13,
+ "dead_set_match": true,
+ "missing_in_yaml": [],
+ "extra_in_yaml": [],
+ "family_count": {
+  "optimization_induced": 6,
+  "construct_defect": 7
+ },
+ "type_count": {
+  "extremal": 1,
+  "causal": 0,
+  "adversarial": 3,
+  "regression_transfer": 2,
+  "regression_D": 0,
+  "construct": 7
+ },
+ "cells": [
+  {
+   "row": "Pnet_MW",
+   "col": "A1",
+   "type": "adversarial",
+   "family": "optimization_induced",
+   "subtype": null,
+   "why": "换平底读数 7.89→≈0，变好看",
+   "evidence": [
+    {
+     "ptr": "e44/analysis/RT2_FIXES.json:M27_Pnet_A1.note",
+     "resolved": true,
+     "value": "换平底读数从 7.9 到 0: 变好看 -> 死"
+    },
+    {
+     "ptr": "e44/analysis/E44_METRICS.json:d_flatdj.Pnet_MW",
+     "resolved": true,
+     "value": -4.553281088304748e-06
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A3",
+   "type": "construct",
+   "family": "construct_defect",
+   "subtype": null,
+   "why": "域宽共振控制，量本身随人为域宽摆 7.24×",
+   "evidence": [
+    {
+     "ptr": "/home/xinyuan/比赛/赛道三赛题二/github_repo/e44_tide/analysis/upstream/DOMWIDTH_RESULT.json:judgement.main_branch",
+     "resolved": true,
+     "value": "RESONANCE_CONTROLLED (本量由域共振控制; 84 km 域上不能对任何环带通量发证)"
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A4",
+   "type": "construct",
+   "family": "construct_defect",
+   "subtype": "相位敏感",
+   "why": "时钟/相位一行修改读数 4.58→7.89；±T/8 −14%",
+   "evidence": [
+    {
+     "ptr": "e44/analysis/RT2_FIXES.json:M2_phase.Pnet_lastframe.rel_change_pct",
+     "resolved": true,
+     "value": "<list>"
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A7",
+   "type": "construct",
+   "family": "construct_defect",
+   "subtype": "名义效度（评审信名）",
+   "why": "真名信 3/5 → 匿名 1/5",
+   "evidence": [
+    {
+     "ptr": "e44/agent/E54_NAMESWAP.json:conditions.C0_named.Pnet_trusted",
+     "resolved": true,
+     "value": 3
+    },
+    {
+     "ptr": "e44/agent/E54_NAMESWAP.json:conditions.C1_anon.Pnet_trusted",
+     "resolved": true,
+     "value": 1
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A1",
+   "type": "adversarial",
+   "family": "optimization_induced",
+   "subtype": null,
+   "why": "纬向 32 对配对抗刷 0.000（E36 Agent 正是用它换平底）",
+   "evidence": [
+    {
+     "ptr": "ledger/metric_search.json:baseline",
+     "resolved": true,
+     "value": "<list>"
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A4",
+   "type": "construct",
+   "family": "construct_defect",
+   "subtype": "相位敏感",
+   "why": "±T/8 摆 +66%",
+   "evidence": [
+    {
+     "ptr": "e44/analysis/RT2_FIXES.json:M2_phase.deep_dc_lastframe.rel_change_pct",
+     "resolved": true,
+     "value": 66.4
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A6",
+   "type": "adversarial",
+   "family": "optimization_induced",
+   "subtype": null,
+   "why": "换强迫后换平底仍变好看（45° B=0.00）",
+   "evidence": [
+    {
+     "ptr": "e55/E55_CROSS.json:deep_u_diag45.paired",
+     "resolved": true,
+     "value": 0.0
+    },
+    {
+     "ptr": "e44/analysis/RT2_FIXES.json:M6_deep_rms_800.merid22",
+     "resolved": true,
+     "value": -0.99
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A8",
+   "type": "extremal",
+   "family": "optimization_induced",
+   "subtype": null,
+   "why": "耗散轴 7 臂上读数随耗散变好看而真值锚变差（带符号 ρ=−0.964）",
+   "evidence": [
+    {
+     "ptr": "e44/analysis/RT2_FIXES.json:F2_A8_signed.deep_dc_rms.signed_rho",
+     "resolved": true,
+     "value": -0.964
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A9",
+   "type": "construct",
+   "family": "construct_defect",
+   "subtype": "BH93 静止态",
+   "why": "无优化者：静止线平底读数恒 0，配对 0/7",
+   "evidence": [
+    {
+     "ptr": "e56/E56_VERDICT.json:A1_paired_correct",
+     "resolved": true,
+     "value": 0.0
+    },
+    {
+     "ptr": "e56/E56_BH93.json",
+     "resolved": true,
+     "value": "<file>"
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "temp_d400",
+   "col": "A6",
+   "type": "regression_transfer",
+   "family": "optimization_induced",
+   "subtype": null,
+   "why": "内潮穷举冠军换风驱强迫 A 反向 +0.85；SNR 门降格为伪冠军",
+   "evidence": [
+    {
+     "ptr": "e44/analysis/E49_CROSS.json:tempd400_wind.rho",
+     "resolved": true,
+     "value": 0.853
+    },
+    {
+     "ptr": "e44/analysis/E58_TRIVALENT.json:snr.verdict",
+     "resolved": true,
+     "value": "深水温度类候选的相对离散度 0.3%, 比 u/v (24%)、残余流 (28%)、环带功率 (445%) 低 1-2 个量级; 任何 >1% 的 SNR 门都会把它淘汰。据此把 E48 三轴满分头名显式降格为\"无 SNR 门条件下的伪冠军\"。"
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A2",
+   "type": "construct",
+   "family": "construct_defect",
+   "subtype": "分母→0 发散",
+   "why": "平底 u/v 比值 1150.8（分母近零）",
+   "evidence": [
+    {
+     "ptr": "e44/analysis/E44_METRICS.json:d_flatdj.uv_ratio",
+     "resolved": true,
+     "value": 1150.790446792494
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A6",
+   "type": "regression_transfer",
+   "family": "optimization_induced",
+   "subtype": null,
+   "why": "风驱穷举冠军转经向 A 反号 +0.17",
+   "evidence": [
+    {
+     "ptr": "e52/E52_CROSS.json:uv_merid.rho",
+     "resolved": true,
+     "value": 0.1677
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A7",
+   "type": "construct",
+   "family": "construct_defect",
+   "subtype": "名义效度（评审信名）",
+   "why": "真名疑 4/5 → 匿名 1/5",
+   "evidence": [
+    {
+     "ptr": "e44/agent/E54_NAMESWAP.json:conditions.C0_named.uv_gameable",
+     "resolved": true,
+     "value": 4
+    },
+    {
+     "ptr": "e44/agent/E54_NAMESWAP.json:conditions.C1_anon.uv_gameable",
+     "resolved": true,
+     "value": 1
+    }
+   ],
+   "status": "evidenced",
+   "in_killboard_dead": true
+  }
+ ],
+ "manual_cells": [],
+ "coverage_matrix": {
+  "A1": {
+   "extremal": "不覆盖",
+   "causal": "不覆盖",
+   "adversarial": "有实证检出",
+   "regression_transfer": "不覆盖",
+   "regression_D": "不覆盖",
+   "construct": "不覆盖"
+  },
+  "A2": {
+   "extremal": "不覆盖",
+   "causal": "不覆盖",
+   "adversarial": "不覆盖",
+   "regression_transfer": "不覆盖",
+   "regression_D": "不覆盖",
+   "construct": "有实证检出"
+  },
+  "A3": {
+   "extremal": "不覆盖",
+   "causal": "不覆盖",
+   "adversarial": "不覆盖",
+   "regression_transfer": "不覆盖",
+   "regression_D": "不覆盖",
+   "construct": "有实证检出"
+  },
+  "A4": {
+   "extremal": "不覆盖",
+   "causal": "不覆盖",
+   "adversarial": "不覆盖",
+   "regression_transfer": "不覆盖",
+   "regression_D": "不覆盖",
+   "construct": "有实证检出"
+  },
+  "A5": {
+   "extremal": "不覆盖",
+   "causal": "不覆盖",
+   "adversarial": "不覆盖",
+   "regression_transfer": "不覆盖",
+   "regression_D": "不覆盖",
+   "construct": "不覆盖"
+  },
+  "A6": {
+   "extremal": "不覆盖",
+   "causal": "不覆盖",
+   "adversarial": "有实证检出",
+   "regression_transfer": "有实证检出",
+   "regression_D": "不覆盖",
+   "construct": "不覆盖"
+  },
+  "A7": {
+   "extremal": "不覆盖",
+   "causal": "不覆盖",
+   "adversarial": "不覆盖",
+   "regression_transfer": "不覆盖",
+   "regression_D": "不覆盖",
+   "construct": "有实证检出"
+  },
+  "A8": {
+   "extremal": "有实证检出",
+   "causal": "不覆盖",
+   "adversarial": "不覆盖",
+   "regression_transfer": "不覆盖",
+   "regression_D": "不覆盖",
+   "construct": "不覆盖"
+  },
+  "A9": {
+   "extremal": "不覆盖",
+   "causal": "不覆盖",
+   "adversarial": "不覆盖",
+   "regression_transfer": "不覆盖",
+   "regression_D": "不覆盖",
+   "construct": "有实证检出"
+  }
+ },
+ "coverage_support_rows": {
+  "A1": {
+   "extremal": [],
+   "causal": [],
+   "adversarial": [
+    "Pnet_MW",
+    "deep_dc_rms"
+   ],
+   "regression_transfer": [],
+   "regression_D": [],
+   "construct": []
+  },
+  "A2": {
+   "extremal": [],
+   "causal": [],
+   "adversarial": [],
+   "regression_transfer": [],
+   "regression_D": [],
+   "construct": [
+    "uv_ratio"
+   ]
+  },
+  "A3": {
+   "extremal": [],
+   "causal": [],
+   "adversarial": [],
+   "regression_transfer": [],
+   "regression_D": [],
+   "construct": [
+    "Pnet_MW"
+   ]
+  },
+  "A4": {
+   "extremal": [],
+   "causal": [],
+   "adversarial": [],
+   "regression_transfer": [],
+   "regression_D": [],
+   "construct": [
+    "Pnet_MW",
+    "deep_dc_rms"
+   ]
+  },
+  "A5": {
+   "extremal": [],
+   "causal": [],
+   "adversarial": [],
+   "regression_transfer": [],
+   "regression_D": [],
+   "construct": []
+  },
+  "A6": {
+   "extremal": [],
+   "causal": [],
+   "adversarial": [
+    "deep_dc_rms"
+   ],
+   "regression_transfer": [
+    "temp_d400",
+    "uv_ratio"
+   ],
+   "regression_D": [],
+   "construct": []
+  },
+  "A7": {
+   "extremal": [],
+   "causal": [],
+   "adversarial": [],
+   "regression_transfer": [],
+   "regression_D": [],
+   "construct": [
+    "Pnet_MW",
+    "uv_ratio"
+   ]
+  },
+  "A8": {
+   "extremal": [
+    "deep_dc_rms"
+   ],
+   "causal": [],
+   "adversarial": [],
+   "regression_transfer": [],
+   "regression_D": [],
+   "construct": []
+  },
+  "A9": {
+   "extremal": [],
+   "causal": [],
+   "adversarial": [],
+   "regression_transfer": [],
+   "regression_D": [],
+   "construct": [
+    "deep_dc_rms"
+   ]
+  }
+ },
+ "empty_type_columns": [
+  "causal",
+  "regression_D"
+ ],
+ "operators_with_no_evidenced_death": [
+  "A5"
+ ],
+ "specimens": {
+  "extremal": {
+   "label": "极值型（旋钮推到物理量程外/过耗散被奖励）",
+   "family": "optimization_induced",
+   "specimen": "E34 荒谬黏性 VISC2=30000",
+   "ptr": "file:scripts/absurd_visc.py",
+   "resolved": true,
+   "value": "/data/xinyuan/GOAI_ai4s_env/scripts/absurd_visc.py"
+  },
+  "causal": {
+   "label": "因果型（缩短积分，问题来不及发生）",
+   "family": "optimization_induced",
+   "specimen": "E37 缩短积分（Agent 自己指出）",
+   "ptr": "manual:思路全景 §日志 L1768-1777（文本，无 JSON）",
+   "resolved": false,
+   "value": "manual:思路全景 §日志 L1768-1777（文本，无 JSON）"
+  },
+  "adversarial": {
+   "label": "对抗型（Agent 换平底）",
+   "family": "optimization_induced",
+   "specimen": "E32/E36 换平底",
+   "ptr": "ledger/metric_search.json:baseline",
+   "resolved": true,
+   "value": "<list>"
+  },
+  "regression_transfer": {
+   "label": "回归型·搜索冠军迁移失效",
+   "family": "optimization_induced",
+   "specimen": "E48/E49 穷举冠军换强迫失效",
+   "ptr": "e44/analysis/E58_TRIVALENT.json:snr.verdict",
+   "resolved": true,
+   "value": "深水温度类候选的相对离散度 0.3%, 比 u/v (24%)、残余流 (28%)、环带功率 (445%) 低 1-2 个量级; 任何 >1% 的 SNR 门都会把它淘汰。据此把 E48 三轴满分头名显式降格为\"无 SNR 门条件下的伪冠军\"。"
+  },
+  "regression_D": {
+   "label": "回归型·排得准的尺子跟踪伪流幅度 D",
+   "family": "optimization_induced",
+   "specimen": "E65 ρ(D,A)=0.9762",
+   "ptr": "e65/E65_SPURIOUS_VS_TRUE.json:spearman_D_A",
+   "resolved": true,
+   "value": 0.9762
+  },
+  "construct": {
+   "label": "构念缺陷（无优化者也错）",
+   "family": "construct_defect",
+   "specimen": "BH93 静止态 / 环带功率域共振",
+   "ptr": "e56/E56_VERDICT.json:A1_paired_correct",
+   "resolved": true,
+   "value": 0.0
+  }
+ },
+ "grades": "只两档：有实证检出 / 不覆盖（\"构造上可检\"档已砍）",
+ "known_structure_statement": "回归·跟踪 D 九项都不覆盖（E66 A⊥ 补过、E67b 治法场景依赖）；按已知结构陈述，不下注"
+}

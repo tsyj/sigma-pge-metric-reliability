@@ -1,0 +1,34 @@
+{
+ "zonal": {
+  "n_steep": 58,
+  "n_flat": 44,
+  "n_pairs": 32
+ },
+ "merid": {
+  "n_steep": 22,
+  "n_flat": 28,
+  "n_pairs": 28
+ },
+ "diag45": {
+  "n_steep": 22,
+  "n_flat": 28,
+  "n_pairs": 28,
+  "labeled_varying_knobs": {
+   "AKV_BAK": 2,
+   "TNU2": 8,
+   "VISC2": 8,
+   "VISC4": 8
+  }
+ },
+ "n_common": 15376,
+ "n_missing_in_diag45": 0,
+ "low_n": false,
+ "prereg_sha": "9c529cb6c91990f2ca55e860787d2513ebb079692136b689f60ecdfb8464bb24",
+ "recipe": "e67b_recipe_transfer.axes 勘误后口径, 与 e71a_pilot_axes.py 逐字一致",
+ "envs": [
+  "zonal",
+  "merid",
+  "diag45"
+ ],
+ "elapsed_s": 7.2
+}

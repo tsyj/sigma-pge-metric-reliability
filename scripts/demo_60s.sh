@@ -1,6 +1,10 @@
 #!/bin/bash
 # 答辩现场演示：全部数字从随包数据现场重算，不联网、不需要机时、不调用大模型。
-set -u; cd "$(dirname "$0")/.."
+set -u -o pipefail; cd "$(dirname "$0")/.."
+# 任何一屏算不出来就必须显形，不许打印完就当通过
+FAILED=0
+trap '[ "$FAILED" -eq 0 ] || { echo "DEMO: FAILED ($FAILED block(s))" >&2; exit 1; }' EXIT
+export OMP_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8 MKL_NUM_THREADS=8 NUMEXPR_NUM_THREADS=8
 PY=${PYTHON:-}
 if [ -z "$PY" ]; then
   for c in python3 python /home/xinyuan/anaconda3/envs/numpy1/bin/python; do
@@ -10,8 +14,31 @@ fi
 [ -n "$PY" ] || { echo "需要 python3"; exit 1; }
 bar(){ printf '\n\033[1;36m%s\033[0m\n' "$1"; }
 
-bar "── 1/4  新旧指标的相互评判 ──────────────────────────────────"
-$PY - <<'PYX'
+bar "── 1/5  一万五千三百七十六把候选，过两道关的只有 204 把 ──────"
+if ! $PY - <<'PYX'
+import numpy as np, json
+d = np.load('e65/E65_AXES.npz')
+A, B = d['A'], d['B']
+n = A.size
+a = int((A >= 0.70).sum()); b = int((B >= 0.90).sum())
+both = int(((A >= 0.70) & (B >= 0.90)).sum())
+print('  候选尺子总数                %6d 把' % n)
+print('  第一关 排序一致 A>=0.70     %6d 把通过' % a)
+print('  第二关 平底对照 B>=0.90     %6d 把通过' % b)
+print('  两关同过                    %6d 把' % both)
+exp = a * b / n
+print()
+print('  → 若两关互不相干，期望同过 %.1f 把；实测 %d 把，衰减 %.1f 倍' % (exp, both, exp / both))
+rec = json.load(open('e67/E67B_RECIPE_TRANSFER.json'))
+ok = (rec['n_zonal'] == n and rec['size_S_A'] == both)
+print('  → 与看数据之前封存的登记件对账：n=%d、过关数=%d —— %s'
+      % (rec['n_zonal'], rec['size_S_A'], '一致' if ok else '不一致'))
+raise SystemExit(0 if ok else 1)
+PYX
+then FAILED=$((FAILED+1)); echo '  [FAIL] 本屏重算失败' >&2; fi
+
+bar "── 2/5  新旧指标的相互评判 ──────────────────────────────────"
+if ! $PY - <<'PYX'
 import json
 K=json.load(open('e44_tide/analysis/KILLBOARD.json'))
 NAME={'Pnet_MW':'海山周围的波功率','deep_dc_rms':'深层残余流','temp_d400':'深水温度',
@@ -27,9 +54,10 @@ print()
 print('  → 最右一列「通行做法」：四个指标全部合格')
 print('  → 换成我们这九项：每一个指标都有不合格的项（共 %d 处不合格或勉强）'%n_bad)
 PYX
+then FAILED=$((FAILED+1)); echo '  [FAIL] 本屏重算失败' >&2; fi
 
-bar "── 2/4  指标的两种性质：刻度精准与泛化性不能兼得 ────────────"
-$PY - <<'PYX'
+bar "── 3/5  指标的两道检验：排序与平底配对 ────────────"
+if ! $PY - <<'PYX'
 import json
 X=json.load(open('e55/E55_CROSS.json'))['prereg_check']['angle_trajectory_uv']
 E=json.load(open('e60/E60_VERDICT.json'))
@@ -44,12 +72,13 @@ print('  换四种陡度的海山 —— 不容易被糊弄的那批指标：')
 print('      合格比例 %s'%(' / '.join('%.1f%%'%(x*100) for x in f)))
 print('      两两重合度 %.2f – %.2f  → 几乎是同一批'%(min(j),max(j)))
 print()
-print('  → 刻度精准的那一半：需要真值，换个场景就崩')
-print('  → 泛化性好的那一半：不需要真值，换个地形几乎不动')
+print('  → 排序检验需要参照解；本例在经向风下排序转负')
+print('  → 配对检验在已测四种陡度内较稳定，不能据此代替排序检验')
 PYX
+then FAILED=$((FAILED+1)); echo '  [FAIL] 本屏重算失败' >&2; fi
 
-bar "── 3/4  它会否定自己：事先登记的预测，现场逐条核对 ──────────"
-$PY - <<'PYX'
+bar "── 4/5  它会否定自己：事先登记的预测，现场逐条核对 ──────────"
+if ! $PY - <<'PYX'
 import json,glob,os
 FILES=[('e55/E55_CROSS.json','换强迫方向'),('e56/E56_VERDICT.json','社区标准检验'),
        ('e59/E59_TRUTHFREE.json','无真值预筛'),('e60/E60_VERDICT.json','换地形陡度'),
@@ -70,12 +99,13 @@ for f,lab in FILES:
             if bad: ref+=1; hits.append('%s 被推翻'%k.split()[0])
     print('  %-12s %s'%(lab, '、'.join(hits) if hits else '本组预测全部命中'))
 print()
-print('  → 现场统计：%d 条事先登记的预测里，%d 条被自己的数据推翻'%(tot,ref))
+print('  → E55–E61 五组现场统计：%d 条事先登记的预测里，%d 条被自己的数据推翻'%(tot,ref))
 print('  → 推翻的部分我们原样保留，没有改判据、没有事后补预测')
 PYX
+then FAILED=$((FAILED+1)); echo '  [FAIL] 本屏重算失败' >&2; fi
 
-bar "── 4/4  全部可复算 ────────────────────────────────────────"
+bar "── 5/5  随包结果可复算 ────────────────────────────────────────"
 echo "  以上每一个数字，都是刚才从随包数据现场重算出来的"
-echo "  一条命令重跑全部主结论：  bash scripts/reproduce_core.sh"
+echo "  一条命令复算随包主结论：  bash scripts/reproduce_core.sh"
 echo "  十秒自检：              bash scripts/smoke_test.sh"
 echo ""

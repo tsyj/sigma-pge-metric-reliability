@@ -1,0 +1,32 @@
+{
+ "script": "e73t_tail.py",
+ "script_sha": "f68596edc02f314f6ef91190cbfe8822bc574ab7d57e9439f5400cdaf565a6e7",
+ "prereg_sha": "238377f14ca258aeeee5238a19b27e2e7f33e2ae63ba2f38c7a360270f7bc607",
+ "seed": 20260917,
+ "metric_search_file": "/data/xinyuan/GOAI_ai4s_env/scripts/metric_search.py",
+ "n_steep": 58,
+ "n_pairs": 32,
+ "n_used": 15376,
+ "n_excluded_lt16": 0,
+ "H1": {
+  "rho_kappa_absg": 0.1615,
+  "perm_p_one_sided": 0.0002,
+  "n_perm": 5000,
+  "direction_confirmed": true
+ },
+ "H2": {
+  "n_dead": 8532,
+  "n_alive": 6844,
+  "med_kappa_dead": NaN,
+  "med_kappa_alive": NaN,
+  "mw_p_one_sided": null,
+  "direction_confirmed": false
+ },
+ "notes": [
+  "非独立证据：κ/g 与命题共用差值序列",
+  "峰度≠尾指数，n=58 粗糙自报",
+  "渐近定理 vs 一次跳变映射松",
+  "不计入真预测计数"
+ ],
+ "elapsed_s": 9.1
+}

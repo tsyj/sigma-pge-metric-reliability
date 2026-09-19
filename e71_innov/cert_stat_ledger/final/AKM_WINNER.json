@@ -1,0 +1,49 @@
+{
+ "module": "P7P8_akm_winner",
+ "B": 4000,
+ "seed": 20260923,
+ "sigma_fisher_z": 0.13888517166742786,
+ "n_samples_A": 58,
+ "n_samp_note": "A 轴 n=58 陡臂样本（e65 源码核）；32 组是 B 轴配对口径，与 A 轴无关",
+ "champion_index_first_argmax": 3922,
+ "P7_champion": {
+  "A_obs": 0.9982158786797504,
+  "corrected_point": 0.997798913529876,
+  "corrected_ci95": [
+   0.9940227565078906,
+   0.999141230976815
+  ],
+  "selection_bias_z": 0.10511687127070385,
+  "gap_q975_z": 0.3333571176653877,
+  "naive_ci95": [
+   0.996926857617295,
+   0.99896450379198
+  ]
+ },
+ "P7_rank45": {
+  "A_obs": 0.990095050601372,
+  "uncond_ci95": [
+   0.9829887107116406,
+   0.9942413906155857
+  ]
+ },
+ "P7_overlap_champ_vs_rank45": true,
+ "P8_enrichment_diag45": {
+  "enrich_obs_from_rounded_base": 23.26354270521768,
+  "enrich_obs_stage_caliber_e67b": 23.24,
+  "caliber_note": "上台引用 23.24（E67B 未舍入口径）；本行 from_rounded_base≈23.26 只作复算注脚（PREREG P8 冻结）",
+  "enrich_corr_lb95": 20.481369094090724,
+  "enrich_corr_ub95": 26.47782646756335,
+  "k": 140,
+  "n": 204,
+  "base_rate": 0.0295
+ },
+ "akm_style_deviation_list": [
+  "①正版 AKM(Andrews-Kitagawa-McCloskey) 是条件截断正态精确推断；此处用插入式参数自助近似",
+  "②Spearman 的 Fisher-z 正态近似，sigma=1.03/sqrt(n-3)，n=58 陡臂样本（Bonett-Wright）",
+  "③赢家并列（max_A=0.998216 共 2 把）按首索引处理",
+  "④候选间相关未建模，自助按独立场抽样；保守性未证明，如实标注",
+  "⑤P8 无赢家截断项：S_A 门选于纬向、评估于 45°，选择与评估数据分离"
+ ],
+ "note": "置换 p 与本校正同图并陈但回答不同问题（PREREG R8）"
+}

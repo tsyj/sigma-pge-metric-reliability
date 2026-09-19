@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """图: Agent 在与线性模型完全相同的信息条件下挑尺子"""
 import sys, json

@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """复赛报告 md -> docx（官方模板视觉规范：标题 #1F4D78 / 强调 #0B2545 / 次要 #5A6573 / 表格底纹 #F4F6F9，
 中文微软雅黑 + 西文 Calibri；图与图注按锚点插入；附录 A/B/C/D 合订；页码）

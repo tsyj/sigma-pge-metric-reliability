@@ -1,0 +1,17 @@
+{
+  "scope": "仅校验公开快照字节，不证明历史封存时间。原始封存门独立保留。",
+  "files": {
+    "cache/GATE_diag45.json": "bad4160740d93e850df8e6110f43e81c45d7fad9da8bc5a1112277056d2af37a",
+    "cache/meta_diag45.json": "ce1b405d13f2c68b1ec4cd89d620209a6ce754cdf6436dc149d3234144a0c78e",
+    "cache/meta_merid.json": "b245934e707be470a916789c46a52b1cf7f64385bce1e48c73c42a4f26f4dd7f",
+    "cache/meta_zonal.json": "ff80968ebbb2767da53554f0ee7305a1371c26bb35ee29e004727bbd5ff9d700",
+    "cache/primitives_diag45.npz": "ab476d804a9716b5b611e3a01311b2cee83456ea629334caec029526643e686c",
+    "cache/primitives_merid.npz": "8100a2ea7ec9b847ba123a2111bd1d2b699f833850fd3236a81ca61de803036f",
+    "cache/primitives_zonal.npz": "8847062a55d5a37955a67e12be210b98f1132e330588306322328bb6814eb047",
+    "reference/E65_AXES.npz": "aefbaed165a213a2c808dfc31672e2bb3bdc62db10e8ab7cbe4043d3a646ac08",
+    "reference/E67B_RECIPE_TRANSFER.json": "f441de0ceeb4a5cf3fc7a2258ba793869bf75b37678773e3c09d85a0fb55e52f",
+    "reference/PREREG_multienv_metrology.md": "9c529cb6c91990f2ca55e860787d2513ebb079692136b689f60ecdfb8464bb24",
+    "reference/PREREG_multienv_metrology.sha256": "00681786a512fbc9b5d223152920d2bffd7b1e1c02808ad2072a117ad3121e9a",
+    "reference/trajectory_e61.jsonl": "8bb78bfaa3a37de409e71973c60600c94a3c92492d347367a7de44f45b8be52a"
+  }
+}

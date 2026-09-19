@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sigma-audit"
+version = "0.1.2"
+description = "Offline metric audits for seamount numerical experiments"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+license = {file = "LICENSE"}
+dependencies = ["numpy==2.0.2", "matplotlib>=3.9,<4"]
+
+[project.scripts]
+sigma-audit = "sigma_audit.__main__:main"
+
+[tool.setuptools]
+packages = ["sigma_audit"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+sigma_audit = ["data/cache/*.npz", "data/cache/*.json", "data/reference/*", "data/*.json"]

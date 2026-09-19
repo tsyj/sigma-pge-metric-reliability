@@ -1,0 +1,321 @@
+{
+ "date": "2026-09-17",
+ "script": "e71_innov/repo_fixes/scripts/fix_06_ingest.py",
+ "policy": {
+  "size_limit_bytes": 52428800,
+  "over_limit": "只入 manifest 不复制",
+  "excluded": "e63/ 依队伍数据隔离红线不入仓（数据盘点 §6 笔误已在决赛材料更正）"
+ },
+ "source_root": "/data/xinyuan/GOAI_ai4s_env（$E）",
+ "files": [
+  {
+   "src": "$E/e65/E65_AXES.npz",
+   "dst": "e65/E65_AXES.npz",
+   "sha256": "aefbaed165a213a2c808dfc31672e2bb3bdc62db10e8ab7cbe4043d3a646ac08",
+   "bytes": 492990,
+   "copied": true
+  },
+  {
+   "src": "$E/e65/E65_SPURIOUS_VS_TRUE.json",
+   "dst": "e65/E65_SPURIOUS_VS_TRUE.json",
+   "sha256": "44ade83ab1d9b03f31feea2c1bdeddb94f2aa8b2d06edcbc39351e2a5bac3652",
+   "bytes": 761,
+   "copied": true
+  },
+  {
+   "src": "$E/e65/PREREG_E65.md",
+   "dst": "e65/PREREG_E65.md",
+   "sha256": "0afa7165261abc99fbd9d148c42e8246f0ac16093abfa310c6a60aa78f00a016",
+   "bytes": 4435,
+   "copied": true
+  },
+  {
+   "src": "$E/e65/PREREG_E65.sha256",
+   "dst": "e65/PREREG_E65.sha256",
+   "sha256": "04f15184c2d28aa1fbe24f9929b11b2325a90352b2bd207bca54ca7d56cb971b",
+   "bytes": 65,
+   "copied": true
+  },
+  {
+   "src": "$E/e65/PREREG_E65.stamp",
+   "dst": "e65/PREREG_E65.stamp",
+   "sha256": "4bd33f6942629c8abf69147b3f531b709f3d65e073d9e576eb62ede8c2a227c6",
+   "bytes": 24,
+   "copied": true
+  },
+  {
+   "src": "$E/e65/e65.log",
+   "dst": "e65/e65.log",
+   "sha256": "7ec0beeb64fec2a49a2f034ddb787a2a023cb4225263dd96edcf4fa63404636a",
+   "bytes": 820,
+   "copied": true
+  },
+  {
+   "src": "$E/e65/e65_spurious_vs_true.py",
+   "dst": "e65/e65_spurious_vs_true.py",
+   "sha256": "cf6507884f767810afff42b14988b177ee2f758981399a109104ca6e7739f4f2",
+   "bytes": 5914,
+   "copied": true
+  },
+  {
+   "src": "$E/e66/E66_AXES.npz",
+   "dst": "e66/E66_AXES.npz",
+   "sha256": "f48f95abc5a4feace1e3546b5bdc4c03636edc01acd9fb472cdd917bbc373cef",
+   "bytes": 616234,
+   "copied": true
+  },
+  {
+   "src": "$E/e66/E66_PARTIAL.json",
+   "dst": "e66/E66_PARTIAL.json",
+   "sha256": "f58837fd400ee95ffc9e0491c627bd56f83f55f4a9bcae0c8726de982409824b",
+   "bytes": 2326,
+   "copied": true
+  },
+  {
+   "src": "$E/e66/PREREG_E66.md",
+   "dst": "e66/PREREG_E66.md",
+   "sha256": "bb1f212f3a63adcb20db901782e4bf3b8379506af93e2d7aea56b2823354c874",
+   "bytes": 2221,
+   "copied": true
+  },
+  {
+   "src": "$E/e66/PREREG_E66.sha256",
+   "dst": "e66/PREREG_E66.sha256",
+   "sha256": "77e34aa11845f1157b6ac0b327446620a92293002170d43e605b63451ef19fec",
+   "bytes": 65,
+   "copied": true
+  },
+  {
+   "src": "$E/e66/PREREG_E66.stamp",
+   "dst": "e66/PREREG_E66.stamp",
+   "sha256": "4d7443e9f9961ec4d22a4796d46d6890e91a238fd5365104b113dea09e2a0de4",
+   "bytes": 24,
+   "copied": true
+  },
+  {
+   "src": "$E/e66/e66.log",
+   "dst": "e66/e66.log",
+   "sha256": "e638bf5b762974c8c1d21509ed8628e75190d7455de912a9ed5b00419dd06dbb",
+   "bytes": 546,
+   "copied": true
+  },
+  {
+   "src": "$E/e66/e66_partial.py",
+   "dst": "e66/e66_partial.py",
+   "sha256": "7937614cce6c4d1ed53a111cb2ee7c0b1f8a7a0cf525908874123d234a5f3d97",
+   "bytes": 5569,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/E67B_RECIPE_TRANSFER.json",
+   "dst": "e67/E67B_RECIPE_TRANSFER.json",
+   "sha256": "f441de0ceeb4a5cf3fc7a2258ba793869bf75b37678773e3c09d85a0fb55e52f",
+   "bytes": 949,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/E67_v1_判据错配_作废.json",
+   "dst": "e67/E67_v1_判据错配_作废.json",
+   "sha256": "147c16ad09b5e0bec7e4359fced31fabe0413b7992f68629c4ae59d7b8bd3833",
+   "bytes": 899,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/PREREG_E67.md",
+   "dst": "e67/PREREG_E67.md",
+   "sha256": "b586fbb6c23ceae9db25557fe3a133cabb03fb3e445ed74da1ba8641311f93e6",
+   "bytes": 2581,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/PREREG_E67.sha256",
+   "dst": "e67/PREREG_E67.sha256",
+   "sha256": "0e4b2f70100ae044064c5324323ac134d98d089d91b217645e96713b7c20fbf7",
+   "bytes": 65,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/PREREG_E67.stamp",
+   "dst": "e67/PREREG_E67.stamp",
+   "sha256": "a39f7168a2c72a1ef6850049ef0f9f776a717bf98f939e481ae31657ad8de9d0",
+   "bytes": 24,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/PREREG_E67b.md",
+   "dst": "e67/PREREG_E67b.md",
+   "sha256": "d06c57879da03dbc5e3f331c031d77567c011fea8a5cee3feaba11f512c9311c",
+   "bytes": 2913,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/PREREG_E67b.sha256",
+   "dst": "e67/PREREG_E67b.sha256",
+   "sha256": "7e28e4c6b096b2d9cc39f137d2cc32ece38fa29dc1a9419311260f05523b69d1",
+   "bytes": 65,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/PREREG_E67b.stamp",
+   "dst": "e67/PREREG_E67b.stamp",
+   "sha256": "d17fdfe0957d7294af4d2f41e919d67d761f2c9b6ab1ad2c192b411bfd9352b7",
+   "bytes": 24,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/PREREG_E67b_核验说明.md",
+   "dst": "e67/PREREG_E67b_核验说明.md",
+   "sha256": "31949cf49ad46a8784f01c248761b416fe1faa1753c36f669587b0565d80b896",
+   "bytes": 1362,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/VOID_v1.md",
+   "dst": "e67/VOID_v1.md",
+   "sha256": "dd219d667c904294ca631cd45d882025a5bb652925ebe055aed8d504d94e6537",
+   "bytes": 1889,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/e67.log",
+   "dst": "e67/e67.log",
+   "sha256": "04583ce76f4193438b194ae322c9b6f3adc340b689f38d0197588079a80fa6f9",
+   "bytes": 708,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/e67_recipe_transfer.py",
+   "dst": "e67/e67_recipe_transfer.py",
+   "sha256": "45e08456f383fadb6540fa8273fd3dc2fa6c03995e4e24dd452994ad11eac4e4",
+   "bytes": 6997,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/e67b.log",
+   "dst": "e67/e67b.log",
+   "sha256": "844385cb13797d54581004d6927b8297d5c6b7d591e26086d699904058df6d98",
+   "bytes": 704,
+   "copied": true
+  },
+  {
+   "src": "$E/e67/e67b_recipe_transfer.py",
+   "dst": "e67/e67b_recipe_transfer.py",
+   "sha256": "f6ce26c1e35dc095f7360ce2c974ddee01c9043f3bb6804df861322a19b01886",
+   "bytes": 7159,
+   "copied": true
+  },
+  {
+   "src": "$E/ledger/knob_sweep_merid.json",
+   "dst": "ledger/knob_sweep_merid.json",
+   "sha256": "dd2a5e62948359ef5b69b8860837f537f43538cddca446ac26ebde306503706a",
+   "bytes": 29316,
+   "copied": true
+  },
+  {
+   "src": "$E/ledger/knob_sweep_diag45.json",
+   "dst": "ledger/knob_sweep_diag45.json",
+   "sha256": "eb93d32e76c2dedd14bc664a4a4dbb14a278af074792cfdbb473a3d8969eaff1",
+   "bytes": 29260,
+   "copied": true
+  },
+  {
+   "src": "$E/ledger/env2_merid_runs.jsonl",
+   "dst": "ledger/env2_merid_runs.jsonl",
+   "sha256": "176f6f6d8afa8a28f0e7373a7ae9d7b8eb51c70be8e36bee9b4369ba16b0e266",
+   "bytes": 53209,
+   "copied": true
+  },
+  {
+   "src": "$E/ledger/env2_diag45_runs.jsonl",
+   "dst": "ledger/env2_diag45_runs.jsonl",
+   "sha256": "b4fcbaf5b45eb156efee3452e90450d9ce7818571e4c7cb1c563b9ce0d4bf57f",
+   "bytes": 53150,
+   "copied": true
+  },
+  {
+   "src": "$E/ledger/metric_search_merid.json",
+   "dst": "ledger/metric_search_merid.json",
+   "sha256": "31968ccb341fe58026afa77c5f23a0d81f0220c46fa6cfc4f395b0ec61200847",
+   "bytes": 2543,
+   "copied": true
+  },
+  {
+   "src": "$E/ledger/metric_search_diag45.json",
+   "dst": "ledger/metric_search_diag45.json",
+   "sha256": "8731a68845e8c70aa26e23cc3bdbbc4ac7c5105f3329688c38c3a007729fda91",
+   "bytes": 2463,
+   "copied": true
+  },
+  {
+   "src": "$E/e59/E59_ARRAYS.npz",
+   "dst": "e59/E59_ARRAYS.npz",
+   "sha256": "dcbc906a41e44d015e5416ca54700f3d44efc738eb5f424e2a5563563875cc8e",
+   "bytes": 2092358,
+   "copied": true
+  }
+ ],
+ "post_ingest_edits": [
+  {
+   "dst": "e65/PREREG_E65.sha256",
+   "source_sha256": "04f15184c2d28aa1fbe24f9929b11b2325a90352b2bd207bca54ca7d56cb971b",
+   "repo_sha256": "4a4d733451d8eca8bf262f89947c58cdce6896ed8c38d1161b6dc3475e23821e",
+   "reason": "统一为 sha256sum -c 格式，路径相对仓库根（原纯哈希行存 PREREG_HASH_INDEX.json）",
+   "script": "e71_innov/repo_fixes/scripts/fix_09_prereg_hash_paths.py"
+  },
+  {
+   "dst": "e66/PREREG_E66.sha256",
+   "source_sha256": "77e34aa11845f1157b6ac0b327446620a92293002170d43e605b63451ef19fec",
+   "repo_sha256": "eb415b51a91fd7ed9ead0d2b851c50cbc8a42619c9523c5c34672f90b7601154",
+   "reason": "统一为 sha256sum -c 格式，路径相对仓库根（原纯哈希行存 PREREG_HASH_INDEX.json）",
+   "script": "e71_innov/repo_fixes/scripts/fix_09_prereg_hash_paths.py"
+  },
+  {
+   "dst": "e67/PREREG_E67.sha256",
+   "source_sha256": "0e4b2f70100ae044064c5324323ac134d98d089d91b217645e96713b7c20fbf7",
+   "repo_sha256": "98cd51244031ba2d363d334318492d129c73b63e4d9ed975644985421609c4a8",
+   "reason": "统一为 sha256sum -c 格式，路径相对仓库根（原纯哈希行存 PREREG_HASH_INDEX.json）",
+   "script": "e71_innov/repo_fixes/scripts/fix_09_prereg_hash_paths.py"
+  },
+  {
+   "dst": "e67/PREREG_E67b.sha256",
+   "source_sha256": "7e28e4c6b096b2d9cc39f137d2cc32ece38fa29dc1a9419311260f05523b69d1",
+   "repo_sha256": "0453d09c6e152623758b9fd2e4e79e1c97f2275d79beea158b17d204c1692bfe",
+   "reason": "统一为 sha256sum -c 格式，路径相对仓库根（原纯哈希行存 PREREG_HASH_INDEX.json）",
+   "script": "e71_innov/repo_fixes/scripts/fix_09_prereg_hash_paths.py"
+  },
+  {
+   "dst": "e67/PREREG_E67b_核验说明.md",
+   "source_sha256": "31949cf49ad46a8784f01c248761b416fe1faa1753c36f669587b0565d80b896",
+   "repo_sha256": "3e4e0a5fd2891f8ab60c27e36d03cf8d2f3db1ffc0439dcfabc051ccb347b0a4",
+   "reason": "末尾追加「5 把」与实测存活 0 的区别（检查意见[一般]3）；原文未改",
+   "script": "e71_innov/repo_fixes/scripts/fix_09_prereg_hash_paths.py"
+  }
+ ],
+ "derived_files_not_from_data": [
+  {
+   "dst": "e65/PREREG_E65.sealed_prefix.md",
+   "sha256": "7b6a233127359f43aee8a356cbaac62cc19e5ae583b1fe2f365a0d76b62091ef",
+   "bytes": 2501,
+   "derivation": "e65/PREREG_E65.md[0:2501]"
+  },
+  {
+   "dst": "e67/PREREG_E67b.sealed_prefix.md",
+   "sha256": "9ee57f046ff19f4a27b55fe894eb172a6d8aa95b830096da3583f802241cdfbf",
+   "bytes": 1136,
+   "derivation": "e67/PREREG_E67b.md[0:1136]"
+  },
+  {
+   "dst": "e65/PREREG_E65_核验说明.md",
+   "sha256": "aa3875d5a5af62e49d8a3c8d4c6c74abcdc128c7da9102bc7baa38e21c3177bc",
+   "bytes": 2086,
+   "derivation": "fix_09 生成"
+  },
+  {
+   "dst": "PREREG_HASH_INDEX.json",
+   "sha256": "86a77205a5c0c9ebd491718ab593bd2cbf7d12f0b05fb40a4da03f1413f7e027",
+   "bytes": 10150,
+   "derivation": "fix_09 生成"
+  }
+ ],
+ "post_ingest_note": "files[] 的 sha256 是 /data 源件哈希；post_ingest_edits 所列文件在仓库内已按原因改动，以 repo_sha256 为准。复跑 fix_06 会还原这些改动，须紧接着复跑 fix_09。"
+}

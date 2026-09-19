@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """e44/mk_case.py -- E44 造 case（内潮 84km, phasefix 口径）
 模板: pf_dj / pf_v4 / pf_combo (phasefix_20260829, ini 已 +15330) / flat (tide_twin_v2/flat_roms, ini 需 +15330)

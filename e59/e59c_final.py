@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E59c: 最终判读 + 图。含两次被数据推翻的事后解释，全部留档。"""
 import json, sys

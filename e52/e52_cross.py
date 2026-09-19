@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E52 三重交集: 纬向风(E40) ∩ 经向风(E52, 同判据) ∩ 内潮(E48 三轴报警)。
 风侧判据函数逐字复用 e49_cross.py 的实现(base_quantities/spearman 来自 scripts/metric_search.py)。"""

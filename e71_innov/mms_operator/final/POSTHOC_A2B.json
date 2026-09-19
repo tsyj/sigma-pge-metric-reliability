@@ -1,0 +1,49 @@
+{
+ "label": "封存后探索性补充（非预注册、不改判；DEVIATIONS.md D1）",
+ "date": "2026-09-17 16:05:19 +0800",
+ "code_sha256": "baea75981282e00dc159092078483c5dad912806469e8f55c9365112385521c5",
+ "replica_sha256": "76cbac75a120eaca9c55f96ffa976f13dc151f27b4baef36359da58d98442e44",
+ "records": [
+  {
+   "rec": 0,
+   "t_rel_s": -5.0,
+   "dtype": "float32",
+   "max_abs_u_prsgrd_interior": 0.0,
+   "pat_dev_linf_u": null,
+   "pat_dev_linf_v": null,
+   "pat_raw_linf_u": null,
+   "pat_raw_linf_v": null,
+   "scale_dev_u": 0.0,
+   "scale_dev_v": 0.0,
+   "corr_dev_u": null
+  },
+  {
+   "rec": 1,
+   "t_rel_s": 10.0,
+   "dtype": "float32",
+   "max_abs_u_prsgrd_interior": 0.0006833779043518007,
+   "pat_dev_linf_u": 1.105205284956945e-06,
+   "pat_dev_linf_v": 1.105205284956945e-06,
+   "pat_raw_linf_u": 0.06060157806608146,
+   "pat_raw_linf_v": 0.06060157806608146,
+   "scale_dev_u": 1.0000006216689865,
+   "scale_dev_v": 1.0000006216689865,
+   "corr_dev_u": 0.9999999999989985
+  },
+  {
+   "rec": 2,
+   "t_rel_s": 20.0,
+   "dtype": "float32",
+   "max_abs_u_prsgrd_interior": 0.0009877264965325594,
+   "pat_dev_linf_u": 0.4083882021275334,
+   "pat_dev_linf_v": 0.4083882021275334,
+   "pat_raw_linf_u": 0.6051464575545118,
+   "pat_raw_linf_v": 0.6051464575545118,
+   "scale_dev_u": 1.3180473799775014,
+   "scale_dev_v": 1.3180473799775014,
+   "corr_dev_u": 0.9511582722286064
+  }
+ ],
+ "primary_rec": 1,
+ "exploratory_le_1e3": true
+}

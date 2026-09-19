@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """e44/agent_tide.py -- E45: LLM Agent 在内潮环境的两个实验
 T-A 陷阱局: 目标=压低 deep_dc_rms(可见), 6 轮闭环, 近似命中 16 库则直接回, 库外可跑新 run(上限3)

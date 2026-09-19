@@ -1,0 +1,115 @@
+{
+ "entry": "audit_battery_meta/derived",
+ "when": "2026-09-17T17:19:09+0800",
+ "preregistered": false,
+ "affects_verdict": false,
+ "code_sha": "444fcc499c6849064df6a835b72bffac4aee401d8d07e50fc152d9ea6cdacfed",
+ "prereg_sha": "7b641565f778ba909f6cff4583d8b7a8be896e59561e15b07a54fc3ce79679d9",
+ "chain": {
+  "n_B_eq_1_and_degenerate": 31,
+  "L1_equals_L0_and_B_eq_1": true,
+  "by_level": {
+   "L0": {
+    "n": 15344,
+    "n_absolute": 124,
+    "n_ratio": 15220,
+    "median_A": 0.032575594450767485,
+    "n_A_ge_0p7": 4851,
+    "n_A_ge_0p9": 3103,
+    "n_A_le_m0p7": 4780,
+    "frac_A_le_m0p7": 0.31152241918665274
+   },
+   "L1": {
+    "n": 5514,
+    "n_absolute": 9,
+    "n_ratio": 5505,
+    "median_A": -0.903595927281676,
+    "n_A_ge_0p7": 130,
+    "n_A_ge_0p9": 9,
+    "n_A_le_m0p7": 3639,
+    "frac_A_le_m0p7": 0.6599564744287268
+   },
+   "L2": {
+    "n": 5035,
+    "n_absolute": 9,
+    "n_ratio": 5026,
+    "median_A": -0.9160232550985882,
+    "n_A_ge_0p7": 61,
+    "n_A_ge_0p9": 3,
+    "n_A_le_m0p7": 3520,
+    "frac_A_le_m0p7": 0.6991062562065541
+   },
+   "L3": {
+    "n": 4916,
+    "n_absolute": 8,
+    "n_ratio": 4908,
+    "median_A": -0.923067458242333,
+    "n_A_ge_0p7": 56,
+    "n_A_ge_0p9": 2,
+    "n_A_le_m0p7": 3520,
+    "frac_A_le_m0p7": 0.7160292921074044
+   },
+   "L4": {
+    "n": 4624,
+    "n_absolute": 5,
+    "n_ratio": 4619,
+    "median_A": -0.9309114399089484,
+    "n_A_ge_0p7": 29,
+    "n_A_ge_0p9": 2,
+    "n_A_le_m0p7": 3464,
+    "frac_A_le_m0p7": 0.7491349480968859
+   }
+  },
+  "all_candidates": {
+   "n": 15376,
+   "median_A": 0.03728198345073673,
+   "n_A_le_m0p7": 4780
+  },
+  "note": "派生非预测：L3 幸存者的 A 分布（A=−ρ(读数,技巧)，E57 约定）"
+ },
+ "mutants": {
+  "kill_by_operator": {
+   "A1": 3,
+   "A2": 0,
+   "A3p": 4,
+   "A4p": 3,
+   "A6": 15,
+   "A8": 13,
+   "A9p": 8
+  },
+  "sole_killer_by_operator": {
+   "A1": 1,
+   "A2": 0,
+   "A3p": 0,
+   "A4p": 0,
+   "A6": 2,
+   "A8": 0,
+   "A9p": 1
+  },
+  "base_dead_operators": {
+   "b1": [
+    "A1",
+    "A9p"
+   ],
+   "b2": [
+    "A1",
+    "A4p",
+    "A9p"
+   ],
+   "b3": [
+    "A1"
+   ],
+   "b4": [
+    "A4p",
+    "A6"
+   ],
+   "b5": [
+    "A4p"
+   ]
+  },
+  "all_bases_dead_somewhere": true,
+  "abs_rate": 1.0,
+  "diff_rate": 0.5405405405405406,
+  "note": "派生非预测：绝对口径 100% 来自基指标自身已在某算子判死（继承性检出），差分口径才度量对注入缺陷的敏感性"
+ }
+}

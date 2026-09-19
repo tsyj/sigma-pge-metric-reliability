@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """modal_paper_20260828/modal_paper.py -- 逐垂向模态分解搬到论文正文那座海山 (零机时, 只读)。
 

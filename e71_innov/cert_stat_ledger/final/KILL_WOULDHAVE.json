@@ -1,0 +1,36 @@
+{
+ "module": "P4_kill_wouldhave",
+ "cells": {
+  "uv_diag45_paired": {
+   "k": 7,
+   "n": 28,
+   "mean_stop_pairs": 4.3279,
+   "median_stop_pairs": 4.0,
+   "p90_stop_pairs": 7.0,
+   "frac_never_killed": 0.0
+  },
+  "vu_zonal_paired": {
+   "k": 7,
+   "n": 32,
+   "mean_stop_pairs": 4.0588,
+   "median_stop_pairs": 4.0,
+   "p90_stop_pairs": 6.0,
+   "frac_never_killed": 0.0
+  },
+  "vu_merid_paired": {
+   "k": 3,
+   "n": 28,
+   "mean_stop_pairs": 3.3923,
+   "median_stop_pairs": 3.0,
+   "p90_stop_pairs": 4.0,
+   "frac_never_killed": 0.0
+  }
+ },
+ "sum_mean_stop": 11.779,
+ "actual_pairs_run": 88,
+ "saving_frac_vs_actual": 0.8661477272727273,
+ "ordering": "RUNS_MANIFEST 无时间戳，B=10000 次序置换平均（PREREG §0 预案）",
+ "B": 10000,
+ "seed": 20260920,
+ "caption_frozen_R3": "此为“假如当时用认证流”的复盘，非当时的真实决策；实跑 88 对是审计矩阵其他格子读数的必需来源，节省数字只适用于“只为判死”的场景。"
+}

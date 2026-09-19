@@ -1,0 +1,13 @@
+{
+ "md": "/data/xinyuan/GOAI_ai4s_env/e71_innov/multienv_metrology/final/PREREG_multienv_metrology.md",
+ "seal": "/data/xinyuan/GOAI_ai4s_env/e71_innov/multienv_metrology/final/PREREG_multienv_metrology.sha256",
+ "ok": true,
+ "failed": [],
+ "checked_at": "2026-09-17T19:02:19+08:00",
+ "registered_sha256": "9c529cb6c91990f2ca55e860787d2513ebb079692136b689f60ecdfb8464bb24",
+ "current_sha256": "9c529cb6c91990f2ca55e860787d2513ebb079692136b689f60ecdfb8464bb24",
+ "sealed_at": "2026-09-17T14:30:56+08:00",
+ "md_mode": "444",
+ "md_writable_by_access": false,
+ "absent": false
+}

@@ -1,0 +1,44 @@
+{
+ "env": "bh93",
+ "stamp": "2026-09-17 14:41:50",
+ "n_dirs": 14,
+ "n_flat": 7,
+ "flat_runs": [
+  "bh93_flat_v0",
+  "bh93_flat_v150",
+  "bh93_flat_v1500",
+  "bh93_flat_v2747",
+  "bh93_flat_v400",
+  "bh93_flat_v50",
+  "bh93_flat_v800"
+ ],
+ "classification": "目录名含 flat",
+ "n_uv_primitives": 56,
+ "floor_log": 0.0009995003330834232,
+ "sigma1": {
+  "median_absdlog_uv": 0.0,
+  "max_absdlog_uv": 0.0,
+  "n_uv_cells": 392,
+  "n_uv_cells_gt_floor": 0,
+  "median_absdlog_all124": 0.0,
+  "max_absdlog_all124": 0.0
+ },
+ "sigma2": {
+  "median_absdlog_uv": 0.0,
+  "max_absdlog_uv": 0.0,
+  "n_uv_cells": 392,
+  "n_uv_cells_gt_floor": 0,
+  "median_absdlog_all124": 0.0,
+  "max_absdlog_all124": 0.0
+ },
+ "sigma4": {
+  "median_absdlog_uv": 0.0,
+  "max_absdlog_uv": 0.0,
+  "n_uv_cells": 392,
+  "n_uv_cells_gt_floor": 0,
+  "median_absdlog_all124": 0.0,
+  "max_absdlog_all124": 0.0
+ },
+ "p7_pass_preview": true,
+ "elapsed_s": 0.2
+}

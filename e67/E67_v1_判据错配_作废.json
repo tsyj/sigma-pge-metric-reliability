@@ -1,0 +1,51 @@
+{
+ "prereg_sha": "b586fbb6c23ceae9db25557fe3a133cabb03fb3e445ed74da1ba8641311f93e6",
+ "n_zonal": 15376,
+ "n_merid": 15376,
+ "n_diag45": 15376,
+ "size_S_A": 204,
+ "size_S_AP": 444,
+ "merid": {
+  "base_rate": 0.0265,
+  "S_A": {
+   "n": 88,
+   "rate": 0.4314,
+   "expect": 5.4,
+   "enrich": 16.3
+  },
+  "S_AP": {
+   "n": 0,
+   "rate": 0.0,
+   "expect": 11.8,
+   "enrich": 0.0
+  }
+ },
+ "diag45": {
+  "base_rate": 0.0295,
+  "S_A": {
+   "n": 140,
+   "rate": 0.6863,
+   "expect": 6.0,
+   "enrich": 23.24
+  },
+  "S_AP": {
+   "n": 0,
+   "rate": 0.0,
+   "expect": 13.1,
+   "enrich": 0.0
+  }
+ },
+ "triple": {
+  "S_A": 80,
+  "S_AP": 0
+ },
+ "merid_survivors_all_ratio": null,
+ "merid_survivors_abs": 0,
+ "prereg_check": {
+  "P1 S_A⊥ 跨向存活率 > S_A": false,
+  "P2 两集合富集均 ≥2 倍": false,
+  "P3 存活者全为比值型": null,
+  "P4 三向交集 S_A⊥ > S_A": false
+ },
+ "elapsed_s": 52.1
+}

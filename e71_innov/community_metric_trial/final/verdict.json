@@ -1,0 +1,278 @@
+{
+ "stamp": "2026-09-17 14:42:00",
+ "prereg_sha": [
+  "83e16b9fef516def41279b945f85c25fcc106013bbf32b9c331f31b3f43c0a29  PREREG_community_metric_trial.md",
+  "7beb586158e992853d0f4422e716589d28ddbb40c52d1a417b5e0d34aa687c3c  validate_envs.py",
+  "2c498ec69c5bcd1eaee06b92a659df89acd7530860f2e4208985a456e7cef0f5  score_prereg.py",
+  "2026-09-17T14:41:34+08:00"
+ ],
+ "inputs": {
+  "zonal": "/data/xinyuan/GOAI_ai4s_env/e71_innov/community_metric_trial/final/VALIDATION_zonal.json",
+  "merid": "/data/xinyuan/GOAI_ai4s_env/e71_innov/community_metric_trial/final/VALIDATION_merid.json",
+  "diag45": "/data/xinyuan/GOAI_ai4s_env/e71_innov/community_metric_trial/final/VALIDATION_diag45.json",
+  "bh93": "/data/xinyuan/GOAI_ai4s_env/e71_innov/community_metric_trial/final/VALIDATION_bh93.json"
+ },
+ "P1": {
+  "statement": "σ2 可刷比例(frac_of_valid) ∈ [0.319,0.519] 于 V1 与 V2",
+  "values": {
+   "V1": 0.4396,
+   "V2": 0.4468
+  },
+  "result": "PASS"
+ },
+ "P2": {
+  "statement": "Haldane OR(σ2) ≥ 3.0 于 V1 与 V2",
+  "values": {
+   "haldane": {
+    "V1": 5.978,
+    "V2": 5.802
+   },
+   "raw": {
+    "V1": 5.981,
+    "V2": 5.804
+   }
+  },
+  "result": "PASS"
+ },
+ "P3": {
+  "statement": "|ρ(σ2美颜改善, D_sym)| ≤ 0.2 于 V1 与 V2",
+  "values": {
+   "rho_D_sym": {
+    "V1": 0.0085,
+    "V2": 0.0011
+   },
+   "rho_D_u": {
+    "V1": 0.0086,
+    "V2": 0.0009
+   }
+  },
+  "result": "PASS"
+ },
+ "P4": {
+  "statement": "纬向S_A∧经向两关集合（期望88）σ2 美颜中招比例 ≥ 0.25",
+  "values": {
+   "n_set": 88,
+   "expect": 88,
+   "n_zonal_SA_mapped": 204,
+   "n_hit_blur2": 28,
+   "frac_hit": 0.3182,
+   "n_distinct_numerators_set": 29,
+   "n_distinct_numerators_hit": 15,
+   "deviation_n_set_ne_88": false
+  },
+  "result": "PASS"
+ },
+ "P5": {
+  "statement": "12 单元格命中 ≥ 8（(a)5基元×2环境, (b)temp_drift×2；(c)观察不计）",
+  "values": {
+   "hits": 11,
+   "cells": {
+    "V1:spec_hi": {
+     "B_oriented": 0.0,
+     "impr": 97.29,
+     "hit": true
+    },
+    "V1:hi_lo_ratio": {
+     "B_oriented": 0.036,
+     "impr": 97.41,
+     "hit": true
+    },
+    "V1:enstrophy_surf": {
+     "B_oriented": 0.0,
+     "impr": 55.52,
+     "hit": true
+    },
+    "V1:div_surf": {
+     "B_oriented": 0.0,
+     "impr": 70.32,
+     "hit": true
+    },
+    "V1:ke_total": {
+     "B_oriented": 0.0,
+     "impr": 43.03,
+     "hit": true
+    },
+    "V1:temp_drift": {
+     "A": -0.088,
+     "blur2_max_absrel": 0.0,
+     "hit": true
+    },
+    "V1:budget_res_u(obs)": {
+     "A": 0.39,
+     "counted": false
+    },
+    "V1:budget_res_v(obs)": {
+     "A": 0.395,
+     "counted": false
+    },
+    "V2:spec_hi": {
+     "B_oriented": 0.0,
+     "impr": 93.3,
+     "hit": true
+    },
+    "V2:hi_lo_ratio": {
+     "B_oriented": 0.143,
+     "impr": 91.76,
+     "hit": false
+    },
+    "V2:enstrophy_surf": {
+     "B_oriented": 0.0,
+     "impr": 72.24,
+     "hit": true
+    },
+    "V2:div_surf": {
+     "B_oriented": 0.0,
+     "impr": 66.29,
+     "hit": true
+    },
+    "V2:ke_total": {
+     "B_oriented": 0.0,
+     "impr": 40.87,
+     "hit": true
+    },
+    "V2:temp_drift": {
+     "A": -0.013,
+     "blur2_max_absrel": 0.0,
+     "hit": true
+    },
+    "V2:budget_res_u(obs)": {
+     "A": 0.395,
+     "counted": false
+    },
+    "V2:budget_res_v(obs)": {
+     "A": 0.395,
+     "counted": false
+    }
+   }
+  },
+  "result": "PASS"
+ },
+ "P6": {
+  "statement": "frac(σ1) ≤ frac(σ2) ≤ frac(σ4) 于 V1 与 V2",
+  "values": {
+   "V1": [
+    0.3467,
+    0.4396,
+    0.4679
+   ],
+   "V2": [
+    0.3659,
+    0.4468,
+    0.4798
+   ]
+  },
+  "result": "PASS"
+ },
+ "P7": {
+  "statement": "BH93 flat 静止：u/v 基元 σ2 |Δlog| 中位数 < ln1.001=0.001000（失败→全案降级）",
+  "values": {
+   "median_absdlog_uv": 0.0,
+   "max_absdlog_uv": 0.0,
+   "n_uv_cells": 392,
+   "n_uv_cells_gt_floor": 0,
+   "median_all124_obs": 0.0,
+   "n_flat": 7
+  },
+  "result": "PASS"
+ },
+ "P8": {
+  "statement": "双攻免疫幸存者非空且形状比占比 ≥ 0.8 于 V1 与 V2",
+  "values": {
+   "V1": {
+    "n": 91,
+    "n_shape": 77,
+    "shape_frac": 0.8462,
+    "n_distinct_numerators": 29,
+    "n_sigma4": 91,
+    "composition": {
+     "w/w": 51,
+     "temp/temp": 18,
+     "w/u": 7,
+     "w/v": 7,
+     "v/u": 4,
+     "u/u": 2,
+     "v/v": 2
+    }
+   },
+   "V2": {
+    "n": 90,
+    "n_shape": 76,
+    "shape_frac": 0.8444,
+    "n_distinct_numerators": 27,
+    "n_sigma4": 89,
+    "composition": {
+     "w/w": 48,
+     "temp/temp": 18,
+     "w/u": 7,
+     "w/v": 7,
+     "u/v": 4,
+     "u/u": 3,
+     "v/v": 2,
+     "v/u": 1
+    }
+   }
+  },
+  "result": "PASS"
+ },
+ "P9": {
+  "statement": "#20 未落地（9/18 12:00 门）",
+  "values": {
+   "file": "/data/xinyuan/GOAI_ai4s_env/e71_innov/community_metric_trial/final/METRICS20_ZONAL.json"
+  },
+  "result": "已预注册未执行"
+ },
+ "P10": {
+  "statement": "#20 未落地（9/18 12:00 门）",
+  "values": {
+   "file": "/data/xinyuan/GOAI_ai4s_env/e71_innov/community_metric_trial/final/METRICS20_ZONAL.json"
+  },
+  "result": "已预注册未执行"
+ },
+ "self_checks": {
+  "zonal_S_A_204": true,
+  "zonal_S_A_distinct_num_41": true,
+  "zonal_keys_124": true,
+  "merid_p4_set_88": true,
+  "bh93_n_flat": 7,
+  "key_deviation": {
+   "merid": null,
+   "diag45": null
+  }
+ },
+ "summary": {
+  "executed": 8,
+  "passed": 8,
+  "not_executed": [
+   "P9",
+   "P10"
+  ],
+  "case_status": "OK",
+  "note": "P7 失败=美颜关噪声门失效，全案降级为待定（PREREG §4.P7）；负结果原样发布"
+ },
+ "distinct_numerator_duals": {
+  "V1": {
+   "S_A_env": 407,
+   "S_A_env_distinct_num": 59,
+   "blur2_hits_in_S_A_env": 194,
+   "blur2_hits_distinct_num": 33,
+   "dual_immune_n": 91,
+   "dual_immune_distinct_num": 29
+  },
+  "V2": {
+   "S_A_env": 454,
+   "S_A_env_distinct_num": 65,
+   "blur2_hits_in_S_A_env": 255,
+   "blur2_hits_distinct_num": 40,
+   "dual_immune_n": 90,
+   "dual_immune_distinct_num": 27
+  },
+  "zonal": {
+   "S_A_env": 204,
+   "S_A_env_distinct_num": 41,
+   "blur2_hits_in_S_A_env": 84,
+   "blur2_hits_distinct_num": 21,
+   "dual_immune_n": 28,
+   "dual_immune_distinct_num": 14
+  }
+ }
+}

@@ -251,7 +251,7 @@
    },
    {
     "verdict": "死",
-    "text": "90°: A +0.17; 45°: A −0.97 / B 0.25",
+    "text": "90°: A −0.17; 45°: A +0.97 / B 0.25",
     "value": 0.1677,
     "source": "e52/E52_CROSS.json; e55/E55_CROSS.json"
    },

@@ -1,0 +1,30 @@
+{
+ "prereg_sha": "7b6a233127359f43aee8a356cbaac62cc19e5ae583b1fe2f365a0d76b62091ef",
+ "spurious_key": "u|all|rms",
+ "n_candidates": 15376,
+ "n_runs_steep": 58,
+ "n_pairs": 32,
+ "spearman_D_A": 0.9762,
+ "spearman_D_B": -0.661,
+ "spearman_A_B": -0.6742,
+ "p_D_A": 0.0004997501249375312,
+ "p_D_B": 0.0004997501249375312,
+ "n_ratio": 15252,
+ "n_absolute": 124,
+ "B_mean_absolute": 0.1376,
+ "B_mean_ratio": 0.5013,
+ "A_mean_absolute": 0.611,
+ "A_mean_ratio": 0.0014,
+ "n_both": 204,
+ "D_mean_all": 0.0067,
+ "D_mean_both": 0.8009,
+ "D_median_all": 0.0524,
+ "D_median_both": 0.7989,
+ "prereg_check": {
+  "P1 rho(D,A)<0": false,
+  "P2 rho(D,B)>0": false,
+  "P3 绝对量的 B 低于比值型": true,
+  "P4 两关同过的 D 低于全体": false
+ },
+ "elapsed_s": 17.7
+}

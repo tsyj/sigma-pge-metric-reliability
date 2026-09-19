@@ -1,0 +1,98 @@
+{
+ "module": "P6_power_ledger",
+ "p_grid": [
+  0.9,
+  0.925,
+  0.95,
+  0.975,
+  1.0
+ ],
+ "n_grid": [
+  32,
+  88,
+  204
+ ],
+ "R": 20000,
+ "seed": 20260922,
+ "min_effect_of_concern": 0.05,
+ "table": {
+  "p0.9_n32": {
+   "eproc_mix": 0.0,
+   "eproc_point095": 0.0,
+   "wilson_oneshot": 0.0
+  },
+  "p0.9_n88": {
+   "eproc_mix": 0.00625,
+   "eproc_point095": 0.002,
+   "wilson_oneshot": 0.01995
+  },
+  "p0.9_n204": {
+   "eproc_mix": 0.01225,
+   "eproc_point095": 0.0151,
+   "wilson_oneshot": 0.0294
+  },
+  "p0.925_n32": {
+   "eproc_mix": 0.0,
+   "eproc_point095": 0.0,
+   "wilson_oneshot": 0.0
+  },
+  "p0.925_n88": {
+   "eproc_mix": 0.0327,
+   "eproc_point095": 0.0146,
+   "wilson_oneshot": 0.09815
+  },
+  "p0.925_n204": {
+   "eproc_mix": 0.0899,
+   "eproc_point095": 0.1252,
+   "wilson_oneshot": 0.23405
+  },
+  "p0.95_n32": {
+   "eproc_mix": 0.0,
+   "eproc_point095": 0.0,
+   "wilson_oneshot": 0.0
+  },
+  "p0.95_n88": {
+   "eproc_mix": 0.13175,
+   "eproc_point095": 0.07905,
+   "wilson_oneshot": 0.35145
+  },
+  "p0.95_n204": {
+   "eproc_mix": 0.45065,
+   "eproc_point095": 0.567,
+   "wilson_oneshot": 0.77975
+  },
+  "p0.975_n32": {
+   "eproc_mix": 0.0,
+   "eproc_point095": 0.0,
+   "wilson_oneshot": 0.0
+  },
+  "p0.975_n88": {
+   "eproc_mix": 0.4663,
+   "eproc_point095": 0.3874,
+   "wilson_oneshot": 0.8192
+  },
+  "p0.975_n204": {
+   "eproc_mix": 0.9607,
+   "eproc_point095": 0.98125,
+   "wilson_oneshot": 0.998
+  },
+  "p1.0_n32": {
+   "eproc_mix": 0.0,
+   "eproc_point095": 0.0,
+   "wilson_oneshot": 0.0
+  },
+  "p1.0_n88": {
+   "eproc_mix": 1.0,
+   "eproc_point095": 1.0,
+   "wilson_oneshot": 1.0
+  },
+  "p1.0_n204": {
+   "eproc_mix": 1.0,
+   "eproc_point095": 1.0,
+   "wilson_oneshot": 1.0
+  }
+ },
+ "P6_power_e_at_32": 0.0,
+ "P6_power_e_at_204": 0.45065,
+ "label": "功效估计（合成流注入），非对真实尺子的认证（PREREG P6 显著标注）"
+}

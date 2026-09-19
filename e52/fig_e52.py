@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import sys, json
 sys.path.insert(0,'/data/xinyuan/GOAI_ai4s_env/scripts')

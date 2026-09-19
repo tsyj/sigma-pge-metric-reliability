@@ -1,36 +1,31 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Kill board v2: 5 行(4 把尺子 + 隐藏真值对照) x 8 审计算子; 每格 {verdict,text,value,source,rule};
 从 analysis/*.json 读值; 出 print(报告)/slide(幻灯) 两版. 规则写在 RULES 并随 JSON 输出."""
 import json, os, sys
 sys.path.insert(0,'/data/xinyuan/GOAI_ai4s_env/scripts')
-import figstyle as F
-import matplotlib.pyplot as plt
 import numpy as np
 # --- 可移植性垫片：开发机行为不变；换台机器时自动改用仓库内的文件 ---
+# 2026-09-17 修（repo_fixes 第二轮）：旧垫片在 figstyle 导入之后才补 sys.path，且按开发机相对路径找文件
+# （e44/ 在仓库里叫 e44_tide/，找不到）——无 /data 的机器上整段必失败，并被 reproduce_core 第 1 步静默跳过。
+# 现在：开发机（/data 存在）读写路径与历史生成逐字相同；否则读写一律落仓库内对应目录。
 import os as _o, sys as _s
 _H=_o.path.dirname(_o.path.abspath(__file__))
 _R=_H if _o.path.isdir(_o.path.join(_H,'e44_tide')) else _o.path.dirname(_H)
 for _d in (_o.path.join(_R,'scripts'), _o.path.join(_R,'e44_tide'), _R):
-    if _o.path.isdir(_d) and _d not in _s.path: _s.path.insert(0,_d)
-if not _o.path.isdir('/data/xinyuan/GOAI_ai4s_env'):
-    # 评委机器：把开发路径重定向到仓库内
-    _real_open=open
-    def open(f,*a,**k):
-        if isinstance(f,str) and f.startswith('/data/xinyuan/GOAI_ai4s_env/'):
-            rel=f.replace('/data/xinyuan/GOAI_ai4s_env/','')
-            for _b in (_R, _o.path.join(_R,'e44_tide')):
-                _p=_o.path.join(_b,rel)
-                if _o.path.exists(_p): return _real_open(_p,*a,**k)
-                _p2=_o.path.join(_b,_o.path.basename(rel))
-                if _o.path.exists(_p2): return _real_open(_p2,*a,**k)
-        return _real_open(f,*a,**k)
+    if _o.path.isdir(_d) and _d not in _s.path: _s.path.append(_d)  # 追加在末尾：开发机仍优先 /data/.../scripts
+_ENV='/data/xinyuan/GOAI_ai4s_env/'
+if _o.path.isdir(_ENV):
+    E,E52,E56=_ENV+'e44/',_ENV+'e52/',_ENV+'e56/'
+else:  # 评委机器
+    E,E52,E56=[_o.path.join(_R,_d)+'/' for _d in ('e44_tide','e52','e56')]
 # --- 垫片结束 ---
+import figstyle as F
+import matplotlib.pyplot as plt
 
 F.paper_style()
 UND='待定'
-E='/data/xinyuan/GOAI_ai4s_env/e44/'
-V=json.load(open(E+'analysis/E44_VERDICT_v2.json')); BH=json.load(open('/data/xinyuan/GOAI_ai4s_env/e56/E56_VERDICT.json')); X=json.load(open('/data/xinyuan/GOAI_ai4s_env/e52/E52_CROSS.json'))
+V=json.load(open(E+'analysis/E44_VERDICT_v2.json')); BH=json.load(open(E56+'E56_VERDICT.json')); X=json.load(open(E52+'E52_CROSS.json'))
 U=json.load(open(E+'analysis/E50_UV_AUDIT.json')); M=json.load(open(E+'analysis/E44_METRICS.json'))
 KB=json.load(open(E+'analysis/KB_EXTRA_CELLS.json')); R=json.load(open(E+'analysis/RT2_FIXES.json'))
 E54=json.load(open(E+'agent/E54_NAMESWAP.json'))['conditions'] if os.path.exists(E+'agent/E54_NAMESWAP.json') else None
@@ -84,7 +79,7 @@ def cell(m,c):
         return {'uv_ratio':(P,'预测失效, 实测存活',None,'PREREG_E44.md P3'),'deep_dc_rms':(B,'P2 半中 (ρ=−0.9 但奖励损伤)',-0.9,'E44_VERDICT_v2.json'),
                 'Pnet_MW':(B,'P5 稳定完赛中; 穿零未预测',None,'PREREG_E44.md P5'),'temp_d400':(NA,'未被预注册覆盖',None,'-')}[m]
     if c==5:
-        return {'uv_ratio':(D,'90°: A +0.17; 45°: A −0.97 / B 0.25',X['uv_merid']['rho'],'e52/E52_CROSS.json; e55/E55_CROSS.json'),
+        return {'uv_ratio':(D,'90°: A −0.17; 45°: A +0.97 / B 0.25',X['uv_merid']['rho'],'e52/E52_CROSS.json; e55/E55_CROSS.json'),
                 'deep_dc_rms':(D,'A −0.99 / B 0.00',R['M6_deep_rms_800']['merid22'],'RT2_FIXES.json:M6'),
                 'temp_d400':(D,'内潮满分 / 风驱 A 反向 +0.85',0.853,'E49_CROSS.json:tempd400_wind'),
                 'Pnet_MW':(NA,'仅内潮有定义',None,'-')}[m]

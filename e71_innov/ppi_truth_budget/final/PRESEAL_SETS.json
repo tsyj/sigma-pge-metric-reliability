@@ -1,0 +1,87 @@
+{
+ "note": "封存前元数据核对；U_meta 以 out_his.nc 存在近似 base_quantities 成功（真实 U 由封存后管线确定）",
+ "ledger_dup_lines": 69,
+ "ledger_dup_with_differing_meta": 0,
+ "n_U_meta": 58,
+ "B_V": [
+  {
+   "run_id": "e2_9e957e1b688e",
+   "VISC2": 30000.0,
+   "in_U_meta": true,
+   "out_his_exists": true
+  },
+  {
+   "run_id": "e2_b82a21ff15fd",
+   "VISC2": 10000.0,
+   "in_U_meta": true,
+   "out_his_exists": true
+  },
+  {
+   "run_id": "e2_ee394c011892",
+   "VISC2": 5000.0,
+   "in_U_meta": true,
+   "out_his_exists": true
+  }
+ ],
+ "n_B_V": 3,
+ "B_V_subset_of_U_meta": true,
+ "n_U_meta_visc2_gt3000_any_action": 3,
+ "n_pairs": 32,
+ "n_B_T": 32,
+ "n_B_T_out_his": 32,
+ "n_pairs_steep_arm_in_U_meta": 32,
+ "n_B_S": 6,
+ "n_B_S_out_his": 5,
+ "n_B_S_matched_with_out_his": 4,
+ "B_S": [
+  {
+   "run_id": "e2_03aef1df4e2d",
+   "ntimes": 1440,
+   "VISC2": 50.0,
+   "seed": 1,
+   "out_his_exists": false,
+   "matched_full_in_U": false
+  },
+  {
+   "run_id": "e2_1ee7319797d7",
+   "ntimes": 1440,
+   "VISC2": 50.0,
+   "seed": 0,
+   "out_his_exists": true,
+   "matched_full_in_U": true
+  },
+  {
+   "run_id": "e2_2225468b5b4d",
+   "ntimes": 2880,
+   "VISC2": 50.0,
+   "seed": 1,
+   "out_his_exists": true,
+   "matched_full_in_U": false
+  },
+  {
+   "run_id": "e2_4a03e23addc6",
+   "ntimes": 1440,
+   "VISC2": 500.0,
+   "seed": 0,
+   "out_his_exists": true,
+   "matched_full_in_U": true
+  },
+  {
+   "run_id": "e2_d8b5544d99c3",
+   "ntimes": 1440,
+   "VISC2": null,
+   "seed": 0,
+   "out_his_exists": true,
+   "matched_full_in_U": true
+  },
+  {
+   "run_id": "e2_e950353e7773",
+   "ntimes": 1440,
+   "VISC2": 2747.0,
+   "seed": 0,
+   "out_his_exists": true,
+   "matched_full_in_U": true
+  }
+ ],
+ "n_ref_visc50_simple_in_U_meta": 1
+}

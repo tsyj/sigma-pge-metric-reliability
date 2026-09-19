@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E54 换名对照 x5: 同一份 15 臂数据, 三种标签条件各 5 次独立调用:
  C0 真名 | C1 匿名 M1-M7 | C2 互换名(把 Pnet 叫 'uv_ratio', 把 uv_ratio 叫 'Pnet_MW', 其余不变)

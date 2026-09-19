@@ -1,0 +1,244 @@
+{
+ "date": "2026-09-17 16:03:44 +0800",
+ "prereg_sha256": "60865d479350418d88eca135f350f20a9196d5d98464725a03b1a15937eec3f4",
+ "code_sha": {
+  "e71g_replica.py": "76cbac75a120eaca9c55f96ffa976f13dc151f27b4baef36359da58d98442e44",
+  "e71g_scan.py": "f73c167bedebc5d33072616cbe3a369f826704dbc541ced4341e9e5cc2ded472",
+  "e71g_verdict.py": "6a1591b2f4c1b2367d9abeecc7a75b8389f496534a86bd024096895ad6ace34a",
+  "e71g_1step_clone.sh": "c4c63d4ebe0e3f58932f2bfae2883cdc4a75887f6690aff1665eabb4ce5194e1",
+  "e71g_run.sh": "1558ec376cfc8119417c7b3e203a9cd03b1372bb403a5019de854c451e626353"
+ },
+ "code_sha_match_scan": true,
+ "scan_meta": {
+  "date": "2026-09-17 16:03:43 +0800",
+  "code_sha": {
+   "e71g_replica.py": "76cbac75a120eaca9c55f96ffa976f13dc151f27b4baef36359da58d98442e44",
+   "e71g_scan.py": "f73c167bedebc5d33072616cbe3a369f826704dbc541ced4341e9e5cc2ded472",
+   "e71g_verdict.py": "6a1591b2f4c1b2367d9abeecc7a75b8389f496534a86bd024096895ad6ace34a",
+   "e71g_1step_clone.sh": "c4c63d4ebe0e3f58932f2bfae2883cdc4a75887f6690aff1665eabb4ce5194e1",
+   "e71g_run.sh": "1558ec376cfc8119417c7b3e203a9cd03b1372bb403a5019de854c451e626353"
+  },
+  "prereg_sha256": "60865d479350418d88eca135f350f20a9196d5d98464725a03b1a15937eec3f4",
+  "numpy": "2.0.2",
+  "netCDF4": "1.7.2",
+  "notes": []
+ },
+ "anchors": [
+  {
+   "id": "A0",
+   "statement": "复刻 Cs_r vs out_his Cs_r：max|Δ| <= 1e-10",
+   "values": {
+    "max_dcs": 4.440892098500626e-16
+   },
+   "gating": true,
+   "anchor_pass": true
+  },
+  {
+   "id": "A1",
+   "statement": "平底零锚：max|a_u| == 0.0 且 max|a_v| == 0.0（逐位零）",
+   "values": {
+    "max_abs_u": 0.0,
+    "max_abs_v": 0.0
+   },
+   "gating": true,
+   "anchor_pass": true
+  },
+  {
+   "id": "A2",
+   "statement": "DT*max_内点|Σ_k(Hz_u·a_u)/Σ_k Hz_u| / ubarmax_step1(1.869474e-3，diag 第2行第2列) ∈ [0.5, 2.0]",
+   "values": {
+    "diag_columns": "tdays, ubarmax, vbarmax, umax, vmax (ana_diag MAX = signed max)",
+    "diag_row2": [
+     730119.000116,
+     0.001869474,
+     0.001869474,
+     -0.0,
+     0.0
+    ],
+    "diag_row3": [
+     730119.000231,
+     0.002856887,
+     0.002856887,
+     0.006833781,
+     0.006833781
+    ],
+    "ubarmax_step1": 0.001869474,
+    "dt_absmax_ubar_repl": 0.002120050830892893,
+    "dt_signedmax_ubar_repl": 0.002120050830892893,
+    "dt_absmax_vbar_repl": 0.002120050830892893,
+    "dt_signedmax_vbar_repl": 0.002120050830892893,
+    "dt_absmax_au_pointwise": 0.007084337439059045,
+    "dt_absmax_av_pointwise": 0.007084337439059045,
+    "dt_absmax_au_pointwise_fullarray": 0.007084337439059045,
+    "ratio": 1.1340360073972107,
+    "ratio_pointwise_record": 3.7894816611833297
+   },
+   "gating": true,
+   "anchor_pass": true
+  },
+  {
+   "id": "A3",
+   "statement": "七档陡臂步 1 ubarmax（diag 第2行第2列）max/min − 1 <= 0.04（日 1 三维 |u|max 比值同框，不判）",
+   "values": {
+    "visc": [
+     "0",
+     "50",
+     "150",
+     "400",
+     "800",
+     "1500",
+     "2747"
+    ],
+    "step1_ubarmax": [
+     0.001869474,
+     0.001868225,
+     0.001865731,
+     0.001859516,
+     0.00184963,
+     0.0018325,
+     0.001802511
+    ],
+    "spread": 0.03714984263618937,
+    "day1_umax3d_abs_cm_v0": 99.71736907958984,
+    "day1_umax3d_abs_cm_v2747": 18.791793823242188,
+    "day1_ratio": 5.306431627419026,
+    "report_step1_umax3d_row3_signed": [
+     0.006833781,
+     0.006832533,
+     0.006830039,
+     0.006823824,
+     0.006813938,
+     0.006796807,
+     0.006766818
+    ],
+    "report_row3_spread": 0.009895788537537031,
+    "pointers": {
+     "step1": "e56/runs/bh93_r26steep_v*/seamount_diag.dat row2 col2",
+     "row3": "row3 col4",
+     "day1": "e56/E56_BH93.json [bathy=r26steep].u_max"
+    }
+   },
+   "gating": true,
+   "anchor_pass": true
+  },
+  {
+   "id": "A2c",
+   "statement": "报告项：diag 第3行第4列 umax ∈ [0.95·X, 1.05·(X+U)]，X=DT*max_内点(a_u−柱平均)，U=ubarmax_step1",
+   "values": {
+    "report_only": true,
+    "X_dt_signedmax_dev_u": 0.006744710400333188,
+    "U_ubarmax_step1": 0.001869474,
+    "umax3d_row3": 0.006833781,
+    "lo": 0.006407474880316528,
+    "hi": 0.009044893620349846,
+    "in_bracket": true,
+    "rel_dev_from_X_plus_U": -0.2605297711959437
+   },
+   "gating": false,
+   "anchor_pass": true
+  },
+  {
+   "id": "A2b",
+   "statement": "一步运行 u_prsgrd/v_prsgrd 与复刻 a_u/a_v 的柱偏差归一化形状 内点 L∞ <= 1e-3（u、v 均需）",
+   "values": {
+    "present": true,
+    "done": true,
+    "nrec": 3,
+    "ocean_time": [
+     63082281595.0,
+     63082281610.0,
+     63082281620.0
+    ],
+    "binary_sha256": "00751585e69ff3e7c236150f0e177a4a1fbfe451b0c3f4d51fe9f8f7b095e3ee",
+    "pat_dev_linf_u": NaN,
+    "pat_dev_linf_v": NaN,
+    "pat_raw_linf_u": NaN,
+    "pat_raw_linf_v": NaN,
+    "scale_dev_u": 0.0,
+    "scale_dev_v": 0.0
+   },
+   "gating": false,
+   "anchor_pass": false
+  }
+ ],
+ "anchor_failed": false,
+ "a2b_status": "fail",
+ "predictions": [
+  {
+   "id": "P1",
+   "statement": "S1 四档 E_L2^u 严格递增（smooth<steep<rx069<harsh）",
+   "values": {
+    "order": [
+     "smooth",
+     "steep",
+     "rx069",
+     "harsh"
+    ],
+    "EL2_u": [
+     2.3336776442385054e-06,
+     3.118971282002113e-06,
+     1.2104402483582795e-05,
+     1.3859263575944083e-05
+    ]
+   },
+   "prediction_pass": true
+  },
+  {
+   "id": "P2",
+   "statement": "光滑成员 p̂_23 ∈ [1.5, 2.5]",
+   "values": {
+    "p23_smooth": 2.0238505472904493
+   },
+   "prediction_pass": true
+  },
+  {
+   "id": "P3",
+   "statement": "p̂_12(陡) <= p̂_12(光滑) − 0.3",
+   "values": {
+    "p12_steep": 1.7541394411678077,
+    "p12_smooth": 2.083721414518342
+   },
+   "prediction_pass": true
+  },
+  {
+   "id": "P4",
+   "statement": "E_L2^u(flat48)/E_L2^u(r26steep) <= 0.2",
+   "values": {
+    "ratio_flat": 0.039571306831698745
+   },
+   "prediction_pass": true
+  },
+  {
+   "id": "P5",
+   "statement": "E_L2^u(r26steep, ρ_m−ρ_ref(z)) / E_L2^u(r26steep, ρ_m) <= 0.5",
+   "values": {
+    "ratio_refsub": 0.04042886486549256
+   },
+   "prediction_pass": true
+  },
+  {
+   "id": "P6",
+   "statement": "S1 四档 E_L∞^v 严格递增（伪梯度，真值恒零）",
+   "values": {
+    "order": [
+     "smooth",
+     "steep",
+     "rx069",
+     "harsh"
+    ],
+    "ELinf_v": [
+     2.8491609385310187e-05,
+     0.00019932659766416886,
+     0.0012410180294451885,
+     0.00110138040321402
+    ]
+   },
+   "prediction_pass": false
+  }
+ ],
+ "n_pass": 5,
+ "n_total": 6,
+ "open_problems": [
+  "n=4 陡度静止态运行对照（已预注册未执行，PREREG §8.5）"
+ ]
+}

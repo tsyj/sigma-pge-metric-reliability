@@ -1,0 +1,194 @@
+{
+ "script": "e73x_posthoc_audit.py",
+ "script_sha": "eb52eaa8644ac39eda4e7e1bb442b480e33c2bd3855c748958a95feec9062358",
+ "status": "封存后探索性，非预注册，不改判",
+ "prereg_sha": "238377f14ca258aeeee5238a19b27e2e7f33e2ae63ba2f38c7a360270f7bc607",
+ "a_tail_nan_audit": {
+  "n_total": 15376,
+  "n_nan_kappa": 32,
+  "n_nan_constant_series": 32,
+  "n_nan_absolute_G1": 0,
+  "n_nan_ratio_G0": 32,
+  "nan_examples": [
+   [
+    "temp|all|max",
+    "temp|s200|max"
+   ],
+   [
+    "temp|all|max",
+    "temp|s50|max"
+   ],
+   [
+    "temp|s200|max",
+    "temp|all|max"
+   ],
+   [
+    "temp|s200|max",
+    "temp|s50|max"
+   ],
+   [
+    "temp|s50|max",
+    "temp|all|max"
+   ],
+   [
+    "temp|s50|max",
+    "temp|s200|max"
+   ],
+   [
+    "w|d200|max",
+    "w|d400|max"
+   ],
+   [
+    "w|d400|max",
+    "w|d200|max"
+   ],
+   [
+    "zeta|all|max",
+    "zeta|s200|max"
+   ],
+   [
+    "zeta|all|max",
+    "zeta|s50|max"
+   ]
+  ],
+  "note_sealed_code_effect": "np.argsort 把 NaN 排在最末（κ 秩最大）；封存版 H1 的 ρ=0.1615 含此伪秩；封存版 H2 的 MW 遇 NaN 返回 NaN→null",
+  "exploratory_H1_nan_excluded": {
+   "n": 15344,
+   "rho": 0.1687,
+   "perm_p": 0.0002
+  },
+  "exploratory_H2_nan_excluded": {
+   "n_dead": 8531,
+   "n_alive": 6813,
+   "med_kappa_dead": 0.094,
+   "med_kappa_alive": 25.0251,
+   "mw_p_one_sided": 1.0
+  }
+ },
+ "b_top30_overlap": {
+  "file_mtime": "2026-09-02 17:28（预先存在）",
+  "top30_format": "[num, den, rho, B]",
+  "n_top30": 30,
+  "overlap_escapees": [
+   [
+    "u|d1500|p95",
+    "w|d1500|rms"
+   ]
+  ],
+  "overlap_triple_n": 12,
+  "overlap_triple": [
+   [
+    "temp|d1500|p95",
+    "temp|all|rms"
+   ],
+   [
+    "temp|d1500|p95",
+    "temp|s200|rms"
+   ],
+   [
+    "temp|d200|p95",
+    "temp|all|rms"
+   ],
+   [
+    "temp|d200|p95",
+    "temp|s200|rms"
+   ],
+   [
+    "u|d1500|p95",
+    "w|d1500|max"
+   ],
+   [
+    "v|d1500|p95",
+    "w|d1500|max"
+   ],
+   [
+    "v|d200|rms",
+    "w|d1500|rms"
+   ],
+   [
+    "v|d400|rms",
+    "w|d1500|rms"
+   ],
+   [
+    "v|d800|p95",
+    "w|d800|max"
+   ],
+   [
+    "v|d800|rms",
+    "w|d1500|rms"
+   ],
+   [
+    "w|s200|rms",
+    "w|d1500|rms"
+   ],
+   [
+    "w|s200|rms",
+    "w|d800|rms"
+   ]
+  ],
+  "overlap_top20_residual": [],
+  "diag45_counts": {
+   "n_pass_A": 4646,
+   "n_pass_AB": 454
+  }
+ },
+ "c_P3b_decomposition": {
+  "note": "描述性，非检验；c_45 取 map 的 4 位小数值（与 e73d 内部全精度差 <5e-5）",
+  "med_triple": 0.103,
+  "n_triple": 80,
+  "med_rest": 0.0773,
+  "n_rest": 15296,
+  "med_rest_absA45_lt_0p3": 0.3523,
+  "n_rest_absA45_lt_0p3": 2431,
+  "med_rest_absA45_ge_0p7": 0.0339,
+  "n_rest_absA45_ge_0p7": 9141,
+  "med_rest_A45_ge_0p7": 0.0333,
+  "n_rest_A45_ge_0p7": 4566,
+  "med_S_A_surv45_not_triple": 0.0604,
+  "n_S_A_surv45_not_triple": 60,
+  "med_S_A_dead45": 0.1203,
+  "med_all_conf": 0.0651,
+  "med_all_nonconf": 0.2901,
+  "triple_mean_signed_r": 0.0793,
+  "rest_A45ge0p7_mean_signed_r": 0.0281
+ },
+ "d_P6_named": {
+  "strict": [
+   [
+    "u|d1500|p95",
+    "w|d1500|rms",
+    0.958,
+    0.964
+   ]
+  ],
+  "standard": [
+   [
+    "u|d1500|p95",
+    "u|d1500|max",
+    0.85,
+    1.0
+   ],
+   [
+    "u|d1500|p95",
+    "v|d1500|max",
+    0.886,
+    1.0
+   ],
+   [
+    "u|d1500|p95",
+    "w|d1500|rms",
+    0.958,
+    0.964
+   ],
+   [
+    "v|d1500|p95",
+    "v|d1500|max",
+    0.871,
+    1.0
+   ]
+  ],
+  "n_A45_ge_0p7": 10,
+  "n_B45_lt_0p9": 7
+ },
+ "elapsed_s": 9.2
+}

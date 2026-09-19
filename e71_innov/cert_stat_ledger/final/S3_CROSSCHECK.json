@@ -1,0 +1,21 @@
+{
+ "module": "S3_crosscheck",
+ "report_only": true,
+ "R": 20000,
+ "n_max": 204,
+ "lambda_halfkelly": 0.2777777777777774,
+ "seed": 20260925,
+ "panels": {
+  "p0.9": {
+   "cert_rate_mix": 0.01205,
+   "cert_rate_halfkelly": 0.00015,
+   "agreement": 0.9881
+  },
+  "p0.95": {
+   "cert_rate_mix": 0.4543,
+   "cert_rate_halfkelly": 0.1194,
+   "agreement": 0.6651
+  }
+ },
+ "note": "两法各自任意时刻有效；一致率只作交叉校核展板，不设通过线（PREREG §2）"
+}

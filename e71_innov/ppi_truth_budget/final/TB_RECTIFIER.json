@@ -1,0 +1,191 @@
+{
+ "prereg_seal": "80e93dc96a0ffbf749d5c1ecc3e069f0b492638bdc7a47874e6c178ee9cc00a2  PREREG_ppi_truth_budget.md",
+ "n_pop": 58,
+ "spur_key": "u|all|rms",
+ "seed": 20260918,
+ "h58": {
+  "a": 2.129684306261192,
+  "b": 0.7189384332523119,
+  "role": "descriptive_only (B_V 为样本内)"
+ },
+ "h_cal": {
+  "a": 2.1311862223791067,
+  "b": 0.7185378634667197,
+  "n_fit": 55,
+  "excluded_B_V_in_U": [
+   "e2_9e957e1b688e",
+   "e2_b82a21ff15fd",
+   "e2_ee394c011892"
+  ],
+  "role": "scoring (三路径均为拟合集外残差)"
+ },
+ "v3_spotcheck": {
+  "rows": [
+   {
+    "run_id": "e2_04ac56d390ce",
+    "regraded": 7.389203437930458,
+    "recomputed": 7.389203437930458,
+    "abs_diff": 0.0
+   },
+   {
+    "run_id": "e2_0603c6898c43",
+    "regraded": 4.155697956374581,
+    "recomputed": 4.155697956374581,
+    "abs_diff": 0.0
+   },
+   {
+    "run_id": "e2_075f704062c9",
+    "regraded": 5.707755074942175,
+    "recomputed": 5.707755074942175,
+    "abs_diff": 0.0
+   },
+   {
+    "run_id": "e2_0b0a9926a354",
+    "regraded": 4.16237870598991,
+    "recomputed": 4.16237870598991,
+    "abs_diff": 0.0
+   },
+   {
+    "run_id": "e2_13361ceca4ec",
+    "regraded": 5.1579815158626205,
+    "recomputed": 5.1579815158626205,
+    "abs_diff": 0.0
+   }
+  ],
+  "pass": true,
+  "tol": 0.001
+ },
+ "path_sets_ledger": {
+  "B_T": 32,
+  "B_V": 3,
+  "B_S": 6,
+  "B_V_in_U": 3,
+  "n_pairs": 32
+ },
+ "multipliers": {
+  "terrain": 2.048317844278895,
+  "visc": 4.407077737202322,
+  "short": 1.9380643321654167,
+  "short_pairing": "matched",
+  "n_terrain": 32,
+  "n_visc": 3,
+  "n_short_matched": 4,
+  "n_short_fallback": 1,
+  "primary_note": "初赛口径 224/62/28 见 github_repo/scripts/fig_llm.py L59-62（换地形32对中位/VISC2 50→30000/缩短积分5对中位），与本口径(SPUR_KEY 配对比中位)不同，只可并列不可互替"
+ },
+ "V6b_init62_recompute": {
+  "arith_ratio": 62.00142959256612,
+  "rounds_to_62": true,
+  "matches": [
+   {
+    "ref50": "e2_04ac56d390ce",
+    "visc30000": "e2_9e957e1b688e",
+    "src": "obs",
+    "key": "deep_rms_800",
+    "ref_value": 8.673704147338867,
+    "brushed_value": 0.13991740345954895
+   }
+  ],
+  "n_ref50": 1,
+  "n_visc30000": 1
+ },
+ "paths": {
+  "terrain": {
+   "n": 32,
+   "rectifier_median": 0.12425299553567992,
+   "rectifier_iqr": [
+    0.1143130003785986,
+    0.17446483777161048
+   ],
+   "descr_rectifier_median_h58": 0.12451673054955759,
+   "ybench_mean": 4.0001890722029945,
+   "reading_mean": 2.779422417283058,
+   "run_ids": [
+    "e2_0f30ed653d45",
+    "e2_109ca3289c7f",
+    "e2_11aefafe644c",
+    "e2_12db7c402b0b",
+    "e2_13bafd1a73e6",
+    "e2_19ddceecb478",
+    "e2_1b79f019a3ed",
+    "e2_1eefb83bbdee",
+    "e2_317a9fe4d3bf",
+    "e2_3ae47d93835d",
+    "e2_575a58da7c09",
+    "e2_5911958ddc4e",
+    "e2_5c603374c94c",
+    "e2_6014076f73c3",
+    "e2_61ad5d20f39b",
+    "e2_710f227af49f",
+    "e2_721ccc919e79",
+    "e2_73d78bd9bb16",
+    "e2_7b5ccdec85e1",
+    "e2_881a70c84453",
+    "e2_8fef85cfc8bc",
+    "e2_a91a2e7b3791",
+    "e2_aa592ccd4bb8",
+    "e2_ab79b814902e",
+    "e2_b3e567c2329a",
+    "e2_be5e14cb5f2c",
+    "e2_c375f3e285d9",
+    "e2_d10659e1b864",
+    "e2_df25deef97aa",
+    "e2_f05e329c7a86",
+    "e2_f9fb12a6aa2f",
+    "e2_fa2337282fcd"
+   ],
+   "status": "OK"
+  },
+  "visc": {
+   "n": 3,
+   "rectifier_median": 0.14057100586166849,
+   "rectifier_iqr": [
+    -0.06947871438391706,
+    0.15014601375133974
+   ],
+   "descr_rectifier_median_h58": 0.14143489374808782,
+   "ybench_mean": 3.3406274324154808,
+   "reading_mean": 1.6735652685165405,
+   "run_ids": [
+    "e2_9e957e1b688e",
+    "e2_b82a21ff15fd",
+    "e2_ee394c011892"
+   ],
+   "status": "OK"
+  },
+  "short": {
+   "n": 5,
+   "rectifier_median": -1.3748121208026651,
+   "rectifier_iqr": [
+    -1.3748121208026651,
+    -1.0072353994716639
+   ],
+   "descr_rectifier_median_h58": -1.3746874363665986,
+   "ybench_mean": 3.1282635291434917,
+   "reading_mean": 3.1269740581512453,
+   "run_ids": [
+    "e2_1ee7319797d7",
+    "e2_2225468b5b4d",
+    "e2_4a03e23addc6",
+    "e2_d8b5544d99c3",
+    "e2_e950353e7773"
+   ],
+   "status": "OK"
+  }
+ },
+ "mixture": {
+  "n_mix": 95,
+  "theta_mix": 4.8503314012167,
+  "n_label": 16,
+  "n_new_members_by_path": {
+   "terrain": 32,
+   "visc": 0,
+   "short": 5
+  },
+  "naive_filler": "h_cal (U∖B_V OLS)",
+  "cov_naive": 1.0,
+  "cov_ppi": 0.827
+ },
+ "elapsed_s": 4.4,
+ "status": "OK"
+}

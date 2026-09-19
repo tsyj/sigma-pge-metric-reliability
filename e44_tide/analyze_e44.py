@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """e44/analyze_e44.py -- E44 收数：每 case 一行指标
 TM(环带外传功率)/COH/正压振幅 口径逐字取自 wake_20260829/phase_test.py (one)；

@@ -1,0 +1,20 @@
+{
+ "A2c_M_over_X": 1.013205993197634,
+ "P1_harsh_over_rx069_EL2u": 1.1449770936435242,
+ "P6_harsh_over_rx069_ELinfv": 0.8874813879266564,
+ "S1_harsh_over_rx069_ELinfu": 0.8877862079302031,
+ "S1_harsh_over_smooth_EL2u": 5.938808048386843,
+ "P3_p12_gap_smooth_minus_steep": 0.3295819733505343,
+ "S3_refsub_over_flat_EL2u": 1.021671208318722,
+ "S3_orig_EL2u_over_true_amax": 0.08609052437982276,
+ "posthoc_rec1_DT_max_u_prsgrd": 0.006833779043518007,
+ "posthoc_rec1_DT_max_u_prsgrd_rel_to_row3": -2.862956821614304e-07,
+ "n_pass": 5,
+ "n_total": 6,
+ "n_refuted": 1,
+ "src_sha256": {
+  "verdict.json": "06df42d0acf38331e00469f521dd8cf42b98cc4ddccc6e4eb85a9ff5e04aa4ce",
+  "MMS_OPERATOR.json": "b448250b13814dfd1db7392a581953868a4ea9f54ba2076d69b00701a0f0cda3",
+  "POSTHOC_A2B.json": "bad8c64606159ac4a235a7494032607fa1e59e71670a42ce1aa652a19f72d5f4"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "对象": "e55/E55_CROSS.json 与 e44_tide/analysis/E55_CROSS.json（两份 sha256 相同，原件一律不改）",
+ "sha256": "d5805f5c579c9cbfc82b145bc870c67627eb80bcce1fb4c427e0273371db287d",
+ "问题": "e55_cross.py 由 e52_cross.py 改写而来：L75 读入的是 45° 数据（ledger/env2_diag45_runs.jsonl 与 runs_diag45），但 L102–107 落盘时沿用了 e52 的 merid 系键名。因此本 JSON 中所有键名含 merid 的字段，其数值实为 45°（diag45）环境的值，不是经向（90°）。",
+ "键名读法": {
+  "merid_pass": "实为 45° 两关通过数 = 454",
+  "uv_merid": "实为 uv_ratio 在 45° 的 (rho, paired) = (-0.9729, 0.25)（== 同文件 angle_trajectory_uv.deg45）",
+  "vu_merid": "实为 vu 在 45° 的 (rho, paired) = (0.1011, 0.8214)（== angle_trajectory_vu.deg45）",
+  "inter_zonal_merid": "实为 纬向∩45° = 140（独立对账：e67/E67B_RECIPE_TRANSFER.json diag45.S_A.n=140）",
+  "inter_merid_tide": "实为 45°∩内潮 = 3",
+  "inter_triple 与 triple_list": "实为 纬向∩45°∩内潮 = 1",
+  "merid_tide_list": "实为 45°∩内潮 的 3 把清单",
+  "family_zonal_merid": "实为 纬向∩45° 的家族分布",
+  "family_merid": "实为 45° 通过者的家族分布",
+  "deep_u_diag45 / deep_v_diag45": "键名本就正确（45°）",
+  "prereg_check.angle_trajectory_*": "键名按角度（deg0/deg45/deg90）标注，正确",
+  "prereg_check.expected_under_independence": "键名按角度标注（zonal_diag45 等），正确"
+ },
+ "真经向90度值出处": {
+  "文件": "e52/E52_CROSS.json",
+  "merid_pass": 407,
+  "uv_merid": {
+   "rho": 0.1677,
+   "paired": 0.8929,
+   "passAB": false
+  },
+  "vu_merid": {
+   "rho": -0.9243,
+   "paired": 0.1071,
+   "passAB": false
+  },
+  "inter_zonal_merid": 88,
+  "inter_merid_tide": 2,
+  "inter_triple": 0
+ },
+ "机械核验": [
+  "E55.uv_merid == E55.prereg_check.angle_trajectory_uv.deg45（本脚本 assert）",
+  "E55.vu_merid == E55.prereg_check.angle_trajectory_vu.deg45（本脚本 assert）",
+  "E52.uv_merid == E55.prereg_check.angle_trajectory_uv.deg90（本脚本 assert）",
+  "E55.inter_zonal_merid == 140 == E67B.diag45.S_A.n；E52.inter_zonal_merid == 88 == E67B.merid.S_A.n（本脚本 assert）"
+ ],
+ "生成": {
+  "脚本": "e71_innov/repo_fixes/scripts/fix_01_e55_keymap.py",
+  "日期": "2026-09-17"
+ }
+}

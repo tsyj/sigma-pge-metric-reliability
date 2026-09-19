@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E49 -- 跨环境交集: 风驱 E40 判据(A: rho<=-0.7 vs 隐藏技巧评分; B: 配对抗刷分>=0.9)
 的完整通过名单 x 内潮 E48 三轴报警名单。

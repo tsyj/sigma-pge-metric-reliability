@@ -1,0 +1,30 @@
+{
+ "module": "P5_perm_ledger",
+ "H0": "配对内标签可交换（sign-flip）",
+ "B": 10000,
+ "seed": 20260921,
+ "judged_field": "p_perm_plus1",
+ "cells": {
+  "uv_diag45_paired": {
+   "k": 7,
+   "n": 28,
+   "p_perm_onesided": 0.008,
+   "p_perm_plus1": 0.008099190080991902,
+   "p_binom_exact_check": 0.006270475685596466
+  },
+  "vu_zonal_paired": {
+   "k": 7,
+   "n": 32,
+   "p_perm_onesided": 0.001,
+   "p_perm_plus1": 0.0010998900109989002,
+   "p_binom_exact_check": 0.0010512007866054773
+  },
+  "vu_merid_paired": {
+   "k": 3,
+   "n": 28,
+   "p_perm_onesided": 0.0,
+   "p_perm_plus1": 9.999000099990002e-05,
+   "p_binom_exact_check": 1.372024416923523e-05
+  }
+ }
+}

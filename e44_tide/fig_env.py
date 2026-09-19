@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """图: 环境四元组 (K, V, H, A) —— 重点是审计算子也用来审隐藏判分自身"""
 import sys

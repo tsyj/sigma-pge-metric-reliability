@@ -1,0 +1,1613 @@
+[
+  {
+    "source": "build/src/ROMS/License_ROMS.txt",
+    "target": "docs/licenses/License_ROMS.txt",
+    "sha256": "8ef4da607dda6777ba383fef9ba798a3c9eb70d644919034156d7c329eaaf237",
+    "mode": "0o755",
+    "delivered_sha256": "8ef4da607dda6777ba383fef9ba798a3c9eb70d644919034156d7c329eaaf237",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e90_repo_ready/evidence/fix/e70_readonly_snapshot.json",
+    "target": "MODEL_USAGE_SNAPSHOT.json",
+    "sha256": "30e4e72d9d9084bcdc6bc40ba7f78a12367a51dcf14f789d6d90e5becdf1d095",
+    "mode": "0o664",
+    "delivered_sha256": "30e4e72d9d9084bcdc6bc40ba7f78a12367a51dcf14f789d6d90e5becdf1d095",
+    "byte_identical": true,
+    "note": "2026-09-18 已结束日志的只读汇总，含 Claude 身份字段限制"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/sigma_audit/__init__.py",
+    "target": "sigma_audit/__init__.py",
+    "sha256": "da2efb65b7f491680c6b1dd2b3093738045e3cfea2b26b97c9396f62d5d3a58b",
+    "mode": "0o664",
+    "delivered_sha256": "bdc17a427e0c0fbf8c3eb7b44986fa17071f74fa2dc92457a5641734d13d1e36",
+    "byte_identical": false,
+    "note": "包化路径、公开快照校验、命令输出与展示文字调整；详见 docs/SIGMA_AUDIT.md；原始来源未改"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/sigma_audit/__main__.py",
+    "target": "sigma_audit/__main__.py",
+    "sha256": "ac9d5cc90cb25d026089c12e05507da3366ed3ed8c035a2dae2360bf5c6cd4d5",
+    "mode": "0o664",
+    "delivered_sha256": "c70ff6c267c2a50901f51968b0bd622e77cd553ecb63b9ed135220c240977729",
+    "byte_identical": false,
+    "note": "包化路径、公开快照校验、命令输出与展示文字调整；详见 docs/SIGMA_AUDIT.md；原始来源未改"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/sigma_audit/anchors.py",
+    "target": "sigma_audit/anchors.py",
+    "sha256": "67724fc22fc914e4fda57778f4439c402ac57ba9dd373ed363d04fae321f119b",
+    "mode": "0o664",
+    "delivered_sha256": "6ea5df7e1c705fe3991755af6bf2cbe992ad165201ef8646ce37841ce9cccd2f",
+    "byte_identical": false,
+    "note": "包化路径、公开快照校验、命令输出与展示文字调整；详见 docs/SIGMA_AUDIT.md；原始来源未改"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/sigma_audit/cache.py",
+    "target": "sigma_audit/cache.py",
+    "sha256": "fc6d871315fa7b65e35399e5a9ab448d1265386dba9000a020e082174efbf73a",
+    "mode": "0o664",
+    "delivered_sha256": "efa5140ab6f67d393388e0c3999bd1a95f74e0370290cfd73de882edb73ab48d",
+    "byte_identical": false,
+    "note": "包化路径、公开快照校验、命令输出与展示文字调整；详见 docs/SIGMA_AUDIT.md；原始来源未改"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/sigma_audit/core.py",
+    "target": "sigma_audit/core.py",
+    "sha256": "4236b317a49412b837de8a136be0522f2dc1cc4d86d94f6d71173624c3f3111c",
+    "mode": "0o664",
+    "delivered_sha256": "a5c8f44bddb625c97d3a53070c7621bb3544621d714417dce5911d0b7b2f2a55",
+    "byte_identical": false,
+    "note": "包化路径、公开快照校验、命令输出与展示文字调整；详见 docs/SIGMA_AUDIT.md；原始来源未改"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/sigma_audit/plugins.py",
+    "target": "sigma_audit/plugins.py",
+    "sha256": "4873b5f75eb17ea4d41c58e566e9a3416b46e741b36696e67ab924107ecd2fd4",
+    "mode": "0o664",
+    "delivered_sha256": "4873b5f75eb17ea4d41c58e566e9a3416b46e741b36696e67ab924107ecd2fd4",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/sigma_audit/selftest.py",
+    "target": "sigma_audit/selftest.py",
+    "sha256": "4f66a3d743f219fe319cfb764746e1dbe79981db4badccdeb8bea5caab268b6c",
+    "mode": "0o664",
+    "delivered_sha256": "c083624616fdb64e7f8017cea259923e902107bc09c671b56eded65d9a3f05ec",
+    "byte_identical": false,
+    "note": "包化路径、公开快照校验、命令输出与展示文字调整；详见 docs/SIGMA_AUDIT.md；原始来源未改"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/cache/GATE_diag45.json",
+    "target": "sigma_audit/data/cache/GATE_diag45.json",
+    "sha256": "bad4160740d93e850df8e6110f43e81c45d7fad9da8bc5a1112277056d2af37a",
+    "mode": "0o664",
+    "delivered_sha256": "bad4160740d93e850df8e6110f43e81c45d7fad9da8bc5a1112277056d2af37a",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/cache/meta_diag45.json",
+    "target": "sigma_audit/data/cache/meta_diag45.json",
+    "sha256": "ce1b405d13f2c68b1ec4cd89d620209a6ce754cdf6436dc149d3234144a0c78e",
+    "mode": "0o664",
+    "delivered_sha256": "ce1b405d13f2c68b1ec4cd89d620209a6ce754cdf6436dc149d3234144a0c78e",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/cache/meta_merid.json",
+    "target": "sigma_audit/data/cache/meta_merid.json",
+    "sha256": "b245934e707be470a916789c46a52b1cf7f64385bce1e48c73c42a4f26f4dd7f",
+    "mode": "0o664",
+    "delivered_sha256": "b245934e707be470a916789c46a52b1cf7f64385bce1e48c73c42a4f26f4dd7f",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/cache/meta_zonal.json",
+    "target": "sigma_audit/data/cache/meta_zonal.json",
+    "sha256": "ff80968ebbb2767da53554f0ee7305a1371c26bb35ee29e004727bbd5ff9d700",
+    "mode": "0o664",
+    "delivered_sha256": "ff80968ebbb2767da53554f0ee7305a1371c26bb35ee29e004727bbd5ff9d700",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/cache/primitives_diag45.npz",
+    "target": "sigma_audit/data/cache/primitives_diag45.npz",
+    "sha256": "ab476d804a9716b5b611e3a01311b2cee83456ea629334caec029526643e686c",
+    "mode": "0o664",
+    "delivered_sha256": "ab476d804a9716b5b611e3a01311b2cee83456ea629334caec029526643e686c",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/cache/primitives_merid.npz",
+    "target": "sigma_audit/data/cache/primitives_merid.npz",
+    "sha256": "8100a2ea7ec9b847ba123a2111bd1d2b699f833850fd3236a81ca61de803036f",
+    "mode": "0o664",
+    "delivered_sha256": "8100a2ea7ec9b847ba123a2111bd1d2b699f833850fd3236a81ca61de803036f",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/cache/primitives_zonal.npz",
+    "target": "sigma_audit/data/cache/primitives_zonal.npz",
+    "sha256": "8847062a55d5a37955a67e12be210b98f1132e330588306322328bb6814eb047",
+    "mode": "0o664",
+    "delivered_sha256": "8847062a55d5a37955a67e12be210b98f1132e330588306322328bb6814eb047",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e65/E65_AXES.npz",
+    "target": "sigma_audit/data/reference/E65_AXES.npz",
+    "sha256": "aefbaed165a213a2c808dfc31672e2bb3bdc62db10e8ab7cbe4043d3a646ac08",
+    "mode": "0o664",
+    "delivered_sha256": "aefbaed165a213a2c808dfc31672e2bb3bdc62db10e8ab7cbe4043d3a646ac08",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e67/E67B_RECIPE_TRANSFER.json",
+    "target": "sigma_audit/data/reference/E67B_RECIPE_TRANSFER.json",
+    "sha256": "f441de0ceeb4a5cf3fc7a2258ba793869bf75b37678773e3c09d85a0fb55e52f",
+    "mode": "0o664",
+    "delivered_sha256": "f441de0ceeb4a5cf3fc7a2258ba793869bf75b37678773e3c09d85a0fb55e52f",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/PREREG_multienv_metrology.md",
+    "target": "sigma_audit/data/reference/PREREG_multienv_metrology.md",
+    "sha256": "9c529cb6c91990f2ca55e860787d2513ebb079692136b689f60ecdfb8464bb24",
+    "mode": "0o444",
+    "delivered_sha256": "9c529cb6c91990f2ca55e860787d2513ebb079692136b689f60ecdfb8464bb24",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/PREREG_multienv_metrology.sha256",
+    "target": "sigma_audit/data/reference/PREREG_multienv_metrology.sha256",
+    "sha256": "00681786a512fbc9b5d223152920d2bffd7b1e1c02808ad2072a117ad3121e9a",
+    "mode": "0o444",
+    "delivered_sha256": "00681786a512fbc9b5d223152920d2bffd7b1e1c02808ad2072a117ad3121e9a",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/tests/test_fault_injection.py",
+    "target": "tests/test_fault_injection.py",
+    "sha256": "76c73bf583af948987bef58798535c466e99e57a90815351f73ea1c5ae64675a",
+    "mode": "0o664",
+    "delivered_sha256": "2e5ad47b144a5d886813bda86e46cf2991ea1b32dedb5bf06cf9a6c5076b347c",
+    "byte_identical": false,
+    "note": "包化路径、公开快照校验、命令输出与展示文字调整；详见 docs/SIGMA_AUDIT.md；原始来源未改"
+  },
+  {
+    "source": "e71_innov/oss_audit_kit/tests/test_submit_e2e.py",
+    "target": "tests/test_submit_e2e.py",
+    "sha256": "890d5d871d143e19debe085d67837a8758888e12912a9f250b97ac01f66863ac",
+    "mode": "0o664",
+    "delivered_sha256": "890d5d871d143e19debe085d67837a8758888e12912a9f250b97ac01f66863ac",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/ABM_DERIVED.json",
+    "target": "e71_innov/audit_battery_meta/final/ABM_DERIVED.json",
+    "sha256": "4859ba75727f16b943a570d816c053cc75287b013c826af9ef1302209383559a",
+    "mode": "0o664",
+    "delivered_sha256": "4859ba75727f16b943a570d816c053cc75287b013c826af9ef1302209383559a",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/ABM_FILTER_CHAIN.json",
+    "target": "e71_innov/audit_battery_meta/final/ABM_FILTER_CHAIN.json",
+    "sha256": "207d1eaa2f83ddf0248224c2391ef15fdddb117a92204e4a1f992e6249d3bce3",
+    "mode": "0o664",
+    "delivered_sha256": "207d1eaa2f83ddf0248224c2391ef15fdddb117a92204e4a1f992e6249d3bce3",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/ABM_GOODHART_MAP.json",
+    "target": "e71_innov/audit_battery_meta/final/ABM_GOODHART_MAP.json",
+    "sha256": "39fb46f9b50af58985de58d49d46f5556ac5c63c2fdfa243aa39ef51d0dcdbca",
+    "mode": "0o664",
+    "delivered_sha256": "39fb46f9b50af58985de58d49d46f5556ac5c63c2fdfa243aa39ef51d0dcdbca",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/ABM_KILL_MATRIX.json",
+    "target": "e71_innov/audit_battery_meta/final/ABM_KILL_MATRIX.json",
+    "sha256": "2c4db4933ef3952081104e0aa0999ad043ce386275cb5e61fad6db37d3f4ce6e",
+    "mode": "0o664",
+    "delivered_sha256": "2c4db4933ef3952081104e0aa0999ad043ce386275cb5e61fad6db37d3f4ce6e",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/ABM_MR_CONSISTENCY.json",
+    "target": "e71_innov/audit_battery_meta/final/ABM_MR_CONSISTENCY.json",
+    "sha256": "31269d283560ab6f2ae1387610835dc905fc1ffbf4d582161555198bd3934654",
+    "mode": "0o664",
+    "delivered_sha256": "31269d283560ab6f2ae1387610835dc905fc1ffbf4d582161555198bd3934654",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/ABM_MUTANT_LEDGER.json",
+    "target": "e71_innov/audit_battery_meta/final/ABM_MUTANT_LEDGER.json",
+    "sha256": "74b6425b2b5835b84f3a4711f2a455db75f90a0a1f3f8bbbe247ef98ae141e90",
+    "mode": "0o664",
+    "delivered_sha256": "74b6425b2b5835b84f3a4711f2a455db75f90a0a1f3f8bbbe247ef98ae141e90",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/ABM_POSTHOC_TIES.json",
+    "target": "e71_innov/audit_battery_meta/final/ABM_POSTHOC_TIES.json",
+    "sha256": "3c4c004ad2d8724314a7d34bc8b7d20f4b465d667b3b35f53f5d0ee5dfbc9279",
+    "mode": "0o664",
+    "delivered_sha256": "3c4c004ad2d8724314a7d34bc8b7d20f4b465d667b3b35f53f5d0ee5dfbc9279",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/AUDIT_BATTERY_MANUAL.md",
+    "target": "e71_innov/audit_battery_meta/final/AUDIT_BATTERY_MANUAL.md",
+    "sha256": "3da326d515c575ceab37d143174f1bbfa593067f8046562493e80544f27bae56",
+    "mode": "0o664",
+    "delivered_sha256": "3da326d515c575ceab37d143174f1bbfa593067f8046562493e80544f27bae56",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/DEVIATIONS.md",
+    "target": "e71_innov/audit_battery_meta/final/DEVIATIONS.md",
+    "sha256": "a852124a2db374409faf14d310a64cf1699a4c0f3de882802a1cd418f3d047ae",
+    "mode": "0o664",
+    "delivered_sha256": "a852124a2db374409faf14d310a64cf1699a4c0f3de882802a1cd418f3d047ae",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/MR_TAXONOMY.md",
+    "target": "e71_innov/audit_battery_meta/final/MR_TAXONOMY.md",
+    "sha256": "8fce3954c042964b2a740f40bddd8249680da47020f7a338c56a5114c17eeffa",
+    "mode": "0o664",
+    "delivered_sha256": "8fce3954c042964b2a740f40bddd8249680da47020f7a338c56a5114c17eeffa",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/OPEN_PROBLEMS.md",
+    "target": "e71_innov/audit_battery_meta/final/OPEN_PROBLEMS.md",
+    "sha256": "b79b11a023ceb969059cfe77b47dadf99ce7237110acbad497e2f16ce48a4ec1",
+    "mode": "0o664",
+    "delivered_sha256": "b79b11a023ceb969059cfe77b47dadf99ce7237110acbad497e2f16ce48a4ec1",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/PREREG_audit_battery_meta.md",
+    "target": "e71_innov/audit_battery_meta/final/PREREG_audit_battery_meta.md",
+    "sha256": "7b641565f778ba909f6cff4583d8b7a8be896e59561e15b07a54fc3ce79679d9",
+    "mode": "0o444",
+    "delivered_sha256": "7b641565f778ba909f6cff4583d8b7a8be896e59561e15b07a54fc3ce79679d9",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/PREREG_audit_battery_meta.sha256",
+    "target": "e71_innov/audit_battery_meta/final/PREREG_audit_battery_meta.sha256",
+    "sha256": "8ea78f4346de6c3a658533f34987c637fcbad6bf5ff29a95e8ba1dd95531ea7b",
+    "mode": "0o444",
+    "delivered_sha256": "8ea78f4346de6c3a658533f34987c637fcbad6bf5ff29a95e8ba1dd95531ea7b",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/RESULT_audit_battery_meta.md",
+    "target": "e71_innov/audit_battery_meta/final/RESULT_audit_battery_meta.md",
+    "sha256": "69aa48b5deb9200a0fd00bef4ac7d412c875443e18e7254f805d87ddbfebec19",
+    "mode": "0o664",
+    "delivered_sha256": "69aa48b5deb9200a0fd00bef4ac7d412c875443e18e7254f805d87ddbfebec19",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/RUN_LOG.md",
+    "target": "e71_innov/audit_battery_meta/final/RUN_LOG.md",
+    "sha256": "08aa5b7d00f45c3999b0facacdd443b7509105ab849a7a87bb217108562dc5d5",
+    "mode": "0o664",
+    "delivered_sha256": "08aa5b7d00f45c3999b0facacdd443b7509105ab849a7a87bb217108562dc5d5",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/abm_chain.py",
+    "target": "e71_innov/audit_battery_meta/final/abm_chain.py",
+    "sha256": "a618fe8e5695f6dec4347e5cdccc26b2016bd5cf923748d52d51f7528c1249d8",
+    "mode": "0o775",
+    "delivered_sha256": "a618fe8e5695f6dec4347e5cdccc26b2016bd5cf923748d52d51f7528c1249d8",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/abm_common.py",
+    "target": "e71_innov/audit_battery_meta/final/abm_common.py",
+    "sha256": "0ac0b416d53c593eae7f076cebe149da326d46f9b1f7f1bd9320525575ac98a6",
+    "mode": "0o775",
+    "delivered_sha256": "0ac0b416d53c593eae7f076cebe149da326d46f9b1f7f1bd9320525575ac98a6",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/abm_derived.py",
+    "target": "e71_innov/audit_battery_meta/final/abm_derived.py",
+    "sha256": "444fcc499c6849064df6a835b72bffac4aee401d8d07e50fc152d9ea6cdacfed",
+    "mode": "0o775",
+    "delivered_sha256": "444fcc499c6849064df6a835b72bffac4aee401d8d07e50fc152d9ea6cdacfed",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/abm_fig_chain.py",
+    "target": "e71_innov/audit_battery_meta/final/abm_fig_chain.py",
+    "sha256": "94cb867466a57bb1ca2b8a3b2137842a6cf772e185c679722474de1ee14f0e93",
+    "mode": "0o664",
+    "delivered_sha256": "94cb867466a57bb1ca2b8a3b2137842a6cf772e185c679722474de1ee14f0e93",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/abm_goodhart_map.py",
+    "target": "e71_innov/audit_battery_meta/final/abm_goodhart_map.py",
+    "sha256": "2464864d5f6d137fbe519f08c2af1502f355929f02e0f57f012d0d30054c4217",
+    "mode": "0o775",
+    "delivered_sha256": "2464864d5f6d137fbe519f08c2af1502f355929f02e0f57f012d0d30054c4217",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/abm_mr_checker.py",
+    "target": "e71_innov/audit_battery_meta/final/abm_mr_checker.py",
+    "sha256": "50ca2f3fa05e8f64216a45b1a58d5347beb366645d9c1753dc5cb0226102e936",
+    "mode": "0o775",
+    "delivered_sha256": "50ca2f3fa05e8f64216a45b1a58d5347beb366645d9c1753dc5cb0226102e936",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/abm_mutants.py",
+    "target": "e71_innov/audit_battery_meta/final/abm_mutants.py",
+    "sha256": "d7e3d7a53fdea0986d1bac9e2028d9ca74b4a40d4d8438251e1be74cfb6df3a5",
+    "mode": "0o775",
+    "delivered_sha256": "d7e3d7a53fdea0986d1bac9e2028d9ca74b4a40d4d8438251e1be74cfb6df3a5",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/abm_posthoc_ties.py",
+    "target": "e71_innov/audit_battery_meta/final/abm_posthoc_ties.py",
+    "sha256": "69c5acccaea4ec40d1971f23231416982fba1d628505a469da732e99f6ecb527",
+    "mode": "0o775",
+    "delivered_sha256": "69c5acccaea4ec40d1971f23231416982fba1d628505a469da732e99f6ecb527",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/abm_selftest.py",
+    "target": "e71_innov/audit_battery_meta/final/abm_selftest.py",
+    "sha256": "b2611e8efe7695aad53ccf912a2eb5fbd906d6f461e615e707d1993988ed32f2",
+    "mode": "0o775",
+    "delivered_sha256": "b2611e8efe7695aad53ccf912a2eb5fbd906d6f461e615e707d1993988ed32f2",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/abm_verdict.py",
+    "target": "e71_innov/audit_battery_meta/final/abm_verdict.py",
+    "sha256": "443dcecf7ce96c6ef2ccdcdc6851db53ec6589ae4e1e36df91cf9a9dd853e46a",
+    "mode": "0o775",
+    "delivered_sha256": "443dcecf7ce96c6ef2ccdcdc6851db53ec6589ae4e1e36df91cf9a9dd853e46a",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/audit_battery_meta/final/verdict.json",
+    "target": "e71_innov/audit_battery_meta/final/verdict.json",
+    "sha256": "cb8cf527292eed143fc27febe6192572115b49a40e1b18bba884148599493116",
+    "mode": "0o664",
+    "delivered_sha256": "cb8cf527292eed143fc27febe6192572115b49a40e1b18bba884148599493116",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/AKM_WINNER.json",
+    "target": "e71_innov/cert_stat_ledger/final/AKM_WINNER.json",
+    "sha256": "5c5dd11ee9109bd985f87d1d9772a773e39e9cb3fefba0860433c46d01ba7493",
+    "mode": "0o664",
+    "delivered_sha256": "5c5dd11ee9109bd985f87d1d9772a773e39e9cb3fefba0860433c46d01ba7493",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/KILL_WOULDHAVE.json",
+    "target": "e71_innov/cert_stat_ledger/final/KILL_WOULDHAVE.json",
+    "sha256": "b71105892b470a507b83fa9e2019e80301e26624ac5a5b699ea6decf9dd3406a",
+    "mode": "0o664",
+    "delivered_sha256": "b71105892b470a507b83fa9e2019e80301e26624ac5a5b699ea6decf9dd3406a",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/PERM_LEDGER.json",
+    "target": "e71_innov/cert_stat_ledger/final/PERM_LEDGER.json",
+    "sha256": "f8c19e42bef5e0fc3558c908a85a9385c1597dba00fabe09ad91fdc374ec0c01",
+    "mode": "0o664",
+    "delivered_sha256": "f8c19e42bef5e0fc3558c908a85a9385c1597dba00fabe09ad91fdc374ec0c01",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/POWER_LEDGER.json",
+    "target": "e71_innov/cert_stat_ledger/final/POWER_LEDGER.json",
+    "sha256": "2e217ffc24a4733b2eacc9f7f976de1ff46367d545e149b2964a9f80d62f8a89",
+    "mode": "0o664",
+    "delivered_sha256": "2e217ffc24a4733b2eacc9f7f976de1ff46367d545e149b2964a9f80d62f8a89",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/PREREG_cert_stat_ledger.md",
+    "target": "e71_innov/cert_stat_ledger/final/PREREG_cert_stat_ledger.md",
+    "sha256": "4fd9507aa577b04f2e9587a42d6ca1d649922d38902cb734b6c7fcdfe774b45b",
+    "mode": "0o444",
+    "delivered_sha256": "4fd9507aa577b04f2e9587a42d6ca1d649922d38902cb734b6c7fcdfe774b45b",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/PREREG_cert_stat_ledger.sha256",
+    "target": "e71_innov/cert_stat_ledger/final/PREREG_cert_stat_ledger.sha256",
+    "sha256": "f988abc9d4200f32abfab4d49c22fd19bd0a1fb26900cc2a983212db7424e7d5",
+    "mode": "0o444",
+    "delivered_sha256": "f988abc9d4200f32abfab4d49c22fd19bd0a1fb26900cc2a983212db7424e7d5",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/PRICE_TABLE.json",
+    "target": "e71_innov/cert_stat_ledger/final/PRICE_TABLE.json",
+    "sha256": "bb369cca98ef5a1c5f223e575d3561457c3093a9e3939a7cb2644b316fa451cc",
+    "mode": "0o664",
+    "delivered_sha256": "bb369cca98ef5a1c5f223e575d3561457c3093a9e3939a7cb2644b316fa451cc",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/RESULT_cert_stat_ledger.md",
+    "target": "e71_innov/cert_stat_ledger/final/RESULT_cert_stat_ledger.md",
+    "sha256": "3babc8aa517c2a2bb2e99ff07f8fa18215a87d84c4a3e64f41aaefcf0c502d0c",
+    "mode": "0o664",
+    "delivered_sha256": "3babc8aa517c2a2bb2e99ff07f8fa18215a87d84c4a3e64f41aaefcf0c502d0c",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/S1_FLIP_TABLE.json",
+    "target": "e71_innov/cert_stat_ledger/final/S1_FLIP_TABLE.json",
+    "sha256": "fa4f4350e15202f0165e8a9f51add4691217b7552167f4dfe688485cf117e281",
+    "mode": "0o664",
+    "delivered_sha256": "fa4f4350e15202f0165e8a9f51add4691217b7552167f4dfe688485cf117e281",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/S3_CROSSCHECK.json",
+    "target": "e71_innov/cert_stat_ledger/final/S3_CROSSCHECK.json",
+    "sha256": "4d022786d179bc636e3970067675f3e8a74470bf1704a37e381b01d79fba2a86",
+    "mode": "0o664",
+    "delivered_sha256": "4d022786d179bc636e3970067675f3e8a74470bf1704a37e381b01d79fba2a86",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/SEALED_SCRIPTS.sha256",
+    "target": "e71_innov/cert_stat_ledger/final/SEALED_SCRIPTS.sha256",
+    "sha256": "4825a62b858482ac1e9cedd1b1b25ef665b559faf0a5a48a606e060bfdec9a18",
+    "mode": "0o444",
+    "delivered_sha256": "4825a62b858482ac1e9cedd1b1b25ef665b559faf0a5a48a606e060bfdec9a18",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/SIM_FALSE_CERT.json",
+    "target": "e71_innov/cert_stat_ledger/final/SIM_FALSE_CERT.json",
+    "sha256": "258700e43fa1b9f041fba296b86c9819da1b95c6e0dad95c68312dcfd0a9d639",
+    "mode": "0o664",
+    "delivered_sha256": "258700e43fa1b9f041fba296b86c9819da1b95c6e0dad95c68312dcfd0a9d639",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/akm_winner.py",
+    "target": "e71_innov/cert_stat_ledger/final/akm_winner.py",
+    "sha256": "448c974ba788e6c671336753ac8cfec23239817da0022b96c73a836ae464828b",
+    "mode": "0o444",
+    "delivered_sha256": "448c974ba788e6c671336753ac8cfec23239817da0022b96c73a836ae464828b",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/cert_gate.py",
+    "target": "e71_innov/cert_stat_ledger/final/cert_gate.py",
+    "sha256": "e75b476e472c053d2aa911f8d3fbae2bd3609a42d5919cfb6508f7f209ddc564",
+    "mode": "0o444",
+    "delivered_sha256": "e75b476e472c053d2aa911f8d3fbae2bd3609a42d5919cfb6508f7f209ddc564",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/judge_cert_stat_ledger.py",
+    "target": "e71_innov/cert_stat_ledger/final/judge_cert_stat_ledger.py",
+    "sha256": "014818ec033805e34ec21f4aa90552cc1bc5f8f2d96434be0ba4bf9d7dacda59",
+    "mode": "0o444",
+    "delivered_sha256": "014818ec033805e34ec21f4aa90552cc1bc5f8f2d96434be0ba4bf9d7dacda59",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/kill_wouldhave.py",
+    "target": "e71_innov/cert_stat_ledger/final/kill_wouldhave.py",
+    "sha256": "aa5a6282852e25426d90cd3ee608d5400669747a0a16bc1d41d686ff394e1e4e",
+    "mode": "0o444",
+    "delivered_sha256": "aa5a6282852e25426d90cd3ee608d5400669747a0a16bc1d41d686ff394e1e4e",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/perm_ledger.py",
+    "target": "e71_innov/cert_stat_ledger/final/perm_ledger.py",
+    "sha256": "c618ee8a527ce219c362a6f3b529b58389408281ea0971e416a1a3bd1bb853c9",
+    "mode": "0o444",
+    "delivered_sha256": "c618ee8a527ce219c362a6f3b529b58389408281ea0971e416a1a3bd1bb853c9",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/power_ledger.py",
+    "target": "e71_innov/cert_stat_ledger/final/power_ledger.py",
+    "sha256": "c1abe3f46182b25c5a68aac4f5b07f12a40ed73583558234ee5e80b720c61034",
+    "mode": "0o444",
+    "delivered_sha256": "c1abe3f46182b25c5a68aac4f5b07f12a40ed73583558234ee5e80b720c61034",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/price_table.py",
+    "target": "e71_innov/cert_stat_ledger/final/price_table.py",
+    "sha256": "2d070e451c48c9b8ba78765b110b9117611732a47caa71768e840c559635a500",
+    "mode": "0o444",
+    "delivered_sha256": "2d070e451c48c9b8ba78765b110b9117611732a47caa71768e840c559635a500",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/s1_flip_table.py",
+    "target": "e71_innov/cert_stat_ledger/final/s1_flip_table.py",
+    "sha256": "28e8c5f77b2003d6294f8c3306f0046021c7263794ce51e00f77c2c2c2a16ec3",
+    "mode": "0o444",
+    "delivered_sha256": "28e8c5f77b2003d6294f8c3306f0046021c7263794ce51e00f77c2c2c2a16ec3",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/s3_crosscheck.py",
+    "target": "e71_innov/cert_stat_ledger/final/s3_crosscheck.py",
+    "sha256": "1e9df50430f34567e02fe1f0150efc1f07c88df023b17745d52806f552785ca7",
+    "mode": "0o444",
+    "delivered_sha256": "1e9df50430f34567e02fe1f0150efc1f07c88df023b17745d52806f552785ca7",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/sim_false_cert.py",
+    "target": "e71_innov/cert_stat_ledger/final/sim_false_cert.py",
+    "sha256": "0c8eb2deb909249eabfa7362886e51764871fa30a7bbace89f4697243db90eea",
+    "mode": "0o444",
+    "delivered_sha256": "0c8eb2deb909249eabfa7362886e51764871fa30a7bbace89f4697243db90eea",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/cert_stat_ledger/final/verdict.json",
+    "target": "e71_innov/cert_stat_ledger/final/verdict.json",
+    "sha256": "c6cefaaa3eaec2da444bdf352e1193774d8f52f50fce06126827552cd83a8228",
+    "mode": "0o664",
+    "delivered_sha256": "c6cefaaa3eaec2da444bdf352e1193774d8f52f50fce06126827552cd83a8228",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/DEVIATIONS.md",
+    "target": "e71_innov/community_metric_trial/final/DEVIATIONS.md",
+    "sha256": "2885de042b553f3760676a60e8847dab49a90876a17196fe0820f6d74841511b",
+    "mode": "0o664",
+    "delivered_sha256": "2885de042b553f3760676a60e8847dab49a90876a17196fe0820f6d74841511b",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/LIT_RECHECK_2606.10642.md",
+    "target": "e71_innov/community_metric_trial/final/LIT_RECHECK_2606.10642.md",
+    "sha256": "3791268ad92289bbde9f420d143bc97988ff15dec9e6ba163bc6369e571a2ae7",
+    "mode": "0o664",
+    "delivered_sha256": "3791268ad92289bbde9f420d143bc97988ff15dec9e6ba163bc6369e571a2ae7",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/PREREG_community_metric_trial.md",
+    "target": "e71_innov/community_metric_trial/final/PREREG_community_metric_trial.md",
+    "sha256": "83e16b9fef516def41279b945f85c25fcc106013bbf32b9c331f31b3f43c0a29",
+    "mode": "0o444",
+    "delivered_sha256": "83e16b9fef516def41279b945f85c25fcc106013bbf32b9c331f31b3f43c0a29",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/PREREG_community_metric_trial.sha256",
+    "target": "e71_innov/community_metric_trial/final/PREREG_community_metric_trial.sha256",
+    "sha256": "57b67a2f541fc80d9809b985c8b1bc23ea77d37364b4bbf5f4d283a0323cef8c",
+    "mode": "0o444",
+    "delivered_sha256": "57b67a2f541fc80d9809b985c8b1bc23ea77d37364b4bbf5f4d283a0323cef8c",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/RESULT_community_metric_trial.md",
+    "target": "e71_innov/community_metric_trial/final/RESULT_community_metric_trial.md",
+    "sha256": "e54f6337af4bfae131522bccf8b2ebf4b5f18169994f80440625c30af021687e",
+    "mode": "0o664",
+    "delivered_sha256": "e54f6337af4bfae131522bccf8b2ebf4b5f18169994f80440625c30af021687e",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/VALIDATION_bh93.json",
+    "target": "e71_innov/community_metric_trial/final/VALIDATION_bh93.json",
+    "sha256": "bbf17eccd9a3ddc11246c2be83285a4585a4d3e00fdc9ac24280fb148eaac669",
+    "mode": "0o664",
+    "delivered_sha256": "bbf17eccd9a3ddc11246c2be83285a4585a4d3e00fdc9ac24280fb148eaac669",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/VALIDATION_diag45.json",
+    "target": "e71_innov/community_metric_trial/final/VALIDATION_diag45.json",
+    "sha256": "1bcfa8ce9bdca05208b0157f1b32cba0e8a167ff80e7db04e94fa27b043ca7dc",
+    "mode": "0o664",
+    "delivered_sha256": "1bcfa8ce9bdca05208b0157f1b32cba0e8a167ff80e7db04e94fa27b043ca7dc",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/VALIDATION_merid.json",
+    "target": "e71_innov/community_metric_trial/final/VALIDATION_merid.json",
+    "sha256": "f156ebd81bad12df8b45113ada22af8b0a3ddd9e577bcd78bb791389a7c2aeb6",
+    "mode": "0o664",
+    "delivered_sha256": "f156ebd81bad12df8b45113ada22af8b0a3ddd9e577bcd78bb791389a7c2aeb6",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/VALIDATION_zonal.json",
+    "target": "e71_innov/community_metric_trial/final/VALIDATION_zonal.json",
+    "sha256": "2798aeb308e20441a364ca94d51a19c858fa35c50287390e632cd42da404f3e3",
+    "mode": "0o664",
+    "delivered_sha256": "2798aeb308e20441a364ca94d51a19c858fa35c50287390e632cd42da404f3e3",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/score_prereg.py",
+    "target": "e71_innov/community_metric_trial/final/score_prereg.py",
+    "sha256": "2c498ec69c5bcd1eaee06b92a659df89acd7530860f2e4208985a456e7cef0f5",
+    "mode": "0o444",
+    "delivered_sha256": "2c498ec69c5bcd1eaee06b92a659df89acd7530860f2e4208985a456e7cef0f5",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/validate_envs.py",
+    "target": "e71_innov/community_metric_trial/final/validate_envs.py",
+    "sha256": "7beb586158e992853d0f4422e716589d28ddbb40c52d1a417b5e0d34aa687c3c",
+    "mode": "0o444",
+    "delivered_sha256": "7beb586158e992853d0f4422e716589d28ddbb40c52d1a417b5e0d34aa687c3c",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/community_metric_trial/final/verdict.json",
+    "target": "e71_innov/community_metric_trial/final/verdict.json",
+    "sha256": "0a96d8e84d1bdbea25803132a4cbe981b8a5aad7373e8b953300f060af13144d",
+    "mode": "0o664",
+    "delivered_sha256": "0a96d8e84d1bdbea25803132a4cbe981b8a5aad7373e8b953300f060af13144d",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/machine_attack_loop/final/AUDIT_VS_MACHINE.json",
+    "target": "e71_innov/machine_attack_loop/final/AUDIT_VS_MACHINE.json",
+    "sha256": "20698239b7cb7cda3aebf0cb7cdad5c1dc09079eb435d5cee261557a6138811e",
+    "mode": "0o664",
+    "delivered_sha256": "20698239b7cb7cda3aebf0cb7cdad5c1dc09079eb435d5cee261557a6138811e",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/machine_attack_loop/final/DEVIATIONS.md",
+    "target": "e71_innov/machine_attack_loop/final/DEVIATIONS.md",
+    "sha256": "09d29471b66b40cf8f9092380a9cffffec325e4bf51a7bd1a4490c3044aabe83",
+    "mode": "0o664",
+    "delivered_sha256": "09d29471b66b40cf8f9092380a9cffffec325e4bf51a7bd1a4490c3044aabe83",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/machine_attack_loop/final/OPEN_PROBLEMS.md",
+    "target": "e71_innov/machine_attack_loop/final/OPEN_PROBLEMS.md",
+    "sha256": "339342d29a2e263f3babb33ca0c69f903f4da598b8d4911599e4d422babdfaef",
+    "mode": "0o664",
+    "delivered_sha256": "339342d29a2e263f3babb33ca0c69f903f4da598b8d4911599e4d422babdfaef",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/machine_attack_loop/final/PREREG_machine_attack_loop.md",
+    "target": "e71_innov/machine_attack_loop/final/PREREG_machine_attack_loop.md",
+    "sha256": "09c5438ab3d4c138b5e246e1536d60ac26f3d8532f6285940b5293ff2ec14939",
+    "mode": "0o444",
+    "delivered_sha256": "09c5438ab3d4c138b5e246e1536d60ac26f3d8532f6285940b5293ff2ec14939",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/machine_attack_loop/final/PREREG_machine_attack_loop.md.sha256",
+    "target": "e71_innov/machine_attack_loop/final/PREREG_machine_attack_loop.md.sha256",
+    "sha256": "d072ff985f3e8c0657041cdb1b1490230d9bd49b253e75610bffa272fd728644",
+    "mode": "0o664",
+    "delivered_sha256": "d072ff985f3e8c0657041cdb1b1490230d9bd49b253e75610bffa272fd728644",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/machine_attack_loop/final/RESULT_machine_attack_loop.md",
+    "target": "e71_innov/machine_attack_loop/final/RESULT_machine_attack_loop.md",
+    "sha256": "19774acdc596d716b4e31f0bca7dda1452a10d2d1e8e81071a4e80d72fe2d2ce",
+    "mode": "0o664",
+    "delivered_sha256": "19774acdc596d716b4e31f0bca7dda1452a10d2d1e8e81071a4e80d72fe2d2ce",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/machine_attack_loop/final/VERDICT_TABLE.md",
+    "target": "e71_innov/machine_attack_loop/final/VERDICT_TABLE.md",
+    "sha256": "30afb2fab1759fc45919e8f9defa8fd2d6fd5418ecc0cddb728a38388f8d625c",
+    "mode": "0o664",
+    "delivered_sha256": "30afb2fab1759fc45919e8f9defa8fd2d6fd5418ecc0cddb728a38388f8d625c",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/machine_attack_loop/final/audit_replay_final.py",
+    "target": "e71_innov/machine_attack_loop/final/audit_replay_final.py",
+    "sha256": "88568d47fd68b6b1114d1218fa1bed7970295778b949fed3962962891e5068c4",
+    "mode": "0o444",
+    "delivered_sha256": "88568d47fd68b6b1114d1218fa1bed7970295778b949fed3962962891e5068c4",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/machine_attack_loop/final/verdict.json",
+    "target": "e71_innov/machine_attack_loop/final/verdict.json",
+    "sha256": "3bb3c379b4cbf6abf1709b10ef8b946277a7b392688196f2f042d4ec7af9c1f2",
+    "mode": "0o664",
+    "delivered_sha256": "3bb3c379b4cbf6abf1709b10ef8b946277a7b392688196f2f042d4ec7af9c1f2",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/DEVIATIONS.md",
+    "target": "e71_innov/mms_operator/final/DEVIATIONS.md",
+    "sha256": "e21d02b635523844dcc1bedc16c11c6b4869b25abf293ed3a4745a6aa021f558",
+    "mode": "0o664",
+    "delivered_sha256": "e21d02b635523844dcc1bedc16c11c6b4869b25abf293ed3a4745a6aa021f558",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/MMS_OPERATOR.json",
+    "target": "e71_innov/mms_operator/final/MMS_OPERATOR.json",
+    "sha256": "b448250b13814dfd1db7392a581953868a4ea9f54ba2076d69b00701a0f0cda3",
+    "mode": "0o444",
+    "delivered_sha256": "b448250b13814dfd1db7392a581953868a4ea9f54ba2076d69b00701a0f0cda3",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/POSTHOC_A2B.json",
+    "target": "e71_innov/mms_operator/final/POSTHOC_A2B.json",
+    "sha256": "bad8c64606159ac4a235a7494032607fa1e59e71670a42ce1aa652a19f72d5f4",
+    "mode": "0o444",
+    "delivered_sha256": "bad8c64606159ac4a235a7494032607fa1e59e71670a42ce1aa652a19f72d5f4",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/PREREG_mms_operator.md",
+    "target": "e71_innov/mms_operator/final/PREREG_mms_operator.md",
+    "sha256": "60865d479350418d88eca135f350f20a9196d5d98464725a03b1a15937eec3f4",
+    "mode": "0o444",
+    "delivered_sha256": "60865d479350418d88eca135f350f20a9196d5d98464725a03b1a15937eec3f4",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/PREREG_mms_operator.sha256",
+    "target": "e71_innov/mms_operator/final/PREREG_mms_operator.sha256",
+    "sha256": "7c9192328b9e0290b43de4ce1682c49cb9bea4702f6074c0e4f09426df8494f4",
+    "mode": "0o444",
+    "delivered_sha256": "7c9192328b9e0290b43de4ce1682c49cb9bea4702f6074c0e4f09426df8494f4",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/RESULT_NUMBERS.json",
+    "target": "e71_innov/mms_operator/final/RESULT_NUMBERS.json",
+    "sha256": "56b4234190ef4733d761497356f04889d8a4309c5feac0103313944b2a9359b9",
+    "mode": "0o444",
+    "delivered_sha256": "56b4234190ef4733d761497356f04889d8a4309c5feac0103313944b2a9359b9",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/RESULT_mms_operator.md",
+    "target": "e71_innov/mms_operator/final/RESULT_mms_operator.md",
+    "sha256": "dc39c6b5fe15e9cd23fe1e5f166d5c5200ba3d8698d42ce2b56fae36e46f311c",
+    "mode": "0o664",
+    "delivered_sha256": "dc39c6b5fe15e9cd23fe1e5f166d5c5200ba3d8698d42ce2b56fae36e46f311c",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/e71g_posthoc_a2b.py",
+    "target": "e71_innov/mms_operator/final/e71g_posthoc_a2b.py",
+    "sha256": "baea75981282e00dc159092078483c5dad912806469e8f55c9365112385521c5",
+    "mode": "0o444",
+    "delivered_sha256": "baea75981282e00dc159092078483c5dad912806469e8f55c9365112385521c5",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/e71g_replica.py",
+    "target": "e71_innov/mms_operator/final/e71g_replica.py",
+    "sha256": "76cbac75a120eaca9c55f96ffa976f13dc151f27b4baef36359da58d98442e44",
+    "mode": "0o444",
+    "delivered_sha256": "76cbac75a120eaca9c55f96ffa976f13dc151f27b4baef36359da58d98442e44",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/e71g_result_numbers.py",
+    "target": "e71_innov/mms_operator/final/e71g_result_numbers.py",
+    "sha256": "bfd5456c2728c80ff51561c1aa8f87513baa42dba1eb233a4d89157af84fac84",
+    "mode": "0o444",
+    "delivered_sha256": "bfd5456c2728c80ff51561c1aa8f87513baa42dba1eb233a4d89157af84fac84",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/e71g_scan.py",
+    "target": "e71_innov/mms_operator/final/e71g_scan.py",
+    "sha256": "f73c167bedebc5d33072616cbe3a369f826704dbc541ced4341e9e5cc2ded472",
+    "mode": "0o444",
+    "delivered_sha256": "f73c167bedebc5d33072616cbe3a369f826704dbc541ced4341e9e5cc2ded472",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/e71g_verdict.py",
+    "target": "e71_innov/mms_operator/final/e71g_verdict.py",
+    "sha256": "6a1591b2f4c1b2367d9abeecc7a75b8389f496534a86bd024096895ad6ace34a",
+    "mode": "0o444",
+    "delivered_sha256": "6a1591b2f4c1b2367d9abeecc7a75b8389f496534a86bd024096895ad6ace34a",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/knob_table.md",
+    "target": "e71_innov/mms_operator/final/knob_table.md",
+    "sha256": "861590c4268e78372a594de42f28f47eeabcbdf0d67e7aab68812f20c656a700",
+    "mode": "0o444",
+    "delivered_sha256": "861590c4268e78372a594de42f28f47eeabcbdf0d67e7aab68812f20c656a700",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/mms_operator/final/verdict.json",
+    "target": "e71_innov/mms_operator/final/verdict.json",
+    "sha256": "06df42d0acf38331e00469f521dd8cf42b98cc4ddccc6e4eb85a9ff5e04aa4ce",
+    "mode": "0o444",
+    "delivered_sha256": "06df42d0acf38331e00469f521dd8cf42b98cc4ddccc6e4eb85a9ff5e04aa4ce",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/DEVIATIONS.md",
+    "target": "e71_innov/multienv_metrology/final/DEVIATIONS.md",
+    "sha256": "a0db486e8bf6255779c117c0ca6fc6c3c317c94a0da7f8a0578ce3dd6b93d4a2",
+    "mode": "0o664",
+    "delivered_sha256": "a0db486e8bf6255779c117c0ca6fc6c3c317c94a0da7f8a0578ce3dd6b93d4a2",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/E71_FINAL_AXES_META.json",
+    "target": "e71_innov/multienv_metrology/final/E71_FINAL_AXES_META.json",
+    "sha256": "a8903b1e3087d10db930a4d5db155dc90a605aeca469582e751e69d572a9b5a7",
+    "mode": "0o664",
+    "delivered_sha256": "a8903b1e3087d10db930a4d5db155dc90a605aeca469582e751e69d572a9b5a7",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/E71_FINAL_RESULTS.json",
+    "target": "e71_innov/multienv_metrology/final/E71_FINAL_RESULTS.json",
+    "sha256": "e4db5593d570f4284c81ef87aa7600d31207776c563f804ee198022192124b5d",
+    "mode": "0o664",
+    "delivered_sha256": "e4db5593d570f4284c81ef87aa7600d31207776c563f804ee198022192124b5d",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/E71_FINAL_S1_E60.json",
+    "target": "e71_innov/multienv_metrology/final/E71_FINAL_S1_E60.json",
+    "sha256": "2e36c59258464edd4b9e71134327f90756a756e85574a3931443bd7307255d88",
+    "mode": "0o664",
+    "delivered_sha256": "2e36c59258464edd4b9e71134327f90756a756e85574a3931443bd7307255d88",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/E71_FINAL_S2_BH93.json",
+    "target": "e71_innov/multienv_metrology/final/E71_FINAL_S2_BH93.json",
+    "sha256": "4ca86910e6f718e31f1ce57af567aa85522d405e665c6f6aad936e7e52964754",
+    "mode": "0o664",
+    "delivered_sha256": "4ca86910e6f718e31f1ce57af567aa85522d405e665c6f6aad936e7e52964754",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/PREREG_multienv_metrology.md",
+    "target": "e71_innov/multienv_metrology/final/PREREG_multienv_metrology.md",
+    "sha256": "9c529cb6c91990f2ca55e860787d2513ebb079692136b689f60ecdfb8464bb24",
+    "mode": "0o444",
+    "delivered_sha256": "9c529cb6c91990f2ca55e860787d2513ebb079692136b689f60ecdfb8464bb24",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/PREREG_multienv_metrology.sha256",
+    "target": "e71_innov/multienv_metrology/final/PREREG_multienv_metrology.sha256",
+    "sha256": "00681786a512fbc9b5d223152920d2bffd7b1e1c02808ad2072a117ad3121e9a",
+    "mode": "0o444",
+    "delivered_sha256": "00681786a512fbc9b5d223152920d2bffd7b1e1c02808ad2072a117ad3121e9a",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/RESULT_multienv_metrology.md",
+    "target": "e71_innov/multienv_metrology/final/RESULT_multienv_metrology.md",
+    "sha256": "5bbe26ec9a79d0e71db16458a52be129d00e7410ca02a7607152b1a248602773",
+    "mode": "0o664",
+    "delivered_sha256": "5bbe26ec9a79d0e71db16458a52be129d00e7410ca02a7607152b1a248602773",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/e71f_axes45.py",
+    "target": "e71_innov/multienv_metrology/final/e71f_axes45.py",
+    "sha256": "97f83046928d8089e566c1eed7e179688d18267a9a4ce71746dbe885ea2b581b",
+    "mode": "0o664",
+    "delivered_sha256": "97f83046928d8089e566c1eed7e179688d18267a9a4ce71746dbe885ea2b581b",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/e71f_figs.py",
+    "target": "e71_innov/multienv_metrology/final/e71f_figs.py",
+    "sha256": "254d00ce8e38560349ef000409a7e12ecb06ae98c2b152b4b481b6fb6eb282e5",
+    "mode": "0o664",
+    "delivered_sha256": "254d00ce8e38560349ef000409a7e12ecb06ae98c2b152b4b481b6fb6eb282e5",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/e71f_metrology.py",
+    "target": "e71_innov/multienv_metrology/final/e71f_metrology.py",
+    "sha256": "8035ac23829541b49cc5e2c3fae4a02ef40650ab462dbca5792f0cb9f06b9fb4",
+    "mode": "0o664",
+    "delivered_sha256": "8035ac23829541b49cc5e2c3fae4a02ef40650ab462dbca5792f0cb9f06b9fb4",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/e71f_s1s2.py",
+    "target": "e71_innov/multienv_metrology/final/e71f_s1s2.py",
+    "sha256": "3670ea83f0f565dc05d100259ff56ca77ea19412c5a384959ff6b2e9ec65ff5e",
+    "mode": "0o664",
+    "delivered_sha256": "3670ea83f0f565dc05d100259ff56ca77ea19412c5a384959ff6b2e9ec65ff5e",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/e71f_verdict.py",
+    "target": "e71_innov/multienv_metrology/final/e71f_verdict.py",
+    "sha256": "dfd929cc2f4e0d45bdf0678ef68a553552218363420f7b14ec5a969f17cf0342",
+    "mode": "0o664",
+    "delivered_sha256": "dfd929cc2f4e0d45bdf0678ef68a553552218363420f7b14ec5a969f17cf0342",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/multienv_metrology/final/verdict.json",
+    "target": "e71_innov/multienv_metrology/final/verdict.json",
+    "sha256": "f1eb3e1ee32388169428484355f97674b6c61d67bd3533c38fad8348eb386e92",
+    "mode": "0o664",
+    "delivered_sha256": "f1eb3e1ee32388169428484355f97674b6c61d67bd3533c38fad8348eb386e92",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/DEVIATIONS.md",
+    "target": "e71_innov/negctrl_surrogate/final/DEVIATIONS.md",
+    "sha256": "de4b940e86ec7c7881448f6fe9ac57c99f53f27e49f755ec9c64ace28e2c8bbb",
+    "mode": "0o664",
+    "delivered_sha256": "de4b940e86ec7c7881448f6fe9ac57c99f53f27e49f755ec9c64ace28e2c8bbb",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/E72_BASEQ_diag45.json",
+    "target": "e71_innov/negctrl_surrogate/final/E72_BASEQ_diag45.json",
+    "sha256": "f7060cd2e42715f361de2aba7d5ad06be2dc89522e9f3a69ccdc2121f930474a",
+    "mode": "0o664",
+    "delivered_sha256": "f7060cd2e42715f361de2aba7d5ad06be2dc89522e9f3a69ccdc2121f930474a",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/E72_BASEQ_merid.json",
+    "target": "e71_innov/negctrl_surrogate/final/E72_BASEQ_merid.json",
+    "sha256": "a41ca47f58a7f03b7fef8a509d5451999aeee643df31fb520f56aa06b4628e68",
+    "mode": "0o664",
+    "delivered_sha256": "a41ca47f58a7f03b7fef8a509d5451999aeee643df31fb520f56aa06b4628e68",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/E72_SELFTEST_ZONAL.json",
+    "target": "e71_innov/negctrl_surrogate/final/E72_SELFTEST_ZONAL.json",
+    "sha256": "7b593f1b11072c7a69f7ea8ceba643f7e0f9801a7e1e14876d282e33d1b0bf30",
+    "mode": "0o664",
+    "delivered_sha256": "7b593f1b11072c7a69f7ea8ceba643f7e0f9801a7e1e14876d282e33d1b0bf30",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/E72_VALID.json",
+    "target": "e71_innov/negctrl_surrogate/final/E72_VALID.json",
+    "sha256": "0763fbddaa68591b6b0e3fa1da852c3e6cd9faf65befbbacc215b6d11d2fbdfd",
+    "mode": "0o664",
+    "delivered_sha256": "0763fbddaa68591b6b0e3fa1da852c3e6cd9faf65befbbacc215b6d11d2fbdfd",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/PREREG_negctrl_surrogate.md",
+    "target": "e71_innov/negctrl_surrogate/final/PREREG_negctrl_surrogate.md",
+    "sha256": "c64f1390037f9dce4a0be13a4b0179ed26d9919285a1e9897e4b445f3695a611",
+    "mode": "0o444",
+    "delivered_sha256": "c64f1390037f9dce4a0be13a4b0179ed26d9919285a1e9897e4b445f3695a611",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/PREREG_negctrl_surrogate.md.sha256",
+    "target": "e71_innov/negctrl_surrogate/final/PREREG_negctrl_surrogate.md.sha256",
+    "sha256": "30db3d50ef18f48edf249c746680b7153b02a191773b94885bf83629221c68bc",
+    "mode": "0o444",
+    "delivered_sha256": "30db3d50ef18f48edf249c746680b7153b02a191773b94885bf83629221c68bc",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/RESULT_negctrl_surrogate.md",
+    "target": "e71_innov/negctrl_surrogate/final/RESULT_negctrl_surrogate.md",
+    "sha256": "e8c616c99e4618e9849fa7da5fd91e2d0ef1c71c12ba38c56c51f74f9c85a0ac",
+    "mode": "0o664",
+    "delivered_sha256": "e8c616c99e4618e9849fa7da5fd91e2d0ef1c71c12ba38c56c51f74f9c85a0ac",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/SEEDS82.json",
+    "target": "e71_innov/negctrl_surrogate/final/SEEDS82.json",
+    "sha256": "561dc4ea04f53137bb6aac16e048571a715c8387d2ece98a7d7eb5172488cbe0",
+    "mode": "0o664",
+    "delivered_sha256": "561dc4ea04f53137bb6aac16e048571a715c8387d2ece98a7d7eb5172488cbe0",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/SEEDS82.json.sha256",
+    "target": "e71_innov/negctrl_surrogate/final/SEEDS82.json.sha256",
+    "sha256": "6b1bcb7e261e96ee8668307eb7f8e40840138241fa6cf04675bd6a9199a8fbec",
+    "mode": "0o664",
+    "delivered_sha256": "6b1bcb7e261e96ee8668307eb7f8e40840138241fa6cf04675bd6a9199a8fbec",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/e72_valid.py",
+    "target": "e71_innov/negctrl_surrogate/final/e72_valid.py",
+    "sha256": "5b0919b7f594d3a17126e0718d1060c12ac931266c84e7b6a23f9d07301a57e6",
+    "mode": "0o775",
+    "delivered_sha256": "5b0919b7f594d3a17126e0718d1060c12ac931266c84e7b6a23f9d07301a57e6",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/e72_verdict.py",
+    "target": "e71_innov/negctrl_surrogate/final/e72_verdict.py",
+    "sha256": "7c482d7e2cc69056f6e1d823584d2552e75e5d5194db7ecab212a0af4df0ff12",
+    "mode": "0o775",
+    "delivered_sha256": "7c482d7e2cc69056f6e1d823584d2552e75e5d5194db7ecab212a0af4df0ff12",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/gen_seeds82.py",
+    "target": "e71_innov/negctrl_surrogate/final/gen_seeds82.py",
+    "sha256": "39a7e712419cbfd1c38d4326767c649683ac00e4145150f146c635b06c62673d",
+    "mode": "0o775",
+    "delivered_sha256": "39a7e712419cbfd1c38d4326767c649683ac00e4145150f146c635b06c62673d",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/negctrl_surrogate/final/verdict.json",
+    "target": "e71_innov/negctrl_surrogate/final/verdict.json",
+    "sha256": "9959e0f6f350307d9c417a04bebd2fba7012739c35e94327ddf9a6ed586ed1fd",
+    "mode": "0o664",
+    "delivered_sha256": "9959e0f6f350307d9c417a04bebd2fba7012739c35e94327ddf9a6ed586ed1fd",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/CALIB_SYNTH.md",
+    "target": "e71_innov/ppi_truth_budget/final/CALIB_SYNTH.md",
+    "sha256": "a3f7f066f6ea7cdf9c82c73b5bdb0eea14ec911ca6300045fe7d73cbc30b717f",
+    "mode": "0o444",
+    "delivered_sha256": "a3f7f066f6ea7cdf9c82c73b5bdb0eea14ec911ca6300045fe7d73cbc30b717f",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/COLLECT.md",
+    "target": "e71_innov/ppi_truth_budget/final/COLLECT.md",
+    "sha256": "cf94ef365dbf27f286350bfbd3c6928134be37abf5c15d8fb1a81969f4c6c8b6",
+    "mode": "0o664",
+    "delivered_sha256": "cf94ef365dbf27f286350bfbd3c6928134be37abf5c15d8fb1a81969f4c6c8b6",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/DEVIATIONS.md",
+    "target": "e71_innov/ppi_truth_budget/final/DEVIATIONS.md",
+    "sha256": "0d6f856062e3d6c8467b57e8d9533bbab88d6a8505b1c48336714a1625394a2b",
+    "mode": "0o664",
+    "delivered_sha256": "0d6f856062e3d6c8467b57e8d9533bbab88d6a8505b1c48336714a1625394a2b",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/PREREG_ppi_truth_budget.md",
+    "target": "e71_innov/ppi_truth_budget/final/PREREG_ppi_truth_budget.md",
+    "sha256": "80e93dc96a0ffbf749d5c1ecc3e069f0b492638bdc7a47874e6c178ee9cc00a2",
+    "mode": "0o444",
+    "delivered_sha256": "80e93dc96a0ffbf749d5c1ecc3e069f0b492638bdc7a47874e6c178ee9cc00a2",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/PRESEAL_SETS.json",
+    "target": "e71_innov/ppi_truth_budget/final/PRESEAL_SETS.json",
+    "sha256": "f5be4915e3c5500116c8fc9e62a30d77c2ba035f905950f3ce71e831eba4f56b",
+    "mode": "0o444",
+    "delivered_sha256": "f5be4915e3c5500116c8fc9e62a30d77c2ba035f905950f3ce71e831eba4f56b",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/RESULT_ppi_truth_budget.md",
+    "target": "e71_innov/ppi_truth_budget/final/RESULT_ppi_truth_budget.md",
+    "sha256": "337e242e278c964a9a60b4b7e06ef750beb731d6f99c8447f4413d48d9c3305b",
+    "mode": "0o664",
+    "delivered_sha256": "337e242e278c964a9a60b4b7e06ef750beb731d6f99c8447f4413d48d9c3305b",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/TB_BUDGET.json",
+    "target": "e71_innov/ppi_truth_budget/final/TB_BUDGET.json",
+    "sha256": "00f8187e0345a559bd8ab838fe11c76d98d42b646791f20c00b9a0cdb1806c6d",
+    "mode": "0o444",
+    "delivered_sha256": "00f8187e0345a559bd8ab838fe11c76d98d42b646791f20c00b9a0cdb1806c6d",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/TB_RECTIFIER.json",
+    "target": "e71_innov/ppi_truth_budget/final/TB_RECTIFIER.json",
+    "sha256": "7ab44196cd7fa41fa8fb61ea8d3258995b89f6bbc8f08235bf2efc8d3f7d1e89",
+    "mode": "0o444",
+    "delivered_sha256": "7ab44196cd7fa41fa8fb61ea8d3258995b89f6bbc8f08235bf2efc8d3f7d1e89",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/TB_SELFTEST.json",
+    "target": "e71_innov/ppi_truth_budget/final/TB_SELFTEST.json",
+    "sha256": "9ce2144cfd21dc1ff0107e0e28fe300c10e13fd3ccbfa911051f6e9453d56a21",
+    "mode": "0o444",
+    "delivered_sha256": "9ce2144cfd21dc1ff0107e0e28fe300c10e13fd3ccbfa911051f6e9453d56a21",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/calib.py",
+    "target": "e71_innov/ppi_truth_budget/final/calib.py",
+    "sha256": "b3f199cf624bfd89d6553b7ac721cbe9af34c1a656ec19511cac3ea36850c7d3",
+    "mode": "0o444",
+    "delivered_sha256": "b3f199cf624bfd89d6553b7ac721cbe9af34c1a656ec19511cac3ea36850c7d3",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/calib2.py",
+    "target": "e71_innov/ppi_truth_budget/final/calib2.py",
+    "sha256": "4991f6571816c03373637cdc42f3987cb761b3f571d0b6f5d6e44bf748cab4b6",
+    "mode": "0o444",
+    "delivered_sha256": "4991f6571816c03373637cdc42f3987cb761b3f571d0b6f5d6e44bf748cab4b6",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/calib3.py",
+    "target": "e71_innov/ppi_truth_budget/final/calib3.py",
+    "sha256": "8b94be8b050bb85049d4b47b0861f06b666e3b86bba7ec753f6cf83a1f48455e",
+    "mode": "0o444",
+    "delivered_sha256": "8b94be8b050bb85049d4b47b0861f06b666e3b86bba7ec753f6cf83a1f48455e",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/calib4.py",
+    "target": "e71_innov/ppi_truth_budget/final/calib4.py",
+    "sha256": "f8b04c1c160845cf0503b5a157e4ffab5cc024120941cb4ec575e48ecbe07a03",
+    "mode": "0o444",
+    "delivered_sha256": "f8b04c1c160845cf0503b5a157e4ffab5cc024120941cb4ec575e48ecbe07a03",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/preseal_sets.py",
+    "target": "e71_innov/ppi_truth_budget/final/preseal_sets.py",
+    "sha256": "216e95cedb35fccb41714f6b1f2a1418e954c46401b6866b23383263963403bc",
+    "mode": "0o444",
+    "delivered_sha256": "216e95cedb35fccb41714f6b1f2a1418e954c46401b6866b23383263963403bc",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/tb_budget.py",
+    "target": "e71_innov/ppi_truth_budget/final/tb_budget.py",
+    "sha256": "207ed148362cc6b2f739cb0a78c98100b331e39d12288dd30c8cebf8ba64cf1f",
+    "mode": "0o444",
+    "delivered_sha256": "207ed148362cc6b2f739cb0a78c98100b331e39d12288dd30c8cebf8ba64cf1f",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/tb_common.py",
+    "target": "e71_innov/ppi_truth_budget/final/tb_common.py",
+    "sha256": "cd2184e6ceb09608b591f589784dbaf0488b87355d247595da93d5c4475896de",
+    "mode": "0o444",
+    "delivered_sha256": "cd2184e6ceb09608b591f589784dbaf0488b87355d247595da93d5c4475896de",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/tb_rectifier.py",
+    "target": "e71_innov/ppi_truth_budget/final/tb_rectifier.py",
+    "sha256": "b0a3e11715efe988958936935f12ae913f3248d80c2e89ed4728e3859a7dc019",
+    "mode": "0o444",
+    "delivered_sha256": "b0a3e11715efe988958936935f12ae913f3248d80c2e89ed4728e3859a7dc019",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/tb_selftest.py",
+    "target": "e71_innov/ppi_truth_budget/final/tb_selftest.py",
+    "sha256": "599b4d2fad3dbdf2ca60d32650c4d78a9dfea38220e74493738f1133441466ec",
+    "mode": "0o444",
+    "delivered_sha256": "599b4d2fad3dbdf2ca60d32650c4d78a9dfea38220e74493738f1133441466ec",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/tb_verdict.py",
+    "target": "e71_innov/ppi_truth_budget/final/tb_verdict.py",
+    "sha256": "8578394ca332a661518bd63cca11fb9bd14901a34e19a3053338966fbbf9a074",
+    "mode": "0o444",
+    "delivered_sha256": "8578394ca332a661518bd63cca11fb9bd14901a34e19a3053338966fbbf9a074",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/ppi_truth_budget/final/verdict.json",
+    "target": "e71_innov/ppi_truth_budget/final/verdict.json",
+    "sha256": "3c513c1b1bdf03fbc0b7832ef54ea131e3ef8adb4fa007e6ebd9680990349842",
+    "mode": "0o444",
+    "delivered_sha256": "3c513c1b1bdf03fbc0b7832ef54ea131e3ef8adb4fa007e6ebd9680990349842",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/DEVIATIONS.md",
+    "target": "e71_innov/shortcut_theorem/final/DEVIATIONS.md",
+    "sha256": "51009aa67c559f53cc2c1b348e87989bf820023cecbc8315015c266f330280bd",
+    "mode": "0o664",
+    "delivered_sha256": "51009aa67c559f53cc2c1b348e87989bf820023cecbc8315015c266f330280bd",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/E73K_KENDALL.json",
+    "target": "e71_innov/shortcut_theorem/final/E73K_KENDALL.json",
+    "sha256": "ec5540c4edb6877e2a8523af4ae0e4171d9a3fad9bc3fe0d12a8fa650251bf6f",
+    "mode": "0o444",
+    "delivered_sha256": "ec5540c4edb6877e2a8523af4ae0e4171d9a3fad9bc3fe0d12a8fa650251bf6f",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/E73P_PROP1_AUDIT.json",
+    "target": "e71_innov/shortcut_theorem/final/E73P_PROP1_AUDIT.json",
+    "sha256": "243649a7ff84340fbdc66f131fde3e090bb0576b6b918554a476742f47d4a8a4",
+    "mode": "0o444",
+    "delivered_sha256": "243649a7ff84340fbdc66f131fde3e090bb0576b6b918554a476742f47d4a8a4",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/E73X_POSTHOC.json",
+    "target": "e71_innov/shortcut_theorem/final/E73X_POSTHOC.json",
+    "sha256": "23988796a445595ed0685214b3b2e46ec0f4c383dcca48d9e48f20373cb67181",
+    "mode": "0o444",
+    "delivered_sha256": "23988796a445595ed0685214b3b2e46ec0f4c383dcca48d9e48f20373cb67181",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/E73_INSAMPLE.json",
+    "target": "e71_innov/shortcut_theorem/final/E73_INSAMPLE.json",
+    "sha256": "2d7b141fb7e24c2b5cc0d6c8f105a43a7f74e76c00cb5e0e5440f66351e2873f",
+    "mode": "0o444",
+    "delivered_sha256": "2d7b141fb7e24c2b5cc0d6c8f105a43a7f74e76c00cb5e0e5440f66351e2873f",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/E73_SHORTCUT_MAP.json",
+    "target": "e71_innov/shortcut_theorem/final/E73_SHORTCUT_MAP.json",
+    "sha256": "15ec5395d5e4c09a48e96da0c47c186fa24530b9eff0036b90d80051f73f1f85",
+    "mode": "0o444",
+    "delivered_sha256": "15ec5395d5e4c09a48e96da0c47c186fa24530b9eff0036b90d80051f73f1f85",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/E73_TAIL.json",
+    "target": "e71_innov/shortcut_theorem/final/E73_TAIL.json",
+    "sha256": "e060a6289b9f2de11d1fe4a50811d6dff7f24961bafc565145a58682fb09d7bb",
+    "mode": "0o444",
+    "delivered_sha256": "e060a6289b9f2de11d1fe4a50811d6dff7f24961bafc565145a58682fb09d7bb",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/PREREG_shortcut_theorem.md",
+    "target": "e71_innov/shortcut_theorem/final/PREREG_shortcut_theorem.md",
+    "sha256": "238377f14ca258aeeee5238a19b27e2e7f33e2ae63ba2f38c7a360270f7bc607",
+    "mode": "0o444",
+    "delivered_sha256": "238377f14ca258aeeee5238a19b27e2e7f33e2ae63ba2f38c7a360270f7bc607",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/PREREG_shortcut_theorem.sha256",
+    "target": "e71_innov/shortcut_theorem/final/PREREG_shortcut_theorem.sha256",
+    "sha256": "6cf69fd81f46bc4aca1b36a6f621ef4cc3768fd3a66b903ab81089a589f51a4c",
+    "mode": "0o444",
+    "delivered_sha256": "6cf69fd81f46bc4aca1b36a6f621ef4cc3768fd3a66b903ab81089a589f51a4c",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/PROP1_命题卡.md",
+    "target": "e71_innov/shortcut_theorem/final/PROP1_命题卡.md",
+    "sha256": "cfd8f8abf676a7ec765fd6e1679e7703de8fe797e6d0301eaa7f6d46e729066a",
+    "mode": "0o664",
+    "delivered_sha256": "cfd8f8abf676a7ec765fd6e1679e7703de8fe797e6d0301eaa7f6d46e729066a",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/RESULT_shortcut_theorem.md",
+    "target": "e71_innov/shortcut_theorem/final/RESULT_shortcut_theorem.md",
+    "sha256": "aff6f25e29ed8b634d9f13b5fb5c2051d7a8024d927eca86b3730469014db7d4",
+    "mode": "0o664",
+    "delivered_sha256": "aff6f25e29ed8b634d9f13b5fb5c2051d7a8024d927eca86b3730469014db7d4",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/e73b_insample.py",
+    "target": "e71_innov/shortcut_theorem/final/e73b_insample.py",
+    "sha256": "d83238205398940f5a73c3d48a746581f5e2b7ebda03d9320ccdd94e7091f67d",
+    "mode": "0o444",
+    "delivered_sha256": "d83238205398940f5a73c3d48a746581f5e2b7ebda03d9320ccdd94e7091f67d",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/e73c_axes45.py",
+    "target": "e71_innov/shortcut_theorem/final/e73c_axes45.py",
+    "sha256": "d60bfc0de209f4f6f1a5cbeea7e808465c726531992999d928af6d96ac71d4b6",
+    "mode": "0o444",
+    "delivered_sha256": "d60bfc0de209f4f6f1a5cbeea7e808465c726531992999d928af6d96ac71d4b6",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/e73d_predict45.py",
+    "target": "e71_innov/shortcut_theorem/final/e73d_predict45.py",
+    "sha256": "4e1cde06cac808a48503fd25f96e4791e3dbc5df4a703ab7062a7a4531ba55cc",
+    "mode": "0o444",
+    "delivered_sha256": "4e1cde06cac808a48503fd25f96e4791e3dbc5df4a703ab7062a7a4531ba55cc",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/e73e_verdict.py",
+    "target": "e71_innov/shortcut_theorem/final/e73e_verdict.py",
+    "sha256": "e45dc7141f2e6a3f68fdc66795b700b7eeb677428b43d2342765e59c8ee4f408",
+    "mode": "0o444",
+    "delivered_sha256": "e45dc7141f2e6a3f68fdc66795b700b7eeb677428b43d2342765e59c8ee4f408",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/e73f_figs.py",
+    "target": "e71_innov/shortcut_theorem/final/e73f_figs.py",
+    "sha256": "faa9f7826f5cc6da35baf337422f31f72967ed33872cf758ebb4c00b7ade86f3",
+    "mode": "0o444",
+    "delivered_sha256": "faa9f7826f5cc6da35baf337422f31f72967ed33872cf758ebb4c00b7ade86f3",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/e73f_figs_corrected_20260917.py",
+    "target": "e71_innov/shortcut_theorem/final/e73f_figs_corrected_20260917.py",
+    "sha256": "2a7809b391b6452b17e77defb5b03b7392cf424033837472be32cf50e172cf8d",
+    "mode": "0o664",
+    "delivered_sha256": "2a7809b391b6452b17e77defb5b03b7392cf424033837472be32cf50e172cf8d",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/e73k_kendall_bound.py",
+    "target": "e71_innov/shortcut_theorem/final/e73k_kendall_bound.py",
+    "sha256": "6cd3496820a30479dc5fc4625baff0768954beed3f5fa1d85d8b6bc8ca7687eb",
+    "mode": "0o444",
+    "delivered_sha256": "6cd3496820a30479dc5fc4625baff0768954beed3f5fa1d85d8b6bc8ca7687eb",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/e73p_prop1_audit.py",
+    "target": "e71_innov/shortcut_theorem/final/e73p_prop1_audit.py",
+    "sha256": "6a75be94b0b759f3cc6e849b88bab2c771b50bb4ae19c90f0cec122801c84194",
+    "mode": "0o444",
+    "delivered_sha256": "6a75be94b0b759f3cc6e849b88bab2c771b50bb4ae19c90f0cec122801c84194",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/e73t_tail.py",
+    "target": "e71_innov/shortcut_theorem/final/e73t_tail.py",
+    "sha256": "f68596edc02f314f6ef91190cbfe8822bc574ab7d57e9439f5400cdaf565a6e7",
+    "mode": "0o444",
+    "delivered_sha256": "f68596edc02f314f6ef91190cbfe8822bc574ab7d57e9439f5400cdaf565a6e7",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/e73x_posthoc_audit.py",
+    "target": "e71_innov/shortcut_theorem/final/e73x_posthoc_audit.py",
+    "sha256": "eb52eaa8644ac39eda4e7e1bb442b480e33c2bd3855c748958a95feec9062358",
+    "mode": "0o444",
+    "delivered_sha256": "eb52eaa8644ac39eda4e7e1bb442b480e33c2bd3855c748958a95feec9062358",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e71_innov/shortcut_theorem/final/verdict.json",
+    "target": "e71_innov/shortcut_theorem/final/verdict.json",
+    "sha256": "b88dac8edfca465d1d746d0adfe0c575aeb28a25753e92672ba7042fcee02048",
+    "mode": "0o444",
+    "delivered_sha256": "b88dac8edfca465d1d746d0adfe0c575aeb28a25753e92672ba7042fcee02048",
+    "byte_identical": true,
+    "note": "原字节复制"
+  },
+  {
+    "source": "e70/SUMMARY_E70.md",
+    "target": "e70/SUMMARY_E70.md",
+    "sha256": "85f7bb22fa7dde7b10ac90ef2607993dbed690bf258cc8f64c56b24b1d0d2a7a",
+    "mode": "0o664",
+    "delivered_sha256": "85f7bb22fa7dde7b10ac90ef2607993dbed690bf258cc8f64c56b24b1d0d2a7a",
+    "byte_identical": true,
+    "note": "2026-09-18 只读预扫描后按原字节复制"
+  },
+  {
+    "source": "e70/E70_NAMESWAP_XVENDOR.json",
+    "target": "e70/E70_NAMESWAP_XVENDOR.json",
+    "sha256": "cd452c1f9cfe4faa3a42f16a652e0423acdfde7af3504e6a6b293717daed31c9",
+    "mode": "0o664",
+    "delivered_sha256": "cd452c1f9cfe4faa3a42f16a652e0423acdfde7af3504e6a6b293717daed31c9",
+    "byte_identical": true,
+    "note": "2026-09-18 只读预扫描后按原字节复制"
+  },
+  {
+    "source": "e70/results/claude.jsonl",
+    "target": "e70/results/claude.jsonl",
+    "sha256": "0f9ba20f57d9d30333dc0ba9a3856f5ea819b02e1278de8172a6307e498a8727",
+    "mode": "0o664",
+    "delivered_sha256": "0f9ba20f57d9d30333dc0ba9a3856f5ea819b02e1278de8172a6307e498a8727",
+    "byte_identical": true,
+    "note": "2026-09-18 只读预扫描后按原字节复制"
+  }
+]

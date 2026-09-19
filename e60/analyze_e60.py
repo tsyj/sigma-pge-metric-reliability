@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E60 判读：抗刷率 B 在陡度轴上稳不稳。穷举器与 E40 逐字同源（base_quantities + 同一比值空间）。"""
 import json, sys, itertools

@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E56 BH93 静止态检验：无风、水平等密初值、真值解析为零。
 造例逻辑逐字沿用 scripts/env2.py 的 step()（含配置回显自检），仅换二进制与初值。"""

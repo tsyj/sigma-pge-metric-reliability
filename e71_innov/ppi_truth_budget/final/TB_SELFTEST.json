@@ -1,0 +1,16 @@
+{
+ "N": 58,
+ "n": 16,
+ "rep": 2000,
+ "corr_fY": 0.9274634748245828,
+ "cov_mean_jackknife": 0.897,
+ "cov_p90_exact": 0.9825,
+ "p90_mae_ratio": 0.6770941686896783,
+ "lam_med": 0.45392884790041926,
+ "ols_slope_pop": 0.4521377181628976,
+ "pass_mean": true,
+ "pass_p90_exact": true,
+ "pass_mae": true,
+ "pass_lam": true,
+ "all_pass": true
+}

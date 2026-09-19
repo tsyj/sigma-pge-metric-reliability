@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E44 主图 v3: 一色一量(validate_palette 全过感知三关); a/b 共享 m 轴堆叠; 单轴归一化
 色表: u/v=#3C5488 蓝圆 | 残余流=#848D96 灰方虚 | 环带功率=#C46A1F 橙棕三角 |

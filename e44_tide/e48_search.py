@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E48 -- 内潮环境的指标穷举（口径逐字继承 E40 metric_search.py 的候选空间）
 基本量: 5 字段 x 8 区域 x 4 统计(末帧, cm 换算同 E40) + 配比 -> ~2 万候选

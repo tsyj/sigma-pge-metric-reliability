@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E47 -- uv_ratio 跨环境有效的机制实测
 假设: 分子 rms(u) 由正压 M2 主导(治理不动它); 分母 mean|v| 由斜压/波动 v 主导(治理选择性吃它)

@@ -1,0 +1,28 @@
+{
+ "module": "S2_bh93_negctrl",
+ "date": "2026-09-17 14:35:57",
+ "prereg_sha": "9c529cb6c91990f2ca55e860787d2513ebb079692136b689f60ecdfb8464bb24",
+ "code_sha": "3670ea83f0f565dc05d100259ff56ca77ea19412c5a384959ff6b2e9ec65ff5e",
+ "n_pairs": 7,
+ "visc2_values": [
+  0.0,
+  50.0,
+  150.0,
+  400.0,
+  800.0,
+  1500.0,
+  2747.0
+ ],
+ "note": "BH93 无风静止海: 风驱环流前提消失, 预期大量候选退化不可算; 探索性, 不设通过线 (PREREG §6)",
+ "n_keys": 124,
+ "n_computable_rest": 784,
+ "n_main_candidates": 15376,
+ "n_computable_in_main": 784,
+ "frac_computable_of_main": 0.051,
+ "rho_Brest_Bz": 0.8491,
+ "rho_Brest_Bz_ties": 0.9231,
+ "B_rest_hist": {
+  "ge_0p9": 346,
+  "le_0p1": 330
+ }
+}

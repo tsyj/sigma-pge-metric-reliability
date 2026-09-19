@@ -1,0 +1,301 @@
+{
+ "entry": "audit_battery_meta",
+ "when": "2026-09-17T17:16:59.069079+08:00",
+ "selftest": false,
+ "prereg_sha": "7b641565f778ba909f6cff4583d8b7a8be896e59561e15b07a54fc3ce79679d9",
+ "code_sha": "443dcecf7ce96c6ef2ccdcdc6851db53ec6589ae4e1e36df91cf9a9dd853e46a",
+ "input_sha": {
+  "ABM_MR_CONSISTENCY": "31269d283560ab6f2ae1387610835dc905fc1ffbf4d582161555198bd3934654",
+  "ABM_GOODHART_MAP": "39fb46f9b50af58985de58d49d46f5556ac5c63c2fdfa243aa39ef51d0dcdbca",
+  "ABM_KILL_MATRIX": "2c4db4933ef3952081104e0aa0999ad043ce386275cb5e61fad6db37d3f4ce6e",
+  "ABM_FILTER_CHAIN": "207d1eaa2f83ddf0248224c2391ef15fdddb117a92204e4a1f992e6249d3bce3"
+ },
+ "flags": {
+  "PIPELINE_SUSPECT": false,
+  "LOW_COVERAGE": true,
+  "downgraded": false,
+  "fallback_two_level": false
+ },
+ "pipeline_suspect_reasons": [],
+ "anchors": {
+  "V1_dead13": true,
+  "V3_real_anchors": {
+   "Pnet_MW_A3A4_dead": true,
+   "deep_dc_rms_A9_static_A1_dead": true,
+   "ok": true
+  },
+  "V1b_goodhart_dead_set_match": true,
+  "V5_battery_u_d800_rms": {
+   "ok": true,
+   "verdicts": {
+    "A1": "死",
+    "A2": "过",
+    "A3p": "过",
+    "A4p": "过",
+    "A6": "边",
+    "A8": "过",
+    "A9p": "死"
+   }
+  },
+  "V2_B_vs_E57_maxdiff": 0.0,
+  "V2_A_vs_E57_maxdiff_reported": 0.0,
+  "V4_echo_204_444_12": true
+ },
+ "predictions": {
+  "P2b": {
+   "statement": "mono_norm 类：可判体 ≥1 且 漏网数 = 可判体数（零差分杀死）",
+   "status": "PASS",
+   "value": {
+    "n_judgeable": 5,
+    "escaped": 5,
+    "killed": 0,
+    "unjudgeable": 0,
+    "n_excluded": 0,
+    "escaped_ids": [
+     "M2_b1",
+     "M2_b2",
+     "M2_b3",
+     "M2_b4",
+     "M2_b5"
+    ],
+    "killed_ids": []
+   },
+   "source": "ABM_KILL_MATRIX.json:classes.mono_norm.escaped"
+  },
+  "P2c": {
+   "statement": "sign_flip 类漏网数 = 0",
+   "status": "PASS",
+   "value": {
+    "n_judgeable": 5,
+    "escaped": 0,
+    "killed": 5,
+    "unjudgeable": 0,
+    "n_excluded": 0,
+    "escaped_ids": [],
+    "killed_ids": [
+     "M3_b1",
+     "M3_b2",
+     "M3_b3",
+     "M3_b4",
+     "M3_b5"
+    ]
+   },
+   "source": "ABM_KILL_MATRIX.json:classes.sign_flip.escaped"
+  },
+  "P2d": {
+   "statement": "boxwidth_dep 类漏网数 ≥ 1",
+   "status": "PASS",
+   "value": {
+    "n_judgeable": 4,
+    "escaped": 4,
+    "killed": 0,
+    "unjudgeable": 0,
+    "n_excluded": 1,
+    "escaped_ids": [
+     "M8_b2",
+     "M8_b3",
+     "M8_b4",
+     "M8_b5"
+    ],
+    "killed_ids": []
+   },
+   "source": "ABM_KILL_MATRIX.json:classes.boxwidth_dep.escaped"
+  },
+  "P2e": {
+   "statement": "irrelevant_num 类漏网数 = 0",
+   "status": "PASS",
+   "value": {
+    "n_judgeable": 3,
+    "escaped": 0,
+    "killed": 3,
+    "unjudgeable": 0,
+    "n_excluded": 2,
+    "escaped_ids": [],
+    "killed_ids": [
+     "M6_b1",
+     "M6_b2",
+     "M6_b5"
+    ]
+   },
+   "source": "ABM_KILL_MATRIX.json:classes.irrelevant_num.escaped"
+  },
+  "P2f": {
+   "statement": "clip_cheat 类漏网数 ≥ 1",
+   "status": "FAIL",
+   "value": {
+    "n_judgeable": 5,
+    "escaped": 0,
+    "killed": 5,
+    "unjudgeable": 0,
+    "n_excluded": 0,
+    "escaped_ids": [],
+    "killed_ids": [
+     "M7_b1",
+     "M7_b2",
+     "M7_b3",
+     "M7_b4",
+     "M7_b5"
+    ]
+   },
+   "source": "ABM_KILL_MATRIX.json:classes.clip_cheat.escaped"
+  },
+  "P2g": {
+   "statement": "wrong_region 类漏网数 ≥ 1",
+   "status": "FAIL",
+   "value": {
+    "n_judgeable": 5,
+    "escaped": 0,
+    "killed": 5,
+    "unjudgeable": 0,
+    "n_excluded": 0,
+    "escaped_ids": [],
+    "killed_ids": [
+     "M4_b1",
+     "M4_b2",
+     "M4_b3",
+     "M4_b4",
+     "M4_b5"
+    ]
+   },
+   "source": "ABM_KILL_MATRIX.json:classes.wrong_region.escaped"
+  },
+  "P2h": {
+   "statement": "wrong_layer 类漏网数 ≥ 1",
+   "status": "PASS",
+   "value": {
+    "n_judgeable": 5,
+    "escaped": 3,
+    "killed": 2,
+    "unjudgeable": 0,
+    "n_excluded": 0,
+    "escaped_ids": [
+     "M5_b1",
+     "M5_b3",
+     "M5_b5"
+    ],
+    "killed_ids": [
+     "M5_b2",
+     "M5_b4"
+    ]
+   },
+   "source": "ABM_KILL_MATRIX.json:classes.wrong_layer.escaped"
+  },
+  "P2i": {
+   "statement": "主口径总检出率 killed/可判体 ∈ [0.20, 0.60]",
+   "status": "PASS",
+   "value": {
+    "rate": 0.5405405405405406,
+    "wilson95": [
+     0.38384046777409486,
+     0.6896143029949754
+    ],
+    "n_killed": 20,
+    "n_judgeable": 37,
+    "raw_rate": 0.5,
+    "abs_rate_sensitivity": 1.0
+   },
+   "source": "ABM_KILL_MATRIX.json:overall.rate"
+  },
+  "P4a": {
+   "statement": "|L3| ∈ [1, 1537]",
+   "status": "FAIL",
+   "value": {
+    "n_L3": 4916
+   },
+   "source": "ABM_FILTER_CHAIN.json:levels.L3.n_survive"
+  },
+  "P4b": {
+   "statement": "几何序 |L1|−|L2| ≥ |L2|−|L3|",
+   "status": "PASS",
+   "value": {
+    "L1": 5514,
+    "L2": 5035,
+    "L3": 4916,
+    "drop_rotate": 479,
+    "drop_absurd": 119
+   },
+   "source": "ABM_FILTER_CHAIN.json:levels"
+  },
+  "P4c": {
+   "statement": "|S_A ∩ L3| ≤ 122",
+   "status": "PASS",
+   "value": {
+    "S_A_intersect_L3": 56,
+    "n_S_A": 204
+   },
+   "source": "ABM_FILTER_CHAIN.json:S_A_intersect_L3"
+  }
+ },
+ "tally": {
+  "PASS": 8,
+  "FAIL": 3,
+  "NOT_RUN": 0,
+  "UNJUDGEABLE": 0
+ },
+ "n_counted": 11,
+ "known_checks": {
+  "K1": {
+   "statement": "K1（已知答案，不计数）：机器可判格上 checker 与 KILLBOARD 不一致数 = 0",
+   "status": "FAIL",
+   "value": {
+    "n_machine": 22,
+    "n_disagree": 2,
+    "discrepancies": [
+     [
+      "deep_dc_rms",
+      "A6",
+      "死",
+      "边"
+     ],
+     [
+      "temp_d400",
+      "A1",
+      "过",
+      "待定"
+     ]
+    ],
+    "author_expected_at_seal": "n_disagree=2（temp_d400·A1、deep_dc_rms·A6）"
+   },
+   "source": "ABM_MR_CONSISTENCY.json:n_disagree"
+  }
+ },
+ "constructive": {
+  "C1": {
+   "statement": "C1（构造性，不计数）：unit_scale 类可判体 ≥1 且全部漏网",
+   "status": "PASS",
+   "value": {
+    "n_judgeable": 5,
+    "escaped": 5,
+    "killed": 0,
+    "unjudgeable": 0,
+    "n_excluded": 0,
+    "escaped_ids": [
+     "M1_b1",
+     "M1_b2",
+     "M1_b3",
+     "M1_b4",
+     "M1_b5"
+    ],
+    "killed_ids": []
+   },
+   "source": "ABM_KILL_MATRIX.json:classes.unit_scale.escaped"
+  },
+  "C2": {
+   "statement": "C2（构造性，不计数）：H=0 三种排法末级幸存集合相同",
+   "status": "PASS",
+   "value": {
+    "single_step_kill": {
+     "zonal": 9830,
+     "rotate": 9722,
+     "absurd": 9080
+    }
+   },
+   "source": "ABM_FILTER_CHAIN.json:H_results.0.00.final_sets_identical"
+  }
+ },
+ "derived_consistency_checks": {
+  "n_B_eq_1_E57": 5545,
+  "note": "派生非预测：封存后由 E57_AB.npz 计出"
+ },
+ "note": "机械判分；只 11 条真预测计数；K1/C1/C2 照判不计数；被推翻原样保留；锚不过全体挂 PIPELINE_SUSPECT（判定保留）。"
+}

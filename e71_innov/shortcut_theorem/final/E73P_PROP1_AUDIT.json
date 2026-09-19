@@ -1,0 +1,62 @@
+{
+ "script": "e73p_prop1_audit.py",
+ "script_sha": "6a75be94b0b759f3cc6e849b88bab2c771b50bb4ae19c90f0cec122801c84194",
+ "status": "封存后描述性，非预注册，不改判",
+ "n": 15376,
+ "n_G1": 124,
+ "n_G0": 15252,
+ "env_z": {
+  "G1": {
+   "n_A_ge_0p7": 81,
+   "n_B_ge_0p9": 0,
+   "frac_B_ge_0p9": 0.0,
+   "median_D": 0.9748
+  },
+  "G0": {
+   "n_A_ge_0p7": 4770,
+   "n_B_ge_0p9": 204,
+   "frac_B_ge_0p9": 0.0428,
+   "median_D": 0.9318
+  },
+  "n_strict_A0p9_B0p9_by_G": {
+   "G1": 0,
+   "G0": 12
+  }
+ },
+ "env_m": {
+  "G1": {
+   "n_A_ge_0p7": 84,
+   "n_B_ge_0p9": 0,
+   "frac_B_ge_0p9": 0.0,
+   "median_D": 0.956
+  },
+  "G0": {
+   "n_A_ge_0p7": 4217,
+   "n_B_ge_0p9": 407,
+   "frac_B_ge_0p9": 0.0965,
+   "median_D": 0.9187
+  },
+  "n_strict_A0p9_B0p9_by_G": {
+   "G1": 0,
+   "G0": 17
+  }
+ },
+ "env_45": {
+  "G1": {
+   "n_A_ge_0p7": 84,
+   "n_B_ge_0p9": 0,
+   "frac_B_ge_0p9": 0.0,
+   "median_D": 0.9701
+  },
+  "G0": {
+   "n_A_ge_0p7": 4562,
+   "n_B_ge_0p9": 454,
+   "frac_B_ge_0p9": 0.0995,
+   "median_D": 0.913
+  },
+  "n_strict_A0p9_B0p9_by_G": {
+   "G1": 0,
+   "G0": 26
+  }
+ }
+}

@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E61: Agent 在与逻辑回归完全相同的信息条件下挑尺子。预注册 sha 67d3ede0…"""
 import os, sys, json, time, random

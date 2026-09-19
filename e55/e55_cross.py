@@ -1,5 +1,6 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# 键名勘误：本脚本由 e52_cross.py 改写，输出 JSON 中 merid 系键名装的是 45°(diag45) 值——见 E55_CROSS_键名勘误.json
 """E52 三重交集: 纬向风(E40) ∩ 经向风(E52, 同判据) ∩ 内潮(E48 三轴报警)。
 风侧判据函数逐字复用 e49_cross.py 的实现(base_quantities/spearman 来自 scripts/metric_search.py)。"""
 import json, sys, itertools

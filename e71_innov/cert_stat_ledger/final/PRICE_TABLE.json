@@ -1,0 +1,11 @@
+{
+ "module": "P3_price_table",
+ "alpha_one_sided": 0.025,
+ "e_star": 40.0,
+ "gate_p0": 0.9,
+ "n_star_mix_U(0.9,1]": 51,
+ "n_star_point_0.95": 69,
+ "AV_LB_32of32": 0.8470000000000003,
+ "wilson_lb_32of32_known": 0.8928208002353198,
+ "note": "确定性量；Wilson 行是封存时已知对照（PREREG §0b），不参与判分方向"
+}

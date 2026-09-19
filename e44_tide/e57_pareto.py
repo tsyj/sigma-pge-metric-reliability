@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E57: 全候选空间的 (排序力 A, 抗刷率 B) 双目标分析
 A = -rho(候选, 隐藏技巧评分)  越高越好；B = 同参数配对抗刷率  越高越好

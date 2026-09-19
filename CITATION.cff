@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "引用本项目时请注明所用提交或快照，并分别遵守代码与数据许可。"
+type: software
+title: "谁来给尺子打分：σ 坐标伪流环境中的代理指标可靠性探索"
+authors:
+  - name: 'GOAI Track-3 Open Exploration entry "Who Grades the Ruler"'
+repository-code: "https://github.com/tsyj/sigma-pge-metric-reliability"
+url: "https://github.com/tsyj/sigma-pge-metric-reliability"
+license: MIT
+abstract: "海山数值试验中代理指标的扰动审计、分析级账本与离线送检。自产数据另依 LICENSE-DATA 使用。"

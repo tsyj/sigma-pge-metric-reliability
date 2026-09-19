@@ -1,0 +1,715 @@
+{
+ "entry": "audit_battery_meta/module2",
+ "when": "2026-09-17T17:16:44+0800",
+ "selftest": false,
+ "downgraded": false,
+ "code_sha": "d7e3d7a53fdea0986d1bac9e2028d9ca74b4a40d4d8438251e1be74cfb6df3a5",
+ "common_sha": "0ac0b416d53c593eae7f076cebe149da326d46f9b1f7f1bd9320525575ac98a6",
+ "prereg_sha": "7b641565f778ba909f6cff4583d8b7a8be896e59561e15b07a54fc3ce79679d9",
+ "semantics": {
+  "primary": "差分杀死：∃o v_mut=死 ∧ v_base≠死；漏网=未杀∧判定≥3；UNJUDGEABLE=未杀∧判定<3",
+  "sensitivity": "绝对检出：∃o v_mut=死"
+ },
+ "operators": [
+  "A1",
+  "A2",
+  "A3p",
+  "A4p",
+  "A6",
+  "A8",
+  "A9p"
+ ],
+ "effective_note": "A2 只判绝对型；5 把基指标全为比值型 → 对变异体电池有效 6 把",
+ "classes": {
+  "unit_scale": {
+   "n_roster": 5,
+   "n_excluded": 0,
+   "excluded": [],
+   "n_eval": 5,
+   "killed": 0,
+   "escaped": 5,
+   "unjudgeable": 0,
+   "n_judgeable": 5,
+   "killed_ids": [],
+   "escaped_ids": [
+    "M1_b1",
+    "M1_b2",
+    "M1_b3",
+    "M1_b4",
+    "M1_b5"
+   ],
+   "unjudgeable_ids": [],
+   "abs_detected": 5,
+   "abs_escaped": 0,
+   "abs_detected_ids": [
+    "M1_b1",
+    "M1_b2",
+    "M1_b3",
+    "M1_b4",
+    "M1_b5"
+   ],
+   "abs_escaped_ids": []
+  },
+  "mono_norm": {
+   "n_roster": 5,
+   "n_excluded": 0,
+   "excluded": [],
+   "n_eval": 5,
+   "killed": 0,
+   "escaped": 5,
+   "unjudgeable": 0,
+   "n_judgeable": 5,
+   "killed_ids": [],
+   "escaped_ids": [
+    "M2_b1",
+    "M2_b2",
+    "M2_b3",
+    "M2_b4",
+    "M2_b5"
+   ],
+   "unjudgeable_ids": [],
+   "abs_detected": 5,
+   "abs_escaped": 0,
+   "abs_detected_ids": [
+    "M2_b1",
+    "M2_b2",
+    "M2_b3",
+    "M2_b4",
+    "M2_b5"
+   ],
+   "abs_escaped_ids": []
+  },
+  "sign_flip": {
+   "n_roster": 5,
+   "n_excluded": 0,
+   "excluded": [],
+   "n_eval": 5,
+   "killed": 5,
+   "escaped": 0,
+   "unjudgeable": 0,
+   "n_judgeable": 5,
+   "killed_ids": [
+    "M3_b1",
+    "M3_b2",
+    "M3_b3",
+    "M3_b4",
+    "M3_b5"
+   ],
+   "escaped_ids": [],
+   "unjudgeable_ids": [],
+   "abs_detected": 5,
+   "abs_escaped": 0,
+   "abs_detected_ids": [
+    "M3_b1",
+    "M3_b2",
+    "M3_b3",
+    "M3_b4",
+    "M3_b5"
+   ],
+   "abs_escaped_ids": []
+  },
+  "wrong_region": {
+   "n_roster": 5,
+   "n_excluded": 0,
+   "excluded": [],
+   "n_eval": 5,
+   "killed": 5,
+   "escaped": 0,
+   "unjudgeable": 0,
+   "n_judgeable": 5,
+   "killed_ids": [
+    "M4_b1",
+    "M4_b2",
+    "M4_b3",
+    "M4_b4",
+    "M4_b5"
+   ],
+   "escaped_ids": [],
+   "unjudgeable_ids": [],
+   "abs_detected": 5,
+   "abs_escaped": 0,
+   "abs_detected_ids": [
+    "M4_b1",
+    "M4_b2",
+    "M4_b3",
+    "M4_b4",
+    "M4_b5"
+   ],
+   "abs_escaped_ids": []
+  },
+  "wrong_layer": {
+   "n_roster": 5,
+   "n_excluded": 0,
+   "excluded": [],
+   "n_eval": 5,
+   "killed": 2,
+   "escaped": 3,
+   "unjudgeable": 0,
+   "n_judgeable": 5,
+   "killed_ids": [
+    "M5_b2",
+    "M5_b4"
+   ],
+   "escaped_ids": [
+    "M5_b1",
+    "M5_b3",
+    "M5_b5"
+   ],
+   "unjudgeable_ids": [],
+   "abs_detected": 5,
+   "abs_escaped": 0,
+   "abs_detected_ids": [
+    "M5_b1",
+    "M5_b2",
+    "M5_b3",
+    "M5_b4",
+    "M5_b5"
+   ],
+   "abs_escaped_ids": []
+  },
+  "irrelevant_num": {
+   "n_roster": 5,
+   "n_excluded": 2,
+   "excluded": [
+    "M6_b3",
+    "M6_b4"
+   ],
+   "n_eval": 3,
+   "killed": 3,
+   "escaped": 0,
+   "unjudgeable": 0,
+   "n_judgeable": 3,
+   "killed_ids": [
+    "M6_b1",
+    "M6_b2",
+    "M6_b5"
+   ],
+   "escaped_ids": [],
+   "unjudgeable_ids": [],
+   "abs_detected": 3,
+   "abs_escaped": 0,
+   "abs_detected_ids": [
+    "M6_b1",
+    "M6_b2",
+    "M6_b5"
+   ],
+   "abs_escaped_ids": []
+  },
+  "clip_cheat": {
+   "n_roster": 5,
+   "n_excluded": 0,
+   "excluded": [],
+   "n_eval": 5,
+   "killed": 5,
+   "escaped": 0,
+   "unjudgeable": 0,
+   "n_judgeable": 5,
+   "killed_ids": [
+    "M7_b1",
+    "M7_b2",
+    "M7_b3",
+    "M7_b4",
+    "M7_b5"
+   ],
+   "escaped_ids": [],
+   "unjudgeable_ids": [],
+   "abs_detected": 5,
+   "abs_escaped": 0,
+   "abs_detected_ids": [
+    "M7_b1",
+    "M7_b2",
+    "M7_b3",
+    "M7_b4",
+    "M7_b5"
+   ],
+   "abs_escaped_ids": []
+  },
+  "boxwidth_dep": {
+   "n_roster": 5,
+   "n_excluded": 1,
+   "excluded": [
+    "M8_b1"
+   ],
+   "n_eval": 4,
+   "killed": 0,
+   "escaped": 4,
+   "unjudgeable": 0,
+   "n_judgeable": 4,
+   "killed_ids": [],
+   "escaped_ids": [
+    "M8_b2",
+    "M8_b3",
+    "M8_b4",
+    "M8_b5"
+   ],
+   "unjudgeable_ids": [],
+   "abs_detected": 4,
+   "abs_escaped": 0,
+   "abs_detected_ids": [
+    "M8_b2",
+    "M8_b3",
+    "M8_b4",
+    "M8_b5"
+   ],
+   "abs_escaped_ids": []
+  }
+ },
+ "overall": {
+  "n_roster": 40,
+  "n_excluded": 3,
+  "n_killed": 20,
+  "n_escaped": 17,
+  "n_unjudgeable": 0,
+  "n_judgeable": 37,
+  "rate": 0.5405405405405406,
+  "wilson95": [
+   0.38384046777409486,
+   0.6896143029949754
+  ],
+  "raw_rate": 0.5,
+  "raw_wilson95": [
+   0.35199526826950456,
+   0.6480047317304954
+  ],
+  "abs_rate": 1.0,
+  "abs_wilson95": [
+   0.9059421728185313,
+   1.0
+  ],
+  "abs_n_detected": 37,
+  "abs_n_judgeable": 37
+ },
+ "base_verdicts": {
+  "b1": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "边",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "b2": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "b3": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "过",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "边"
+  },
+  "b4": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "过",
+   "A9p": "过"
+  },
+  "b5": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "边",
+   "A4p": "死",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "过"
+  }
+ },
+ "matrix": {
+  "M1_b1": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "边",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "M2_b1": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "边",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "M3_b1": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "边",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M4_b1": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "边",
+   "A4p": "边",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M5_b1": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "边",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "M6_b1": {
+   "A1": "边",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M7_b1": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "边",
+   "A9p": "死"
+  },
+  "M8_b1": "EQUIVALENT",
+  "M1_b2": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "M2_b2": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "M3_b2": {
+   "A1": "边",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M4_b2": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "死",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M5_b2": {
+   "A1": "边",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "过",
+   "A9p": "边"
+  },
+  "M6_b2": {
+   "A1": "边",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M7_b2": {
+   "A1": "边",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "边",
+   "A9p": "死"
+  },
+  "M8_b2": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "M1_b3": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "过",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "边"
+  },
+  "M2_b3": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "过",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "边"
+  },
+  "M3_b3": {
+   "A1": "边",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "过",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M4_b3": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M5_b3": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "过",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "过"
+  },
+  "M6_b3": "DUPLICATE",
+  "M7_b3": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "死",
+   "A4p": "过",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "M8_b3": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "过",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "边"
+  },
+  "M1_b4": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "过",
+   "A9p": "过"
+  },
+  "M2_b4": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "过",
+   "A9p": "过"
+  },
+  "M3_b4": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M4_b4": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M5_b4": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "过",
+   "A9p": "过"
+  },
+  "M6_b4": "DUPLICATE",
+  "M7_b4": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "M8_b4": {
+   "A1": "边",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "过",
+   "A9p": "过"
+  },
+  "M1_b5": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "边",
+   "A4p": "死",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "过"
+  },
+  "M2_b5": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "边",
+   "A4p": "死",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "过"
+  },
+  "M3_b5": {
+   "A1": "死",
+   "A2": "未",
+   "A3p": "边",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M4_b5": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "边",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "边"
+  },
+  "M5_b5": {
+   "A1": "边",
+   "A2": "未",
+   "A3p": "过",
+   "A4p": "死",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "过"
+  },
+  "M6_b5": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "死",
+   "A4p": "过",
+   "A6": "死",
+   "A8": "死",
+   "A9p": "死"
+  },
+  "M7_b5": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "死",
+   "A4p": "死",
+   "A6": "死",
+   "A8": "过",
+   "A9p": "过"
+  },
+  "M8_b5": {
+   "A1": "过",
+   "A2": "未",
+   "A3p": "边",
+   "A4p": "死",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "过"
+  }
+ },
+ "anchor_V5": {
+  "metric": "u|d800|rms",
+  "verdicts": {
+   "A1": "死",
+   "A2": "过",
+   "A3p": "过",
+   "A4p": "过",
+   "A6": "边",
+   "A8": "过",
+   "A9p": "死"
+  },
+  "ok": true
+ },
+ "pipeline": {
+  "impl_anchor_ok": true,
+  "impl_mismatch": [],
+  "read_fail": [],
+  "static_umax_match_E56_VERDICT": true,
+  "N_ref_consistent": true,
+  "base_names_from_front_sample": [
+   [
+    "u|all|rms",
+    "v|s200|p95"
+   ],
+   [
+    "u|s200|rms",
+    "v|s50|p95"
+   ],
+   [
+    "v|s50|rms",
+    "v|s50|p95"
+   ],
+   [
+    "u|s50|rms",
+    "v|s50|p95"
+   ],
+   [
+    "u|d1500|p95",
+    "w|d1500|rms"
+   ]
+  ]
+ },
+ "wall_s": 5.6,
+ "log": [
+  "[   5.1s] 上下文就绪：Z58 58 Z32 32 MT 22 M28 28 V7 7 ST 7；读失败 0；实现锚不符 0",
+  "[   5.5s] 基指标电池：{'b1': {'A1': '死', 'A2': '未', 'A3p': '过', 'A4p': '边', 'A6': '边', 'A8': '过', 'A9p': '死'}, 'b2': {'A1': '死', 'A2': '未', 'A3p': '过', 'A4p': '死', 'A6': '边', 'A8': '过', 'A9p': '死'}, 'b3': {'A1': '死', 'A2': '未', 'A3p': '过', 'A4p': '过', 'A6': '边', 'A8': '过', 'A9p': '边'}, 'b4': {'A1': '过', 'A2': '未', 'A3p': '过', 'A4p': '死', 'A6': '死', 'A8': '过', 'A9p': '过'}, 'b5': {'A1': '过', 'A2': '未', 'A3p': '边', 'A4p': '死', 'A6': '边', 'A8': '过', 'A9p': '过'}}",
+  "[   5.6s] 名册 40：{'KILLED': 20, 'ESCAPED': 17, 'UNJUDGEABLE': 0, 'EQUIVALENT': 1, 'DUPLICATE': 2}"
+ ]
+}

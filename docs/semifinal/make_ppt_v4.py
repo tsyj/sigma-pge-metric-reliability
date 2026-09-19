@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """复赛 PPT v4（方案 B, 7 页, 3 分钟）"""
 from pptx import Presentation

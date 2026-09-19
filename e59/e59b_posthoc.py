@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E59b（事后分析，非预注册）：检验假说——无真值特征预测的是判别力强度 |rho|，不是方向 sign(rho)。"""
 import json

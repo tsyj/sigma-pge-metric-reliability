@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """图: 排得准的程度 A 与抗糊弄的程度 B 的双目标平面 + 阈值敏感性"""
 import sys, json

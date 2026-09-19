@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E50 -- 把处死环带功率的审计砍向新冠军 uv_ratio:
 (a) 采样相位敏感性: 末帧 vs 倒数2/3/4帧(隔 1h=0.081 T_M2)的 uv 波动

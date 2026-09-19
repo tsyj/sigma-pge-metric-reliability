@@ -1,0 +1,133 @@
+{
+ "module": "verdict_cert_stat_ledger",
+ "prereg_sha256": "4fd9507aa577b04f2e9587a42d6ca1d649922d38902cb734b6c7fcdfe774b45b",
+ "preflight": {
+  "scripts_reverified": 11,
+  "inputs_reverified": 6
+ },
+ "n_true_predictions": 8,
+ "n_hit": 8,
+ "n_miss": 0,
+ "n_notrun": 0,
+ "headline_true_bets": {
+  "members": [
+   "P1",
+   "P4",
+   "P6_clause2",
+   "P7"
+  ],
+  "P6_clause2": {
+   "predicted": "0.20 <= power_e@204 <= 0.75",
+   "observed": 0.45065,
+   "verdict": "中"
+  },
+  "verdicts": {
+   "P1": "中",
+   "P4": "中",
+   "P6_clause2": "中",
+   "P7": "中"
+  },
+  "n_hit": 4,
+  "n_of": 4,
+  "note": "头条战绩只数真赌注 4 项（PREREG §1 冻结）；『8 中 X』总数只可进附录并同框分层表"
+ },
+ "per_prediction": {
+  "P1": {
+   "predicted": "r_optstop >= 0.0375 AND r_oneshot204 <= 0.035",
+   "observed": {
+    "r_optstop": 0.088505,
+    "r_oneshot204": 0.026055
+   },
+   "verdict": "中",
+   "tier": "真赌注"
+  },
+  "P2": {
+   "predicted": "r_eproc <= 0.027",
+   "observed": {
+    "r_eproc": 0.012355
+   },
+   "verdict": "中",
+   "tier": "近确定"
+  },
+  "P3": {
+   "predicted": "n*_mix in [45,60] AND n*_point in [60,80] AND AV_LB_32of32 in [0.80,0.88]",
+   "observed": {
+    "n_star_mix": 51,
+    "n_star_point": 69,
+    "AV_LB_32of32": 0.8470000000000003
+   },
+   "verdict": "中",
+   "tier": "确定性核验"
+  },
+  "P4": {
+   "predicted": "三判死格平均爆仓对数均<=6 AND 三格之和<=18",
+   "observed": {
+    "mean_stop_pairs": {
+     "uv_diag45": 4.3279,
+     "vu_zonal": 4.0588,
+     "vu_merid": 3.3923
+    },
+    "sum": 11.779
+   },
+   "verdict": "中",
+   "tier": "真赌注"
+  },
+  "P5": {
+   "predicted": "三判死格加一修正置换 p 均 <= 0.02",
+   "observed": {
+    "p_perm_plus1": {
+     "uv_diag45_paired": 0.008099190080991902,
+     "vu_zonal_paired": 0.0010998900109989002,
+     "vu_merid_paired": 9.999000099990002e-05
+    }
+   },
+   "verdict": "中",
+   "tier": "近确定"
+  },
+  "P6": {
+   "predicted": "power_e@32 <= 0.05 AND power_e@204 in [0.20,0.75]",
+   "observed": {
+    "power_e_32": 0.0,
+    "power_e_204": 0.45065
+   },
+   "verdict": "中",
+   "tier": "子句1=确定性核验/子句2=真赌注"
+  },
+  "P7": {
+   "predicted": "0.90 <= 冠军校正后95%下界 <= 0.995 AND overlap45（双条件区间相交）",
+   "observed": {
+    "LB_champ_corr": 0.9940227565078906,
+    "overlap45": true
+   },
+   "verdict": "中",
+   "tier": "真赌注"
+  },
+  "P8": {
+   "predicted": "E67B 45° 富集校正后95%下界 >= 5",
+   "observed": {
+    "enrich_corr_lb95": 20.481369094090724
+   },
+   "verdict": "中",
+   "tier": "近确定"
+  }
+ },
+ "S_status": {
+  "S1": {
+   "status": "已跑",
+   "output": "S1_FLIP_TABLE.json"
+  },
+  "S2": {
+   "status": "未跑",
+   "reason": "无冻结脚本（PREREG 附录 B：无脚本即未跑）"
+  },
+  "S3": {
+   "status": "已跑",
+   "output": "S3_CROSSCHECK.json"
+  },
+  "S4": {
+   "status": "未跑",
+   "reason": "无冻结脚本；R9 random-walk 原文待核"
+  }
+ },
+ "note": "验证性断言（PREREG §0b）不计入战绩；被推翻的预测原样保留（PREREG §1）"
+}

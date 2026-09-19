@@ -1,0 +1,1307 @@
+{
+ "entry": "audit_battery_meta/module1",
+ "when": "2026-09-17T17:16:13+0800",
+ "selftest": false,
+ "code_sha": "50ca2f3fa05e8f64216a45b1a58d5347beb366645d9c1753dc5cb0226102e936",
+ "common_sha": "0ac0b416d53c593eae7f076cebe149da326d46f9b1f7f1bd9320525575ac98a6",
+ "yaml_sha": "d3b9b309fe4730bd7456e2f27d0cb972c190525dd51fe245f74718c2d25e5b1d",
+ "killboard_sha": "668769740ccc8ba8699f8557267fc3a021f8e2c53d70178b1f75132bbd747d92",
+ "prereg_sha": "7b641565f778ba909f6cff4583d8b7a8be896e59561e15b07a54fc3ce79679d9",
+ "n_cells": 50,
+ "n_machine": 22,
+ "n_machine_evaluated": 22,
+ "n_disagree": 2,
+ "coverage_gate": {
+  "threshold": 24,
+  "n_machine": 22,
+  "LOW_COVERAGE": true
+ },
+ "discrepancies": [
+  {
+   "row": "deep_dc_rms",
+   "col": "A6",
+   "kb": "死",
+   "checker": "边",
+   "rule": "A6_rotate",
+   "inputs": {
+    "A_rho": [
+     "e44/analysis/RT2_FIXES.json:M6_deep_rms_800.merid22",
+     -0.99
+    ],
+    "B": [
+     "e55/E55_CROSS.json:deep_u_diag45.paired",
+     0.0
+    ]
+   },
+   "detail": {
+    "A_rho": -0.99,
+    "B": 0.0
+   }
+  },
+  {
+   "row": "temp_d400",
+   "col": "A1",
+   "kb": "过",
+   "checker": "待定",
+   "rule": "A1_trivalent",
+   "inputs": {
+    "paired": [
+     "e44/analysis/E49_CROSS.json:tempd400_wind.paired",
+     1.0
+    ],
+    "n": [
+     "e44/analysis/E57_PARETO.json:n_pairs",
+     32
+    ]
+   },
+   "detail": {
+    "k": 32,
+    "n": 32,
+    "point": 1.0,
+    "wilson95": [
+     0.8928208002353198,
+     1.0
+    ]
+   }
+  }
+ ],
+ "manual_cells": [
+  {
+   "row": "Pnet_MW",
+   "col": "A5",
+   "kb": "边",
+   "why": "A5 程序性控制（定性：预测覆盖/部分中）"
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A6",
+   "kb": "未",
+   "why": "未：仅内潮有定义"
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A9",
+   "kb": "未",
+   "why": "未：静止态无内潮"
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "R",
+   "kb": "过",
+   "why": "R 列为 LLM 现行评审判据对照（定性）"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A2",
+   "kb": "边",
+   "why": "KB 以定性分句『平底本身无该误差成分』定边"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A3",
+   "kb": "未",
+   "why": "未：500 km 未算"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A5",
+   "kb": "边",
+   "why": "A5 程序性控制"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "R",
+   "kb": "过",
+   "why": "R 列定性"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A2",
+   "kb": "边",
+   "why": "KB 以定性分句定边（平底 4.000 / 海山≈3.99）"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A3",
+   "kb": "未",
+   "why": "未：500 km 未算"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A5",
+   "kb": "未",
+   "why": "未：未被预注册覆盖"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A7",
+   "kb": "未",
+   "why": "未：未列入换名局"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A9",
+   "kb": "未",
+   "why": "未：未算"
+  },
+  {
+   "row": "temp_d400",
+   "col": "R",
+   "kb": "过",
+   "why": "R 列定性"
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A2",
+   "kb": "死",
+   "why": "KB 以『分母→0 发散』定死，源键 uv_ratio_raw_invalid 不存在，发散无数值阈"
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A5",
+   "kb": "过",
+   "why": "A5 程序性控制"
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A9",
+   "kb": "未",
+   "why": "未：静止态无真信号可锚"
+  },
+  {
+   "row": "uv_ratio",
+   "col": "R",
+   "kb": "过",
+   "why": "R 列定性"
+  },
+  {
+   "row": "truth",
+   "col": "A1",
+   "kb": "定义",
+   "why": "定义格"
+  },
+  {
+   "row": "truth",
+   "col": "A2",
+   "kb": "定义",
+   "why": "定义格"
+  },
+  {
+   "row": "truth",
+   "col": "A3",
+   "kb": "定义",
+   "why": "定义格"
+  },
+  {
+   "row": "truth",
+   "col": "A4",
+   "kb": "过",
+   "why": "对照行定性"
+  },
+  {
+   "row": "truth",
+   "col": "A5",
+   "kb": "过",
+   "why": "对照行定性"
+  },
+  {
+   "row": "truth",
+   "col": "A6",
+   "kb": "过",
+   "why": "对照行定性"
+  },
+  {
+   "row": "truth",
+   "col": "A7",
+   "kb": "未",
+   "why": "不适用"
+  },
+  {
+   "row": "truth",
+   "col": "A8",
+   "kb": "定义",
+   "why": "定义格"
+  },
+  {
+   "row": "truth",
+   "col": "A9",
+   "kb": "过",
+   "why": "对照行定性"
+  },
+  {
+   "row": "truth",
+   "col": "R",
+   "kb": "定义",
+   "why": "定义格"
+  }
+ ],
+ "kb_dead_cells": [
+  [
+   "Pnet_MW",
+   "A1"
+  ],
+  [
+   "Pnet_MW",
+   "A3"
+  ],
+  [
+   "Pnet_MW",
+   "A4"
+  ],
+  [
+   "Pnet_MW",
+   "A7"
+  ],
+  [
+   "deep_dc_rms",
+   "A1"
+  ],
+  [
+   "deep_dc_rms",
+   "A4"
+  ],
+  [
+   "deep_dc_rms",
+   "A6"
+  ],
+  [
+   "deep_dc_rms",
+   "A8"
+  ],
+  [
+   "deep_dc_rms",
+   "A9"
+  ],
+  [
+   "temp_d400",
+   "A6"
+  ],
+  [
+   "uv_ratio",
+   "A2"
+  ],
+  [
+   "uv_ratio",
+   "A6"
+  ],
+  [
+   "uv_ratio",
+   "A7"
+  ]
+ ],
+ "kb_verdict_distribution": {
+  "死": 13,
+  "过": 16,
+  "边": 6,
+  "未": 9,
+  "待定": 1,
+  "定义": 5
+ },
+ "real_anchor_check": {
+  "Pnet_MW_A3A4_dead": true,
+  "deep_dc_rms_A9_dead": true,
+  "parts": {
+   "Pnet_MW_A3_dead": true,
+   "Pnet_MW_A4_dead": true,
+   "deep_dc_rms_A9_dead": true
+  },
+  "note": "deep_dc_rms 锚 = BH93 静止线 A1 部分（E56_VERDICT:A1_paired_correct）；exaggeration 不参与"
+ },
+ "pipeline_issues": [],
+ "cells": [
+  {
+   "row": "Pnet_MW",
+   "col": "A1",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A1_trivalent",
+   "checker_verdict": "死",
+   "detail": {
+    "k": 0,
+    "n": 1,
+    "point": 0.0,
+    "wilson95": [
+     0.0,
+     0.7934506882081973
+    ]
+   },
+   "inputs": {
+    "flat": {
+     "ptr": "e44/analysis/RT2_FIXES.json:M27_Pnet_A1.flat",
+     "ok": true,
+     "value": -4.553281088304748e-06
+    },
+    "steep": {
+     "ptr": "e44/analysis/RT2_FIXES.json:M27_Pnet_A1.dj",
+     "ok": true,
+     "value": 7.894257942032854
+    }
+   },
+   "aux": [
+    {
+     "fact": "A1 方向：Pnet_MW 换平底读数降低=变好看（内潮单对）",
+     "type": "str_contains",
+     "ptr": "e44/analysis/RT2_FIXES.json:M27_Pnet_A1.note",
+     "resolved": true,
+     "holds": true
+    }
+   ],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A2",
+   "kb_verdict": "过",
+   "machine": true,
+   "rule": "A2_zero_channel",
+   "checker_verdict": "过",
+   "detail": {
+    "ratio": 5.76783925954696e-07
+   },
+   "inputs": {
+    "flat": {
+     "ptr": "e44/analysis/E44_METRICS.json:d_flatdj.Pnet_MW",
+     "ok": true,
+     "value": -4.553281088304748e-06
+    },
+    "typical": {
+     "ptr": "e44/analysis/RT2_FIXES.json:M27_Pnet_A1.dj",
+     "ok": true,
+     "value": 7.894257942032854
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A3",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A3_boxwidth",
+   "checker_verdict": "死",
+   "detail": {
+    "max_over_min": 7.242705186975977,
+    "amp": 6.242705186975977,
+    "meaning_changed": true,
+    "order_changed": false
+   },
+   "inputs": {
+    "ratio_dict": {
+     "ptr": "/home/xinyuan/比赛/赛道三赛题二/github_repo/e44_tide/analysis/upstream/DOMWIDTH_RESULT.json:ratio_vs_84km",
+     "ok": true,
+     "value": {
+      "dom84km_archive": 1.0,
+      "dom86km": 0.8363573912199024,
+      "dom88km": 1.1459247163829667,
+      "dom90km": 2.468950662446988,
+      "dom94km": 6.057490015554083,
+      "dom126km": 4.600424290639677,
+      "dom168km": 1.8487059762090932
+     }
+    }
+   },
+   "aux": [
+    {
+     "fact": "含义变：DOMWIDTH 预注册判为域共振控制（84 km 域上不能对任何环带通量发证）",
+     "type": "str_startswith",
+     "ptr": "/home/xinyuan/比赛/赛道三赛题二/github_repo/e44_tide/analysis/upstream/DOMWIDTH_RESULT.json:judgement.main_branch",
+     "resolved": true,
+     "holds": true
+    }
+   ],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A4",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A4_phase",
+   "checker_verdict": "死",
+   "detail": {
+    "rel_pct": [
+     -14.1,
+     -4.3
+    ],
+    "amp_pct": 14.1,
+    "robust_pct": null,
+    "no_robust": true
+   },
+   "inputs": {
+    "rel_pct": {
+     "ptr": "e44/analysis/RT2_FIXES.json:M2_phase.Pnet_lastframe.rel_change_pct",
+     "ok": true,
+     "value": [
+      -14.1,
+      -4.3
+     ]
+    }
+   },
+   "aux": [
+    {
+     "fact": "无稳健版：M2_phase 下无 Pnet 窗均键",
+     "type": "key_absent_regex",
+     "ptr": "e44/analysis/RT2_FIXES.json:M2_phase",
+     "resolved": true,
+     "holds": true
+    }
+   ],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A5",
+   "kb_verdict": "边",
+   "machine": false,
+   "why": "A5 程序性控制（定性：预测覆盖/部分中）"
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A6",
+   "kb_verdict": "未",
+   "machine": false,
+   "why": "未：仅内潮有定义"
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A7",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A7_nameswap",
+   "checker_verdict": "死",
+   "detail": {
+    "named": 3,
+    "anon": 1
+   },
+   "inputs": {
+    "named": {
+     "ptr": "e44/agent/E54_NAMESWAP.json:conditions.C0_named.Pnet_trusted",
+     "ok": true,
+     "value": 3
+    },
+    "anon": {
+     "ptr": "e44/agent/E54_NAMESWAP.json:conditions.C1_anon.Pnet_trusted",
+     "ok": true,
+     "value": 1
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A8",
+   "kb_verdict": "过",
+   "machine": true,
+   "rule": "A8_anchor",
+   "checker_verdict": "过",
+   "detail": {
+    "rho": 0.857,
+    "p": 0.0238
+   },
+   "inputs": {
+    "rho": {
+     "ptr": "e44/analysis/RT2_FIXES.json:F2_A8_signed.Pnet_MW.signed_rho",
+     "ok": true,
+     "value": 0.857
+    },
+    "p": {
+     "ptr": "e44/analysis/RT2_FIXES.json:F2_A8_signed.Pnet_MW.p_exact_two_sided",
+     "ok": true,
+     "value": 0.0238
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "A9",
+   "kb_verdict": "未",
+   "machine": false,
+   "why": "未：静止态无内潮"
+  },
+  {
+   "row": "Pnet_MW",
+   "col": "R",
+   "kb_verdict": "过",
+   "machine": false,
+   "why": "R 列为 LLM 现行评审判据对照（定性）"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A1",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A1_trivalent",
+   "checker_verdict": "死",
+   "detail": {
+    "k": 0,
+    "n": 32,
+    "point": 0.0,
+    "wilson95": [
+     0.0,
+     0.10717919976468034
+    ]
+   },
+   "inputs": {
+    "paired": {
+     "ptr": "ledger/metric_search.json:baseline.3",
+     "ok": true,
+     "value": 0.0
+    },
+    "n": {
+     "ptr": "e44/analysis/E57_PARETO.json:n_pairs",
+     "ok": true,
+     "value": 32
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": "KB 该格源为纬向风 deep_rms_800（u|d800|rms）配对 32 对"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A2",
+   "kb_verdict": "边",
+   "machine": false,
+   "why": "KB 以定性分句『平底本身无该误差成分』定边"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A3",
+   "kb_verdict": "未",
+   "machine": false,
+   "why": "未：500 km 未算"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A4",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A4_phase",
+   "checker_verdict": "死",
+   "detail": {
+    "rel_pct": [
+     66.4
+    ],
+    "amp_pct": 66.4,
+    "robust_pct": null,
+    "no_robust": true
+   },
+   "inputs": {
+    "rel_pct": {
+     "ptr": "e44/analysis/RT2_FIXES.json:M2_phase.deep_dc_lastframe.rel_change_pct",
+     "ok": true,
+     "value": 66.4
+    }
+   },
+   "aux": [
+    {
+     "fact": "无稳健版：M2_phase 下无 deep_dc 窗均键",
+     "type": "key_absent_regex",
+     "ptr": "e44/analysis/RT2_FIXES.json:M2_phase",
+     "resolved": true,
+     "holds": true
+    }
+   ],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A5",
+   "kb_verdict": "边",
+   "machine": false,
+   "why": "A5 程序性控制"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A6",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A6_rotate",
+   "checker_verdict": "边",
+   "detail": {
+    "A_rho": -0.99,
+    "B": 0.0
+   },
+   "inputs": {
+    "A_rho": {
+     "ptr": "e44/analysis/RT2_FIXES.json:M6_deep_rms_800.merid22",
+     "ok": true,
+     "value": -0.99
+    },
+    "B": {
+     "ptr": "e55/E55_CROSS.json:deep_u_diag45.paired",
+     "ok": true,
+     "value": 0.0
+    }
+   },
+   "aux": [],
+   "agree": false,
+   "note": "经向 B 盘上无；B 取 45°（E55 键名勘误确认 deep_u_diag45 键名本就正确）；KB 列标题为 45°/90°"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A7",
+   "kb_verdict": "过",
+   "machine": true,
+   "rule": "A7_nameswap",
+   "checker_verdict": "过",
+   "detail": {
+    "named": 5,
+    "anon": 5
+   },
+   "inputs": {
+    "named": {
+     "ptr": "e44/agent/E54_NAMESWAP.json:conditions.C0_named.deepDC_gameable",
+     "ok": true,
+     "value": 5
+    },
+    "anon": {
+     "ptr": "e44/agent/E54_NAMESWAP.json:conditions.C1_anon.deepDC_gameable",
+     "ok": true,
+     "value": 5
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A8",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A8_anchor",
+   "checker_verdict": "死",
+   "detail": {
+    "rho": -0.964,
+    "p": 0.0028
+   },
+   "inputs": {
+    "rho": {
+     "ptr": "e44/analysis/RT2_FIXES.json:F2_A8_signed.deep_dc_rms.signed_rho",
+     "ok": true,
+     "value": -0.964
+    },
+    "p": {
+     "ptr": "e44/analysis/RT2_FIXES.json:F2_A8_signed.deep_dc_rms.p_exact_two_sided",
+     "ok": true,
+     "value": 0.0028
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "A9",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A9_static",
+   "checker_verdict": "死",
+   "detail": {
+    "A1_part": {
+     "k": 0,
+     "n": 7,
+     "point": 0.0,
+     "wilson95": [
+      0.0,
+      0.35433043867586833
+     ],
+     "verdict": "死"
+    },
+    "A8_part": {
+     "rho": 1.0,
+     "p_exact": 0.0003968253968253968,
+     "verdict": "过"
+    }
+   },
+   "inputs": {
+    "a1_paired": {
+     "ptr": "e56/E56_VERDICT.json:A1_paired_correct",
+     "ok": true,
+     "value": 0.0
+    },
+    "a1_n_len": {
+     "ptr": "e56/E56_VERDICT.json:V",
+     "ok": true,
+     "value": [
+      0.0,
+      50.0,
+      150.0,
+      400.0,
+      800.0,
+      1500.0,
+      2747.0
+     ]
+    },
+    "a8_x": {
+     "ptr": "e56/E56_VERDICT.json:bh93_deep800",
+     "ok": true,
+     "value": [
+      9.345410346984863,
+      8.784461975097656,
+      7.503782272338867,
+      5.435649871826172,
+      3.7815234661102295,
+      2.479538679122925,
+      1.6209425926208496
+     ]
+    },
+    "a8_y": {
+     "ptr": "e56/E56_VERDICT.json:bh93_umax",
+     "ok": true,
+     "value": [
+      99.71736907958984,
+      89.34526062011719,
+      79.08129119873047,
+      55.656612396240234,
+      49.574668884277344,
+      32.448055267333984,
+      18.791793823242188
+     ]
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": "BH93 静止线锚；exaggeration=1.6895 为纬向风 sweep 派生，不作判死依据"
+  },
+  {
+   "row": "deep_dc_rms",
+   "col": "R",
+   "kb_verdict": "过",
+   "machine": false,
+   "why": "R 列定性"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A1",
+   "kb_verdict": "过",
+   "machine": true,
+   "rule": "A1_trivalent",
+   "checker_verdict": "待定",
+   "detail": {
+    "k": 32,
+    "n": 32,
+    "point": 1.0,
+    "wilson95": [
+     0.8928208002353198,
+     1.0
+    ]
+   },
+   "inputs": {
+    "paired": {
+     "ptr": "e44/analysis/E49_CROSS.json:tempd400_wind.paired",
+     "ok": true,
+     "value": 1.0
+    },
+    "n": {
+     "ptr": "e44/analysis/E57_PARETO.json:n_pairs",
+     "ok": true,
+     "value": 32
+    }
+   },
+   "aux": [],
+   "agree": false,
+   "note": "内潮冠军在纬向风 32 对上的配对比例"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A2",
+   "kb_verdict": "边",
+   "machine": false,
+   "why": "KB 以定性分句定边（平底 4.000 / 海山≈3.99）"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A3",
+   "kb_verdict": "未",
+   "machine": false,
+   "why": "未：500 km 未算"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A4",
+   "kb_verdict": "过",
+   "machine": true,
+   "rule": "A4_phase",
+   "checker_verdict": "过",
+   "detail": {
+    "rel_pct": [
+     -0.007,
+     -0.008
+    ],
+    "amp_pct": 0.008,
+    "robust_pct": null,
+    "no_robust": null
+   },
+   "inputs": {
+    "rel_pct": {
+     "ptr": "e44/analysis/RT2_FIXES.json:M27_temp_A4.rel_change_pct",
+     "ok": true,
+     "value": [
+      -0.007,
+      -0.008
+     ]
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "temp_d400",
+   "col": "A5",
+   "kb_verdict": "未",
+   "machine": false,
+   "why": "未：未被预注册覆盖"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A6",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A6_rotate",
+   "checker_verdict": "死",
+   "detail": {
+    "A_rho": 0.853,
+    "B": 1.0
+   },
+   "inputs": {
+    "A_rho": {
+     "ptr": "e44/analysis/E49_CROSS.json:tempd400_wind.rho",
+     "ok": true,
+     "value": 0.853
+    },
+    "B": {
+     "ptr": "e44/analysis/E49_CROSS.json:tempd400_wind.paired",
+     "ok": true,
+     "value": 1.0
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": "第三强迫 = 内潮→风驱"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A7",
+   "kb_verdict": "未",
+   "machine": false,
+   "why": "未：未列入换名局"
+  },
+  {
+   "row": "temp_d400",
+   "col": "A8",
+   "kb_verdict": "过",
+   "machine": true,
+   "rule": "A8_anchor",
+   "checker_verdict": "过",
+   "detail": {
+    "rho": 0.964,
+    "p": 0.0028
+   },
+   "inputs": {
+    "rho": {
+     "ptr": "e44/analysis/RT2_FIXES.json:F2_A8_signed.temp_d400.signed_rho",
+     "ok": true,
+     "value": 0.964
+    },
+    "p": {
+     "ptr": "e44/analysis/RT2_FIXES.json:F2_A8_signed.temp_d400.p_exact_two_sided",
+     "ok": true,
+     "value": 0.0028
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "temp_d400",
+   "col": "A9",
+   "kb_verdict": "未",
+   "machine": false,
+   "why": "未：未算"
+  },
+  {
+   "row": "temp_d400",
+   "col": "R",
+   "kb_verdict": "过",
+   "machine": false,
+   "why": "R 列定性"
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A1",
+   "kb_verdict": "待定",
+   "machine": true,
+   "rule": "A1_trivalent",
+   "checker_verdict": "待定",
+   "detail": {
+    "k": 32,
+    "n": 32,
+    "point": 1.0,
+    "wilson95": [
+     0.8928208002353198,
+     1.0
+    ]
+   },
+   "inputs": {
+    "k": {
+     "ptr": "e44/analysis/E58_TRIVALENT.json:rows.uv_zonal_paired.k",
+     "ok": true,
+     "value": 32
+    },
+    "n": {
+     "ptr": "e44/analysis/E58_TRIVALENT.json:rows.uv_zonal_paired.n",
+     "ok": true,
+     "value": 32
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A2",
+   "kb_verdict": "死",
+   "machine": false,
+   "why": "KB 以『分母→0 发散』定死，源键 uv_ratio_raw_invalid 不存在，发散无数值阈"
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A3",
+   "kb_verdict": "边",
+   "machine": true,
+   "rule": "A3_boxwidth",
+   "checker_verdict": "边",
+   "detail": {
+    "order_spearman": 1.0,
+    "amp": 5.875796528823584,
+    "meaning_changed": false,
+    "order_changed": false
+   },
+   "inputs": {
+    "base_list": {
+     "ptr": [
+      "e44/analysis/E44_METRICS.json:pf_dj.uv_ratio",
+      "e44/analysis/E44_METRICS.json:pf_v4.uv_ratio",
+      "e44/analysis/E44_METRICS.json:pf_combo.uv_ratio"
+     ],
+     "value": [
+      2.3607446689201574,
+      2.540212753547053,
+      3.0748838740783433
+     ]
+    },
+    "pert_list": {
+     "ptr": [
+      "e44/analysis/E50_UV_AUDIT.json:boxwidth_500km.ps_dj",
+      "e44/analysis/E50_UV_AUDIT.json:boxwidth_500km.ps_v4",
+      "e44/analysis/E50_UV_AUDIT.json:boxwidth_500km.ps_combo_m4"
+     ],
+     "value": [
+      16.232,
+      17.105,
+      17.85
+     ]
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": "84 km 三臂 vs 500 km 同名三臂；序检验 = 两组 spearman 是否为 1"
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A4",
+   "kb_verdict": "边",
+   "machine": true,
+   "rule": "A4_phase",
+   "checker_verdict": "边",
+   "detail": {
+    "rel_pct": [
+     -30.205048245137366,
+     23.11301908380239
+    ],
+    "amp_pct": 30.205048245137366,
+    "robust_pct": 3.8,
+    "no_robust": null
+   },
+   "inputs": {
+    "lastframe": {
+     "ptr": "e44/analysis/RT2_FIXES.json:M2_phase.uv_lastframe",
+     "ok": true,
+     "value": {
+      "c_g4": 3.4930834734943907,
+      "p_g4_plus": 2.43799592508249,
+      "p_g4_minus": 4.300440523336297
+     }
+    },
+    "robust_pct": {
+     "ptr": "e44/analysis/RT2_FIXES.json:M2_phase.uv_window_mean.rel_change_pct",
+     "ok": true,
+     "value": [
+      -3.8,
+      -3.6
+     ]
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A5",
+   "kb_verdict": "过",
+   "machine": false,
+   "why": "A5 程序性控制"
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A6",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A6_rotate",
+   "checker_verdict": "死",
+   "detail": {
+    "A_rho": 0.1677,
+    "B": 0.8929
+   },
+   "inputs": {
+    "A_rho": {
+     "ptr": "e52/E52_CROSS.json:uv_merid.rho",
+     "ok": true,
+     "value": 0.1677
+    },
+    "B": {
+     "ptr": "e52/E52_CROSS.json:uv_merid.paired",
+     "ok": true,
+     "value": 0.8929
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": "真经向 90°（E52）；E55 的 uv_merid 键实为 45°，不用"
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A7",
+   "kb_verdict": "死",
+   "machine": true,
+   "rule": "A7_nameswap",
+   "checker_verdict": "死",
+   "detail": {
+    "named": 4,
+    "anon": 1
+   },
+   "inputs": {
+    "named": {
+     "ptr": "e44/agent/E54_NAMESWAP.json:conditions.C0_named.uv_gameable",
+     "ok": true,
+     "value": 4
+    },
+    "anon": {
+     "ptr": "e44/agent/E54_NAMESWAP.json:conditions.C1_anon.uv_gameable",
+     "ok": true,
+     "value": 1
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A8",
+   "kb_verdict": "过",
+   "machine": true,
+   "rule": "A8_anchor",
+   "checker_verdict": "过",
+   "detail": {
+    "rho": 0.893,
+    "p": 0.0123
+   },
+   "inputs": {
+    "rho": {
+     "ptr": "e44/analysis/RT2_FIXES.json:F2_A8_signed.uv_ratio.signed_rho",
+     "ok": true,
+     "value": 0.893
+    },
+    "p": {
+     "ptr": "e44/analysis/RT2_FIXES.json:F2_A8_signed.uv_ratio.p_exact_two_sided",
+     "ok": true,
+     "value": 0.0123
+    }
+   },
+   "aux": [],
+   "agree": true,
+   "note": null
+  },
+  {
+   "row": "uv_ratio",
+   "col": "A9",
+   "kb_verdict": "未",
+   "machine": false,
+   "why": "未：静止态无真信号可锚"
+  },
+  {
+   "row": "uv_ratio",
+   "col": "R",
+   "kb_verdict": "过",
+   "machine": false,
+   "why": "R 列定性"
+  },
+  {
+   "row": "truth",
+   "col": "A1",
+   "kb_verdict": "定义",
+   "machine": false,
+   "why": "定义格"
+  },
+  {
+   "row": "truth",
+   "col": "A2",
+   "kb_verdict": "定义",
+   "machine": false,
+   "why": "定义格"
+  },
+  {
+   "row": "truth",
+   "col": "A3",
+   "kb_verdict": "定义",
+   "machine": false,
+   "why": "定义格"
+  },
+  {
+   "row": "truth",
+   "col": "A4",
+   "kb_verdict": "过",
+   "machine": false,
+   "why": "对照行定性"
+  },
+  {
+   "row": "truth",
+   "col": "A5",
+   "kb_verdict": "过",
+   "machine": false,
+   "why": "对照行定性"
+  },
+  {
+   "row": "truth",
+   "col": "A6",
+   "kb_verdict": "过",
+   "machine": false,
+   "why": "对照行定性"
+  },
+  {
+   "row": "truth",
+   "col": "A7",
+   "kb_verdict": "未",
+   "machine": false,
+   "why": "不适用"
+  },
+  {
+   "row": "truth",
+   "col": "A8",
+   "kb_verdict": "定义",
+   "machine": false,
+   "why": "定义格"
+  },
+  {
+   "row": "truth",
+   "col": "A9",
+   "kb_verdict": "过",
+   "machine": false,
+   "why": "对照行定性"
+  },
+  {
+   "row": "truth",
+   "col": "R",
+   "kb_verdict": "定义",
+   "machine": false,
+   "why": "定义格"
+  }
+ ],
+ "taxonomy": {
+  "A1": {
+   "class": "sound_falsification",
+   "source_case": "陡海山算例（同旋钮）",
+   "transform": "换平底（σ-PGE 伪流按构造为零）",
+   "relation": "读数不得变好看：m(flat) ≥ m(steep) 的配对比例（越小越好口径）",
+   "tolerance": "≥0.9 过 / <0.5 死；Wilson 三值化（RULES['三值化']）",
+   "soundness": "依赖平底伪流为零的物理构造，非形式证明"
+  },
+  "A2": {
+   "class": "sound_falsification",
+   "source_case": "平底算例",
+   "transform": "恒等（读零真值通道）",
+   "relation": "|m(flat)| / |m(steep 典型)| < 1%",
+   "tolerance": "1%；发散/无定义 死",
+   "soundness": "同 A1"
+  },
+  "A3": {
+   "class": "heuristic_invariance",
+   "source_case": "基准域",
+   "transform": "只改盒宽/区域边界",
+   "relation": "幅变 <20% 且序保持",
+   "tolerance": "20%；序或含义变 死",
+   "soundness": "启发式：物理量不应依赖人为盒宽"
+  },
+  "A4": {
+   "class": "heuristic_invariance",
+   "source_case": "基准输出时刻",
+   "transform": "时钟/相位扰动（±T/8 或相邻帧）",
+   "relation": "幅变 <10%（或存在稳健版 <10%）",
+   "tolerance": "10%",
+   "soundness": "启发式：稳态诊断量不应依赖采样相位"
+  },
+  "A5": {
+   "class": "procedural_control",
+   "note": "预注册对照：不是蜕变关系，是程序性控制（deck p7 同步改叙事）"
+  },
+  "A6": {
+   "class": "equivariance",
+   "source_case": "纬向风强迫",
+   "transform": "转风向（经向 90° / 45°）",
+   "relation": "A（ρ≤−0.7）与 B（≥0.9）随强迫同步成立",
+   "tolerance": "同过 过；一过一败 边；同败/方向反 死",
+   "soundness": "等变性：真值随强迫同步转向（MITgcm 双侧）"
+  },
+  "A7": {
+   "class": "heuristic_invariance",
+   "source_case": "LLM 评审的指标卡",
+   "transform": "换名/匿名",
+   "relation": "评审判定不随名字变",
+   "tolerance": "真名 ≥3/5 且匿名 ≤1/5 死；两版一致 过"
+  },
+  "A8": {
+   "class": "monotonicity",
+   "source_case": "真值锚轴上的 n=7 臂",
+   "transform": "沿锚轴排序",
+   "relation": "带符号 ρ(尺子更好方向, 真值更好方向) ≥0.8 且精确 p<0.05",
+   "tolerance": "0.6–0.8 边；<0.6 死"
+  },
+  "A9": {
+   "class": "sound_falsification",
+   "source_case": "BH93 静止态海山（无风＋水平等密，真值解析为零）",
+   "transform": "去强迫",
+   "relation": "判据同 A1/A8（RULES['A9'] 原文）",
+   "tolerance": "同 A1/A8",
+   "soundness": "依赖静止态伪流真值为零的解析构造"
+  }
+ }
+}

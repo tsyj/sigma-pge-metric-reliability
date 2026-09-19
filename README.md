@@ -1,64 +1,37 @@
-# 谁来给尺子打分：σ 坐标伪流环境中的代理指标可靠性探索
+# 谁来给尺子打分
 
-GOAI 世界人工智能开源大赛 · 赛道三 AI for Research · 开放探索赛题参赛作品（初赛）。
+在海山数值试验中检验代理指标：既要与参照解排序一致，也要通过平底配对检验。AI 在实验中挑动作、挑指标或给出判断，数值由固定脚本计算。
 
-**一句话**：在一个真值可独立测量的 σ 坐标伪流算例上，检验"判断控制方案好坏"的代理指标本身是否可信——并实测了智能体如何刷分、以及一个抗刷分指标如何让刷分消失。
-
-- 四页文档：`docs/初赛文档_终稿.pdf`
-- 环境细节：`docs/环境README.md`
-
-## 核心结果
-
-| 发现 | 数字 |
-|---|---|
-| σ 坐标凭空造出的伪流 vs 独立真值（MITgcm z 坐标） | 系统性大 10–16 倍，惯性节点处 99 倍 |
-| 只改一句目标表述，LLM 智能体的刷分率 | 90% → 18%（12 轮实测） |
-| 三条刷分路径（换地形 / 荒谬黏性 / 缩短积分） | 224× / 62× / 28×（同参数配对中位） |
-| 从 15,376 个候选穷举出的抗刷分指标 uv_ratio | 排序能力 96→92，抗刷分 0→100 |
-| 放回环境重跑（只换目标指标） | 平底占比 89.8%→7.5%，"最优在平底" 5/5→0/4 |
-
-## 快速复现
+准备 Python 3.9–3.12，以下三条命令依次执行（安装时固定 NumPy 2.0.2，与冻结数值实现一致）：
 
 ```bash
-# 1. 重建求解器（约 5 min / 16 核；MITgcm 真值侧约 3 min，与官方发表 run 逐位一致）
-bash build/build_v4.sh
-bash build_mitgcm/build.sh
-
-# 2. 端到端回归（约 25 s）
-python scripts/smoke_test.py
-
-# 3. 单次交互（约 125 s；智能体侧看不到真值）
-python -c "
-import sys; sys.path.insert(0,'scripts')
-from env2 import SigmaPGEEnv, grade
-env = SigmaPGEEnv()
-obs, info = env.step({'bathy':'r26steep','VISC2':50.0,'ntimes':8640,'seed':0})
-print(obs); print(grade(info['run_id']))"
+git clone https://github.com/tsyj/sigma-pge-metric-reliability.git && cd sigma-pge-metric-reliability
+python3 -m venv .venv && .venv/bin/python -m pip install . && PYTHON=.venv/bin/python nice -n 19 bash scripts/demo_60s.sh
+nice -n 19 .venv/bin/python -m sigma_audit submit 'u|s50|mean_abs / v|s50|rms'
 ```
 
-随机种子与关键参数在代码中体现（`env2.py` 的 `ACTION_SPACE`）；每条台账记录绑定求解器二进制的 sha256。
+当前为决赛工作区准备版，上述入口随本轮文件交付；公开远端是否包含本版须以发布后的验证为准。安装需要获取 Python 依赖，安装后的演示与送检使用随包缓存，无需模型服务或原始模式输出。线程统一限制为 8。
 
-## 目录
+## 可以复算什么
 
-| 路径 | 内容 |
-|---|---|
-| `scripts/env2.py` | 环境本体，单一入口 `env.step(action)`；隐藏评估器 `grade()` |
-| `scripts/llm_planner.py` | LLM 智能体（A/B/C/A2 四条件） |
-| `scripts/metric_search.py` | 15,376 个候选指标穷举 |
-| `scripts/agent_metric_v2.py` | 让智能体自己提议指标（E43，30 轮 0 通过的诚实负结果） |
-| `scripts/fig_*.py` | 全部图，均可独立重跑 |
-| `ledger/` | 全部实验台账（367 次运行、16+ 轮 LLM 轨迹、每轮完整 prompt/回复） |
-| `figs/` | 终版图 |
+送检台给出纬向、经向及 45° 风向上的排序、配对检验和扣除伪流成分后的读数。只覆盖随包环境族及缓存可表达的指标；参照解由另一套代码 MITgcm 计算，不能据此归因于垂向坐标这一项差别。
 
-## 外部依赖（来源与版本）
+```bash
+PYTHON=.venv/bin/python nice -n 19 bash scripts/reproduce_core.sh
+PYTHON=.venv/bin/python nice -n 19 bash scripts/smoke_test.sh
+nice -n 19 .venv/bin/python -m sigma_audit selftest
+nice -n 19 .venv/bin/python -m sigma_audit replay
+```
 
-ROMS/COAWST（LGPL）、MITgcm（MIT 系开源协议）、numpy / netCDF4 / matplotlib / scikit-learn。
-LLM 实验使用 DeepSeek API（deepseek-v4-pro / v4-flash），全部轨迹（含 prompt 原文）已存于 `ledger/`。
+Demo 中的预测统计仅覆盖 E55–E61 五组实验。历史三环境交集计数保留供对账；交集为空不作为跨环境不可能性的证据。BH93 静止态幅度检验不能直接挪作风驱技巧评分。
 
-## 诚实声明
+## 数据与出处
 
-本项目的探索记录包含 10 次撤回与多个负结果（详见台账与文档 §4.2），包括"智能体抓到我们观测接口的 bug""让智能体自己提议指标 30 轮无一通过"。它们与正向发现同样是本作品的一部分。
+- [RUNS_MANIFEST](RUNS_MANIFEST.md)：从五份扫描账本生成条数、完成状态与出处；不是全项目所有运行的总数。
+- [送检台说明](docs/SIGMA_AUDIT.md)：缓存范围、校验方式及离线测试。
+- [模型与数据披露](DISCLOSURE.md)：实验模型、渠道及未完成核验项。
+- [预注册索引](PREREG_HASH_INDEX.json)：E65/E67b 校验封存段及全文前缀，不能称整文件封存。
 
+重新生成清单：`nice -n 19 .venv/bin/python scripts/gen_runs_manifest.py`。预注册哈希是本地一致性证据；后续公开时间不能证明历史封存时间，同一执行链的自检也不构成外部复核。
 
-## 复赛（2026-09）
-见 [README_semifinal.md](README_semifinal.md)：第二/第三环境、审计算子 A1–A8、kill board 一键重生成。
+自有代码采用 [MIT](LICENSE)，自产分析数据采用 [CC BY 4.0](LICENSE-DATA)。ROMS 的本地许可原文为 [MIT/X](docs/licenses/License_ROMS.txt)，其他组件各依原许可。引用格式见 [CITATION.cff](CITATION.cff)。

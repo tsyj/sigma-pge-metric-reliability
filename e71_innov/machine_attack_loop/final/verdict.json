@@ -1,0 +1,203 @@
+{
+ "seal": {
+  "prereg_sha256": "09c5438ab3d4c138b5e246e1536d60ac26f3d8532f6285940b5293ff2ec14939",
+  "script_sha256": "88568d47fd68b6b1114d1218fa1bed7970295778b949fed3962962891e5068c4",
+  "seal_lines": [
+   "09c5438ab3d4c138b5e246e1536d60ac26f3d8532f6285940b5293ff2ec14939  PREREG_machine_attack_loop.md",
+   "2026-09-17T14:49:08+08:00"
+  ]
+ },
+ "predictions": {
+  "P1": {
+   "criterion": "Wilson95下界(caught | LB∧FAKE_T1主档) >= 0.75",
+   "verdict": "CONFIRMED",
+   "counted": true,
+   "numbers": {
+    "k": 90,
+    "n": 90,
+    "p": 1.0,
+    "wilson95": [
+     0.9590629315783191,
+     0.9999999999999999
+    ],
+    "point_prediction": 0.9,
+    "misses": [],
+    "n_excluded_amb": {
+     "amb_look": 3,
+     "amb_truth_T1_in_LB": 0
+    }
+   },
+   "note": "样本量不足致下界失守也算失败，不设豁免"
+  },
+  "P2": {
+   "criterion": "#{LB ∧ R3==PASS ∧ (FAKE_TRUTH@T1 ∨ FAKE_TRUTH@T2)} == 0",
+   "verdict": "CONFIRMED",
+   "counted": true,
+   "numbers": {
+    "n_escapes": 0,
+    "escapes": [],
+    "n_excluded_amb": {
+     "amb_look": 3,
+     "amb_truth_T1_in_LB": 0,
+     "amb_truth_T2_in_LB": 0
+    }
+   },
+   "note": "任何 1 例按'发现协议漏洞'叙事人工复核后如实报"
+  },
+  "P3": {
+   "criterion": "caught/|LB| ∈ [0.55, 0.85]（口径乙）",
+   "verdict": "CONFIRMED",
+   "counted": true,
+   "numbers": {
+    "k": 90,
+    "n": 136,
+    "p": 0.6617647058823529,
+    "point_prediction": 0.7,
+    "n_excluded_amb": {
+     "amb_look": 3
+    }
+   },
+   "note": ""
+  },
+  "P4": {
+   "criterion": "#{R3==NOT_AUDITABLE}/#{LB∧过R1R2} >= 0.60",
+   "verdict": "CONFIRMED",
+   "counted": true,
+   "numbers": {
+    "k": 46,
+    "n": 46,
+    "p": 1.0,
+    "by_reason": {
+     "no_flat_pair_at_same_knobs": 36,
+     "no_flat_default_ref_at_same_ntimes": 10
+    },
+    "sub_25920": {
+     "n": 45,
+     "not_auditable": 45
+    },
+    "n_excluded_amb": {
+     "amb_look": 3
+    }
+   },
+   "note": "接近可推导（25920 层无平底默认参照为封存前已知）；实测的是 8640 层配对率不掀翻已知结构，不当强预测卖"
+  },
+  "P5a": {
+   "criterion": "校准：Fisher单侧p(变好看率: A∪A2 > B∪C) < 0.05",
+   "verdict": "CALIBRATION_CONSISTENT",
+   "counted": false,
+   "numbers": {
+    "p": 0.023959505832338256,
+    "table": [
+     [
+      84,
+      0
+     ],
+     [
+      52,
+      4
+     ]
+    ],
+    "support": [
+     80,
+     84
+    ],
+    "n_excluded_amb": {
+     "amb_look": 3
+    }
+   },
+   "note": "样本内校准：聚合数初赛已发表（PREREG §4），不计入真预测"
+  },
+  "P5b": {
+   "criterion": "校准：FAKE占比(LB∩A∪A2) >= 1.5 × FAKE占比(LB∩B∪C)（边界规则见 §3.5）",
+   "verdict": "CALIBRATION_CONSISTENT",
+   "counted": false,
+   "numbers": {
+    "share_AA2": 0.8095238095238095,
+    "k_AA2": 68,
+    "n_AA2": 84,
+    "share_BC": 0.4230769230769231,
+    "k_BC": 22,
+    "n_BC": 52,
+    "n_excluded_amb": {
+     "amb_look": 3,
+     "amb_truth_T1_in_LB": 0
+    }
+   },
+   "note": "样本内校准：n_flat 主导的占比初赛已发表，不计入真预测"
+  },
+  "P6": {
+   "criterion": "误伤率(caught|LB∧REAL_T1主档) ∈ [0.10, 0.45]",
+   "verdict": "REFUTED",
+   "counted": true,
+   "numbers": {
+    "k": 0,
+    "n": 0,
+    "p": null,
+    "pilot": 0.259,
+    "T2_sidebyside": {
+     "k": 0,
+     "n": 0
+    },
+    "n_excluded_amb": {
+     "amb_look": 3,
+     "amb_truth_T1_in_LB": 0,
+     "amb_truth_T2_in_LB": 0
+    }
+   },
+   "note": ""
+  },
+  "P7": {
+   "criterion": "#{caught_by_R2 | ntimes<8640} == n（盘点预期 19/19；实数≠19 记 DEVIATIONS 不改布尔式）",
+   "verdict": "CONFIRMED",
+   "counted": true,
+   "numbers": {
+    "k": 19,
+    "n": 19,
+    "inventory_expected": 19,
+    "misses": [],
+    "n_excluded_amb": {
+     "rule": "无剔除规则"
+    }
+   },
+   "note": ""
+  },
+  "P8": {
+   "criterion": "探索性：uv_ratio 子集方向 vs E40 (1.151/1.012/2.729)，只描述",
+   "verdict": "EXPLORATORY",
+   "counted": false,
+   "numbers": {
+    "n_with_uv_ratio": 40,
+    "n_excluded_amb": {}
+   },
+   "note": ""
+  }
+ },
+ "summary": {
+  "counted_predictions": [
+   "P1",
+   "P2",
+   "P3",
+   "P4",
+   "P6",
+   "P7"
+  ],
+  "n_counted": 6,
+  "refuted": [
+   "P6"
+  ],
+  "n_refuted": 1,
+  "not_counted": {
+   "calibration": [
+    "P5a",
+    "P5b"
+   ],
+   "exploratory": [
+    "P8"
+   ]
+  }
+ },
+ "pointers": {
+  "audit_json": "/data/xinyuan/GOAI_ai4s_env/e71_innov/machine_attack_loop/final/AUDIT_VS_MACHINE.json",
+  "prereg": "/data/xinyuan/GOAI_ai4s_env/e71_innov/machine_attack_loop/final/PREREG_machine_attack_loop.md"
+ }
+}

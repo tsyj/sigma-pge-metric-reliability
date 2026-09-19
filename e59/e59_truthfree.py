@@ -1,4 +1,4 @@
-#!/home/xinyuan/anaconda3/envs/numpy1/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """E59: 只用无真值特征预测排序力。纬向训练 -> 经向测试。
 严格纪律: 特征计算过程中不得触碰 skill_vs_zero / 任何真值配对; 真值只在最后算 y 与 AUC 时出现。"""

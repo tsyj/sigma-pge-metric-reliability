@@ -1,0 +1,33 @@
+{
+ "script": "e73k_kendall_bound.py",
+ "script_sha": "6cd3496820a30479dc5fc4625baff0768954beed3f5fa1d85d8b6bc8ca7687eb",
+ "status": "封存后描述性，非预注册，不改判",
+ "prereg_sha": "238377f14ca258aeeee5238a19b27e2e7f33e2ae63ba2f38c7a360270f7bc607",
+ "zonal_insample": {
+  "n_runs": 58,
+  "n_pairs_P": 1653,
+  "n_candidates": 15376,
+  "eps_hat": 0.0526,
+  "bound_2eps": 0.1053,
+  "tauH_spur_skill": 0.8947,
+  "max_abs_diff": 0.1053,
+  "n_violations": 0,
+  "n_tauH_skill_ge_0p7": 4038,
+  "min_tauH_spur_among_those": 0.608,
+  "implied_floor": 0.5947
+ },
+ "diag45_postseal": {
+  "n_runs": 22,
+  "n_pairs_P": 231,
+  "n_candidates": 15376,
+  "eps_hat": 0.0433,
+  "bound_2eps": 0.0866,
+  "tauH_spur_skill": 0.9134,
+  "max_abs_diff": 0.0866,
+  "n_violations": 0,
+  "n_tauH_skill_ge_0p7": 3633,
+  "min_tauH_spur_among_those": 0.619,
+  "implied_floor": 0.6134
+ },
+ "elapsed_s": 3.2
+}

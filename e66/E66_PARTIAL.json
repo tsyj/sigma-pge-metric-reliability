@@ -1,0 +1,125 @@
+{
+ "prereg_sha": "bb1f212f3a63adcb20db901782e4bf3b8379506af93e2d7aea56b2823354c874",
+ "n_candidates": 15376,
+ "spurious_key": "u|all|rms",
+ "A_median": 0.0373,
+ "Aperp_median": 0.0,
+ "A_max": 0.9982,
+ "Aperp_max": 0.9748,
+ "frac_A_ge_0p7": 0.3155,
+ "frac_Aperp_ge_0p7": 0.094,
+ "n_both_A": 204,
+ "n_both_Aperp": 444,
+ "Aperp_median_in_both65": 0.1255,
+ "winners_all_ratio": true,
+ "n_winners_ratio": 444,
+ "n_winners_abs": 0,
+ "spearman_A_Aperp": 0.6125,
+ "spearman_Aperp_B": -0.4778,
+ "spearman_Aperp_D": 0.4814,
+ "winners_top": [
+  {
+   "num": "temp|d800|max",
+   "den": "v|s200|mean_abs",
+   "A": -0.674,
+   "Aperp": 0.875,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|d1500|mean_abs",
+   "den": "v|s200|mean_abs",
+   "A": -0.676,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|d200|mean_abs",
+   "den": "v|s200|mean_abs",
+   "A": -0.676,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|d1500|rms",
+   "den": "v|s200|mean_abs",
+   "A": -0.676,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|d800|mean_abs",
+   "den": "v|s200|mean_abs",
+   "A": -0.676,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|d400|rms",
+   "den": "v|s200|mean_abs",
+   "A": -0.676,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|d200|rms",
+   "den": "v|s200|mean_abs",
+   "A": -0.676,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|d800|rms",
+   "den": "v|s200|mean_abs",
+   "A": -0.676,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|d400|mean_abs",
+   "den": "v|s200|mean_abs",
+   "A": -0.676,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|s200|p95",
+   "den": "v|s200|mean_abs",
+   "A": -0.675,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|s50|p95",
+   "den": "v|s200|mean_abs",
+   "A": -0.675,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  },
+  {
+   "num": "temp|s50|mean_abs",
+   "den": "v|s200|mean_abs",
+   "A": -0.675,
+   "Aperp": 0.865,
+   "B": 1.0,
+   "D": -0.857
+  }
+ ],
+ "prereg_check": {
+  "P1 A⊥中位数 < A中位数": true,
+  "P2 A⊥≥0.7 且 B≥0.9 的候选 < 20": false,
+  "P3 204 个同过者的 A⊥ 中位数 < 0.3": true,
+  "P4 胜出者全为比值型": true
+ },
+ "elapsed_s": 20.0
+}

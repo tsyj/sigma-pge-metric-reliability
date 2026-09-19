@@ -12,10 +12,10 @@
 | E48 | 内潮穷举三轴判据 | 19600 候选 | 报警型 2574（13.1%）/ 可刷型 2580 | e44_tide/analysis/E48_SEARCH.json |
 | E49 | 风驱∩内潮交集 | — | 13（期望 26.8） | e44_tide/analysis/E49_CROSS.json |
 | E50 | u/v 审计：帧敏感 / 窗均 / 盒宽 | 7 组 + 500 km 5 组 | 末帧全幅 39–66%；500 km 绝对值 16–18 | e44_tide/analysis/E50_UV_AUDIT.json |
-| E52 | 经向风第三环境 | 56 条（22 带真值） | u/v A +0.17；v/u A −0.92 B 0.11；三重交集 0（期望 0.71） | e52/E52_CROSS.json、PROVENANCE.md |
+| E52 | 经向风第三环境 | 56 条（22 带真值） | u/v A −0.17；v/u A +0.92 B 0.11；三重交集 0（期望 0.71） | e52/E52_CROSS.json、PROVENANCE.md |
 | E53 | 配对规则与置换 | 7 锚组 | 门 ×1.1/1.2/1.5 → 冻结修正 / m2 / m6 | e44_tide/analysis/E53_PAIRED_AND_STATS.json、RT2_FIXES.json:M19 |
 | E54 | 换名 ×5 | 15 次调用 | 真名 3/5·4/5 → 匿名 1/5·1/5 | e44_tide/agent/E54_NAMESWAP.json |
-| E55 | 45° 风（预注册 P1–P4） | 56 条（22 带真值） | P1 中、P2 反驳、P3 反驳、P4 中；u/v A −0.97 B 0.25；v/u A +0.10 B 0.82；纬向∩45°∩内潮 = 1（期望 0.79） | e55/PREREG_E55.md（sha ec1b1ecf…）、e55/E55_CROSS.json:prereg_check |
+| E55 | 45° 风（预注册 P1–P4） | 56 条（22 带真值） | P1 中、P2 反驳、P3 反驳、P4 中；u/v A +0.97 B 0.25；v/u A −0.10 B 0.82；纬向∩45°∩内潮 = 1（期望 0.79） | e55/PREREG_E55.md（sha ec1b1ecf…）、e55/E55_CROSS.json:prereg_check |
 | 500 km 锚 | 逐模态远场功率 | 在档 5 组 + 补跑 2 | m2/m4/m6 第二模 0.94/0.68/0.47；γ16 0.25；VISC4 3e8 0.52 | e44_tide/analysis/ANSWER_KEY_500KM.json、upstream/BANDTOLL_VERDICT.json |
 | E56 | BH93 静止态检验（预注册 A9） | 14 条（7 档 VISC2 × 2 地形） | 平底全档 u_max=0.0000；陡海山 99.72→18.79（ρ=−1.000, p=0.0004）；A1 抗糊弄 0.000；代理夸大 1.69 倍；技巧全程为负 −8.48→−1.46（P3 被反驳） | e56/prereg_e56.md（sha 7792b30e…）、e56/E56_BH93.json、E56_VERDICT.json |
 | E57 | 双目标 (A,B) 全候选分析 | 15376 候选 | ρ(A,B)=−0.674；两关同过 204 vs 独立期望 2159（贫化 10.6×）；Pareto 前沿 5 点；乌托邦角为空；阈值 (0.5,0.7)→(0.9,1.0) 通过数 739→9 | e44_tide/analysis/E57_PARETO.json、E57_AB.npz、fig_pareto.png |
@@ -27,7 +27,7 @@
 | 时间台账 | 算例时刻记录 | 43 条 | e44/e52/e55 用 DONE 文件 mtime（当时未写 T_START）；e56 为运行时写入的真起止时刻。差异照实记下来，不追溯补造 | e44_tide/analysis/TIME_LEDGER.json |
 | 审计原件 | 盒宽 / 时钟 | 在档 | 摆 7.24×；4.58→7.89 | e44_tide/analysis/upstream/DOMWIDTH_RESULT.json、PHASEFIX_TABLE.md |
 
-经向∩内潮的 2 把：见 e52/E52_CROSS.json（family_merid 字段；三重列表为空即无一在纬向通过）；45°∩内潮的 3 把：w|all|max / w|d400|max、w|all|max / w|d200|max、u|s50|mean_abs / v|s50|rms（e55/E55_CROSS.json:merid_tide_list）。
+经向∩内潮的 2 把：见 e52/E52_CROSS.json（family_merid 字段；三重列表为空即无一在纬向通过）；45°∩内潮的 3 把：w|all|max / w|d400|max、w|all|max / w|d200|max、u|s50|mean_abs / v|s50|rms（e55/E55_CROSS.json:merid_tide_list；键名勘误：该文件内 merid 系键名实为 45° 值，经向真值见 e52/E52_CROSS.json，详见 e55/E55_CROSS_键名勘误.json）。
 
 
 ---
