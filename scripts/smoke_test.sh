@@ -74,11 +74,13 @@ for f in baselines/BASELINES.md scripts/reproduce_core.sh DISCLOSURE.md LICENSE 
   [ -f "$f" ] || { echo "  FAIL: 缺 $f"; exit 1; }
 done
 n=$(ls e44_tide/agent/*.jsonl 2>/dev/null | wc -l); [ "$n" -ge 3 ] || { echo "  FAIL: 探索日志 JSONL 少于 3 个"; exit 1; }
+# 扫描须排除 .venv/site-packages 等第三方源码：README 指引在仓库内建 venv，
+# setuptools 自带源码含 password 字样，否则会误判为泄密。
 # 只在"有实际赋值"时判为 secret: 词后须跟冒号/等号与非空值; 单独出现该词(如官方条款原文)不算
 MI=$(printf '\345\257\206\347\240\201')
 PREFIX=s
 PAT="${PREFIX}k-[A-Za-z0-9]{16,}|(${MI}|passwd|password)[[:space:]]*[:=][[:space:]]*[^[:space:]]|100\.(9[0-9]|1[0-2][0-9])\.[0-9]+\.[0-9]+|BEGIN [A-Z ]*PRIVATE KEY"
-if grep -rInE "$PAT" . --exclude-dir=.git --exclude=smoke_test.sh -q 2>/dev/null; then
-  echo "  FAIL: 疑似 secret:"; grep -rInE "$PAT" . --exclude-dir=.git --exclude=smoke_test.sh 2>/dev/null | head -3; exit 1; fi
+if grep -rInE "$PAT" . --exclude-dir=.git --exclude-dir=.venv --exclude-dir=venv --exclude-dir=__pycache__ --exclude-dir=site-packages --exclude-dir=node_modules --exclude-dir=ci-logs --exclude-dir=.eggs --exclude-dir=build --exclude=smoke_test.sh -q 2>/dev/null; then
+  echo "  FAIL: 疑似 secret:"; grep -rInE "$PAT" . --exclude-dir=.git --exclude-dir=.venv --exclude-dir=venv --exclude-dir=__pycache__ --exclude-dir=site-packages --exclude-dir=node_modules --exclude-dir=ci-logs --exclude-dir=.eggs --exclude-dir=build --exclude=smoke_test.sh 2>/dev/null | head -3; exit 1; fi
 echo "  PASS: 交付件齐全（参照系/一键复现/披露/许可/kill board/$n 份轨迹），无 secret"
 echo "SMOKE TEST: ALL PASS (5/5)"
