@@ -19,7 +19,20 @@ os.chdir(ROOT)
 if os.name == "nt":
     os.system("")
 USE_COLOR = sys.stdout.isatty() and os.environ.get("NO_COLOR") is None
-CYAN, RESET = ("\033[1;36m", "\033[0m") if USE_COLOR else ("", "")
+
+
+def _c(code):
+    return "\033[%sm" % code if USE_COLOR else ""
+
+
+CYAN = _c("1;36")      # 标题
+NUM = _c("1;93")       # 数字，亮黄
+KEY = _c("1;97")       # 结论句，亮白
+DIM = _c("2;37")       # 次要说明
+OK = _c("1;92")        # 对上了，绿
+BAD = _c("1;91")       # 对不上，红
+RULE = _c("38;5;24")   # 分隔线，暗蓝
+RESET = _c("0")
 
 FAILED = 0
 
@@ -33,8 +46,15 @@ def pad(s, n):
     return s + " " * max(0, n - w(s))
 
 
+W = 66
+
+
 def bar(t):
-    print("\n%s%s%s" % (CYAN, t, RESET))
+    line = "─" * W
+    print()
+    print("  %s%s%s" % (RULE, line, RESET))
+    print("  %s%s%s" % (CYAN, t, RESET))
+    print("  %s%s%s" % (RULE, line, RESET))
 
 
 def screen(title, fn):
@@ -55,23 +75,32 @@ def s1():
     a = int((A >= 0.70).sum())
     b = int((B >= 0.90).sum())
     both = int(((A >= 0.70) & (B >= 0.90)).sum())
-    print("  要判断一个改进有没有效果，得先有指标。我们把可用的指标全部列了出来。")
     print()
-    print("  %s%6d 个" % (pad("候选指标", 40), n))
+    print("  %s要判断一个改进有没有效果，得先有指标。我们把可用的指标全部列了出来。%s"
+          % (DIM, RESET))
     print()
-    print("    %s%6d 个" % (pad("第一条　能分出方法的好坏", 38), a))
-    print("    %s%6d 个" % (pad("第二条　在无误差的对照算例上不报改善", 38), b))
-    print("    %s%6d 个" % (pad("两条都满足", 38), both))
+    def row(lab, val, hi=NUM, ind=6):
+        print("%s%s%s%8s%s 个" % (" " * ind, pad(lab, 40), hi,
+                                  "{:,}".format(val), RESET))
+
+    row("候选指标", n, ind=4)
+    print()
+    row("第一条　能分出方法的好坏", a)
+    row("第二条　在无误差的对照算例上不报改善", b)
+    print("      %s%s%s" % (RULE, "·" * 49, RESET))
+    row("两条都满足", both, hi=KEY)
     exp = a * b / n
     print()
-    print("  若这两条互不相关，两条都满足的应有 %.0f 个；实测 %d 个。" % (exp, both))
-    print("  能分出好坏的那一批，恰恰最容易在对照算例上误报改善。")
-    print("  而真实研究中没有答案可对，我们只看得见它「分得准」。")
+    print("  若这两条互不相关，两条都满足的应有 %s%s%s 个；实测 %s%s%s 个。"
+          % (NUM, "{:,.0f}".format(exp), RESET, NUM, "{:,}".format(both), RESET))
+    print("  %s能分出好坏的那一批，恰恰最容易在对照算例上误报改善。%s" % (KEY, RESET))
+    print("  %s而真实研究中没有答案可对，我们只看得见它「分得准」。%s" % (DIM, RESET))
     print()
     rec = json.load(open("e67/E67B_RECIPE_TRANSFER.json", encoding="utf8"))
     ok = rec["n_zonal"] == n and rec["size_S_A"] == both
-    print("  这 %d 个在看数据之前已登记封存。以上为现场重算，结果%s。"
-          % (rec["size_S_A"], "一致" if ok else "对不上"))
+    print("  这 %s%d%s 个在看数据之前已登记封存。以上为现场重算，结果%s。"
+          % (NUM, rec["size_S_A"], RESET,
+             (OK + "一致" + RESET) if ok else (BAD + "对不上" + RESET)))
     if not ok:
         raise AssertionError("与封存登记件不一致")
 
@@ -151,11 +180,11 @@ def s5():
 
 
 SCREENS = [
-    ("── 1/5  一万五千多个候选指标，两条都满足的只有 204 个 ────────────", s1),
-    ("── 2/5  新旧指标的相互评判 ──────────────────────────────────", s2),
-    ("── 3/5  指标的两道检验：排序与平底配对 ────────────", s3),
-    ("── 4/5  它会否定自己：事先登记的预测，现场逐条核对 ──────────", s4),
-    ("── 5/5  随包结果可复算 ────────────────────────────────────────", s5),
+    ("1 / 5    一万五千多个候选指标，两条都满足的只有 204 个", s1),
+    ("2 / 5    新旧指标的相互评判", s2),
+    ("3 / 5    两道检验：能否分出好坏，会不会在对照上误报", s3),
+    ("4 / 5    它会否定自己：事先登记的预测，现场逐条核对", s4),
+    ("5 / 5    随包结果可复算", s5),
 ]
 
 USAGE = """用法：

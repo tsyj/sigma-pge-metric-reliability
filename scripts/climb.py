@@ -104,6 +104,10 @@ def draw():
     axB.axis("off")
 
     axM.imshow(SCORE, cmap="YlGnBu", vmin=0, vmax=100, aspect="auto")
+    axM.set_xticks(np.arange(-.5, NA, 1), minor=True)
+    axM.set_yticks(np.arange(-.5, NR, 1), minor=True)
+    axM.grid(which="minor", color="white", linewidth=1.1)
+    axM.tick_params(which="minor", length=0)
     axM.set_xticks(range(NA)); axM.set_xticklabels([])
     axM.set_yticks(range(NR))
     axM.set_yticklabels(["指标%d" % (i + 1) for i in range(NR)], fontsize=10)
@@ -117,9 +121,9 @@ def draw():
         axM.plot(t, [-0.75] * len(t), "-", color=ORANGE, lw=3.0,
                  clip_on=False, zorder=6)
     axM.plot(t, [-0.75] * len(t), "o", color=ORANGE, ms=9,
-             clip_on=False, zorder=7)
+             mec="white", mew=1.4, clip_on=False, zorder=7)
     axM.set_title("一边改进方法，一边重新判断该信哪个指标　　　空格走一轮　r 重来　t 显示真值",
-                  fontsize=16, color=NAVY, fontweight="bold", pad=18)
+                  fontsize=17.5, color=NAVY, fontweight="bold", pad=20, loc="left")
 
     tv = 100.0 * (TRUTH - TRUTH.min()) / (TRUTH.max() - TRUTH.min())
     if S["truth"]:
@@ -145,6 +149,8 @@ def draw():
     for i in range(NR):
         axW.text(1.02, i, "%.3f" % S["w"][i], va="center", fontsize=9.5,
                  color=NAVY if S["w"][i] > .4 else GREY)
+    axW.set_axisbelow(True)
+    axW.xaxis.grid(True, color="#E4E9EF", lw=1.0)
     axW.set_yticks(y)
     axW.set_yticklabels(["指标%-2d　对照上不误报 %.0f%%" % (i + 1, BSEAL[i] * 100) for i in range(NR)],
                         fontsize=9.5)
@@ -155,6 +161,8 @@ def draw():
         axW.spines[s_].set_visible(False)
     axW.tick_params(length=0)
 
+    axB.add_patch(plt.Rectangle((0, 0), 1, 1, transform=axB.transAxes,
+                                facecolor="#F4F7FA", edgecolor="none", zorder=0))
     if S["log"] is None:
         axB.text(0, .72, "起点：方法1　十四个指标权重相同", fontsize=17,
                  color=NAVY, fontweight="bold", transform=axB.transAxes)
