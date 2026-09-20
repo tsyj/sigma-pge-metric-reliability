@@ -77,7 +77,7 @@ def step():
     j1 = S["pos"]
     if j1 >= NA - 1:
         S["done"] = True
-        S["log"] = ("到头了", "已经是最后一个方法。按 r 重来。", TEAL)
+        S["log"] = ("已到末档", "已经是最后一个方法。按 r 重来。", TEAL)
         return
     j2 = j1 + 1
     fooled = FL[:, j2] < ST[:, j2]          # 在没有误差可改的平底上显得更好看
@@ -91,9 +91,9 @@ def step():
         S["pos"] = j2
         S["traj"].append(j2)
     n = int(fooled.sum())
-    head = "第 %d 轮　方法%d 往 方法%d" % (S["step"], j1 + 1, j2 + 1)
-    body = ("%.0f%% 的尺子（按权重）说下一个方法更好　%s　　本轮有 %d 把在对照上显得更好看，权重砍半"
-            % (tally * 100, "→ 往前一格" if moved else "→ 不到一半，留在原地", n))
+    head = "第 %d 轮　方法%d 到 方法%d" % (S["step"], j1 + 1, j2 + 1)
+    body = ("按权重计，%.0f%% 认为下一个方法更好　%s　　本轮 %d 个指标在无误差的对照算例上报了改善，权重减半"
+            % (tally * 100, "过半，前进一格" if moved else "不过半，留在原地", n))
     S["log"] = (head, body, TEAL if moved else ORANGE)
     if not moved:
         S["done"] = True
@@ -106,7 +106,7 @@ def draw():
     axM.imshow(SCORE, cmap="YlGnBu", vmin=0, vmax=100, aspect="auto")
     axM.set_xticks(range(NA)); axM.set_xticklabels([])
     axM.set_yticks(range(NR))
-    axM.set_yticklabels(["尺子%d" % (i + 1) for i in range(NR)], fontsize=10)
+    axM.set_yticklabels(["指标%d" % (i + 1) for i in range(NR)], fontsize=10)
     axM.tick_params(length=0)
     for sp in axM.spines.values():
         sp.set_edgecolor(NAVY); sp.set_linewidth(2.2)
@@ -118,7 +118,7 @@ def draw():
                  clip_on=False, zorder=6)
     axM.plot(t, [-0.75] * len(t), "o", color=ORANGE, ms=9,
              clip_on=False, zorder=7)
-    axM.set_title("一边改进方法，一边重新决定该信哪把尺子　　　空格走一轮　r 重来　t 看答案",
+    axM.set_title("一边改进方法，一边重新判断该信哪个指标　　　空格走一轮　r 重来　t 显示真值",
                   fontsize=16, color=NAVY, fontweight="bold", pad=18)
 
     tv = 100.0 * (TRUTH - TRUTH.min()) / (TRUTH.max() - TRUTH.min())
@@ -130,7 +130,7 @@ def draw():
         for sp in axT.spines.values():
             sp.set_edgecolor(ORANGE); sp.set_linewidth(1.8)
     else:
-        axT.text(.5, .5, "答案封着呢　按 t 揭开", ha="center", va="center",
+        axT.text(.5, .5, "真值已封存　按 t 显示", ha="center", va="center",
                  fontsize=11.5, color=GREY, transform=axT.transAxes)
         for sp in axT.spines.values():
             sp.set_visible(False)
@@ -146,20 +146,20 @@ def draw():
         axW.text(1.02, i, "%.3f" % S["w"][i], va="center", fontsize=9.5,
                  color=NAVY if S["w"][i] > .4 else GREY)
     axW.set_yticks(y)
-    axW.set_yticklabels(["尺子%-2d 对照上不乱说 %.0f%%" % (i + 1, BSEAL[i] * 100) for i in range(NR)],
+    axW.set_yticklabels(["指标%-2d　对照上不误报 %.0f%%" % (i + 1, BSEAL[i] * 100) for i in range(NR)],
                         fontsize=9.5)
     axW.invert_yaxis(); axW.set_xlim(0, 1.18); axW.set_xticks([0, .5, 1])
-    axW.set_title("每把尺子现在有多少话语权（橙＝本轮刚被降）", fontsize=13, color=NAVY,
+    axW.set_title("各指标当前的权重（橙＝本轮刚被下调）", fontsize=13, color=NAVY,
                   fontweight="bold", pad=10)
     for s_ in ("top", "right"):
         axW.spines[s_].set_visible(False)
     axW.tick_params(length=0)
 
     if S["log"] is None:
-        axB.text(0, .72, "起点：方法1，十四把尺子话语权相同", fontsize=17,
+        axB.text(0, .72, "起点：方法1　十四个指标权重相同", fontsize=17,
                  color=NAVY, fontweight="bold", transform=axB.transAxes)
-        axB.text(0, .30, "按空格走一轮 —— 尺子们投票决定下一步往哪走，"
-                         "同时回头看谁在「什么都没修」的对照上也说自己变好了", fontsize=14,
+        axB.text(0, .30, "按空格走一轮：各指标按权重投票决定下一步，"
+                         "同时回查谁在无误差的对照算例上报了改善", fontsize=14,
                  color=GREY, transform=axB.transAxes)
     else:
         h, b, c = S["log"]
@@ -167,8 +167,8 @@ def draw():
                  transform=axB.transAxes)
         axB.text(0, .38, b, fontsize=15, color=NAVY, transform=axB.transAxes)
         if S["done"] and S["step"]:
-            axB.text(0, .02, "停住了 —— 还在说「往前」的那几把，已经被我们自己降权了。"
-                             "尺子变了，决策就变了。",
+            axB.text(0, .02, "停住了：仍主张前进的那几个，已在前几轮因对照误报被下调权重。"
+                             "指标的权重变了，结论就跟着变了。",
                      fontsize=16.5, color=ORANGE, fontweight="bold",
                      transform=axB.transAxes)
     fig.canvas.draw_idle()
