@@ -144,12 +144,47 @@ def s5():
     print("  复算随包主结论（Linux/macOS）：bash scripts/reproduce_core.sh")
 
 
+SCREENS = [
+    ("── 1/5  一万五千三百七十六把候选，过两道关的只有 204 把 ──────", s1),
+    ("── 2/5  新旧指标的相互评判 ──────────────────────────────────", s2),
+    ("── 3/5  指标的两道检验：排序与平底配对 ────────────", s3),
+    ("── 4/5  它会否定自己：事先登记的预测，现场逐条核对 ──────────", s4),
+    ("── 5/5  随包结果可复算 ────────────────────────────────────────", s5),
+]
+
+USAGE = """用法：
+  python scripts/demo.py              五屏一次跑完
+  python scripts/demo.py --only 1     只跑第 1 屏（答辩现场用，约 20 秒）
+  python scripts/demo.py --stage      一屏一停，按回车翻下一屏
+  python scripts/demo.py --only 1,4   只跑指定的几屏
+"""
+
+
 def main():
-    screen("── 1/5  一万五千三百七十六把候选，过两道关的只有 204 把 ──────", s1)
-    screen("── 2/5  新旧指标的相互评判 ──────────────────────────────────", s2)
-    screen("── 3/5  指标的两道检验：排序与平底配对 ────────────", s3)
-    screen("── 4/5  它会否定自己：事先登记的预测，现场逐条核对 ──────────", s4)
-    screen("── 5/5  随包结果可复算 ────────────────────────────────────────", s5)
+    argv = sys.argv[1:]
+    if "-h" in argv or "--help" in argv:
+        print(USAGE); return 0
+    stage = "--stage" in argv
+    pick = list(range(1, len(SCREENS) + 1))
+    if "--only" in argv:
+        i = argv.index("--only")
+        if i + 1 < len(argv):
+            try:
+                pick = [int(x) for x in argv[i + 1].replace("，", ",").split(",") if x.strip()]
+            except ValueError:
+                print("--only 的参数要是屏号，例如 --only 1 或 --only 1,4", file=sys.stderr)
+                return 2
+    for k, n in enumerate(pick):
+        if not 1 <= n <= len(SCREENS):
+            print("没有第 %d 屏（共 %d 屏）" % (n, len(SCREENS)), file=sys.stderr)
+            return 2
+        title, fn = SCREENS[n - 1]
+        screen(title, fn)
+        if stage and k < len(pick) - 1:
+            try:
+                input("\n    ——— 按回车继续 ———")
+            except (EOFError, KeyboardInterrupt):
+                print(); break
     print()
     if FAILED:
         print("DEMO: FAILED (%d block(s))" % FAILED, file=sys.stderr)
